@@ -352,6 +352,23 @@ Promise.all([
 });
 
 function switchMode(mode) {
+  const isUnlocked = (localStorage.getItem('koreapass_unlocked_' + curLang) === 'true') || (localStorage.getItem('koreapass_unlocked') === 'true');
+
+  if (mode === 'exam' && !isUnlocked) {
+    const lockAlertMsg = {
+      ko: "🔒 실전 모의고사는 60일 올패스 이용권 전용 기능입니다.\n아래 9,900원 결제 후 40문항 실전 모의고사와 1,000문항 전체 해설을 무제한 이용하세요!",
+      uz: "🔒 Haqiqiy imtihon simulyatori faqat 60 kunlik All-Pass obunachilari uchun!\nPastdagi 9,900 won to'lovni amalga oshirib, 40 talik imtihon va 1,000 ta to'liq savollarni oching.",
+      ne: "🔒 वास्तविक परीक्षा सिमुलेटर ६० दिने अल-पास प्रयोगकर्ताहरूको लागि मात्र उपलब्ध छ।\nतल ९,९०० वन भुक्तानी गरी ४० प्रश्नहरूको पूर्ण परीक्षा अनलक गर्नुहोस्!",
+      vi: "🔒 Tính năng thi thử 40 câu chỉ dành cho gói All-Pass 60 ngày.\nVui lòng thanh toán 9.900đ ở bên dưới để mở khóa toàn bộ!",
+      en: "🔒 Real Exam Simulator is an All-Pass exclusive feature.\nPlease purchase below to unlock 40-question mock exams & all 1,000 questions!",
+      zh: "🔒 全真模拟考场为60天全通关畅学卡专属功能。\n请在下方完成支付以解锁40题全真模拟与1000道题库！"
+    };
+    alert(lockAlertMsg[curLang] || lockAlertMsg.ko);
+    const lockEl = document.querySelector('.cta-lock');
+    if (lockEl) lockEl.scrollIntoView({ behavior: 'smooth' });
+    return;
+  }
+
   curMode = mode;
   curIdx = 0;
   answered = {};
@@ -510,7 +527,17 @@ function prevQ() {
 }
 
 function nextQ() {
+  const isUnlocked = (localStorage.getItem('koreapass_unlocked_' + curLang) === 'true') || (localStorage.getItem('koreapass_unlocked') === 'true');
   const t = UI_TEXT[curLang] || UI_TEXT.ko;
+
+  // 무료 체험 학습 모드에서는 10번 문제 이후 결제 잠금 유도
+  if (curMode === 'study' && !isUnlocked && curIdx >= 9) {
+    alert(t.endAlert);
+    const lockEl = document.querySelector('.cta-lock');
+    if (lockEl) lockEl.scrollIntoView({ behavior: 'smooth' });
+    return;
+  }
+
   if (curIdx < curDB.length - 1) {
     curIdx++;
     render();
