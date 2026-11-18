@@ -162,11 +162,14 @@ main { max-width: 580px; margin: 0 auto; padding: 14px 16px 120px; }
     <p id="lock-desc">1,000문제 전체 문제은행 + 40제 실전 모의고사 + 오답노트 무제한 (60일 올패스)</p>
     
     <!-- 토스 결제수단 및 이용약관 공식 렌더링 영역 -->
+    <div id="pay-guide-box" style="background:rgba(0,180,216,0.12); border:1px solid var(--acc); border-radius:10px; padding:10px; font-size:13.5px; color:#fff; font-weight:600; margin-bottom:12px; text-align:center;">
+      💡 카드를 먼저 선택하고 약관 동의 후 아래 버튼을 누르세요
+    </div>
     <div id="payment-method" style="margin-bottom:12px;"></div>
     <div id="agreement" style="margin-bottom:16px;"></div>
 
     <div style="display:flex; flex-direction:column; gap:10px;">
-      <button class="btn-buy" id="btn-price" onclick="requestPay()">⚡ 1초 간편결제 (9,900원)</button>
+      <button class="btn-buy" id="btn-price" onclick="requestPay()">👇 카드를 선택한 뒤 여기를 눌러 결제하기 (9,900원)</button>
     </div>
   </div>
 
@@ -200,7 +203,8 @@ const UI_TEXT = {
     lockTitle: "🔒 남은 990문제 전체 해설 열기",
     lockDesc: "1,000문제 전체 문제은행 + 40제 실전 모의고사 + 오답노트 무제한 (60일 올패스)",
     priceAmount: 9900,
-    btnToss: "⚡ 토스 1초 간편결제 (9,900원)",
+    btnToss: "👇 카드를 선택한 뒤 여기를 눌러 결제하기 (9,900원)",
+    payGuide: "💡 카드를 먼저 선택하고 약관 동의 후 아래 버튼을 누르세요",
     btnKmong: "🛍️ 크몽 / 네이버페이로 안전결제 (9,900원)",
     prevBtn: "← 이전 문제",
     nextBtn: "다음 문제 →",
@@ -222,7 +226,8 @@ const UI_TEXT = {
     lockTitle: "🔒 QOLGAN 990 TA SAVOLNI OCHISH",
     lockDesc: "1,000 ta to'liq savollar bazasi + 40 talik imtihon simulyatori (60 kun)",
     priceAmount: 9900,
-    btnToss: "⚡ Toss 1-soniyali to'lov (9,900 won)",
+    btnToss: "👇 Kartani tanlab, to'lash uchun bu yerni bosing (9,900 won)",
+    payGuide: "💡 Avval kartangizni tanlang va pastdagi tugmani bosing",
     btnKmong: "🛍️ Kmong orqali xavfsiz to'lov (9,900 won)",
     prevBtn: "← OLDINGI",
     nextBtn: "KEYINGI →",
@@ -244,7 +249,8 @@ const UI_TEXT = {
     lockTitle: "🔒 बाँकी ९९० प्रश्नहरू अनलक गर्नुहोस्",
     lockDesc: "१००० पूर्ण प्रश्नहरू + परीक्षा सिमुलेटर (६० दिन असीमित)",
     priceAmount: 9900,
-    btnToss: "⚡ Toss द्रुत भुक्तानी (९,९०० वन)",
+    btnToss: "👇 कार्ड चयन गरेपछि भुक्तानी गर्न यहाँ थिच्नुहोस् (९,९०० वन)",
+    payGuide: "💡 पहिले आफ्नो कार्ड छान्नुहोस् र तलको बटन थिच्नुहोस्",
     btnKmong: "🛍️ Kmong सुरक्षित भुक्तानी (९,९०० वन)",
     prevBtn: "← अघिल्लो",
     nextBtn: "पछिल्लो →",
@@ -266,7 +272,8 @@ const UI_TEXT = {
     lockTitle: "🔒 MỞ KHÓA 990 CÂU HỎI CÒN LẠI",
     lockDesc: "1.000 câu đầy đủ + Thi thử 40 câu như thi thật (60 ngày)",
     priceAmount: 7500,
-    btnToss: "⚡ Thanh toán Toss / Thẻ VN (7,500원 / ~139,000đ)",
+    btnToss: "👇 Chọn thẻ xong bấm vào đây để thanh toán (7,500원)",
+    payGuide: "💡 Vui lòng chọn thẻ trước, sau đó bấm nút bên dưới",
     btnKmong: "🛍️ Mua qua Kmong bảo đảm (7,500원)",
     prevBtn: "← Câu trước",
     nextBtn: "Câu tiếp →",
@@ -288,7 +295,8 @@ const UI_TEXT = {
     lockTitle: "🔒 UNLOCK REMAINING 990 QUESTIONS",
     lockDesc: "Full 1,000 Questions + Real Exam Simulator (60 Days Pass)",
     priceAmount: 14000,
-    btnToss: "⚡ Instant Checkout (₩14,000 / ~$10.50)",
+    btnToss: "👇 Select Card above & Tap here to Pay (₩14,000)",
+    payGuide: "💡 Please select your card above first, then tap button below",
     btnKmong: "🛍️ Safe Checkout via Kmong (₩14,000)",
     prevBtn: "← PREV",
     nextBtn: "NEXT →",
@@ -310,7 +318,8 @@ const UI_TEXT = {
     lockTitle: "🔒 解锁剩余990道全真试题",
     lockDesc: "1000题完整题库 + 40题实战模拟考场（60天畅学）",
     priceAmount: 9000,
-    btnToss: "⚡ Toss快捷支付 (9,000韩元 / 约48元)",
+    btnToss: "👇 选择卡片后点击此处进行支付 (9,000韩元)",
+    payGuide: "💡 请先在上方选择银行卡，然后点击下方按钮",
     btnKmong: "🛍️ Kmong担保安全支付 (9,000韩元)",
     prevBtn: "← 上一题",
     nextBtn: "下一题 →",
@@ -447,6 +456,8 @@ function render() {
   if (lockTitleEl) lockTitleEl.innerText = t.lockTitle;
   const lockDescEl = document.getElementById('lock-desc');
   if (lockDescEl) lockDescEl.innerText = t.lockDesc;
+  const payGuideBox = document.getElementById('pay-guide-box');
+  if (payGuideBox && t.payGuide) payGuideBox.innerText = t.payGuide;
   const btnPriceEl = document.getElementById('btn-price');
   if (btnPriceEl) btnPriceEl.innerText = t.btnToss;
   document.getElementById('btn-prev').innerText = t.prevBtn;
@@ -641,6 +652,9 @@ function checkUnlocked() {
       lockEl.innerHTML = `
         <h3 id="lock-title">${t.lockTitle}</h3>
         <p id="lock-desc">${t.lockDesc}</p>
+        <div id="pay-guide-box" style="background:rgba(0,180,216,0.12); border:1px solid var(--acc); border-radius:10px; padding:10px; font-size:13.5px; color:#fff; font-weight:600; margin-bottom:12px; text-align:center;">
+          ${t.payGuide || "💡 카드를 먼저 선택하고 약관 동의 후 아래 버튼을 누르세요"}
+        </div>
         <div id="payment-method" style="margin-bottom:12px;"></div>
         <div id="agreement" style="margin-bottom:16px;"></div>
         <div style="display:flex; flex-direction:column; gap:10px;">
