@@ -109,12 +109,6 @@ main { max-width: 580px; margin: 0 auto; padding: 14px 16px 120px; }
     <button class="tab-btn" id="tab-exam" onclick="switchMode('exam')">⏱️ 실전 모의고사 (40문항·40분)</button>
   </div>
 
-  <!-- 수험생 친절 안내 배너 (왜 한국어가 더 큰가?) -->
-  <div id="lang-guide-banner" style="display:none; background:rgba(0,180,216,0.12); border:1px solid var(--acc); border-radius:12px; padding:12px 16px; margin-bottom:16px; font-size:13.5px; line-height:1.5; color:#fff;">
-    <div style="font-weight:800; color:var(--gold); margin-bottom:4px;" id="guide-title">💡 [합격 안내] 한국어 원문이 더 크게 표시되는 이유</div>
-    <div id="guide-desc" style="color:var(--text);">실제 한국 운전면허시험장 PC 화면에 나오는 한국어 지문을 눈에 익혀야 1번에 합격할 수 있습니다. 아래 모국어 번역과 함께 비교하며 공부하세요!</div>
-  </div>
-
   <!-- 실전 모의고사 상단 상태바 (타이머 + 제출 버튼) -->
   <div class="exam-bar" id="exam-bar">
     <div class="timer">⏱️ <span id="timer-val">40:00</span></div>
@@ -135,6 +129,13 @@ main { max-width: 580px; margin: 0 auto; padding: 14px 16px 120px; }
       <span id="score-text">1종 보통 / 2종 보통 실전 규격</span>
     </div>
     <div class="bar"><div class="bar-fill" id="bar-fill"></div></div>
+  </div>
+
+  <!-- 1번 문제 바로 머리맡: 수험생 친절 안내 배너 (X 닫기 버튼 탑재) -->
+  <div id="lang-guide-banner" style="display:none; position:relative; background:linear-gradient(135deg, rgba(0,180,216,0.15), rgba(19,34,56,0.9)); border:1.5px solid var(--acc); border-radius:14px; padding:14px 40px 14px 16px; margin-bottom:16px; font-size:13.5px; line-height:1.5; color:#fff; box-shadow:0 4px 16px rgba(0,0,0,0.25);">
+    <button onclick="closeGuideBanner()" style="position:absolute; right:12px; top:12px; background:transparent; border:0; color:var(--sub); font-size:18px; font-weight:700; cursor:pointer; line-height:1; padding:4px;">✕</button>
+    <div style="font-weight:800; color:var(--gold); margin-bottom:4px; font-size:14px;" id="guide-title">💡 [합격 안내] 한국어 원문이 더 크게 표시되는 이유</div>
+    <div id="guide-desc" style="color:var(--text);">실제 한국 운전면허시험장 PC 화면에 나오는 한국어 지문을 눈에 익혀야 1번에 합격할 수 있습니다. 아래 모국어 번역과 함께 비교하며 공부하세요!</div>
   </div>
 
   <div class="q-box">
@@ -360,14 +361,19 @@ function updateTimerDisplay() {
   if (el) el.innerText = `${m}:${s}`;
 }
 
+function closeGuideBanner() {
+  document.getElementById('lang-guide-banner').style.display = 'none';
+  sessionStorage.setItem('guide_banner_closed', 'true');
+}
+
 function render() {
   if (!curDB.length) return;
   const item = curDB[curIdx];
   const t = UI_TEXT[curLang] || UI_TEXT.ko;
 
-  // 가이드 배너 업데이트 (한국어 모드일 땐 숨김, 외국어 모드일 땐 모국어로 친절 설명)
+  // 가이드 배너 업데이트 (한국어 모드이거나 수험생이 닫기를 눌렀을 땐 숨김)
   const guideBanner = document.getElementById('lang-guide-banner');
-  if (curLang === 'ko') {
+  if (curLang === 'ko' || sessionStorage.getItem('guide_banner_closed') === 'true') {
     guideBanner.style.display = 'none';
   } else {
     guideBanner.style.display = 'block';
