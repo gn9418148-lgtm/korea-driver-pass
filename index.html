@@ -595,15 +595,38 @@ try {
 }
 
 function checkUnlocked() {
-  if (localStorage.getItem('koreapass_unlocked') === 'true') {
+  const isUnlockedThisLang = (localStorage.getItem('koreapass_unlocked_' + curLang) === 'true') || (localStorage.getItem('koreapass_unlocked') === 'true');
+  const lockEl = document.querySelector('.cta-lock');
+  if (isUnlockedThisLang) {
     const t = UI_TEXT[curLang] || UI_TEXT.ko;
-    const lockEl = document.querySelector('.cta-lock');
     if (lockEl) {
       lockEl.style.borderColor = 'var(--ok)';
       lockEl.innerHTML = `
         <h3 style="color:var(--ok);">${t.unlockedTitle || "🎉 60일 올패스 이용권 활성화 완료"}</h3>
         <p style="color:#fff; margin:8px 0 0;">${t.unlockedDesc || "1,000문항 전체 해설과 실전 모의고사 제한이 모두 해제되었습니다."}</p>
       `;
+    }
+  } else {
+    // 결제되지 않은 타 언어로 이동 시 다시 잠금 UI 표시
+    if (lockEl && !document.getElementById('lock-title')) {
+      const t = UI_TEXT[curLang] || UI_TEXT.ko;
+      lockEl.style.borderColor = 'var(--gold)';
+      lockEl.innerHTML = `
+        <h3 id="lock-title">${t.lockTitle}</h3>
+        <p id="lock-desc">${t.lockDesc}</p>
+        <div id="payment-method" style="margin-bottom:12px;"></div>
+        <div id="agreement" style="margin-bottom:16px;"></div>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <button class="btn-buy" id="btn-price" onclick="requestPay()">${t.btnToss}</button>
+        </div>
+      `;
+      // 토스 위젯 재렌더링
+      try {
+        if (paymentWidget) {
+          paymentMethodWidget = paymentWidget.renderPaymentMethods('#payment-method', { value: t.priceAmount || 9900 }, { variantKey: 'DEFAULT' });
+          paymentWidget.renderAgreement('#agreement');
+        }
+      } catch (e) {}
     }
   }
 }
@@ -625,8 +648,8 @@ function requestPay() {
       orderId: orderId,
       orderName: orderName,
       customerName: '수험생',
-      successUrl: baseUrl + 'success.html',
-      failUrl: baseUrl + 'fail.html',
+      successUrl: baseUrl + 'success.html?lang=' + curLang,
+      failUrl: baseUrl + 'fail.html?lang=' + curLang,
     }).catch(function (error) {
       if (error.code === 'USER_CANCEL') {
       } else {
