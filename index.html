@@ -109,6 +109,12 @@ main { max-width: 580px; margin: 0 auto; padding: 14px 16px 120px; }
     <button class="tab-btn" id="tab-exam" onclick="switchMode('exam')">⏱️ 실전 모의고사 (40문항·40분)</button>
   </div>
 
+  <!-- 수험생 친절 안내 배너 (왜 한국어가 더 큰가?) -->
+  <div id="lang-guide-banner" style="display:none; background:rgba(0,180,216,0.12); border:1px solid var(--acc); border-radius:12px; padding:12px 16px; margin-bottom:16px; font-size:13.5px; line-height:1.5; color:#fff;">
+    <div style="font-weight:800; color:var(--gold); margin-bottom:4px;" id="guide-title">💡 [합격 안내] 한국어 원문이 더 크게 표시되는 이유</div>
+    <div id="guide-desc" style="color:var(--text);">실제 한국 운전면허시험장 PC 화면에 나오는 한국어 지문을 눈에 익혀야 1번에 합격할 수 있습니다. 아래 모국어 번역과 함께 비교하며 공부하세요!</div>
+  </div>
+
   <!-- 실전 모의고사 상단 상태바 (타이머 + 제출 버튼) -->
   <div class="exam-bar" id="exam-bar">
     <div class="timer">⏱️ <span id="timer-val">40:00</span></div>
@@ -179,7 +185,8 @@ let timeLeft = 40 * 60; // 40분
 
 const UI_TEXT = {
   ko: {
-    tabStudy: "📖 학습 모드 (즉시 채점)",
+    guideTitle: "💡 [합격 꿀팁] 왜 한국어가 더 크게 나오나요?",
+    guideDesc: "실제 한국 시험장 PC 화면에는 한국어로 문제가 나옵니다! 시험장에서 당황하지 않고 1번에 찍을 수 있도록 한국어를 눈에 익히고, 바로 아래 해석을 참고하세요.",
     tabExam: "⏱️ 실전 모의고사 (40문항·40분)",
     badge: "무료 체험 모드 (10문항)",
     scoreMeta: "1종 보통 / 2종 보통 실전 규격",
@@ -197,6 +204,8 @@ const UI_TEXT = {
     footerText: "출처: 한국도로교통공단 학과시험 문제은행 (공공누리 제1유형).<br><b>[환불 규정]</b> 본 상품은 결제 즉시 전체 해설과 문제 데이터가 즉시 열람되는 디지털 교육 콘텐츠 특성상, 결제 완료 후에는 환불이 불가합니다.<br>© KoreaPass. All rights reserved."
   },
   uz: {
+    guideTitle: "💡 [Imtihon maslahati] Nega koreyscha matn kattaroq yozilgan?",
+    guideDesc: "Koreyadagi haqiqiy imtihon kompyuterida savollar koreys tilida chiqadi! Imtihonda darhol tanib olishingiz uchun koreyscha matnni ko'z bilan eslab qoling va pastdagi o'zbekcha tarjimadan foydalaning.",
     tabStudy: "📖 O'rganish rejimi (Darhol tekshirish)",
     tabExam: "⏱️ Haqiqiy imtihon (40 ta savol · 40 daqiqa)",
     badge: "BEPUL SINOV (10 SAVOL)",
@@ -215,6 +224,8 @@ const UI_TEXT = {
     footerText: "Manba: Koreya Yo'l Harakati Xavfsizligi Boshqarmasi (KoROAD).<br>© KoreaPass. All rights reserved."
   },
   ne: {
+    guideTitle: "💡 [परीक्षा सफलता टिप्स] कोरियन अक्षर किन ठूलो लेखिएको छ?",
+    guideDesc: "कोरियाको वास्तविक परीक्षा हलको कम्प्युटरमा कोरियन भाषामा प्रश्न आउँछ! परीक्षामा नअल्मलिई तुरुन्तै मिलाउन कोरियन अक्षर आँखाले चिन्नुहोस् र तलको नेपाली अनुवाद हेर्नुहोस्।",
     tabStudy: "📖 अध्ययन मोड (तुरुन्तै उत्तर)",
     tabExam: "⏱️ वास्तविक परीक्षा (४० प्रश्न · ४० मिनेट)",
     badge: "निःशुल्क अभ्यास (१० प्रश्न)",
@@ -233,6 +244,8 @@ const UI_TEXT = {
     footerText: "स्रोत: कोरिया सडक यातायात प्राधिकरण (KoROAD).<br>© KoreaPass. All rights reserved."
   },
   vi: {
+    guideTitle: "💡 [Mẹo thi đỗ] Tại sao đề tiếng Hàn lại được viết to hơn?",
+    guideDesc: "Phòng thi thực tế tại Hàn Quốc hiển thị câu hỏi bằng tiếng Hàn! Hãy làm quen với mặt chữ tiếng Hàn để nhìn là chọn được ngay, đồng thời xem bản dịch tiếng Việt chi tiết ở ngay bên dưới.",
     tabStudy: "📖 Chế độ học tập (Xem đáp án ngay)",
     tabExam: "⏱️ Thi thử phòng thi (40 câu · 40 phút)",
     badge: "DÙNG THỬ MIỄN PHÍ (10 CÂU)",
@@ -251,6 +264,8 @@ const UI_TEXT = {
     footerText: "Nguồn: Cơ quan Giao thông Đường bộ Hàn Quốc (KoROAD).<br>© KoreaPass. All rights reserved."
   },
   en: {
+    guideTitle: "💡 [Exam Tip] Why is the Korean text displayed larger?",
+    guideDesc: "The real exam computers in Korea display questions in Korean! Familiarize yourself with the original Korean phrasing while using the English explanation below to ensure a 1-shot pass.",
     tabStudy: "📖 Study Mode (Instant Answers)",
     tabExam: "⏱️ Real Exam Simulator (40 Qs · 40 Mins)",
     badge: "FREE TRIAL (10 QUESTIONS)",
@@ -269,6 +284,8 @@ const UI_TEXT = {
     footerText: "Source: Korea Road Traffic Authority (KOROAD).<br>© KoreaPass. All rights reserved."
   },
   zh: {
+    guideTitle: "💡【通关秘籍】为什么韩文原题字体更大？",
+    guideDesc: "韩国考场实际电脑考试是韩文出题！通过眼熟韩文原题关键词，结合下方中文逐题精准解析，助您在实际考场一眼秒选正确答案！",
     tabStudy: "📖 学习模式（即时查看解析）",
     tabExam: "⏱️ 全真考场模拟（40题·40分钟）",
     badge: "免费体验（10题精选）",
@@ -347,6 +364,16 @@ function render() {
   if (!curDB.length) return;
   const item = curDB[curIdx];
   const t = UI_TEXT[curLang] || UI_TEXT.ko;
+
+  // 가이드 배너 업데이트 (한국어 모드일 땐 숨김, 외국어 모드일 땐 모국어로 친절 설명)
+  const guideBanner = document.getElementById('lang-guide-banner');
+  if (curLang === 'ko') {
+    guideBanner.style.display = 'none';
+  } else {
+    guideBanner.style.display = 'block';
+    document.getElementById('guide-title').innerText = t.guideTitle;
+    document.getElementById('guide-desc').innerText = t.guideDesc;
+  }
 
   document.getElementById('tab-study').innerText = t.tabStudy;
   document.getElementById('tab-exam').innerText = t.tabExam;
