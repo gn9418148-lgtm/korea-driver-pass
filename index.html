@@ -21,42 +21,44 @@
   --line: #2b3a4a;
 }
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; margin: 0; padding: 0; }
-body { background: var(--bg); color: var(--text); font-family: Pretendard, "Noto Sans SC", "Noto Sans Devanagari", sans-serif; font-size: 17px; line-height: 1.6; }
-main { max-width: 560px; margin: 0 auto; padding: 16px 16px 120px; }
+body { background: var(--bg); color: var(--text); font-family: Pretendard, "Noto Sans SC", "Noto Sans Devanagari", sans-serif; font-size: 16px; line-height: 1.6; }
+main { max-width: 580px; margin: 0 auto; padding: 14px 16px 120px; }
 
 /* Top Header */
-.top { display: flex; justify-content: space-between; align-items: center; padding: 12px 0 16px; }
+.top { display: flex; justify-content: space-between; align-items: center; padding: 8px 0 14px; }
 .logo { font-size: 20px; font-weight: 800; color: #fff; letter-spacing: -0.5px; }
 .logo span { color: var(--acc); }
 
 /* Language Selector Pill */
 .lang-selector { display: flex; gap: 4px; background: #132238; padding: 4px; border-radius: 99px; border: 1px solid var(--line); }
-.lang-btn { border: 0; background: transparent; color: var(--sub); font-size: 12px; font-weight: 700; padding: 6px 10px; border-radius: 99px; cursor: pointer; transition: all 0.2s; }
+.lang-btn { border: 0; background: transparent; color: var(--sub); font-size: 11px; font-weight: 700; padding: 5px 8px; border-radius: 99px; cursor: pointer; transition: all 0.2s; }
 .lang-btn.active { background: var(--acc); color: #fff; box-shadow: 0 2px 8px rgba(0, 180, 216, 0.4); }
 
-/* Hero Banner */
-.hero { background: linear-gradient(135deg, #1b263b, #132238); border: 1px solid var(--line); border-radius: 16px; padding: 20px; margin-bottom: 20px; position: relative; overflow: hidden; }
-.hero:after { content: "PASS"; position: absolute; right: -10px; bottom: -20px; font-size: 80px; font-weight: 900; color: rgba(255,255,255,0.03); pointer-events: none; }
-.badge-free { display: inline-flex; align-items: center; gap: 6px; background: rgba(6, 214, 160, 0.15); border: 1px solid var(--ok); color: var(--ok); padding: 4px 10px; border-radius: 99px; font-size: 12px; font-weight: 700; margin-bottom: 10px; }
-.hero h1 { font-size: 22px; font-weight: 800; line-height: 1.35; margin-bottom: 8px; color: #fff; }
-.hero p { font-size: 14px; color: var(--sub); line-height: 1.5; }
+/* Mode Switcher Tabs */
+.mode-tabs { display: flex; gap: 8px; margin-bottom: 16px; background: #132238; padding: 4px; border-radius: 12px; border: 1px solid var(--line); }
+.tab-btn { flex: 1; border: 0; background: transparent; color: var(--sub); padding: 10px; font-size: 14px; font-weight: 700; border-radius: 8px; cursor: pointer; transition: all 0.2s; }
+.tab-btn.active { background: var(--card); color: #fff; border: 1px solid var(--acc); box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+
+/* Exam Simulator Status Bar */
+.exam-bar { display: none; background: #1a0f1d; border: 1.5px solid var(--no); border-radius: 12px; padding: 12px 16px; margin-bottom: 16px; align-items: center; justify-content: space-between; }
+.timer { font-size: 20px; font-weight: 800; color: var(--gold); display: flex; align-items: center; gap: 6px; font-family: monospace; }
+.btn-submit-exam { background: var(--no); color: #fff; border: 0; padding: 8px 16px; font-size: 13px; font-weight: 800; border-radius: 8px; cursor: pointer; }
 
 /* Progress bar */
 .progress-wrap { margin-bottom: 16px; }
 .progress-meta { display: flex; justify-content: space-between; font-size: 13px; color: var(--sub); margin-bottom: 6px; font-weight: 600; }
 .bar { height: 6px; background: var(--line); border-radius: 99px; overflow: hidden; }
-.bar-fill { height: 100%; width: 33%; background: var(--acc); border-radius: 99px; transition: width 0.3s ease; }
+.bar-fill { height: 100%; width: 2.5%; background: var(--acc); border-radius: 99px; transition: width 0.3s ease; }
 
 /* Question Box */
 .q-box { background: var(--card); border-radius: 16px; padding: 20px; border: 1px solid var(--line); margin-bottom: 20px; }
 .q-tag { display: inline-block; font-size: 12px; font-weight: 700; color: var(--gold); background: rgba(255, 209, 102, 0.12); padding: 3px 8px; border-radius: 6px; margin-bottom: 12px; }
-.q-title-kr { font-size: 14px; color: var(--sub); margin-bottom: 8px; line-height: 1.4; border-left: 2px solid var(--line); padding-left: 8px; }
-.q-title-trans { font-size: 19px; font-weight: 700; color: #fff; line-height: 1.45; margin-bottom: 20px; }
 
 /* Options */
 .opt { display: flex; align-items: flex-start; gap: 12px; width: 100%; text-align: left; background: rgba(255,255,255,0.03); border: 1.5px solid var(--line); border-radius: 12px; padding: 14px 16px; margin-bottom: 10px; color: var(--text); font-size: 15px; cursor: pointer; transition: all 0.15s; }
 .opt:hover { background: rgba(255,255,255,0.06); }
 .opt .num { flex: none; width: 26px; height: 26px; border-radius: 50%; background: var(--line); display: grid; place-items: center; font-size: 13px; font-weight: 800; color: var(--sub); }
+.opt.selected { border-color: var(--acc); background: rgba(0, 180, 216, 0.15); }
 .opt.ok { border-color: var(--ok); background: rgba(6, 214, 160, 0.15); color: #fff; }
 .opt.ok .num { background: var(--ok); color: #000; }
 .opt.no { border-color: var(--no); background: rgba(239, 71, 111, 0.15); }
@@ -65,6 +67,11 @@ main { max-width: 560px; margin: 0 auto; padding: 16px 16px 120px; }
 /* Explanation Box */
 .explain { display: none; background: rgba(0, 180, 216, 0.08); border-left: 4px solid var(--acc); padding: 16px; border-radius: 0 12px 12px 0; margin-top: 18px; font-size: 14px; line-height: 1.6; }
 .explain b { color: var(--acc); display: block; font-size: 15px; margin-bottom: 6px; }
+
+/* Result Modal / Screen */
+.result-card { display: none; background: #132238; border: 2px solid var(--gold); border-radius: 16px; padding: 24px; text-align: center; margin-bottom: 24px; box-shadow: 0 8px 30px rgba(0,0,0,0.5); }
+.stamp-pass { display: inline-block; border: 4px solid var(--ok); color: var(--ok); font-size: 26px; font-weight: 900; padding: 8px 24px; border-radius: 12px; transform: rotate(-5deg); margin-bottom: 14px; }
+.stamp-fail { display: inline-block; border: 4px solid var(--no); color: var(--no); font-size: 26px; font-weight: 900; padding: 8px 24px; border-radius: 12px; transform: rotate(-5deg); margin-bottom: 14px; }
 
 /* Paywall CTA Card */
 .cta-lock { background: linear-gradient(180deg, #1b263b 0%, #223147 100%); border: 1.5px solid var(--gold); border-radius: 16px; padding: 24px; text-align: center; margin-top: 24px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
@@ -96,15 +103,29 @@ main { max-width: 560px; margin: 0 auto; padding: 16px 16px 120px; }
     </div>
   </div>
 
-  <div class="hero">
-    <div class="badge-free">🎁 <span id="badge-text">무료 모의고사 (40문항 풀이)</span></div>
-    <h1 id="hero-title">2026 한국 운전면허 학과시험</h1>
-    <p id="hero-desc">도로교통공단 최신 1,000문항 및 1초 이해 핵심 해설.</p>
+  <!-- 모드 전환 탭: 연습 학습 모드 vs 실전 시험장 40분 모의고사 모드 -->
+  <div class="mode-tabs">
+    <button class="tab-btn active" id="tab-study" onclick="switchMode('study')">📖 학습 모드 (즉시 채점)</button>
+    <button class="tab-btn" id="tab-exam" onclick="switchMode('exam')">⏱️ 실전 모의고사 (40문항·40분)</button>
+  </div>
+
+  <!-- 실전 모의고사 상단 상태바 (타이머 + 제출 버튼) -->
+  <div class="exam-bar" id="exam-bar">
+    <div class="timer">⏱️ <span id="timer-val">40:00</span></div>
+    <button class="btn-submit-exam" onclick="submitExam()">답안 최종 제출 (채점)</button>
+  </div>
+
+  <!-- 시험 결과 카드 -->
+  <div class="result-card" id="result-card">
+    <div id="result-stamp"></div>
+    <h2 id="result-score" style="font-size:32px; color:#fff; margin-bottom:8px;">85점</h2>
+    <p id="result-verdict" style="font-size:15px; color:var(--sub); margin-bottom:16px;">1종 보통 (70점 이상) 합격 / 2종 보통 (60점 이상) 합격</p>
+    <button class="btn-buy" style="background:var(--acc); color:#fff;" onclick="restartExam()">🔄 다시 모의고사 응시하기</button>
   </div>
 
   <div class="progress-wrap">
     <div class="progress-meta">
-      <span id="q-counter">문제 1 / 40</span>
+      <span id="q-counter">문제 1 / 10</span>
       <span id="score-text">1종 보통 / 2종 보통 실전 규격</span>
     </div>
     <div class="bar"><div class="bar-fill" id="bar-fill"></div></div>
@@ -113,7 +134,7 @@ main { max-width: 560px; margin: 0 auto; padding: 16px 16px 120px; }
   <div class="q-box">
     <span class="q-tag" id="q-tag">1번 문제 (2점)</span>
     <!-- 문제 영역: 한국어 원문(크게) -> 모국어 해석(또렷하게) -->
-    <div class="q-title-trans" id="q-title-ko" style="font-size:20px; font-weight:800; color:#fff; line-height:1.45; margin-bottom:8px;"></div>
+    <div class="q-title-trans" id="q-title-ko" style="font-size:19px; font-weight:800; color:#fff; line-height:1.45; margin-bottom:8px;"></div>
     <div id="q-title-trans" style="display:none; font-size:15px; font-weight:600; color:var(--acc); margin-bottom:20px; line-height:1.45; background:rgba(0,180,216,0.08); border-left:3px solid var(--acc); padding:8px 12px; border-radius:0 8px 8px 0;"></div>
 
     <div id="options-container"></div>
@@ -147,142 +168,188 @@ main { max-width: 560px; margin: 0 auto; padding: 16px 16px 120px; }
 
 <script>
 let curLang = 'ko';
+let curMode = 'study'; // 'study' (즉시채점) or 'exam' (40분 실전)
 let curIdx = 0;
-let answered = {};
-let DB = [];
+let answered = {}; // qIdx -> selected option
+let DB_STUDY = [];
+let DB_EXAM = [];
+let curDB = [];
+let timerInterval = null;
+let timeLeft = 40 * 60; // 40분
 
 const UI_TEXT = {
   ko: {
-    badge: "무료 모의고사 (40문항 풀이)",
-    heroTitle: "2026 한국 운전면허 학과시험",
-    heroDesc: "도로교통공단 최신 1,000문항 및 1초 이해 핵심 해설.",
+    tabStudy: "📖 학습 모드 (즉시 채점)",
+    tabExam: "⏱️ 실전 모의고사 (40문항·40분)",
+    badge: "무료 체험 모드 (10문항)",
     scoreMeta: "1종 보통 / 2종 보통 실전 규격",
     ansTitle: "정답",
     lockTitle: "🔒 남은 990문제 전체 해설 열기",
     lockDesc: "1,000문제 전체 문제은행 + 40제 실전 모의고사 + 오답노트 무제한 (60일 올패스)",
+    priceAmount: 9900,
     btnToss: "⚡ 토스 1초 간편결제 (9,900원)",
     btnKmong: "🛍️ 크몽 / 네이버페이로 안전결제 (9,900원)",
-    btnForeign: "🌍 외국인 / 해외카드 결제 (PayPal · Alipay)",
     prevBtn: "← 이전 문제",
     nextBtn: "다음 문제 →",
     qPrefix: "문제",
     ptText: "점",
-    endAlert: "🎁 무료 체험 샘플이 끝났습니다! 아래 결제 버튼을 통해 1,000문제 전체와 실전 모의고사를 이용하실 수 있습니다.",
-    footerText: "출처: 한국도로교통공단 학과시험 문제은행 (공공누리 제1유형).<br>해설은 자체 제작 학습 자료이며 한국도로교통공단의 공식 해설이나 제휴 관계가 아닙니다.<br><b>[환불 규정]</b> 본 상품은 결제 즉시 전체 해설과 문제 데이터가 즉시 열람되는 디지털 교육 콘텐츠 특성상, 결제 완료 후에는 전자상거래법 제17조 제2항에 따라 환불 및 취소가 불가합니다.<br>© KoreaPass. All rights reserved."
+    endAlert: "모든 문제를 다 확인하셨습니다! 아래 버튼으로 결제 시 1,000문항 전체와 모의고사가 즉시 열립니다.",
+    footerText: "출처: 한국도로교통공단 학과시험 문제은행 (공공누리 제1유형).<br><b>[환불 규정]</b> 본 상품은 결제 즉시 전체 해설과 문제 데이터가 즉시 열람되는 디지털 교육 콘텐츠 특성상, 결제 완료 후에는 환불이 불가합니다.<br>© KoreaPass. All rights reserved."
   },
   uz: {
+    tabStudy: "📖 O'rganish rejimi (Darhol tekshirish)",
+    tabExam: "⏱️ Haqiqiy imtihon (40 ta savol · 40 daqiqa)",
     badge: "BEPUL SINOV (10 SAVOL)",
-    heroTitle: "Koreya Haydovchilik Guvohnomasi Imtihoni",
-    heroDesc: "2026-yilgi yangi 1,000 ta savol va o'zbek tilidagi batafsil tushuntirishlar.",
     scoreMeta: "1-TOIFA / 2-TOIFA (100% MOS)",
     ansTitle: "TO'G'RI JAVOB",
     lockTitle: "🔒 QOLGAN 990 TA SAVOLNI OCHISH",
-    lockDesc: "1,000 ta to'liq savollar bazasi + Imtihon simulyatori + Xatolar ustida ishlash (60 kunlik to'liq kirish)",
+    lockDesc: "1,000 ta to'liq savollar bazasi + 40 talik imtihon simulyatori (60 kun)",
+    priceAmount: 9900,
     btnToss: "⚡ Toss 1-soniyali to'lov (9,900 won)",
     btnKmong: "🛍️ Kmong orqali xavfsiz to'lov (9,900 won)",
-    btnForeign: "🌍 Xorijiy kartalar / PayPal / Alipay",
     prevBtn: "← OLDINGI",
     nextBtn: "KEYINGI →",
     qPrefix: "SAVOL",
     ptText: "BALL",
-    endAlert: "🎁 Bepul sinov savollari tugadi! 1,000 ta to'liq savollar va 40 talik imtihon simulyatorini ochish uchun pastdagi to'lov tugmasini bosing.",
-    footerText: "Manba: Koreya Yo'l Harakati Xavfsizligi Boshqarmasi (KoROAD, 1-toifa litsenziya).<br>Ushbu tushuntirishlar mustaqil ta'limiy material bo'lib, KoROAD ning rasmiy xulosasi emas.<br><b>[Pulni qaytarish qoidasi]</b> Ushbu mahsulot to'lovdan so'ng darhol to'liq ochiladigan raqamli ta'lim kontenti bo'lgani sababli, to'lov amalga oshirilgandan keyin pul qaytarilmaydi.<br>© KoreaPass. All rights reserved."
+    endAlert: "Bepul sinov savollari tugadi! 1,000 ta to'liq savollarni ochish uchun pastdagi tugmani bosing.",
+    footerText: "Manba: Koreya Yo'l Harakati Xavfsizligi Boshqarmasi (KoROAD).<br>© KoreaPass. All rights reserved."
   },
   ne: {
+    tabStudy: "📖 अध्ययन मोड (तुरुन्तै उत्तर)",
+    tabExam: "⏱️ वास्तविक परीक्षा (४० प्रश्न · ४० मिनेट)",
     badge: "निःशुल्क अभ्यास (१० प्रश्न)",
-    heroTitle: "कोरिया ड्राइभिङ लाइसेन्स परीक्षा",
-    heroDesc: "२०२६ नयाँ १००० प्रश्नहरू र नेपाली भाषामा विस्तृत व्याख्या।",
     scoreMeta: "वर्ग १ / वर्ग २ लाइसेन्स",
     ansTitle: "सही उत्तर",
     lockTitle: "🔒 बाँकी ९९० प्रश्नहरू अनलक गर्नुहोस्",
-    lockDesc: "१००० पूर्ण प्रश्नहरू + परीक्षा सिमुलेटर + गल्ती सुधार (६० दिन असीमित)",
+    lockDesc: "१००० पूर्ण प्रश्नहरू + परीक्षा सिमुलेटर (६० दिन असीमित)",
+    priceAmount: 9900,
     btnToss: "⚡ Toss द्रुत भुक्तानी (९,९०० वन)",
     btnKmong: "🛍️ Kmong सुरक्षित भुक्तानी (९,९०० वन)",
-    btnForeign: "🌍 अन्तर्राष्ट्रिय कार्ड / PayPal / Alipay",
     prevBtn: "← अघिल्लो",
     nextBtn: "पछिल्लो →",
     qPrefix: "प्रश्न",
     ptText: "अंक",
-    endAlert: "🎁 निःशुल्क परीक्षण प्रश्नहरू समाप्त भए! सम्पूर्ण १००० प्रश्नहरू र अभ्यास परीक्षाका लागि तलको भुक्तानी बटन थिच्नुहोस्।",
-    footerText: "स्रोत: कोरिया सडक यातायात प्राधिकरण (KoROAD, खुला प्रकार १)।<br>यो व्याख्या एक स्वतन्त्र अध्ययन सामग्री हो र KoROAD को आधिकारिक व्याख्या होइन।<br><b>[रिफन्ड नीति]</b> भुक्तानीपछि तुरुन्तै सम्पूर्ण सामग्री खुल्ने डिजिटल शैक्षिक उत्पादन भएकाले, खरिदपछि रकम फिर्ता (Refund) गर्न सकिँदैन।<br>© KoreaPass. All rights reserved."
+    endAlert: "निःशुल्क परीक्षण प्रश्नहरू समाप्त भए!",
+    footerText: "स्रोत: कोरिया सडक यातायात प्राधिकरण (KoROAD).<br>© KoreaPass. All rights reserved."
   },
   vi: {
+    tabStudy: "📖 Chế độ học tập (Xem đáp án ngay)",
+    tabExam: "⏱️ Thi thử phòng thi (40 câu · 40 phút)",
     badge: "DÙNG THỬ MIỄN PHÍ (10 CÂU)",
-    heroTitle: "Thi Lý Thuyết Lái Xe Hàn Quốc 2026",
-    heroDesc: "Bộ 1.000 Câu Hỏi Mới Nhất Kèm Lời Giải Chi Tiết.",
     scoreMeta: "Bằng Lái Hạng 1 & Hạng 2",
     ansTitle: "ĐÁP ÁN ĐÚNG",
     lockTitle: "🔒 MỞ KHÓA 990 CÂU HỎI CÒN LẠI",
-    lockDesc: "1.000 câu đầy đủ + Thi thử 40 câu như thi thật + Sổ tay câu sai (60 ngày)",
+    lockDesc: "1.000 câu đầy đủ + Thi thử 40 câu như thi thật (60 ngày)",
     priceAmount: 7500,
     btnToss: "⚡ Thanh toán Toss / Thẻ VN (7,500원 / ~139,000đ)",
     btnKmong: "🛍️ Mua qua Kmong bảo đảm (7,500원)",
-    btnForeign: "🌍 Thẻ quốc tế / PayPal / Momo",
     prevBtn: "← Câu trước",
     nextBtn: "Câu tiếp →",
     qPrefix: "Câu",
     ptText: "điểm",
-    endAlert: "🎁 Bạn đã hoàn thành câu hỏi thử! Nhấn nút thanh toán bên dưới để mở khóa toàn bộ 1.000 câu.",
-    footerText: "Nguồn: Cơ quan Giao thông Đường bộ Hàn Quốc (KoROAD).<br><b>[Chính sách hoàn tiền]</b> Đây là sản phẩm học trực tuyến mở khóa ngay sau khi mua nên không hỗ trợ hoàn tiền.<br>© KoreaPass. All rights reserved."
+    endAlert: "Đã hoàn thành câu hỏi thử!",
+    footerText: "Nguồn: Cơ quan Giao thông Đường bộ Hàn Quốc (KoROAD).<br>© KoreaPass. All rights reserved."
   },
   en: {
+    tabStudy: "📖 Study Mode (Instant Answers)",
+    tabExam: "⏱️ Real Exam Simulator (40 Qs · 40 Mins)",
     badge: "FREE TRIAL (10 QUESTIONS)",
-    heroTitle: "Korea Driver's License Written Exam",
-    heroDesc: "New 2026 1,000 Questions Bank with Clear Explanations.",
     scoreMeta: "Type 1 & Type 2 Licenses",
     ansTitle: "CORRECT ANSWER",
     lockTitle: "🔒 UNLOCK REMAINING 990 QUESTIONS",
-    lockDesc: "Full 1,000 Questions + Real Exam Simulator + Wrong Answer Notes (60 Days Pass)",
+    lockDesc: "Full 1,000 Questions + Real Exam Simulator (60 Days Pass)",
     priceAmount: 14000,
     btnToss: "⚡ Instant Checkout (₩14,000 / ~$10.50)",
     btnKmong: "🛍️ Safe Checkout via Kmong (₩14,000)",
-    btnForeign: "🌍 International Cards / PayPal",
     prevBtn: "← PREV",
     nextBtn: "NEXT →",
     qPrefix: "Q",
     ptText: "pt",
-    endAlert: "🎁 Free trial questions completed! Tap any payment button below to unlock all 1,000 questions and full mock exams.",
-    footerText: "Source: Korea Road Traffic Authority (KOROAD, Public Nuri Type 1).<br>Explanations are independent study materials.<br><b>[Refund Policy]</b> As this is a digital educational product with instant access upon purchase, all sales are final and non-refundable.<br>© KoreaPass. All rights reserved."
+    endAlert: "Free trial questions completed!",
+    footerText: "Source: Korea Road Traffic Authority (KOROAD).<br>© KoreaPass. All rights reserved."
   },
   zh: {
+    tabStudy: "📖 学习模式（即时查看解析）",
+    tabExam: "⏱️ 全真考场模拟（40题·40分钟）",
     badge: "免费体验（10题精选）",
-    heroTitle: "韩国驾照学科考试通关题库",
-    heroDesc: "2026最新1000题全真题库 + 中文逐题解析。",
     scoreMeta: "第1类 / 第2类 普通驾照",
     ansTitle: "正确答案",
     lockTitle: "🔒 解锁剩余990道全真试题",
-    lockDesc: "1000题完整题库 + 40题实战模拟考场 + 错题本（60天畅学）",
+    lockDesc: "1000题完整题库 + 40题实战模拟考场（60天畅学）",
     priceAmount: 9000,
-    btnToss: "⚡ Toss快捷极速支付 (9,000韩元 / 约48元)",
+    btnToss: "⚡ Toss快捷支付 (9,000韩元 / 约48元)",
     btnKmong: "🛍️ Kmong担保安全支付 (9,000韩元)",
-    btnForeign: "🌍 国际信用卡 / PayPal / 支付宝 (Alipay)",
     prevBtn: "← 上一题",
     nextBtn: "下一题 →",
     qPrefix: "试题",
     ptText: "分",
-    endAlert: "🎁 免费体验题目已做完！如需解锁完整1000题题库及模拟考场，请点击下方支付按钮。",
-    footerText: "出处：韩国道路交通公团学科考试题库（公共Nuri第1类）。<br><b>【退款政策】</b> 本商品购买后立即开通，属于数字化内容服务，购买后概不支持退款。<br>© KoreaPass. All rights reserved."
+    endAlert: "免费体验题目已做完！",
+    footerText: "出处：韩国道路交通公团学科考试题库。<br>© KoreaPass. All rights reserved."
   }
 };
 
-fetch('mock_sample_4lang.json')
-  .then(r => r.json())
-  .then(data => {
-    DB = data;
-    render();
-  })
-  .catch(() => {
-    render();
-  });
+// 데이터 로드
+Promise.all([
+  fetch('mock_sample_4lang.json').then(r => r.json()),
+  fetch('mock_40_questions.json').then(r => r.json()).catch(() => [])
+]).then(([sampleData, examData]) => {
+  DB_STUDY = sampleData;
+  DB_EXAM = examData.length ? examData : sampleData;
+  curDB = DB_STUDY;
+  render();
+});
+
+function switchMode(mode) {
+  curMode = mode;
+  curIdx = 0;
+  answered = {};
+  document.getElementById('result-card').style.display = 'none';
+
+  if (mode === 'study') {
+    document.getElementById('tab-study').classList.add('active');
+    document.getElementById('tab-exam').classList.remove('active');
+    document.getElementById('exam-bar').style.display = 'none';
+    if (timerInterval) clearInterval(timerInterval);
+    curDB = DB_STUDY;
+  } else {
+    document.getElementById('tab-study').classList.remove('active');
+    document.getElementById('tab-exam').classList.add('active');
+    document.getElementById('exam-bar').style.display = 'flex';
+    curDB = DB_EXAM;
+    startTimer();
+  }
+  render();
+}
+
+function startTimer() {
+  if (timerInterval) clearInterval(timerInterval);
+  timeLeft = 40 * 60;
+  updateTimerDisplay();
+  timerInterval = setInterval(() => {
+    timeLeft--;
+    updateTimerDisplay();
+    if (timeLeft <= 0) {
+      clearInterval(timerInterval);
+      alert("⏱️ 시험 시간(40분)이 종료되었습니다! 답안을 자동 채점합니다.");
+      submitExam();
+    }
+  }, 1000);
+}
+
+function updateTimerDisplay() {
+  const m = Math.floor(timeLeft / 60).toString().padStart(2, '0');
+  const s = (timeLeft % 60).toString().padStart(2, '0');
+  const el = document.getElementById('timer-val');
+  if (el) el.innerText = `${m}:${s}`;
+}
 
 function render() {
-  if (!DB.length) return;
-  const item = DB[curIdx];
-  const t = UI_TEXT[curLang];
+  if (!curDB.length) return;
+  const item = curDB[curIdx];
+  const t = UI_TEXT[curLang] || UI_TEXT.ko;
 
-  document.getElementById('badge-text').innerText = t.badge;
-  document.getElementById('hero-title').innerText = t.heroTitle;
-  document.getElementById('hero-desc').innerText = t.heroDesc;
+  document.getElementById('tab-study').innerText = t.tabStudy;
+  document.getElementById('tab-exam').innerText = t.tabExam;
   document.getElementById('score-text').innerText = t.scoreMeta;
   document.getElementById('lock-title').innerText = t.lockTitle;
   document.getElementById('lock-desc').innerText = t.lockDesc;
@@ -292,11 +359,11 @@ function render() {
   document.getElementById('btn-next').innerText = t.nextBtn;
   document.getElementById('footer-content').innerHTML = t.footerText;
 
-  document.getElementById('q-counter').innerText = `${t.qPrefix} ${curIdx + 1} / ${DB.length}`;
-  document.getElementById('bar-fill').style.width = `${((curIdx + 1) / DB.length) * 100}%`;
+  document.getElementById('q-counter').innerText = `${t.qPrefix} ${curIdx + 1} / ${curDB.length}`;
+  document.getElementById('bar-fill').style.width = `${((curIdx + 1) / curDB.length) * 100}%`;
   document.getElementById('q-tag').innerText = `${t.qPrefix} ${curIdx + 1} (${item.score}${t.ptText})`;
 
-  // 문제: 1순위 시험장 한국어(크게) -> 2순위 모국어 직관 해석(하늘색 박스)
+  // 한국어 원문 크게
   document.getElementById('q-title-ko').innerText = item.q.ko;
   const qTransBox = document.getElementById('q-title-trans');
   if (curLang === 'ko') {
@@ -309,24 +376,29 @@ function render() {
 
   const optContainer = document.getElementById('options-container');
   optContainer.innerHTML = '';
-
-  // 보기: 1순위 시험장 한국어(크게 흰색) -> 2순위 모국어 해석(하늘색 안내)
   const koOpts = item.options.ko;
   const transOpts = item.options[curLang] || item.options.ko;
 
   koOpts.forEach((koTxt, i) => {
     const btn = document.createElement('div');
     btn.className = 'opt';
-    if (answered[curIdx] !== undefined) {
-      if (i + 1 === item.answer) btn.classList.add('ok');
-      else if (answered[curIdx] === i + 1) btn.classList.add('no');
+    
+    if (curMode === 'study') {
+      // 학습 모드: 즉시 정답/오답 표시
+      if (answered[curIdx] !== undefined) {
+        if (i + 1 === item.answer) btn.classList.add('ok');
+        else if (answered[curIdx] === i + 1) btn.classList.add('no');
+      }
+    } else {
+      // 실전 모의고사 모드: 선택한 보기만 하늘색 표시 (정답은 숨김)
+      if (answered[curIdx] === i + 1) {
+        btn.classList.add('selected');
+      }
     }
     
     const transTxt = transOpts[i] || '';
     let innerHtml = `<span class="num">${i + 1}</span><div style="flex:1;">`;
-    // 시험장 한국어 (크게)
     innerHtml += `<div class="opt-text" style="font-size:16px; font-weight:700; color:#fff;">${koTxt}</div>`;
-    // 모국어 해석 (직관적 보조)
     if (curLang !== 'ko' && transTxt) {
       innerHtml += `<div style="font-size:13.5px; color:var(--acc); margin-top:4px; line-height:1.35; font-weight:500;">↳ ${transTxt}</div>`;
     }
@@ -338,7 +410,7 @@ function render() {
   });
 
   const expBox = document.getElementById('explain-box');
-  if (answered[curIdx] !== undefined) {
+  if (curMode === 'study' && answered[curIdx] !== undefined) {
     expBox.style.display = 'block';
     document.getElementById('explain-title').innerText = `${t.ansTitle}: ${item.answer}번`;
     document.getElementById('explain-text').innerText = item.explain[curLang] || item.explain.ko;
@@ -348,7 +420,7 @@ function render() {
 }
 
 function selectOpt(n) {
-  if (answered[curIdx] !== undefined) return;
+  if (curMode === 'study' && answered[curIdx] !== undefined) return;
   answered[curIdx] = n;
   render();
 }
@@ -361,15 +433,57 @@ function prevQ() {
 }
 
 function nextQ() {
-  if (curIdx < DB.length - 1) {
+  if (curIdx < curDB.length - 1) {
     curIdx++;
     render();
   } else {
-    const t = UI_TEXT[curLang] || UI_TEXT.ko;
-    alert(t.endAlert);
-    const lockEl = document.querySelector('.cta-lock');
-    if (lockEl) lockEl.scrollIntoView({ behavior: 'smooth' });
+    if (curMode === 'study') {
+      const t = UI_TEXT[curLang] || UI_TEXT.ko;
+      alert(t.endAlert);
+    } else {
+      alert("마지막 문항입니다. 상단의 [답안 최종 제출] 버튼을 눌러 점수를 확인하세요!");
+    }
   }
+}
+
+function submitExam() {
+  if (timerInterval) clearInterval(timerInterval);
+  let totalScore = 0;
+  let correctCount = 0;
+
+  curDB.forEach((item, idx) => {
+    if (answered[idx] === item.answer) {
+      totalScore += item.score;
+      correctCount++;
+    }
+  });
+
+  const isPass1 = totalScore >= 70;
+  const isPass2 = totalScore >= 60;
+  const resCard = document.getElementById('result-card');
+  const stampEl = document.getElementById('result-stamp');
+  const scoreEl = document.getElementById('result-score');
+  const verdictEl = document.getElementById('result-verdict');
+
+  scoreEl.innerText = `${totalScore}점 (총 40문항 중 ${correctCount}개 정답)`;
+
+  if (isPass1) {
+    stampEl.innerHTML = `<span class="stamp-pass">🎉 1종·2종 합격 (PASS)</span>`;
+    verdictEl.innerText = "축하합니다! 1종 보통(70점)과 2종 보통(60점) 합격 기준을 모두 여유롭게 통과하셨습니다.";
+  } else if (isPass2) {
+    stampEl.innerHTML = `<span class="stamp-pass">🎉 2종 합격 (PASS)</span>`;
+    verdictEl.innerText = "2종 보통 합격 기준(60점 이상)을 통과하셨습니다! 1종 보통 합격을 위해 오답을 복습해 보세요.";
+  } else {
+    stampEl.innerHTML = `<span class="stamp-fail">⚠️ 불합격 (FAIL)</span>`;
+    verdictEl.innerText = "합격 기준(60점)에 도달하지 못했습니다. 틀린 문제를 복습하고 다시 도전해 보세요!";
+  }
+
+  resCard.style.display = 'block';
+  resCard.scrollIntoView({ behavior: 'smooth' });
+}
+
+function restartExam() {
+  switchMode('exam');
 }
 
 function changeLang(lang) {
@@ -379,18 +493,17 @@ function changeLang(lang) {
   render();
 }
 
-// 토스페이먼츠 공식 인증 결제위젯 연동
-const clientKey = 'test_gck_docs_Ovk5rk1EwkEbP0W43n07xlzm'; // 토스 공식 개발연동 클라이언트 키
+// 토스페이먼츠 연동
+const clientKey = 'test_gck_docs_Ovk5rk1EwkEbP0W43n07xlzm';
 const customerKey = 'CUST_' + Math.random().toString(36).substring(2, 10);
 let paymentWidget;
 
 try {
   paymentWidget = PaymentWidget(clientKey, customerKey);
 } catch (e) {
-  console.log('PaymentWidget load deferred');
+  console.log('PaymentWidget defer');
 }
 
-// 결제 완료 여부 체크
 function checkUnlocked() {
   if (localStorage.getItem('koreapass_unlocked') === 'true') {
     const lockEl = document.querySelector('.cta-lock');
@@ -421,7 +534,6 @@ function requestPay() {
       failUrl: window.location.origin + window.location.pathname.replace('index.html', '') + 'fail.html',
     }).catch(function (error) {
       if (error.code === 'USER_CANCEL') {
-        // 사용자 취소
       } else {
         alert(error.message);
       }
@@ -430,16 +542,10 @@ function requestPay() {
     alert("결제 모듈을 준비 중입니다. 잠시 후 다시 시도해 주세요.");
   }
 }
+
 function openKmong() {
-  // 크몽 등록 상품 URL (또는 준비된 결제 링크)
   alert("크몽 결제창으로 이동합니다. (구매 즉시 60일 올패스 코드가 발급됩니다)");
   window.open("https://kmong.com", "_blank");
-}
-
-function openForeignPay() {
-  // 외국인 해외카드 / 페이팔
-  alert("Foreigner / Overseas Payment: PayPal, Alipay & International Cards are supported.");
-  window.open("https://www.paypal.com", "_blank");
 }
 </script>
 </body>
