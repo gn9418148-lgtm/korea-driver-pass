@@ -8,7 +8,8 @@
       "uz": "Yo'l harakati to'g'risidagi qonunga ko'ra 'Sekin harakatlanish' (서행) tushunchasining to'g'ri ta'rifi qaysi?",
       "ne": "सवारी नियम अनुसार 'बिस्तारै हाँक्नु' (서행) भन्नाले के बुझिन्छ?",
       "en": "Under the Road Traffic Act, which of the following correctly describes 'slow driving' (서행)?",
-      "zh": "根据《道路交通法》，关于'慢行'的正确说明是？"
+      "zh": "根据《道路交通法》，关于'慢行'的正确说明是？",
+      "vi": "Theo Luật Giao thông Đường bộ Hàn Quốc, giải thích nào sau đây về 'đi chậm' (서행) là đúng?"
     },
     "options": {
       "ko": [
@@ -40,6 +41,12 @@
         "驾驶人能随时立即停车的慢速行驶",
         "在危险场所开启危险报警闪光灯行驶",
         "与前车保持安全距离行驶"
+      ],
+      "vi": [
+        "Đi với tốc độ dưới 20 km/h",
+        "Đi với tốc độ chậm để người lái có thể dừng xe ngay lập tức khi cần",
+        "Bật đèn khẩn cấp và di chuyển qua các khu vực nguy hiểm",
+        "Duy trì khoảng cách an toàn với xe phía trước khi di chuyển"
       ]
     },
     "answer": 2,
@@ -48,7 +55,8 @@
       "uz": "'Sekin haydash' (서행) degani – haydovchi xavf yuzaga kelganda transport vositasini bir zumda to'xtata oladigan darajadagi sekin tezlikni bildiradi.",
       "ne": "'बिस्तारै हाँक्नु' (서행) भन्नाले चालकले गाडीलाई तुरुन्तै रोक्न सक्ने गरी सुस्त गतिमा हाँक्नु हो।",
       "en": "'Slow driving' means proceeding at a slow speed that allows the driver to stop the vehicle immediately.",
-      "zh": "'慢行'是指驾驶人能随时立即停车的慢速行驶，法律并未规定具体的时速数值。"
+      "zh": "'慢行'是指驾驶人能随时立即停车的慢速行驶，法律并未规定具体的时速数值。",
+      "vi": "'Đi chậm' (서행) là tốc độ chậm giúp tài xế có thể dừng xe ngay lập tức, luật không quy định con số km/h cụ thể."
     }
   },
   {
@@ -60,7 +68,8 @@
       "uz": "Yo'l harakati qoidalariga ko'ra, chapga yoki o'ngga burilishda burilish signalini berish vaqti qaysi?",
       "ne": "ट्राफिक नियम अनुसार दायाँ वा बायाँ मोड्दा साइड लाइट दिने सही समय कुन हो?",
       "en": "Under the Road Traffic Act, when should a driver signal when intending to turn left or right?",
-      "zh": "根据道路交通法令，准备左转或右转时的正确打灯时机是？"
+      "zh": "根据道路交通法令，准备左转或右转时的正确打灯时机是？",
+      "vi": "Theo Luật Giao thông, khi muốn rẽ trái hoặc rẽ phải, người lái xe phải bật xi-nhan trước bao nhiêu mét trên đường thông thường?"
     },
     "options": {
       "ko": [
@@ -92,6 +101,12 @@
         "在路口内改变方向时",
         "到达转向地点（路口）前30米（高速公路100米）以上地点",
         "到达转向地点前10米以上地点"
+      ],
+      "vi": [
+        "Trước 10 mét",
+        "Trước 20 mét",
+        "Trước 30 mét",
+        "Trước 50 mét"
       ]
     },
     "answer": 3,
@@ -100,7 +115,8 @@
       "uz": "Oddiy yo'llarda chorrahagacha 30 metr, avtomagistrallarda esa 100 metr qolganda burilish chirog'ini yoqish shart.",
       "ne": "साधारण सडकमा चौबाटोभन्दा ३० मिटर र राजमार्गमा १०० मिटर अगावै साइड लाइट बाल्नुपर्छ।",
       "en": "Turn signals must be activated at least 30 meters before intersections on general roads (100 meters on expressways).",
-      "zh": "普通道路在路口前30米以上，高速公路在100米以上必须提前开启转向灯以防追尾。"
+      "zh": "普通道路在路口前30米以上，高速公路在100米以上必须提前开启转向灯以防追尾。",
+      "vi": "Trên đường thông thường phải bật xi-nhan trước điểm rẽ ít nhất 30m, trên đường cao tốc là trước 100m."
     }
   },
   {
@@ -112,7 +128,8 @@
       "uz": "'Himoyalanmagan chapga burilish' (비보호 좌회전) chorrahasida chapga burilishning to'g'ri qoidasi qaysi?",
       "ne": "'असंरक्षित बायाँ मोड' (비보호 좌회전) चौबाटोमा बायाँ मोड्ने सही तरिका कुन हो?",
       "en": "Under the Road Traffic Act, what is the correct way to make an 'unprotected left turn' (비보호 좌회전)?",
-      "zh": "根据道路交通法，在'非保护左转'路口左转的正确方法是？"
+      "zh": "根据道路交通法，在'非保护左转'路口左转的正确方法是？",
+      "vi": "Tại ngã tư có biển 'Rẽ trái không được bảo vệ' (비보호 좌회전), cách rẽ trái nào sau đây là đúng?"
     },
     "options": {
       "ko": [
@@ -144,6 +161,12 @@
         "仅在黄灯时可以左转。",
         "对面车辆无优先权因此随时可以左转。",
         "绿灯时在不妨碍对面直行车辆通行的情况下左转。"
+      ],
+      "vi": [
+        "Chỉ được rẽ trái khi đèn đỏ",
+        "Rẽ trái khi đèn xanh, chú ý nhường đường cho xe đi thẳng chiều ngược lại",
+        "Rẽ trái bất cứ lúc nào bất kể tín hiệu đèn",
+        "Bấm còi liên tục và rẽ trái nhanh chóng"
       ]
     },
     "answer": 4,
@@ -152,7 +175,8 @@
       "uz": "Himoyalanmagan chapga burilish FAQAT 'yashil chiroq'da, qarama-qarshi harakat xavfsiz bo'lganda amalga oshiriladi. Qizil chiroqda burilish qoidabuzarlikdir.",
       "ne": "असंरक्षित बायाँ मोड सधैं 'हरियो बत्ती' मा विपरित गाडी नआउँदा मात्र गर्नुपर्छ। रातो बत्तीमा मोड्नु नियम उल्लंघन हो।",
       "en": "Unprotected left turns MUST be made only on a GREEN signal when oncoming traffic is clear.",
-      "zh": "非保护左转必须在'绿灯'且对面无直行来车时通行。红灯左转属于闯红灯违章行为。"
+      "zh": "非保护左转必须在'绿灯'且对面无直行来车时通行。红灯左转属于闯红灯违章行为。",
+      "vi": "Rẽ trái không bảo vệ (비보호) chỉ được rẽ khi ĐÈN XANH và phải nhường đường tuyệt đối cho xe đi thẳng đối diện."
     }
   },
   {
@@ -164,7 +188,8 @@
       "uz": "Yo'l harakati qoidalariga ko'ra kechasi yo'lda yurganda faralarni yoqish qoidasi qaysi?",
       "ne": "राति सडकमा गाडी चलाउँदा हेडलाइट बाल्ने सही नियम कुन हो?",
       "en": "Under the Road Traffic Act, when must a driver turn on the headlights when driving on the road at night?",
-      "zh": "根据道路交通法令，夜间在道路上行驶时开启前照灯的正确规定是？"
+      "zh": "根据道路交通法令，夜间在道路上行驶时开启前照灯的正确规定是？",
+      "vi": "Theo quy định, khi lái xe vào ban đêm trên đường, đèn nào sau đây bắt buộc phải bật?"
     },
     "options": {
       "ko": [
@@ -196,6 +221,12 @@
         "日落后至日出前开启。",
         "变暗时由驾驶人自行决定开启。",
         "路灯开启后至关闭前开启。"
+      ],
+      "vi": [
+        "Chỉ bật đèn chiếu hậu",
+        "Đèn pha (đèn trước), đèn hậu, đèn biển số xe",
+        "Chỉ bật đèn sương mù",
+        "Chỉ bật đèn xi-nhan khẩn cấp"
       ]
     },
     "answer": 2,
@@ -204,7 +235,8 @@
       "uz": "Qonunda tungi chiroqlarni yoqish vaqti 'quyosh botgandan quyosh chiqqungacha' deb aniq belgilangan.",
       "ne": "कानून अनुसार रातिको लाइट बाल्ने समय 'सूर्यास्तदेखि सूर्योदयसम्म' भनी तोकिएको छ।",
       "en": "The law explicitly defines night lighting as 'from sunset to sunrise'.",
-      "zh": "道路交通法明确规定夜间车灯开启标准为'日落后至日出前'。"
+      "zh": "道路交通法明确规定夜间车灯开启标准为'日落后至日出前'。",
+      "vi": "Lái xe ban đêm bắt buộc phải bật đồng thời đèn pha, đèn hậu và đèn soi biển số xe theo luật định."
     }
   },
   {
@@ -216,7 +248,8 @@
       "uz": "Bolalar xavfsizligi hududida (School Zone) tezlik chegarasini buzganlik uchun jarima haqida to'g'ri fikr qaysi?",
       "ne": "बालबालिका सुरक्षा क्षेत्र (School Zone) भित्र गति सीमा उल्लंघन गर्दा लाग्ने जरिवानाबारे सही कुरा कुन हो?",
       "en": "Which of the following is correct regarding traffic fines for speeding in a Child Protection Zone (School Zone)?",
-      "zh": "在儿童保护区内违反限速规定时的罚款说明，正确的是？"
+      "zh": "在儿童保护区内违反限速规定时的罚款说明，正确的是？",
+      "vi": "Mức xử phạt và điểm trừ đối với hành vi vi phạm tốc độ trong Khu vực Bảo vệ Trẻ em (스쿨존) từ 8h đến 20h là bao nhiêu?"
     },
     "options": {
       "ko": [
@@ -248,6 +281,12 @@
         "24小时按3倍加重处罚。",
         "周末及公休日不予加重处罚。",
         "未见儿童时与普通道路相同."
+      ],
+      "vi": [
+        "Xử phạt như đường bình thường",
+        "Phạt gấp đôi mức phạt thông thường",
+        "Chỉ cảnh cáo miệng",
+        "Phạt gấp ba lần mức thông thường"
       ]
     },
     "answer": 1,
@@ -256,7 +295,8 @@
       "uz": "Maktab zonalarida soat 08:00 dan 20:00 gacha tezlik va svetofor qoidabuzarliklari uchun jarimalar 2 barobar oshiriladi.",
       "ne": "बालबालिका सुरक्षा क्षेत्रमा बिहान ८ देखि साँझ ८ बजेसम्म ट्राफिक नियम उल्लंघनमा २ गुणा बढी जरिवाना लाग्छ।",
       "en": "Traffic violation fines and demerit points are doubled from 8:00 AM to 8:00 PM in school zones.",
-      "zh": "在儿童保护区内，早8点至晚8点期间，闯红灯、超速等违章处罚均按普通道路标准的2倍加重执行。"
+      "zh": "在儿童保护区内，早8点至晚8点期间，闯红灯、超速等违章处罚均按普通道路标准的2倍加重执行。",
+      "vi": "Trong khu vực trường học (스쿨존) từ 8h đến 20h hàng ngày, mức phạt tiền và điểm trừ bị áp dụng GẤP ĐÔI."
     }
   },
   {
@@ -268,7 +308,8 @@
       "uz": "Qondagi spirt miqdori necha foizdan oshganda haydovchilik guvohnomasi butunlay bekor qilinadi (bekor qilish jazosi)?",
       "ne": "रगतमा रक्सीको मात्रा कति प्रतिशत भन्दा बढी भएमा लाइसेन्स खारेज गरिन्छ?",
       "en": "Under the Road Traffic Act, at what Blood Alcohol Concentration (BAC) is a driver's license revoked?",
-      "zh": "根据道路交通法，血液酒精浓度达到百分之多少以上时会被吊销机动车驾驶证？"
+      "zh": "根据道路交通法，血液酒精浓度达到百分之多少以上时会被吊销机动车驾驶证？",
+      "vi": "Theo Luật Giao thông, nồng độ cồn trong máu (BAC) từ bao nhiêu trở lên thì bị TƯỚC BẰNG LÁI XE?"
     },
     "options": {
       "ko": [
@@ -300,6 +341,12 @@
         "0.05%以上",
         "0.08%以上",
         "0.10%以上"
+      ],
+      "vi": [
+        "0,03% trở lên",
+        "0,05% trở lên",
+        "0,08% trở lên",
+        "0,10% trở lên"
       ]
     },
     "answer": 3,
@@ -308,7 +355,8 @@
       "uz": "0.03% dan 0.08% gacha – to'xtatish (100 kun), 0.08% dan yuqori bo'lsa – guvohnoma 'bekor qilinadi'.",
       "ne": "०.०३% देखि ०.०८% सम्म 'निलम्बन' (१०० दिन) र ०.०८% भन्दा माथि 'खारेज' गरिन्छ।",
       "en": "A BAC of 0.03% to under 0.08% results in license suspension; 0.08% or higher results in license revocation.",
-      "zh": "血液酒精浓度0.03%以上至未满0.08%为暂扣驾驶证（100天），0.08%以上为直接'吊销'驾驶证。"
+      "zh": "血液酒精浓度0.03%以上至未满0.08%为暂扣驾驶证（100天），0.08%以上为直接'吊销'驾驶证。",
+      "vi": "Nồng độ cồn từ 0,03% ~ dưới 0,08% bị treo bằng 100 ngày; từ 0,08% trở lên bị TƯỚC BẰNG (hủy giấy phép)."
     }
   },
   {
@@ -320,7 +368,8 @@
       "uz": "Avtomagistralda mashina buzilib to'xtab qolganda, kunduz kuni xavfsizlik uchburchagi mashinadan kamida necha metr orqaga qo'yilishi kerak?",
       "ne": "राजमार्गमा गाडी बिग्रिएर रोकिँदा दिउँसोको समयमा आपतकालीन त्रिकोण (Safety Triangle) गाडीभन्दा कति मिटर पछाडि राख्नुपर्छ?",
       "en": "When a vehicle stops on an expressway due to breakdown, what is the minimum distance behind the vehicle to place a safety triangle during the day?",
-      "zh": "在高速公路上因车辆故障等停车时，白天应在车后至少多远距离放置安全警告三脚架？"
+      "zh": "在高速公路上因车辆故障等停车时，白天应在车后至少多远距离放置安全警告三脚架？",
+      "vi": "Khi xe bị hỏng phải dừng trên đường cao tốc vào ban ngày, biển cảnh báo nguy hiểm phải đặt cách sau xe bao nhiêu mét?"
     },
     "options": {
       "ko": [
@@ -352,6 +401,12 @@
         "车后方100米以上地点",
         "后方来车能够清晰识别的安全地点",
         "车辆后备箱正后方"
+      ],
+      "vi": [
+        "Ngay sát đuôi xe",
+        "Nơi người đi sau dễ nhìn thấy (khuyến nghị ban ngày 100m, ban đêm kèm đèn nháy)",
+        "Cách 500 mét",
+        "Không cần đặt biển cảnh báo"
       ]
     },
     "answer": 3,
@@ -360,7 +415,8 @@
       "uz": "Qonun yangilangan: Endi qat'iy metr emas, orqadan kelayotgan haydovchi xavfsiz ko'ra oladigan qulay joyga o'rnatiladi.",
       "ne": "नियम परिमार्जन भई अहिले पछाडिका चालकले सुरक्षित रूपमा देख्न सक्ने ठाउँमा राख्नुपर्छ।",
       "en": "The law was amended from a strict meter rule to 'a location where approaching drivers from behind can clearly identify it' to prevent secondary accidents.",
-      "zh": "现行交规已修改，取消了原有的硬性米数规定，改为设置在'后方来车驾驶人能够确认的安全位置'以防二次事故。"
+      "zh": "现行交规已修改，取消了原有的硬性米数规定，改为设置在'后方来车驾驶人能够确认的安全位置'以防二次事故。",
+      "vi": "Phải đặt biển cảnh báo nguy hiểm ở khoảng cách an toàn phía sau xe nơi các phương tiện khác dễ dàng nhận biết."
     }
   },
   {
@@ -372,7 +428,8 @@
       "uz": "1-toifa oddiy haydovchilik guvohnomasiga (1종 보통) ega shaxs haydashi MUMKIN BO'LMAGAN transport vositasi qaysi?",
       "ne": "वर्ग १ साधारण (1종 보통) लाइसेन्स भएका व्यक्तिले चलाउन नमिल्ने सवारी साधन कुन हो?",
       "en": "Which of the following vehicles CANNOT be driven by a person holding a Type 1 Regular Driver's License?",
-      "zh": "持有第1类普通驾驶证（1종 보통）的人员，下列哪项车辆不可驾驶？"
+      "zh": "持有第1类普通驾驶证（1종 보통）的人员，下列哪项车辆不可驾驶？",
+      "vi": "Người có bằng lái xe Hạng 1 Thông thường (제1종 보통) KHÔNG ĐƯỢC PHÉP lái loại xe nào sau đây?"
     },
     "options": {
       "ko": [
@@ -404,6 +461,12 @@
         "载重12吨以下的货车",
         "总重量10吨以下的特殊作业车（拖车、清障车除外）",
         "乘载定员20人的客车"
+      ],
+      "vi": [
+        "Xe ô tô con dưới 10 chỗ ngồi",
+        "Xe tải có trọng tải dưới 12 tấn",
+        "Xe máy chuyên dùng có dung tích xi lanh trên 250cc",
+        "Xe đầu kéo rơ-moóc lớn (xe container chuyên dụng)"
       ]
     },
     "answer": 4,
@@ -412,7 +475,8 @@
       "uz": "1-toifa oddiy guvohnoma bilan faqat 15 kishilik mikroavtobusgacha mumkin. 16 tadan oshsa Katta litsenziya (대형) kerak.",
       "ne": "वर्ग १ साधारण लाइसेन्सले १५ सिटसम्म मात्र चलाउन पाइन्छ। १६ वा सोभन्दा बढीका लागि ठूलो लाइसेन्स (대형) चाहिन्छ।",
       "en": "Type 1 Regular licenses permit driving passenger vans with up to 15 seats. 16 seats or more require a Type 1 Large license.",
-      "zh": "1类普通驾照最多只能驾驶15座及以下客车，16座以上（如20座）必须持有1类大型（大巴）驾照。"
+      "zh": "1类普通驾照最多只能驾驶15座及以下客车，16座以上（如20座）必须持有1类大型（大巴）驾照。",
+      "vi": "Bằng 1종 보통 không được lái xe đầu kéo container lớn hoặc xe siêu trường siêu trọng chuyên dụng."
     }
   },
   {
@@ -424,7 +488,8 @@
       "uz": "Haydash paytida telefondan foydalanganlik uchun jarima balli va jarima miqdori haqida to'g'ri fikr qaysi?",
       "ne": "गाडी चलाउँदा मोबाइल फोन प्रयोग गरेको भेटिएमा लाग्ने जरिवाना र डिमेरिट अंकबारे सही कुरा कुन हो?",
       "en": "Which of the following is correct regarding penalty points and fines for using a mobile phone while driving?",
-      "zh": "驾车途中使用手机被查处时，关于罚分与罚款的正确说明是？"
+      "zh": "驾车途中使用手机被查处时，关于罚分与罚款的正确说明是？",
+      "vi": "Mức phạt và điểm trừ đối với hành vi sử dụng điện thoại di động khi đang lái xe là bao nhiêu (đối với xe con)?"
     },
     "options": {
       "ko": [
@@ -456,6 +521,12 @@
         "罚分30分，乘用车罚款10万韩元",
         "不记分仅处以罚款",
         "警告后免予处罚"
+      ],
+      "vi": [
+        "Phạt 60.000 won + trừ 15 điểm",
+        "Phạt 30.000 won + không trừ điểm",
+        "Phạt 100.000 won + trừ 30 điểm",
+        "Chỉ phạt tiền không trừ điểm"
       ]
     },
     "answer": 1,
@@ -464,7 +535,8 @@
       "uz": "Haydash vaqtida telefondan foydalanish 15 jarima balli va 60,000 won jarima bilan jazolanadi.",
       "ne": "गाडी चलाउँदा फोन प्रयोग गरेमा १५ अंक र ६०,००० वन जरिवाना लाग्छ।",
       "en": "Using a phone while driving incurs 15 penalty points and a ₩60,000 fine for regular passenger cars.",
-      "zh": "驾车途中使用手机将被处以扣15分、普通私家车罚款6万韩元（面包车7万韩元）。"
+      "zh": "驾车途中使用手机将被处以扣15分、普通私家车罚款6万韩元（面包车7万韩元）。",
+      "vi": "Sử dụng điện thoại khi lái xe (xe con) bị phạt 60.000 won và phạt 15 điểm bằng lái."
     }
   },
   {
@@ -476,7 +548,8 @@
       "uz": "Piyoda piyodalar o'tish joyidan (zebra) o'tayotganda haydovchining to'g'ri harakati qaysi?",
       "ne": "पैदलयात्री जेब्रा क्रसिङ पार गर्दै गर्दा चालकले गर्नुपर्ने सही कदम कुन हो?",
       "en": "What is the correct action for a driver when a pedestrian is crossing a crosswalk?",
-      "zh": "行人正在通过人行横道时，驾驶人的正确做法是？"
+      "zh": "行人正在通过人行横道时，驾驶人的正确做法是？",
+      "vi": "Hành vi đúng đắn của người lái xe khi có người đi bộ đang qua đường tại vạch kẻ đường (người đi bộ) là gì?"
     },
     "options": {
       "ko": [
@@ -508,6 +581,12 @@
         "在人行横道前立即停车，等待行人完全通过。",
         "从行人后方迅速绕行通过。",
         "开启双闪并在行人之前抢先通过。"
+      ],
+      "vi": [
+        "Bấm còi giục người đi bộ đi nhanh hơn",
+        "Dừng xe hoàn toàn trước vạch dừng để nhường đường",
+        "Lách qua phía sau người đi bộ để đi tiếp",
+        "Nháy đèn pha cảnh báo rồi tiếp tục di chuyển"
       ]
     },
     "answer": 2,
@@ -516,7 +595,8 @@
       "uz": "Qonunga ko'ra piyoda o'tayotganda yoki o'tmoqchi bo'lib turganda ham zebra oldida MUTLAQO to'liq to'xtash shart.",
       "ne": "पैदलयात्री पार गर्दै गर्दा वा गर्न लाग्दा जेब्रा क्रसिङ अगाडि अनिवार्य 'पूर्ण विराम' गर्नुपर्छ।",
       "en": "Under the revised Road Traffic Act, drivers MUST come to a complete stop before the crosswalk when pedestrians are crossing or about to cross.",
-      "zh": "新交规严格规定，行人正在过马路或'正准备过马路'时，车辆必须在斑马线前完全停车等待。"
+      "zh": "新交规严格规定，行人正在过马路或'正准备过马路'时，车辆必须在斑马线前完全停车等待。",
+      "vi": "Tài xế bắt buộc phải DỪNG XE HOÀN TOÀN trước vạch đi bộ khi có người đang qua hoặc chuẩn bị qua đường."
     }
   },
   {
