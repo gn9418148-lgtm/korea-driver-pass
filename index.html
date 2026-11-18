@@ -379,7 +379,6 @@ function switchMode(mode) {
   }
 
   curMode = mode;
-  curIdx = 0;
   answered = {};
   document.getElementById('result-card').style.display = 'none';
 
@@ -389,11 +388,16 @@ function switchMode(mode) {
     document.getElementById('exam-bar').style.display = 'none';
     if (timerInterval) clearInterval(timerInterval);
     curDB = DB_STUDY;
+    // 학습 모드 진도 이어풀기 복원
+    const savedIdx = parseInt(localStorage.getItem('koreapass_study_idx_' + curLang) || '0', 10);
+    curIdx = (savedIdx >= 0 && savedIdx < curDB.length) ? savedIdx : 0;
   } else {
     document.getElementById('tab-study').classList.remove('active');
     document.getElementById('tab-exam').classList.add('active');
     document.getElementById('exam-bar').style.display = 'flex';
-    curDB = DB_EXAM;
+    // 실전 모의고사: 매회 40문항 순서 랜덤 셔플 (실제 공단 시험과 100% 동일)
+    curDB = [...DB_EXAM].sort(() => Math.random() - 0.5);
+    curIdx = 0;
     startTimer();
   }
   render();
@@ -551,10 +555,27 @@ function nextQ() {
 
   if (curIdx < curDB.length - 1) {
     curIdx++;
+    if (curMode === 'study') {
+      localStorage.setItem('koreapass_study_idx_' + curLang, curIdx);
+    }
     render();
   } else {
     if (curMode === 'study') {
-      alert(t.endAlert);
+      if (isUnlocked) {
+        const completeMsg = {
+          ko: "🎉 축하합니다! 학습 모드의 모든 문항(40문항)을 확인하셨습니다.\n상단의 [⏱️ 실전 모의고사]를 눌러 40분 타이머로 실전 시험에 도전해보세요!",
+          uz: "🎉 Tabriklaymiz! O'rganish rejimining barcha savollarini ko'rib chiqdingiz.\nEndi yuqoridagi [⏱️ Haqiqiy imtihon] tugmasini bosib o'zingizni sinab ko'ring!",
+          ne: "🎉 बधाई छ! तपाईंले सबै प्रश्नहरू अध्ययन गर्नुभयो।\nमाथिको [⏱️ वास्तविक परीक्षा] थिचेर वास्तविक परीक्षा दिनुहोस्!",
+          vi: "🎉 Chúc mừng bạn đã hoàn thành tất cả câu hỏi ôn tập!\nHãy nhấn [⏱️ Thi thử] ở trên để làm bài thi 40 phút như thi thật!",
+          en: "🎉 Congratulations! You have completed all study questions.\nTap [⏱️ Real Exam Simulator] above to take the timed 40-minute test!",
+          zh: "🎉 恭喜！您已完成全部学习模式试题。\n请点击顶部的【⏱️ 全真模拟考场】开始40分钟限时模考！"
+        };
+        alert(completeMsg[curLang] || completeMsg.ko);
+      } else {
+        alert(t.endAlert);
+        const lockEl = document.querySelector('.cta-lock');
+        if (lockEl) lockEl.scrollIntoView({ behavior: 'smooth' });
+      }
     } else {
       const examEndMsg = {
         ko: "마지막 문항입니다. 상단의 [답안 최종 제출] 버튼을 눌러 점수를 확인하세요!",
