@@ -1,72 +1,190 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>결제 완료 - KoreaPass</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Complete | Korea Driver's License Pass</title>
 <style>
-body { background: #0d1b2a; color: #fff; font-family: sans-serif; text-align: center; padding: 50px 20px; }
-.card { background: #1b263b; border-radius: 16px; padding: 30px; max-width: 400px; margin: 0 auto; border: 1px solid #2b3a4a; }
-.icon { font-size: 50px; color: #06d6a0; margin-bottom: 20px; }
-h1 { font-size: 24px; margin-bottom: 10px; color: #06d6a0; }
-p { font-size: 15px; color: #8da4c4; line-height: 1.6; margin-bottom: 25px; }
-.btn { display: block; background: #00b4d8; color: #fff; padding: 14px; border-radius: 99px; text-decoration: none; font-weight: bold; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #F4F6F9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .box {
+    background: #fff;
+    border-radius: 20px;
+    padding: 36px 24px;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-top: 6px solid #10B981;
+  }
+  .icon { font-size: 54px; margin-bottom: 12px; }
+  h1 { font-size: 22px; color: #1E293B; margin: 0 0 10px; }
+  p { font-size: 15px; color: #475569; line-height: 1.6; margin-bottom: 20px; }
+  .code-box {
+    background: #ECFDF5;
+    border: 2px dashed #10B981;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-weight: 800;
+    color: #065F46;
+  }
+  .btn {
+    display: block;
+    background: #2563EB;
+    color: #fff;
+    text-decoration: none;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: 800;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+  }
+  .btn:disabled {
+    background: #94A3B8;
+    cursor: wait;
+  }
 </style>
 </head>
 <body>
-<div class="card">
-  <div class="icon">✓</div>
-  <h1 id="suc-title">결제가 완료되었습니다!</h1>
-  <p id="suc-desc">To'lov muvaffaqiyatli amalga oshirildi!<br>भुक्तानी सफल भयो!<br>Payment Successful!<br><br>이제 60일간 선택하신 언어의 1,000문항 전체와 모의고사를 무제한으로 이용하실 수 있습니다.</p>
-  <a href="./" id="btn-start" class="btn">학습 시작하기 (Start Learning)</a>
+<div class="box" id="box-card">
+  <div class="icon" id="status-icon">✅</div>
+  <h1 id="title">결제가 정상 완료되었습니다!</h1>
+  <p id="desc">60일 무제한 올패스 권한이 즉시 활성화되었습니다.<br>지금 바로 1,000문항 전체와 실전 모의고사를 시작하세요.</p>
+  <div class="code-box" id="badge">
+    🎉 60일 올패스 잠금 해제 완료 (자동 적용됨)
+  </div>
+  <button id="btn" class="btn" onclick="goStudy()">1,000문항 전체 문제 풀러 가기 👉</button>
 </div>
 <script>
-const SUCCESS_TEXT = {
-  ko: {
-    title: "결제가 완료되었습니다!",
-    desc: "이제 60일간 한국어 1,000문항 전체와 실전 모의고사를 무제한으로 이용하실 수 있습니다.",
-    btn: "학습 시작하기"
-  },
-  uz: {
-    title: "To'lov muvaffaqiyatli amalga oshirildi!",
-    desc: "Endi 60 kun davomida o'zbek tilidagi 1,000 ta to'liq savollar va haqiqiy imtihon simulyatoridan cheksiz foydalanishingiz mumkin.",
-    btn: "O'rganishni boshlash"
-  },
-  ne: {
-    title: "भुक्तानी सफल भयो!",
-    desc: "अब तपाइँ ६० दिनसम्म नेपाली भाषाका १,००० प्रश्नहरू र वास्तविक परीक्षा सिमुलेटर असीमित रूपमा प्रयोग गर्न सक्नुहुन्छ।",
-    btn: "सिक्न सुरु गर्नुहोस्"
-  },
-  vi: {
-    title: "Thanh toán thành công!",
-    desc: "Bây giờ bạn có thể sử dụng không giới hạn toàn bộ 1.000 câu hỏi tiếng Việt và thi thử trong 60 ngày.",
-    btn: "Bắt đầu học ngay"
-  },
-  en: {
-    title: "Payment Successful!",
-    desc: "You now have 60 days of unlimited access to all 1,000 English questions and real mock exams.",
-    btn: "Start Learning"
-  },
-  zh: {
-    title: "支付成功！",
-    desc: "您现在可在60天内无限次畅学中文1000道完整题库及全真模拟考试。",
-    btn: "开始学习"
+  const params = new URLSearchParams(window.location.search);
+  const lang = params.get('lang') || localStorage.getItem('koreapass_pending_lang') || 'ko';
+  const paymentKey = params.get('paymentKey') || '';
+  const orderId = params.get('orderId') || '';
+  const amount = params.get('amount') || '';
+
+  // Cloudflare Worker / 서버리스 결제 승인 엔드포인트 (설정 시 서버 승인 검증 수행)
+  const CONFIRM_ENDPOINT = window.KOREAPASS_CONFIRM_URL || '';
+
+  const TEXT = {
+    ko: {
+      title: "결제가 정상 완료되었습니다!",
+      verifying: "결제 승인 확인 중입니다...",
+      desc: "60일 무제한 올패스 권한이 즉시 활성화되었습니다.<br>지금 바로 1,000문항 전체와 실전 모의고사를 시작하세요.",
+      badge: "🎉 60일 올패스 잠금 해제 완료 (자동 적용됨)",
+      btn: "1,000문항 전체 문제 풀러 가기 👉",
+      invalid: "결제 인증 정보가 확인되지 않았습니다. 메인 화면으로 이동합니다."
+    },
+    uz: {
+      title: "To'lov muvaffaqiyatli yakunlandi!",
+      verifying: "To'lov tasdiqlanmoqda...",
+      desc: "60 kunlik cheksiz All-Pass huquqi darhol faollashtirildi.<br>Hoziroq barcha 1,000 ta savol va real imtihonni boshlang!",
+      badge: "🎉 60 kunlik All-Pass ochildi (Avtomatik faollashdi)",
+      btn: "1,000 ta savolni yechishni boshlash 👉",
+      invalid: "To'lov ma'lumotlari topilmadi. Asosiy sahifaga qaytilmoqda."
+    },
+    ne: {
+      title: "भुक्तानी सफलतापूर्वक सम्पन्न भयो!",
+      verifying: "भुक्तानी प्रमाणित हुँदैछ...",
+      desc: "६० दिने असीमित All-Pass तुरुन्तै सक्रिय भएको छ।<br>अहिले नै सम्पूर्ण १,००० प्रश्न रमक परीक्षा सुरु गर्नुहोस्!",
+      badge: "🎉 ६० दिने All-Pass अनलक भयो (स्वतः लागू)",
+      btn: "१,००० प्रश्नहरू अभ्यास गर्न जानुहोस् 👉",
+      invalid: "भुक्तानी विवरण फेला परेन। मुख्य पृष्ठमा फर्कँदैछ।"
+    },
+    vi: {
+      title: "Thanh toán đã hoàn tất thành công!",
+      verifying: "Đang xác nhận thanh toán...",
+      desc: "Quyền truy cập All-Pass 60 ngày không giới hạn đã được kích hoạt.<br>Hãy bắt đầu giải toàn bộ 1.000 câu hỏi và thi thử ngay!",
+      badge: "🎉 Đã mở khóa All-Pass 60 ngày (Tự động áp dụng)",
+      btn: "Bắt đầu giải 1.000 câu hỏi ngay 👉",
+      invalid: "Không tìm thấy thông tin thanh toán. Đang quay lại trang chính."
+    },
+    en: {
+      title: "Payment Successfully Completed!",
+      verifying: "Confirming your payment...",
+      desc: "Your 60-Day Unlimited All-Pass is now active.<br>Start practicing all 1,000 questions and full mock exams right away!",
+      badge: "🎉 60-Day All-Pass Unlocked (Automatically Applied)",
+      btn: "Start All 1,000 Questions Now 👉",
+      invalid: "Payment parameters missing. Returning to main page."
+    },
+    zh: {
+      title: "支付已成功完成！",
+      verifying: "正在确认支付结果...",
+      desc: "60天无限畅享通关权限已立即激活。<br>现在即可开始练习全部1,000道题与全真模拟考试！",
+      badge: "🎉 60天通关权限已解锁（已自动生效）",
+      btn: "立即开始练习1,000道全真题 👉",
+      invalid: "未检测到支付验证信息，正在返回主页。"
+    }
+  };
+
+  const t = TEXT[lang] || TEXT.ko;
+  document.documentElement.lang = lang;
+
+  function unlockAndRender() {
+    localStorage.setItem('koreapass_unlocked_' + lang, 'true');
+    if (orderId) localStorage.setItem('koreapass_order_' + lang, orderId);
+    document.getElementById('status-icon').innerText = '✅';
+    document.getElementById('title').innerText = t.title;
+    document.getElementById('desc').innerHTML = t.desc;
+    document.getElementById('badge').innerText = t.badge;
+    const btn = document.getElementById('btn');
+    btn.disabled = false;
+    btn.innerText = t.btn;
   }
-};
 
-// 결제창에서 넘어온 언어 파라미터 확인 (?lang=uz 등)
-const urlParams = new URLSearchParams(window.location.search);
-const payLang = urlParams.get('lang') || 'ko';
+  async function initPaymentConfirm() {
+    // paymentKey, orderId, amount 파라미터가 전혀 없이 직접 URL로 접근한 경우 차단
+    if (!paymentKey || !orderId || !amount) {
+      if (localStorage.getItem('koreapass_unlocked_' + lang) === 'true') {
+        unlockAndRender();
+        return;
+      }
+      alert(t.invalid);
+      window.location.replace('./?lang=' + encodeURIComponent(lang));
+      return;
+    }
 
-// 해당 언어만 잠금 해제 (타 언어 차단 격리)
-localStorage.setItem('koreapass_unlocked_' + payLang, 'true');
+    if (CONFIRM_ENDPOINT) {
+      const btn = document.getElementById('btn');
+      btn.disabled = true;
+      document.getElementById('status-icon').innerText = '⏳';
+      document.getElementById('title').innerText = t.verifying;
+      try {
+        const res = await fetch(CONFIRM_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ paymentKey, orderId, amount: Number(amount), lang })
+        });
+        const data = await res.json();
+        if (!res.ok || !data.ok) {
+          window.location.replace('./fail.html?lang=' + encodeURIComponent(lang) + '&code=' + encodeURIComponent(data.code || 'CONFIRM_ERROR') + '&message=' + encodeURIComponent(data.message || ''));
+          return;
+        }
+      } catch (err) {
+        console.error('Payment confirm endpoint error:', err);
+      }
+    }
 
-// 해당 언어로 화면 100% 현지화 렌더링
-const t = SUCCESS_TEXT[payLang] || SUCCESS_TEXT.ko;
-document.getElementById('suc-title').innerText = t.title;
-document.getElementById('suc-desc').innerText = t.desc;
-document.getElementById('btn-start').innerText = t.btn;
-document.getElementById('btn-start').href = './?lang=' + payLang;
+    unlockAndRender();
+  }
+
+  function goStudy() {
+    window.location.href = './?lang=' + encodeURIComponent(lang);
+  }
+
+  initPaymentConfirm();
 </script>
 </body>
 </html>

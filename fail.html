@@ -18,7 +18,14 @@ p { font-size: 15px; color: #8da4c4; line-height: 1.6; margin-bottom: 25px; }
   <div class="icon">✕</div>
   <h1>결제가 취소되었거나 실패했습니다</h1>
   <p>To'lov bekor qilindi yoki xatolik yuz berdi.<br>Payment failed or cancelled.<br><br>다시 시도해 주시기 바랍니다.</p>
-  <a href="/" class="btn">다시 시도하기 (Try Again)</a>
+  <a href="./" id="btn-retry" class="btn">다시 시도하기 (Try Again)</a>
 </div>
+<script>
+const p = new URLSearchParams(window.location.search);
+const lang = p.get('lang');
+if (lang) {
+  document.getElementById('btn-retry').href = './?lang=' + encodeURIComponent(lang);
+}
+</script>
 </body>
 </html>
