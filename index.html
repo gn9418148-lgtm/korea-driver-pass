@@ -346,19 +346,31 @@ if (langParam && UI_TEXT[langParam]) {
   });
 }
 
-// 데이터 로드
-Promise.all([
-  fetch('mock_sample_4lang.json').then(r => r.json()).catch(() => []),
-  fetch('mock_40_questions.json').then(r => r.json()).catch(() => [])
-]).then(([sampleData, examData]) => {
-  // 40문항 풀데이터 우선 적용 (uz, ne, vi, en, zh 완벽 탑재)
-  const masterData = (examData && examData.length) ? examData : sampleData;
-  DB_STUDY = masterData;
-  DB_EXAM = masterData;
-  curDB = DB_STUDY;
-  render();
-  checkUnlocked();
-});
+// 1,000문항 공식 문제은행 전체 데이터 로드
+fetch('questions_1000_bank.json')
+  .then(r => r.json())
+  .then(allData => {
+    if (allData && allData.length) {
+      DB_STUDY = allData;
+      // 실전 모의고사는 1,000문제 중 40문항을 무작위 추출하여 구성
+      DB_EXAM = allData;
+      curDB = DB_STUDY;
+      render();
+      checkUnlocked();
+    }
+  })
+  .catch(() => {
+    // 예외 대비 fallback
+    fetch('mock_40_questions.json')
+      .then(r => r.json())
+      .then(fallbackData => {
+        DB_STUDY = fallbackData;
+        DB_EXAM = fallbackData;
+        curDB = DB_STUDY;
+        render();
+        checkUnlocked();
+      });
+  });
 
 function switchMode(mode) {
   const isUnlocked = (localStorage.getItem('koreapass_unlocked_' + curLang) === 'true');
@@ -395,8 +407,8 @@ function switchMode(mode) {
     document.getElementById('tab-study').classList.remove('active');
     document.getElementById('tab-exam').classList.add('active');
     document.getElementById('exam-bar').style.display = 'flex';
-    // 실전 모의고사: 매회 40문항 순서 랜덤 셔플 (실제 공단 시험과 100% 동일)
-    curDB = [...DB_EXAM].sort(() => Math.random() - 0.5);
+    // 실전 모의고사: 1,000문항 문제은행에서 무작위 40문항 추출 (실제 공단 시험과 100% 동일)
+    curDB = [...DB_EXAM].sort(() => Math.random() - 0.5).slice(0, 40);
     curIdx = 0;
     startTimer();
   }
