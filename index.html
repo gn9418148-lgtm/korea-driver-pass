@@ -103,10 +103,11 @@ main { max-width: 580px; margin: 0 auto; padding: 14px 16px 120px; }
     </div>
   </div>
 
-  <!-- 모드 전환 탭: 연습 학습 모드 vs 실전 시험장 40분 모의고사 모드 -->
+  <!-- 모드 전환 탭: 연습 학습 모드 vs 실전 시험장 40분 모의고사 모드 vs 오답노트 -->
   <div class="mode-tabs">
     <button class="tab-btn active" id="tab-study" onclick="switchMode('study')">📖 학습 모드 (즉시 채점)</button>
     <button class="tab-btn" id="tab-exam" onclick="switchMode('exam')">⏱️ 실전 모의고사 (40문항·40분)</button>
+    <button class="tab-btn" id="tab-wrong" onclick="switchMode('wrong')">📝 오답노트 (<span id="wrong-count-badge">0</span>)</button>
   </div>
 
   <!-- 실전 모의고사 상단 상태바 (타이머 + 제출 버튼) -->
@@ -120,7 +121,10 @@ main { max-width: 580px; margin: 0 auto; padding: 14px 16px 120px; }
     <div id="result-stamp"></div>
     <h2 id="result-score" style="font-size:32px; color:#fff; margin-bottom:8px;">85점</h2>
     <p id="result-verdict" style="font-size:15px; color:var(--sub); margin-bottom:16px;">1종 보통 (70점 이상) 합격 / 2종 보통 (60점 이상) 합격</p>
-    <button class="btn-buy" style="background:var(--acc); color:#fff;" onclick="restartExam()">🔄 다시 모의고사 응시하기</button>
+    <div style="display:flex; gap:10px;">
+      <button class="btn-buy" style="background:var(--acc); color:#fff; flex:1;" onclick="restartExam()">🔄 다시 모의고사 응시</button>
+      <button class="btn-buy" style="background:var(--gold); color:#000; flex:1;" onclick="switchMode('wrong')">📝 틀린 문제 오답노트 복습</button>
+    </div>
   </div>
 
   <div class="progress-wrap">
@@ -197,6 +201,7 @@ const UI_TEXT = {
     guideDesc: "실제 한국 시험장 PC 화면에는 한국어로 문제가 나옵니다! 시험장에서 당황하지 않고 1번에 찍을 수 있도록 한국어를 눈에 익히고, 바로 아래 해석을 참고하세요.",
     tabStudy: "📖 학습 모드 (즉시 채점)",
     tabExam: "⏱️ 실전 모의고사 (40문항·40분)",
+    tabWrong: "📝 오답노트",
     badge: "무료 체험 모드 (10문항)",
     scoreMeta: "1종 보통 / 2종 보통 실전 규격",
     ansTitle: "정답",
@@ -220,6 +225,7 @@ const UI_TEXT = {
     guideDesc: "Koreyadagi haqiqiy imtihon kompyuterida savollar koreys tilida chiqadi! Imtihonda darhol tanib olishingiz uchun koreyscha matnni ko'z bilan eslab qoling va pastdagi o'zbekcha tarjimadan foydalaning.",
     tabStudy: "📖 O'rganish rejimi (Darhol tekshirish)",
     tabExam: "⏱️ Haqiqiy imtihon (40 ta savol · 40 daqiqa)",
+    tabWrong: "📝 Xatolar ustida ishlash",
     badge: "BEPUL SINOV (10 SAVOL)",
     scoreMeta: "1-TOIFA / 2-TOIFA (100% MOS)",
     ansTitle: "TO'G'RI JAVOB",
@@ -243,6 +249,7 @@ const UI_TEXT = {
     guideDesc: "कोरियाको वास्तविक परीक्षा हलको कम्प्युटरमा कोरियन भाषामा प्रश्न आउँछ! परीक्षामा नअल्मलिई तुरुन्तै मिलाउन कोरियन अक्षर आँखाले चिन्नुहोस् र तलको नेपाली अनुवाद हेर्नुहोस्।",
     tabStudy: "📖 अध्ययन मोड (तुरुन्तै उत्तर)",
     tabExam: "⏱️ वास्तविक परीक्षा (४० प्रश्न · ४० मिनेट)",
+    tabWrong: "📝 गलत उत्तर नोट",
     badge: "निःशुल्क अभ्यास (१० प्रश्न)",
     scoreMeta: "वर्ग १ / वर्ग २ लाइसेन्स",
     ansTitle: "सही उत्तर",
@@ -266,6 +273,7 @@ const UI_TEXT = {
     guideDesc: "Phòng thi thực tế tại Hàn Quốc hiển thị câu hỏi bằng tiếng Hàn! Hãy làm quen với mặt chữ tiếng Hàn để nhìn là chọn được ngay, đồng thời xem bản dịch tiếng Việt chi tiết ở ngay bên dưới.",
     tabStudy: "📖 Chế độ học tập (Xem đáp án ngay)",
     tabExam: "⏱️ Thi thử phòng thi (40 câu · 40 phút)",
+    tabWrong: "📝 Sổ câu sai",
     badge: "DÙNG THỬ MIỄN PHÍ (10 CÂU)",
     scoreMeta: "Bằng Lái Hạng 1 & Hạng 2",
     ansTitle: "ĐÁP ÁN ĐÚNG",
@@ -289,6 +297,7 @@ const UI_TEXT = {
     guideDesc: "The real exam computers in Korea display questions in Korean! Familiarize yourself with the original Korean phrasing while using the English explanation below to ensure a 1-shot pass.",
     tabStudy: "📖 Study Mode (Instant Answers)",
     tabExam: "⏱️ Real Exam Simulator (40 Qs · 40 Mins)",
+    tabWrong: "📝 Review Mistakes",
     badge: "FREE TRIAL (10 QUESTIONS)",
     scoreMeta: "Type 1 & Type 2 Licenses",
     ansTitle: "CORRECT ANSWER",
@@ -312,6 +321,7 @@ const UI_TEXT = {
     guideDesc: "韩国考场实际电脑考试是韩文出题！通过眼熟韩文原题关键词，结合下方中文逐题精准解析，助您在实际考场一眼秒选正确答案！",
     tabStudy: "📖 学习模式（即时查看解析）",
     tabExam: "⏱️ 全真考场模拟（40题·40分钟）",
+    tabWrong: "📝 错题集",
     badge: "免费体验（10题精选）",
     scoreMeta: "第1类 / 第2类 普通驾照",
     ansTitle: "正确答案",
@@ -372,17 +382,50 @@ fetch('questions_1000_bank.json')
       });
   });
 
+// 오답노트 관리 함수
+function getWrongIds() {
+  try {
+    return JSON.parse(localStorage.getItem('koreapass_wrong_ids_' + curLang) || '[]');
+  } catch (e) {
+    return [];
+  }
+}
+
+function saveWrongId(id) {
+  const list = getWrongIds();
+  if (!list.includes(id)) {
+    list.push(id);
+    localStorage.setItem('koreapass_wrong_ids_' + curLang, JSON.stringify(list));
+    updateWrongBadge();
+  }
+}
+
+function removeWrongId(id) {
+  let list = getWrongIds();
+  list = list.filter(x => x !== id);
+  localStorage.setItem('koreapass_wrong_ids_' + curLang, JSON.stringify(list));
+  updateWrongBadge();
+}
+
+function updateWrongBadge() {
+  const badge = document.getElementById('wrong-count-badge');
+  if (badge) {
+    const count = getWrongIds().length;
+    badge.innerText = count;
+  }
+}
+
 function switchMode(mode) {
   const isUnlocked = (localStorage.getItem('koreapass_unlocked_' + curLang) === 'true');
 
-  if (mode === 'exam' && !isUnlocked) {
+  if ((mode === 'exam' || mode === 'wrong') && !isUnlocked) {
     const lockAlertMsg = {
-      ko: "🔒 실전 모의고사는 60일 올패스 이용권 전용 기능입니다.\n아래 9,900원 결제 후 40문항 실전 모의고사와 1,000문항 전체 해설을 무제한 이용하세요!",
-      uz: "🔒 Haqiqiy imtihon simulyatori faqat 60 kunlik All-Pass obunachilari uchun!\nPastdagi 9,900 won to'lovni amalga oshirib, 40 talik imtihon va 1,000 ta to'liq savollarni oching.",
-      ne: "🔒 वास्तविक परीक्षा सिमुलेटर ६० दिने अल-पास प्रयोगकर्ताहरूको लागि मात्र उपलब्ध छ।\nतल ९,९०० वन भुक्तानी गरी ४० प्रश्नहरूको पूर्ण परीक्षा अनलक गर्नुहोस्!",
-      vi: "🔒 Tính năng thi thử 40 câu chỉ dành cho gói All-Pass 60 ngày.\nVui lòng thanh toán 9.900đ ở bên dưới để mở khóa toàn bộ!",
-      en: "🔒 Real Exam Simulator is an All-Pass exclusive feature.\nPlease purchase below to unlock 40-question mock exams & all 1,000 questions!",
-      zh: "🔒 全真模拟考场为60天全通关畅学卡专属功能。\n请在下方完成支付以解锁40题全真模拟与1000道题库！"
+      ko: "🔒 실전 모의고사 및 오답노트는 60일 올패스 이용권 전용 기능입니다.\n아래 9,900원 결제 후 40문항 실전 모의고사와 1,000문항 오답노트를 무제한 이용하세요!",
+      uz: "🔒 Haqiqiy imtihon va xatolar daftari All-Pass obunachilari uchun!\nPastdagi 9,900 won to'lovni amalga oshirib to'liq oching.",
+      ne: "🔒 वास्तविक परीक्षा र गलत उत्तर नोट अल-पास प्रयोगकर्ताहरूको लागि मात्र उपलब्ध छ।",
+      vi: "🔒 Tính năng thi thử và sổ câu sai chỉ dành cho gói All-Pass 60 ngày.",
+      en: "🔒 Real Exam Simulator & Mistake Notebook are exclusive features for All-Pass members.",
+      zh: "🔒 全真模拟考场及错题集为60天全通关畅学卡专属功能。"
     };
     alert(lockAlertMsg[curLang] || lockAlertMsg.ko);
     const lockEl = document.querySelector('.cta-lock');
@@ -394,25 +437,45 @@ function switchMode(mode) {
   answered = {};
   document.getElementById('result-card').style.display = 'none';
 
+  // 탭 활성화 UI 업데이트
+  document.getElementById('tab-study').classList.remove('active');
+  document.getElementById('tab-exam').classList.remove('active');
+  document.getElementById('tab-wrong').classList.remove('active');
+
   if (mode === 'study') {
     document.getElementById('tab-study').classList.add('active');
-    document.getElementById('tab-exam').classList.remove('active');
     document.getElementById('exam-bar').style.display = 'none';
     if (timerInterval) clearInterval(timerInterval);
     curDB = DB_STUDY;
     // 학습 모드 진도 이어풀기 복원
     const savedIdx = parseInt(localStorage.getItem('koreapass_study_idx_' + curLang) || '0', 10);
     curIdx = (savedIdx >= 0 && savedIdx < curDB.length) ? savedIdx : 0;
-  } else {
-    document.getElementById('tab-study').classList.remove('active');
+  } else if (mode === 'exam') {
     document.getElementById('tab-exam').classList.add('active');
     document.getElementById('exam-bar').style.display = 'flex';
-    // 실전 모의고사: 1,000문항 문제은행에서 무작위 40문항 추출 (실제 공단 시험과 100% 동일)
+    // 실전 모의고사: 1,000문항 문제은행에서 무작위 40문항 추출
     curDB = [...DB_EXAM].sort(() => Math.random() - 0.5).slice(0, 40);
     curIdx = 0;
     startTimer();
+  } else if (mode === 'wrong') {
+    document.getElementById('tab-wrong').classList.add('active');
+    document.getElementById('exam-bar').style.display = 'none';
+    if (timerInterval) clearInterval(timerInterval);
+    
+    // 저장된 오답 ID 기반으로 문제 DB 필터링
+    const wrongIds = getWrongIds();
+    const wrongQuestions = DB_STUDY.filter(item => wrongIds.includes(item.id));
+    
+    if (wrongQuestions.length === 0) {
+      alert("📝 현재 저장된 오답이 없습니다!\n학습 모드나 실전 모의고사에서 틀린 문제가 이곳에 자동으로 기록됩니다.");
+      switchMode('study');
+      return;
+    }
+    curDB = wrongQuestions;
+    curIdx = 0;
   }
   render();
+  updateWrongBadge();
 }
 
 function startTimer() {
@@ -504,8 +567,8 @@ function render() {
     const btn = document.createElement('div');
     btn.className = 'opt';
     
-    if (curMode === 'study') {
-      // 학습 모드: 즉시 정답/오답 표시
+    if (curMode === 'study' || curMode === 'wrong') {
+      // 학습 모드 & 오답노트: 즉시 정답/오답 표시
       if (answered[curIdx] !== undefined) {
         if (i + 1 === item.answer) btn.classList.add('ok');
         else if (answered[curIdx] === i + 1) btn.classList.add('no');
@@ -531,7 +594,7 @@ function render() {
   });
 
   const expBox = document.getElementById('explain-box');
-  if (curMode === 'study' && answered[curIdx] !== undefined) {
+  if ((curMode === 'study' || curMode === 'wrong') && answered[curIdx] !== undefined) {
     expBox.style.display = 'block';
     document.getElementById('explain-title').innerText = `${t.ansTitle}: ${item.answer}번`;
     document.getElementById('explain-text').innerText = item.explain[curLang] || item.explain.ko;
@@ -542,7 +605,22 @@ function render() {
 
 function selectOpt(n) {
   if (curMode === 'study' && answered[curIdx] !== undefined) return;
+  if (curMode === 'wrong' && answered[curIdx] !== undefined) return;
+  
   answered[curIdx] = n;
+  const item = curDB[curIdx];
+
+  // 학습 모드 또는 오답노트에서 틀렸을 때 오답노트에 자동 등록
+  if (curMode === 'study') {
+    if (n !== item.answer) {
+      saveWrongId(item.id);
+    }
+  } else if (curMode === 'wrong') {
+    if (n === item.answer) {
+      // 오답노트에서 정답을 맞히면 오답노트에서 졸업(제거)
+      removeWrongId(item.id);
+    }
+  }
   render();
 }
 
@@ -611,6 +689,9 @@ function submitExam() {
     if (answered[idx] === item.answer) {
       totalScore += item.score;
       correctCount++;
+    } else {
+      // 모의고사에서 틀린 문제 오답노트에 자동 등록
+      saveWrongId(item.id);
     }
   });
 
