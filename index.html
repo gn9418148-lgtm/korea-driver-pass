@@ -348,7 +348,15 @@ function startTimer() {
     updateTimerDisplay();
     if (timeLeft <= 0) {
       clearInterval(timerInterval);
-      alert("⏱️ 시험 시간(40분)이 종료되었습니다! 답안을 자동 채점합니다.");
+      const timeUpMsg = {
+        ko: "⏱️ 시험 시간(40분)이 종료되었습니다! 답안을 자동 채점합니다.",
+        uz: "⏱️ Imtihon vaqti (40 daqiqa) tugadi! Javoblar avtomatik tekshiriladi.",
+        ne: "⏱️ परीक्षा समय (४० मिनेट) समाप्त भयो! उत्तर स्वचालित रूपमा जाँचिन्छ।",
+        vi: "⏱️ Hết giờ làm bài (40 phút)! Hệ thống sẽ tự động chấm điểm.",
+        en: "⏱️ Time's up (40 minutes)! Your exam will now be automatically graded.",
+        zh: "⏱️ 考试时间（40分钟）已到！系统将自动交卷并计算成绩。"
+      };
+      alert(timeUpMsg[curLang] || timeUpMsg.ko);
       submitExam();
     }
   }, 1000);
@@ -465,15 +473,23 @@ function prevQ() {
 }
 
 function nextQ() {
+  const t = UI_TEXT[curLang] || UI_TEXT.ko;
   if (curIdx < curDB.length - 1) {
     curIdx++;
     render();
   } else {
     if (curMode === 'study') {
-      const t = UI_TEXT[curLang] || UI_TEXT.ko;
       alert(t.endAlert);
     } else {
-      alert("마지막 문항입니다. 상단의 [답안 최종 제출] 버튼을 눌러 점수를 확인하세요!");
+      const examEndMsg = {
+        ko: "마지막 문항입니다. 상단의 [답안 최종 제출] 버튼을 눌러 점수를 확인하세요!",
+        uz: "Oxirgi savol! Natijani bilish uchun yuqoridagi [Javoblarni topshirish] tugmasini bosing.",
+        ne: "अन्तिम प्रश्न हो! नतिजा हेर्न माथिको [उत्तर पेश गर्नुहोस्] बटन थिच्नुहोस्।",
+        vi: "Đã đến câu cuối cùng! Nhấn nút [Nộp bài thi] ở phía trên để xem điểm số.",
+        en: "This is the final question! Tap [Submit Exam] at the top to check your score.",
+        zh: "已到最后一题！请点击顶部的【最终交卷】按钮查看您的成绩。"
+      };
+      alert(examEndMsg[curLang] || examEndMsg.ko);
     }
   }
 }
@@ -570,7 +586,15 @@ function requestPay() {
       }
     });
   } else {
-    alert("결제 모듈을 준비 중입니다. 잠시 후 다시 시도해 주세요.");
+    const readyMsg = {
+      ko: "결제 모듈을 준비 중입니다. 잠시 후 다시 시도해 주세요.",
+      uz: "To'lov moduli tayyorlanmoqda. Birozdan so'ng qayta urinib ko'ring.",
+      ne: "भुक्तानी मोड्युल तयार हुँदैछ। कृपया केही बेरपछि फेरि प्रयास गर्नुहोस्।",
+      vi: "Đang chuẩn bị mô-đun thanh toán. Vui lòng thử lại sau giây lát.",
+      en: "Preparing payment module. Please try again in a moment.",
+      zh: "正在加载支付模块，请稍后再试。"
+    };
+    alert(readyMsg[curLang] || readyMsg.ko);
   }
 }
 
