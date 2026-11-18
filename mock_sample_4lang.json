@@ -1,0 +1,522 @@
+[
+  {
+    "id": 1,
+    "type": "문장형 (1지선다)",
+    "score": 2,
+    "q": {
+      "ko": "도로교통법상 '서행'에 대한 설명으로 옳은 것은?",
+      "uz": "Yo'l harakati to'g'risidagi qonunga ko'ra 'Sekin harakatlanish' (서행) tushunchasining to'g'ri ta'rifi qaysi?",
+      "ne": "सवारी नियम अनुसार 'बिस्तारै हाँक्नु' (서행) भन्नाले के बुझिन्छ?",
+      "en": "Under the Road Traffic Act, which of the following correctly describes 'slow driving' (서행)?",
+      "zh": "根据《道路交通法》，关于'慢行'的正确说明是？"
+    },
+    "options": {
+      "ko": [
+        "시속 20킬로미터 이하로 주행하는 것",
+        "운전자가 차를 즉시 정지시킬 수 있는 느린 속도로 진행하는 것",
+        "위험한 장소에서 비상점멸등을 켜고 주행하는 것",
+        "앞차와의 안전거리를 유지하며 주행하는 것"
+      ],
+      "uz": [
+        "Soatiga 20 kilometrdan past tezlikda haydash",
+        "Haydovchi xavf tug'ilganda mashinani darhol to'xtata oladigan sekin tezlikda haydash",
+        "Xavfli joylarda avariya chiroqlarini yoqib haydash",
+        "Oldidagi mashina bilan xavfsiz masofani saqlab harakatlanish"
+      ],
+      "ne": [
+        "प्रति घण्टा २० किमी भन्दा कम गतिमा चलाउनु",
+        "चालकले गाडी तुरुन्तै रोक्न सक्ने गरी बिस्तारै हाँक्नु",
+        "खतराको बत्ती बालेर हाँक्नु",
+        "अगाडिको गाडीसँग सुरक्षित दूरी कायम गरी हाँक्नु"
+      ],
+      "en": [
+        "Driving at a speed of 20 km/h or less",
+        "Driving at a slow speed that enables the driver to stop the vehicle immediately",
+        "Driving with emergency hazard lights on in hazardous areas",
+        "Driving while maintaining a safe distance from the vehicle ahead"
+      ],
+      "zh": [
+        "以每小时20公里以下的速度行驶",
+        "驾驶人能随时立即停车的慢速行驶",
+        "在危险场所开启危险报警闪光灯行驶",
+        "与前车保持安全距离行驶"
+      ]
+    },
+    "answer": 2,
+    "explain": {
+      "ko": "'서행'이란 운전자가 차를 즉시 정지시킬 수 있는 느린 속도로 진행하는 것을 말하며, 구체적인 시속 수치로 정해져 있지 않습니다.",
+      "uz": "'Sekin haydash' (서행) degani – haydovchi xavf yuzaga kelganda transport vositasini bir zumda to'xtata oladigan darajadagi sekin tezlikni bildiradi.",
+      "ne": "'बिस्तारै हाँक्नु' (서행) भन्नाले चालकले गाडीलाई तुरुन्तै रोक्न सक्ने गरी सुस्त गतिमा हाँक्नु हो।",
+      "en": "'Slow driving' means proceeding at a slow speed that allows the driver to stop the vehicle immediately.",
+      "zh": "'慢行'是指驾驶人能随时立即停车的慢速行驶，法律并未规定具体的时速数值。"
+    }
+  },
+  {
+    "id": 2,
+    "type": "문장형 (1지선다)",
+    "score": 2,
+    "q": {
+      "ko": "도로교통법령상 좌회전 또는 우회전을 하려고 할 때 신호 시기로 옳은 것은?",
+      "uz": "Yo'l harakati qoidalariga ko'ra, chapga yoki o'ngga burilishda burilish signalini berish vaqti qaysi?",
+      "ne": "ट्राफिक नियम अनुसार दायाँ वा बायाँ मोड्दा साइड लाइट दिने सही समय कुन हो?",
+      "en": "Under the Road Traffic Act, when should a driver signal when intending to turn left or right?",
+      "zh": "根据道路交通法令，准备左转或右转时的正确打灯时机是？"
+    },
+    "options": {
+      "ko": [
+        "교차로에 진입한 직후",
+        "교차로 내에서 방향을 바꿀 때",
+        "그 행위를 하고자 하는 지점(교차로)에 이르기 전 30미터(고속도로는 100미터) 이상의 지점",
+        "그 행위를 하고자 하는 지점(교차로)에 이르기 전 10미터 이상의 지점"
+      ],
+      "uz": [
+        "Chorrahaga kirgandan so'ng darhol",
+        "Chorraha ichida yo'nalishni o'zgartirganda",
+        "Burilish joyiga (chorrahaga) yetib borishdan kamida 30 metr (magistralda 100 metr) oldin",
+        "Burilish joyiga yetib borishdan kamida 10 metr oldin"
+      ],
+      "ne": [
+        "चौबाटोमा प्रवेश गरेलगत्तै",
+        "चौबाटोभित्र दिशा परिवर्तन गर्दा",
+        "मोड्ने ठाउँ (चौबाटो) पुग्नुभन्दा कम्तीमा ३० मिटर (राजमार्गमा १०० मिटर) अगाडि",
+        "मोड्ने ठाउँ पुग्नुभन्दा कम्तीमा १० मिटर अगाडि"
+      ],
+      "en": [
+        "Immediately after entering the intersection",
+        "When changing directions inside the intersection",
+        "At least 30 meters (100 meters on highways) before reaching the point (intersection)",
+        "At least 10 meters before reaching the point (intersection)"
+      ],
+      "zh": [
+        "进入路口后立即",
+        "在路口内改变方向时",
+        "到达转向地点（路口）前30米（高速公路100米）以上地点",
+        "到达转向地点前10米以上地点"
+      ]
+    },
+    "answer": 3,
+    "explain": {
+      "ko": "일반도로에서는 교차로 전 30미터 전, 고속도로에서는 100미터 전부터 미리 방향지시등을 켜야 후방 추돌을 예방할 수 있습니다.",
+      "uz": "Oddiy yo'llarda chorrahagacha 30 metr, avtomagistrallarda esa 100 metr qolganda burilish chirog'ini yoqish shart.",
+      "ne": "साधारण सडकमा चौबाटोभन्दा ३० मिटर र राजमार्गमा १०० मिटर अगावै साइड लाइट बाल्नुपर्छ।",
+      "en": "Turn signals must be activated at least 30 meters before intersections on general roads (100 meters on expressways).",
+      "zh": "普通道路在路口前30米以上，高速公路在100米以上必须提前开启转向灯以防追尾。"
+    }
+  },
+  {
+    "id": 3,
+    "type": "문장형 (1지선다)",
+    "score": 2,
+    "q": {
+      "ko": "도로교통법상 '비보호 좌회전' 교차로에서 좌회전 방법으로 옳은 것은?",
+      "uz": "'Himoyalanmagan chapga burilish' (비보호 좌회전) chorrahasida chapga burilishning to'g'ri qoidasi qaysi?",
+      "ne": "'असंरक्षित बायाँ मोड' (비보호 좌회전) चौबाटोमा बायाँ मोड्ने सही तरिका कुन हो?",
+      "en": "Under the Road Traffic Act, what is the correct way to make an 'unprotected left turn' (비보호 좌회전)?",
+      "zh": "根据道路交通法，在'非保护左转'路口左转的正确方法是？"
+    },
+    "options": {
+      "ko": [
+        "적색 신호일 때 다른 차량이 없으면 신속히 좌회전한다.",
+        "황색 신호일 때만 좌회전할 수 있다.",
+        "반대 방향 차량에 우선권이 없으므로 언제든 좌회전한다.",
+        "녹색 신호일 때 반대 방향 직진 차량의 진행에 방해가 되지 않도록 좌회전한다."
+      ],
+      "uz": [
+        "Qizil chiroqda boshqa mashina bo'lmasa tezda burilish kerak.",
+        "Faqat sariq chiroq yonganda burilish mumkin.",
+        "Qarama-qarshi tomondagi mashinaning ustunligi yo'q, shuning uchun istalgan vaqtda burilish mumkin.",
+        "Yashil chiroqda qarama-qarshi tomondan to'g'ri kelayotgan mashinalarga xalaqit bermasdan burilish kerak."
+      ],
+      "ne": [
+        "रातो बत्ती हुँदा गाडी नभएमा तुरुन्तै मोड्ने।",
+        "पहेंलो बत्तीमा मात्र मोड्न सकिन्छ।",
+        "विपरित दिशाका गाडीलाई प्राथमिकता नहुने हुँदा जहिले पनि मोड्न सकिन्छ।",
+        "हरियो बत्ती हुँदा विपरित दिशाबाट आउने गाडीलाई बाधा नपर्ने गरी मोड्ने।"
+      ],
+      "en": [
+        "Turn left promptly on a red signal if there are no other vehicles.",
+        "Turn left only when the signal is yellow.",
+        "Turn left at any time because oncoming vehicles do not have the right of way.",
+        "Turn left on a green signal without obstructing oncoming traffic traveling straight."
+      ],
+      "zh": [
+        "红灯时若无其他车辆迅速左转。",
+        "仅在黄灯时可以左转。",
+        "对面车辆无优先权因此随时可以左转。",
+        "绿灯时在不妨碍对面直行车辆通行的情况下左转。"
+      ]
+    },
+    "answer": 4,
+    "explain": {
+      "ko": "비보호 좌회전은 반드시 '녹색 신호'에서 마주 오는 차량이 없을 때 안전하게 통과해야 합니다. 적색 신호 시 좌회전은 신호위반입니다.",
+      "uz": "Himoyalanmagan chapga burilish FAQAT 'yashil chiroq'da, qarama-qarshi harakat xavfsiz bo'lganda amalga oshiriladi. Qizil chiroqda burilish qoidabuzarlikdir.",
+      "ne": "असंरक्षित बायाँ मोड सधैं 'हरियो बत्ती' मा विपरित गाडी नआउँदा मात्र गर्नुपर्छ। रातो बत्तीमा मोड्नु नियम उल्लंघन हो।",
+      "en": "Unprotected left turns MUST be made only on a GREEN signal when oncoming traffic is clear.",
+      "zh": "非保护左转必须在'绿灯'且对面无直行来车时通行。红灯左转属于闯红灯违章行为。"
+    }
+  },
+  {
+    "id": 4,
+    "type": "문장형 (1지선다)",
+    "score": 2,
+    "q": {
+      "ko": "도로교통법령상 밤에 도로에서 차를 운행할 때 전조등 등화의 점등 시기로 옳은 것은?",
+      "uz": "Yo'l harakati qoidalariga ko'ra kechasi yo'lda yurganda faralarni yoqish qoidasi qaysi?",
+      "ne": "राति सडकमा गाडी चलाउँदा हेडलाइट बाल्ने सही नियम कुन हो?",
+      "en": "Under the Road Traffic Act, when must a driver turn on the headlights when driving on the road at night?",
+      "zh": "根据道路交通法令，夜间在道路上行驶时开启前照灯的正确规定是？"
+    },
+    "options": {
+      "ko": [
+        "오후 7시부터 다음 날 오전 6시까지 켠다.",
+        "일몰 후부터 일출 전까지 켠다.",
+        "어두워지기 시작할 때 운전자 판단으로 켠다.",
+        "가로등이 켜진 후부터 끈 때까지 켠다."
+      ],
+      "uz": [
+        "Kechki 19:00 dan ertalabki 06:00 gacha yoqiladi.",
+        "Quyosh botgandan to quyosh chiqqunga qadar yoqiladi.",
+        "Qorong'i tushganda haydovchi xohishiga ko'ra yoqiladi.",
+        "Ko'cha chiroqlari yongandan o'chgungacha yoqiladi."
+      ],
+      "ne": [
+        "साँझ ७ बजेदेखि बिहान ६ बजेसम्म बाल्नुपर्छ।",
+        "सूर्यास्तपछि देखि सूर्योदय हुनुभन्दा अघिसम्म बाल्नुपर्छ।",
+        "अँध्यारो भएपछि चालकको इच्छाअनुसार बाल्ने।",
+        "सडक बत्ती बलेपछि मात्र बाल्ने।"
+      ],
+      "en": [
+        "Turn on from 7:00 PM to 6:00 AM the next day.",
+        "Turn on from sunset to sunrise.",
+        "Turn on at the driver's discretion when it gets dark.",
+        "Turn on while streetlights are on."
+      ],
+      "zh": [
+        "下午7点至次日上午6点开启。",
+        "日落后至日出前开启。",
+        "变暗时由驾驶人自行决定开启。",
+        "路灯开启后至关闭前开启。"
+      ]
+    },
+    "answer": 2,
+    "explain": {
+      "ko": "도로교통법상 밤의 등화 기준은 '일몰 후부터 일출 전까지'로 명확히 규정되어 있습니다.",
+      "uz": "Qonunda tungi chiroqlarni yoqish vaqti 'quyosh botgandan quyosh chiqqungacha' deb aniq belgilangan.",
+      "ne": "कानून अनुसार रातिको लाइट बाल्ने समय 'सूर्यास्तदेखि सूर्योदयसम्म' भनी तोकिएको छ।",
+      "en": "The law explicitly defines night lighting as 'from sunset to sunrise'.",
+      "zh": "道路交通法明确规定夜间车灯开启标准为'日落后至日出前'。"
+    }
+  },
+  {
+    "id": 5,
+    "type": "문장형 (1지선다)",
+    "score": 2,
+    "q": {
+      "ko": "어린이 보호구역 안에서 제한속도를 위반한 경우 범칙금에 대한 설명으로 옳은 것은?",
+      "uz": "Bolalar xavfsizligi hududida (School Zone) tezlik chegarasini buzganlik uchun jarima haqida to'g'ri fikr qaysi?",
+      "ne": "बालबालिका सुरक्षा क्षेत्र (School Zone) भित्र गति सीमा उल्लंघन गर्दा लाग्ने जरिवानाबारे सही कुरा कुन हो?",
+      "en": "Which of the following is correct regarding traffic fines for speeding in a Child Protection Zone (School Zone)?",
+      "zh": "在儿童保护区内违反限速规定时的罚款说明，正确的是？"
+    },
+    "options": {
+      "ko": [
+        "오전 8시부터 오후 8시까지 일반도로의 2배로 가중 부과된다.",
+        "24시간 내내 3배로 가중 부과된다.",
+        "주말 및 공휴일에는 가중 부과되지 않는다.",
+        "어린이가 보이지 않을 때는 일반도로와 동일하다."
+      ],
+      "uz": [
+        "Ertalabki 08:00 dan kechki 20:00 gacha oddiy yo'ldagidan 2 barobar ko'proq jarima qo'llaniladi.",
+        "24 soat davomida 3 barobar qo'llaniladi.",
+        "Dam olish kunlarida jarima oshirilmaydi.",
+        "Bolalar ko'rinmasa oddiy jarima qo'llanadi."
+      ],
+      "ne": [
+        "बिहान ८ बजेदेखि साँझ ८ बजेसम्म साधारण सडकभन्दा २ गुणा बढी जरिवाना लाग्छ।",
+        "२४ सै घण्टा ३ गुणा जरिवाना लाग्छ।",
+        "बिदाको दिनमा जरिवाना बढ्दैन।",
+        "बच्चाहरू नदेखिँदा साधारण जरिवाना नै लाग्छ।"
+      ],
+      "en": [
+        "Fines and penalty points are doubled from 8:00 AM to 8:00 PM compared to general roads.",
+        "Fines are tripled 24 hours a day.",
+        "No aggravated fines apply on weekends or public holidays.",
+        "The same fine applies as general roads if no children are in sight."
+      ],
+      "zh": [
+        "上午8点至下午8点，按普通道路的2倍加重处罚。",
+        "24小时按3倍加重处罚。",
+        "周末及公休日不予加重处罚。",
+        "未见儿童时与普通道路相同."
+      ]
+    },
+    "answer": 1,
+    "explain": {
+      "ko": "어린이 보호구역에서는 오전 8시부터 오후 8시까지 신호위반, 속도위반 등의 범칙금 및 벌점이 일반도로 기준 2배로 가중 처벌됩니다.",
+      "uz": "Maktab zonalarida soat 08:00 dan 20:00 gacha tezlik va svetofor qoidabuzarliklari uchun jarimalar 2 barobar oshiriladi.",
+      "ne": "बालबालिका सुरक्षा क्षेत्रमा बिहान ८ देखि साँझ ८ बजेसम्म ट्राफिक नियम उल्लंघनमा २ गुणा बढी जरिवाना लाग्छ।",
+      "en": "Traffic violation fines and demerit points are doubled from 8:00 AM to 8:00 PM in school zones.",
+      "zh": "在儿童保护区内，早8点至晚8点期间，闯红灯、超速等违章处罚均按普通道路标准的2倍加重执行。"
+    }
+  },
+  {
+    "id": 6,
+    "type": "문장형 (1지선다)",
+    "score": 2,
+    "q": {
+      "ko": "도로교통법상 혈중알코올농도 몇 퍼센트 이상일 때 운전면허 취소 처분을 받게 되는가?",
+      "uz": "Qondagi spirt miqdori necha foizdan oshganda haydovchilik guvohnomasi butunlay bekor qilinadi (bekor qilish jazosi)?",
+      "ne": "रगतमा रक्सीको मात्रा कति प्रतिशत भन्दा बढी भएमा लाइसेन्स खारेज गरिन्छ?",
+      "en": "Under the Road Traffic Act, at what Blood Alcohol Concentration (BAC) is a driver's license revoked?",
+      "zh": "根据道路交通法，血液酒精浓度达到百分之多少以上时会被吊销机动车驾驶证？"
+    },
+    "options": {
+      "ko": [
+        "0.03% 이상",
+        "0.05% 이상",
+        "0.08% 이상",
+        "0.1% 이상"
+      ],
+      "uz": [
+        "0.03% dan yuqori",
+        "0.05% dan yuqori",
+        "0.08% dan yuqori",
+        "0.1% dan yuqori"
+      ],
+      "ne": [
+        "०.०३% भन्दा बढी",
+        "०.०५% भन्दा बढी",
+        "०.०८% भन्दा बढी",
+        "०.१% भन्दा बढी"
+      ],
+      "en": [
+        "0.03% or higher",
+        "0.05% or higher",
+        "0.08% or higher",
+        "0.10% or higher"
+      ],
+      "zh": [
+        "0.03%以上",
+        "0.05%以上",
+        "0.08%以上",
+        "0.10%以上"
+      ]
+    },
+    "answer": 3,
+    "explain": {
+      "ko": "혈중알코올농도 0.03% 이상~0.08% 미만은 면허 '정지'(100일), 0.08% 이상은 면허 '취소' 처분을 받게 됩니다.",
+      "uz": "0.03% dan 0.08% gacha – to'xtatish (100 kun), 0.08% dan yuqori bo'lsa – guvohnoma 'bekor qilinadi'.",
+      "ne": "०.०३% देखि ०.०८% सम्म 'निलम्बन' (१०० दिन) र ०.०८% भन्दा माथि 'खारेज' गरिन्छ।",
+      "en": "A BAC of 0.03% to under 0.08% results in license suspension; 0.08% or higher results in license revocation.",
+      "zh": "血液酒精浓度0.03%以上至未满0.08%为暂扣驾驶证（100天），0.08%以上为直接'吊销'驾驶证。"
+    }
+  },
+  {
+    "id": 7,
+    "type": "문장형 (1지선다)",
+    "score": 2,
+    "q": {
+      "ko": "고속도로에서 차량 고장 등으로 정지한 경우, 주간에 설치해야 하는 안전삼각대의 최소 설치 거리는?",
+      "uz": "Avtomagistralda mashina buzilib to'xtab qolganda, kunduz kuni xavfsizlik uchburchagi mashinadan kamida necha metr orqaga qo'yilishi kerak?",
+      "ne": "राजमार्गमा गाडी बिग्रिएर रोकिँदा दिउँसोको समयमा आपतकालीन त्रिकोण (Safety Triangle) गाडीभन्दा कति मिटर पछाडि राख्नुपर्छ?",
+      "en": "When a vehicle stops on an expressway due to breakdown, what is the minimum distance behind the vehicle to place a safety triangle during the day?",
+      "zh": "在高速公路上因车辆故障等停车时，白天应在车后至少多远距离放置安全警告三脚架？"
+    },
+    "options": {
+      "ko": [
+        "차량 후방 50미터 이상 지점",
+        "차량 후방 100미터 이상 지점",
+        "후방에서 접근하는 차량이 식별할 수 있는 안전한 지점",
+        "차량 트렁크 바로 뒤"
+      ],
+      "uz": [
+        "Mashina orqasidan kamida 50 metr masofada",
+        "Mashina orqasidan kamida 100 metr masofada",
+        "Orqadan kelayotgan mashinalar bemalol ko'ra oladigan xavfsiz masofada",
+        "Bagajning orqasiga qo'yish kifoya"
+      ],
+      "ne": [
+        "गाडीको पछाडि ५० मिटर",
+        "गाडीको पछाडि १०० मिटर",
+        "पछाडिबाट आउने गाडीले सजिलै देख्न सक्ने सुरक्षित ठाउँमा",
+        "गाडीको डिक्कीको ठीक पछाडि"
+      ],
+      "en": [
+        "At least 50 meters behind the vehicle",
+        "At least 100 meters behind the vehicle",
+        "A safe location where approaching vehicles from behind can clearly recognize it",
+        "Directly behind the vehicle's trunk"
+      ],
+      "zh": [
+        "车后方50米以上地点",
+        "车后方100米以上地点",
+        "后方来车能够清晰识别的安全地点",
+        "车辆后备箱正后方"
+      ]
+    },
+    "answer": 3,
+    "explain": {
+      "ko": "과거 100미터 규정에서 법이 개정되어 현재는 2차 사고 예방을 위해 '후방에서 접근하는 자동차의 운전자가 확인할 수 있는 위치'에 안전하게 설치하도록 규정하고 있습니다.",
+      "uz": "Qonun yangilangan: Endi qat'iy metr emas, orqadan kelayotgan haydovchi xavfsiz ko'ra oladigan qulay joyga o'rnatiladi.",
+      "ne": "नियम परिमार्जन भई अहिले पछाडिका चालकले सुरक्षित रूपमा देख्न सक्ने ठाउँमा राख्नुपर्छ।",
+      "en": "The law was amended from a strict meter rule to 'a location where approaching drivers from behind can clearly identify it' to prevent secondary accidents.",
+      "zh": "现行交规已修改，取消了原有的硬性米数规定，改为设置在'后方来车驾驶人能够确认的安全位置'以防二次事故。"
+    }
+  },
+  {
+    "id": 8,
+    "type": "문장형 (1지선다)",
+    "score": 2,
+    "q": {
+      "ko": "제1종 보통면허를 취득한 사람이 운전할 수 있는 차량에 해당하지 않는 것은?",
+      "uz": "1-toifa oddiy haydovchilik guvohnomasiga (1종 보통) ega shaxs haydashi MUMKIN BO'LMAGAN transport vositasi qaysi?",
+      "ne": "वर्ग १ साधारण (1종 보통) लाइसेन्स भएका व्यक्तिले चलाउन नमिल्ने सवारी साधन कुन हो?",
+      "en": "Which of the following vehicles CANNOT be driven by a person holding a Type 1 Regular Driver's License?",
+      "zh": "持有第1类普通驾驶证（1종 보통）的人员，下列哪项车辆不可驾驶？"
+    },
+    "options": {
+      "ko": [
+        "승차정원 15인 이하의 승합자동차",
+        "적재중량 12톤 미만의 화물자동차",
+        "총중량 10톤 미만의 특수자동차(트레일러, 레커차 제외)",
+        "승차정원 20인의 승합자동차"
+      ],
+      "uz": [
+        "15 o'rindiqdan oshmaydigan yo'lovchi avtobusi",
+        "12 tonnagacha yuk ko'taradigan yuk mashinasi",
+        "10 tonnagacha maxsus texnika (tirkama va evakuator bundan mustasno)",
+        "20 o'rindiqli yo'lovchi avtobusi"
+      ],
+      "ne": [
+        "१५ जनासम्म सिट भएको यात्रुवाहक बस",
+        "१२ टन भन्दा कम भार वहन क्षमता भएको ट्रक",
+        "१० टन भन्दा कमको विशेष गाडी",
+        "२० सिट भएको यात्रुवाहक बस"
+      ],
+      "en": [
+        "Passenger vans with a seating capacity of 15 or less",
+        "Freight trucks with a load capacity of less than 12 tons",
+        "Special vehicles with a gross weight of less than 10 tons (excluding trailers/wreckers)",
+        "Passenger vans with a seating capacity of 20"
+      ],
+      "zh": [
+        "乘载定员15人以下的面包车/客车",
+        "载重12吨以下的货车",
+        "总重量10吨以下的特殊作业车（拖车、清障车除外）",
+        "乘载定员20人的客车"
+      ]
+    },
+    "answer": 4,
+    "explain": {
+      "ko": "1종 보통면허로는 승차정원 15인 이하의 승합차까지만 운전할 수 있으며, 16인 이상(20인 등)은 제1종 대형면허가 필요합니다.",
+      "uz": "1-toifa oddiy guvohnoma bilan faqat 15 kishilik mikroavtobusgacha mumkin. 16 tadan oshsa Katta litsenziya (대형) kerak.",
+      "ne": "वर्ग १ साधारण लाइसेन्सले १५ सिटसम्म मात्र चलाउन पाइन्छ। १६ वा सोभन्दा बढीका लागि ठूलो लाइसेन्स (대형) चाहिन्छ।",
+      "en": "Type 1 Regular licenses permit driving passenger vans with up to 15 seats. 16 seats or more require a Type 1 Large license.",
+      "zh": "1类普通驾照最多只能驾驶15座及以下客车，16座以上（如20座）必须持有1类大型（大巴）驾照。"
+    }
+  },
+  {
+    "id": 9,
+    "type": "문장형 (1지선다)",
+    "score": 2,
+    "q": {
+      "ko": "운전 중 휴대폰을 사용하다 적발된 경우, 벌점과 범칙금에 관한 설명으로 옳은 것은?",
+      "uz": "Haydash paytida telefondan foydalanganlik uchun jarima balli va jarima miqdori haqida to'g'ri fikr qaysi?",
+      "ne": "गाडी चलाउँदा मोबाइल फोन प्रयोग गरेको भेटिएमा लाग्ने जरिवाना र डिमेरिट अंकबारे सही कुरा कुन हो?",
+      "en": "Which of the following is correct regarding penalty points and fines for using a mobile phone while driving?",
+      "zh": "驾车途中使用手机被查处时，关于罚分与罚款的正确说明是？"
+    },
+    "options": {
+      "ko": [
+        "벌점 15점, 승용차 기준 범칙금 6만 원",
+        "벌점 30점, 승용차 기준 범칙금 10만 원",
+        "벌점 없이 과태료만 부과된다.",
+        "경고 조치 후 훈방된다."
+      ],
+      "uz": [
+        "15 jarima balli va yengil mashinaga 60,000 won jarima",
+        "30 jarima balli va 100,000 won jarima",
+        "Faqat jarima to'lanadi, ball berilmaydi",
+        "Faqat ogohlantirish beriladi"
+      ],
+      "ne": [
+        "१५ डिमेरिट अंक र कारको हकमा ६०,००० वन जरिवाना",
+        "३० अंक र १०,००० वन जरिवाना",
+        "अंक नघटाई जरिवाना मात्र",
+        "सचेत गराएर छाडिने"
+      ],
+      "en": [
+        "15 penalty points and a fine of ₩60,000 (for passenger cars)",
+        "30 penalty points and a fine of ₩100,000",
+        "Only a fine without any demerit points",
+        "Only a verbal warning"
+      ],
+      "zh": [
+        "罚分15分，乘用车罚款6万韩元",
+        "罚分30分，乘用车罚款10万韩元",
+        "不记分仅处以罚款",
+        "警告后免予处罚"
+      ]
+    },
+    "answer": 1,
+    "explain": {
+      "ko": "운전 중 휴대폰 사용은 벌점 15점과 함께 승용차 기준 6만 원(승합차 7만 원)의 범칙금이 부과됩니다.",
+      "uz": "Haydash vaqtida telefondan foydalanish 15 jarima balli va 60,000 won jarima bilan jazolanadi.",
+      "ne": "गाडी चलाउँदा फोन प्रयोग गरेमा १५ अंक र ६०,००० वन जरिवाना लाग्छ।",
+      "en": "Using a phone while driving incurs 15 penalty points and a ₩60,000 fine for regular passenger cars.",
+      "zh": "驾车途中使用手机将被处以扣15分、普通私家车罚款6万韩元（面包车7万韩元）。"
+    }
+  },
+  {
+    "id": 10,
+    "type": "문장형 (1지선다)",
+    "score": 2,
+    "q": {
+      "ko": "보행자가 횡단보도를 건너고 있을 때 운전자의 올바른 조치 방법은?",
+      "uz": "Piyoda piyodalar o'tish joyidan (zebra) o'tayotganda haydovchining to'g'ri harakati qaysi?",
+      "ne": "पैदलयात्री जेब्रा क्रसिङ पार गर्दै गर्दा चालकले गर्नुपर्ने सही कदम कुन हो?",
+      "en": "What is the correct action for a driver when a pedestrian is crossing a crosswalk?",
+      "zh": "行人正在通过人行横道时，驾驶人的正确做法是？"
+    },
+    "options": {
+      "ko": [
+        "경음기를 울리며 서행하여 통과한다.",
+        "횡단보도 직전에 일시정지하여 보행자가 완전히 건널 때까지 기다린다.",
+        "보행자 뒤쪽으로 신속히 우회하여 지나간다.",
+        "비상등을 켜고 보행자보다 먼저 통과한다."
+      ],
+      "uz": [
+        "Signal chalib, sekin o'tib ketish",
+        "Zebra oldida butunlay to'xtab (일시정지), piyoda to'liq o'tib bo'lguncha kutish",
+        "Piyodaning orqa tomonidan tezda aylanib o'tib ketish",
+        "Avariya chirog'ini yoqib, piyodadan oldin o'tib ketish"
+      ],
+      "ne": [
+        "हर्न बजाउँदै बिस्तारै अगाडि बढ्ने।",
+        "जेब्रा क्रसिङ अगाडि पूर्ण रूपमा रोकेर पैदलयात्री पार नहुन्जेल पर्खने।",
+        "पैदलयात्रीको पछाडिबाट छिट्टै पास गर्ने।",
+        "खतराको बत्ती बालेर पहिले नै क्रस गर्ने।"
+      ],
+      "en": [
+        "Honk the horn and pass through slowly",
+        "Come to a complete stop right before the crosswalk and wait until the pedestrian has fully crossed",
+        "Quickly detour around the rear of the pedestrian",
+        "Turn on hazard lights and pass before the pedestrian"
+      ],
+      "zh": [
+        "按喇叭慢速通过。",
+        "在人行横道前立即停车，等待行人完全通过。",
+        "从行人后方迅速绕行通过。",
+        "开启双闪并在行人之前抢先通过。"
+      ]
+    },
+    "answer": 2,
+    "explain": {
+      "ko": "도로교통법 개정으로 보행자가 건너고 있거나 '건너려고 할 때'에도 횡단보도 바로 앞에서 반드시 '일시정지'하여야 합니다.",
+      "uz": "Qonunga ko'ra piyoda o'tayotganda yoki o'tmoqchi bo'lib turganda ham zebra oldida MUTLAQO to'liq to'xtash shart.",
+      "ne": "पैदलयात्री पार गर्दै गर्दा वा गर्न लाग्दा जेब्रा क्रसिङ अगाडि अनिवार्य 'पूर्ण विराम' गर्नुपर्छ।",
+      "en": "Under the revised Road Traffic Act, drivers MUST come to a complete stop before the crosswalk when pedestrians are crossing or about to cross.",
+      "zh": "新交规严格规定，行人正在过马路或'正准备过马路'时，车辆必须在斑马线前完全停车等待。"
+    }
+  }
+]
