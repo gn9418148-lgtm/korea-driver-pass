@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Pretendard:wght@400;600;700;800&display=swap" rel="stylesheet">
-<script src="https://js.tosspayments.com/v1/payment"></script>
+<script src="https://js.tosspayments.com/v1/payment-widget"></script>
 <style>
 :root {
   --bg: #0d1b2a;
@@ -160,8 +160,13 @@ main { max-width: 580px; margin: 0 auto; padding: 14px 16px 120px; }
   <div class="cta-lock">
     <h3 id="lock-title">🔒 남은 990문제 전체 해설 열기</h3>
     <p id="lock-desc">1,000문제 전체 문제은행 + 40제 실전 모의고사 + 오답노트 무제한 (60일 올패스)</p>
+    
+    <!-- 토스 결제수단 및 이용약관 공식 렌더링 영역 -->
+    <div id="payment-method" style="margin-bottom:12px;"></div>
+    <div id="agreement" style="margin-bottom:16px;"></div>
+
     <div style="display:flex; flex-direction:column; gap:10px;">
-      <button class="btn-buy" id="btn-price" onclick="requestPay()">⚡ 토스 1초 간편결제 (9,900원)</button>
+      <button class="btn-buy" id="btn-price" onclick="requestPay()">⚡ 1초 간편결제 (9,900원)</button>
     </div>
   </div>
 
@@ -541,14 +546,18 @@ function changeLang(lang) {
   render();
 }
 
-// 토스페이먼츠 공식 표준 결제창 (위젯 없이 버튼 클릭 즉시 결제창 팝업)
-const clientKey = 'test_ck_D5GePWvyJnrK0W0k6q8gLzN97Eoq'; // 토스 공식 표준 테스트 키
-let tossPayments;
+// 토스페이먼츠 공식 결제위젯 (공식 인증 데모 키)
+const clientKey = 'test_gck_docs_Ovk5rk1EwkEbP0W43n07xlzm';
+const customerKey = 'CUST_' + Math.random().toString(36).substring(2, 10);
+let paymentWidget;
+let paymentMethodWidget;
 
 try {
-  tossPayments = TossPayments(clientKey);
+  paymentWidget = PaymentWidget(clientKey, customerKey);
+  paymentMethodWidget = paymentWidget.renderPaymentMethods('#payment-method', { value: 9900 }, { variantKey: 'DEFAULT' });
+  paymentWidget.renderAgreement('#agreement');
 } catch (e) {
-  console.log('TossPayments load defer');
+  console.log('PaymentWidget defer', e);
 }
 
 function checkUnlocked() {
@@ -571,9 +580,12 @@ function requestPay() {
   const orderId = 'KP_' + Date.now();
   const orderName = '외국인 운전면허 1000제 60일 올패스 (' + curLang.toUpperCase() + ')';
   
-  if (tossPayments) {
-    tossPayments.requestPayment('카드', {
-      amount: payAmount,
+  if (paymentWidget) {
+    // 결제 금액 갱신
+    if (paymentMethodWidget && paymentMethodWidget.updateAmount) {
+      paymentMethodWidget.updateAmount(payAmount);
+    }
+    paymentWidget.requestPayment({
       orderId: orderId,
       orderName: orderName,
       customerName: '수험생',
