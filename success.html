@@ -21,6 +21,39 @@ p { font-size: 15px; color: #8da4c4; line-height: 1.6; margin-bottom: 25px; }
   <a href="./" id="btn-start" class="btn">학습 시작하기 (Start Learning)</a>
 </div>
 <script>
+const SUCCESS_TEXT = {
+  ko: {
+    title: "결제가 완료되었습니다!",
+    desc: "이제 60일간 한국어 1,000문항 전체와 실전 모의고사를 무제한으로 이용하실 수 있습니다.",
+    btn: "학습 시작하기"
+  },
+  uz: {
+    title: "To'lov muvaffaqiyatli amalga oshirildi!",
+    desc: "Endi 60 kun davomida o'zbek tilidagi 1,000 ta to'liq savollar va haqiqiy imtihon simulyatoridan cheksiz foydalanishingiz mumkin.",
+    btn: "O'rganishni boshlash"
+  },
+  ne: {
+    title: "भुक्तानी सफल भयो!",
+    desc: "अब तपाइँ ६० दिनसम्म नेपाली भाषाका १,००० प्रश्नहरू र वास्तविक परीक्षा सिमुलेटर असीमित रूपमा प्रयोग गर्न सक्नुहुन्छ।",
+    btn: "सिक्न सुरु गर्नुहोस्"
+  },
+  vi: {
+    title: "Thanh toán thành công!",
+    desc: "Bây giờ bạn có thể sử dụng không giới hạn toàn bộ 1.000 câu hỏi tiếng Việt và thi thử trong 60 ngày.",
+    btn: "Bắt đầu học ngay"
+  },
+  en: {
+    title: "Payment Successful!",
+    desc: "You now have 60 days of unlimited access to all 1,000 English questions and real mock exams.",
+    btn: "Start Learning"
+  },
+  zh: {
+    title: "支付成功！",
+    desc: "您现在可在60天内无限次畅学中文1000道完整题库及全真模拟考试。",
+    btn: "开始学习"
+  }
+};
+
 // 결제창에서 넘어온 언어 파라미터 확인 (?lang=uz 등)
 const urlParams = new URLSearchParams(window.location.search);
 const payLang = urlParams.get('lang') || 'ko';
@@ -28,7 +61,11 @@ const payLang = urlParams.get('lang') || 'ko';
 // 해당 언어만 잠금 해제 (타 언어 차단 격리)
 localStorage.setItem('koreapass_unlocked_' + payLang, 'true');
 
-// 학습 시작하기 버튼에도 해당 언어 파라미터 전달
+// 해당 언어로 화면 100% 현지화 렌더링
+const t = SUCCESS_TEXT[payLang] || SUCCESS_TEXT.ko;
+document.getElementById('suc-title').innerText = t.title;
+document.getElementById('suc-desc').innerText = t.desc;
+document.getElementById('btn-start').innerText = t.btn;
 document.getElementById('btn-start').href = './?lang=' + payLang;
 </script>
 </body>
