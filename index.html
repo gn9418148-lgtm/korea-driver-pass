@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Pretendard:wght@400;600;700;800&display=swap" rel="stylesheet">
-<script src="https://js.tosspayments.com/v1/payment-widget"></script>
+<script src="https://js.tosspayments.com/v1/payment"></script>
 <style>
 :root {
   --bg: #0d1b2a;
@@ -525,15 +525,14 @@ function changeLang(lang) {
   render();
 }
 
-// 토스페이먼츠 연동
-const clientKey = 'test_gck_docs_Ovk5rk1EwkEbP0W43n07xlzm';
-const customerKey = 'CUST_' + Math.random().toString(36).substring(2, 10);
-let paymentWidget;
+// 토스페이먼츠 공식 표준 결제창 (위젯 없이 버튼 클릭 즉시 결제창 팝업)
+const clientKey = 'test_ck_D5GePWvyJnrK0W0k6q8gLzN97Eoq'; // 토스 공식 표준 테스트 키
+let tossPayments;
 
 try {
-  paymentWidget = PaymentWidget(clientKey, customerKey);
+  tossPayments = TossPayments(clientKey);
 } catch (e) {
-  console.log('PaymentWidget defer');
+  console.log('TossPayments load defer');
 }
 
 function checkUnlocked() {
@@ -556,11 +555,11 @@ function requestPay() {
   const orderId = 'KP_' + Date.now();
   const orderName = '외국인 운전면허 1000제 60일 올패스 (' + curLang.toUpperCase() + ')';
   
-  if (paymentWidget) {
-    paymentWidget.requestPayment({
+  if (tossPayments) {
+    tossPayments.requestPayment('카드', {
+      amount: payAmount,
       orderId: orderId,
       orderName: orderName,
-      amount: payAmount,
       customerName: '수험생',
       successUrl: window.location.origin + window.location.pathname.replace('index.html', '') + 'success.html',
       failUrl: window.location.origin + window.location.pathname.replace('index.html', '') + 'fail.html',
