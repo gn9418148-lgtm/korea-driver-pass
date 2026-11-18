@@ -426,9 +426,12 @@ function render() {
   document.getElementById('tab-study').innerText = t.tabStudy;
   document.getElementById('tab-exam').innerText = t.tabExam;
   document.getElementById('score-text').innerText = t.scoreMeta;
-  document.getElementById('lock-title').innerText = t.lockTitle;
-  document.getElementById('lock-desc').innerText = t.lockDesc;
-  document.getElementById('btn-price').innerText = t.btnToss;
+  const lockTitleEl = document.getElementById('lock-title');
+  if (lockTitleEl) lockTitleEl.innerText = t.lockTitle;
+  const lockDescEl = document.getElementById('lock-desc');
+  if (lockDescEl) lockDescEl.innerText = t.lockDesc;
+  const btnPriceEl = document.getElementById('btn-price');
+  if (btnPriceEl) btnPriceEl.innerText = t.btnToss;
   document.getElementById('btn-prev').innerText = t.prevBtn;
   document.getElementById('btn-next').innerText = t.nextBtn;
   document.getElementById('footer-content').innerHTML = t.footerText;
