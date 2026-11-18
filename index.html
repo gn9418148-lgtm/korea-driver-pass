@@ -585,12 +585,13 @@ function requestPay() {
     if (paymentMethodWidget && paymentMethodWidget.updateAmount) {
       paymentMethodWidget.updateAmount(payAmount);
     }
+    const baseUrl = 'https://gn9418148-lgtm.github.io/korea-driver-pass/';
     paymentWidget.requestPayment({
       orderId: orderId,
       orderName: orderName,
       customerName: '수험생',
-      successUrl: window.location.origin + window.location.pathname.replace('index.html', '') + 'success.html',
-      failUrl: window.location.origin + window.location.pathname.replace('index.html', '') + 'fail.html',
+      successUrl: baseUrl + 'success.html',
+      failUrl: baseUrl + 'fail.html',
     }).catch(function (error) {
       if (error.code === 'USER_CANCEL') {
       } else {
