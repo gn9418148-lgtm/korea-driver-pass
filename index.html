@@ -162,7 +162,6 @@ main { max-width: 580px; margin: 0 auto; padding: 14px 16px 120px; }
     <p id="lock-desc">1,000문제 전체 문제은행 + 40제 실전 모의고사 + 오답노트 무제한 (60일 올패스)</p>
     <div style="display:flex; flex-direction:column; gap:10px;">
       <button class="btn-buy" id="btn-price" onclick="requestPay()">⚡ 토스 1초 간편결제 (9,900원)</button>
-      <button class="btn-buy" id="btn-kmong" style="background:#ffd166; color:#000;" onclick="openKmong()">🛍️ 크몽 / 네이버페이로 안전결제 (9,900원)</button>
     </div>
   </div>
 
@@ -188,6 +187,7 @@ const UI_TEXT = {
   ko: {
     guideTitle: "💡 [합격 꿀팁] 왜 한국어가 더 크게 나오나요?",
     guideDesc: "실제 한국 시험장 PC 화면에는 한국어로 문제가 나옵니다! 시험장에서 당황하지 않고 1번에 찍을 수 있도록 한국어를 눈에 익히고, 바로 아래 해석을 참고하세요.",
+    tabStudy: "📖 학습 모드 (즉시 채점)",
     tabExam: "⏱️ 실전 모의고사 (40문항·40분)",
     badge: "무료 체험 모드 (10문항)",
     scoreMeta: "1종 보통 / 2종 보통 실전 규격",
@@ -387,7 +387,6 @@ function render() {
   document.getElementById('lock-title').innerText = t.lockTitle;
   document.getElementById('lock-desc').innerText = t.lockDesc;
   document.getElementById('btn-price').innerText = t.btnToss;
-  document.getElementById('btn-kmong').innerText = t.btnKmong;
   document.getElementById('btn-prev').innerText = t.prevBtn;
   document.getElementById('btn-next').innerText = t.nextBtn;
   document.getElementById('footer-content').innerHTML = t.footerText;
