@@ -352,7 +352,7 @@ Promise.all([
 });
 
 function switchMode(mode) {
-  const isUnlocked = (localStorage.getItem('koreapass_unlocked_' + curLang) === 'true') || (localStorage.getItem('koreapass_unlocked') === 'true');
+  const isUnlocked = (localStorage.getItem('koreapass_unlocked_' + curLang) === 'true');
 
   if (mode === 'exam' && !isUnlocked) {
     const lockAlertMsg = {
@@ -527,7 +527,7 @@ function prevQ() {
 }
 
 function nextQ() {
-  const isUnlocked = (localStorage.getItem('koreapass_unlocked_' + curLang) === 'true') || (localStorage.getItem('koreapass_unlocked') === 'true');
+  const isUnlocked = (localStorage.getItem('koreapass_unlocked_' + curLang) === 'true');
   const t = UI_TEXT[curLang] || UI_TEXT.ko;
 
   // 무료 체험 학습 모드에서는 10번 문제 이후 결제 잠금 유도
@@ -622,7 +622,7 @@ try {
 }
 
 function checkUnlocked() {
-  const isUnlockedThisLang = (localStorage.getItem('koreapass_unlocked_' + curLang) === 'true') || (localStorage.getItem('koreapass_unlocked') === 'true');
+  const isUnlockedThisLang = (localStorage.getItem('koreapass_unlocked_' + curLang) === 'true');
   const lockEl = document.querySelector('.cta-lock');
   if (isUnlockedThisLang) {
     const t = UI_TEXT[curLang] || UI_TEXT.ko;
