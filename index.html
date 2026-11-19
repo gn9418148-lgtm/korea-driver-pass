@@ -736,12 +736,24 @@ function toNativeKoreanModNum(numStr) {
   return tensWord + NATIVE_KO_ONES[o];
 }
 
+function toAmPmKoreanTime(hStr, mStr) {
+  const h = parseInt(hStr, 10);
+  const m = parseInt(mStr || '0', 10);
+  if (isNaN(h)) return hStr + ':' + mStr;
+  let period = h < 12 ? '오전' : '오후';
+  let h12 = h % 12;
+  if (h === 0 || h === 24) { period = '밤'; h12 = 12; }
+  else if (h === 12) { period = '낮'; h12 = 12; }
+  const hWord = `${toNativeKoreanModNum(String(h12))} 시`;
+  return m === 0 ? `${period} ${hWord}` : `${period} ${hWord} ${m}분`;
+}
+
 function formatKoreanSpeech(raw) {
   if (!raw) return '';
   let s = String(raw);
-  // Normalize clock ranges like 08:00 ~ 20:00 -> 8시부터 20시까지
-  s = s.replace(/\b0?(\d{1,2}):00\s*[~∼-]\s*0?(\d{1,2}):00/g, (_, h1, h2) => `${toNativeKoreanModNum(h1)} 시부터 ${toNativeKoreanModNum(h2)} 시까지`);
-  s = s.replace(/\b0?(\d{1,2}):(\d{2})/g, (_, h1, m1) => m1 === '00' ? `${toNativeKoreanModNum(h1)} 시` : `${toNativeKoreanModNum(h1)} 시 ${parseInt(m1, 10)}분`);
+  // Normalize clock ranges like 08:00 ~ 20:00 -> 오전 여덟 시부터 오후 여덟 시까지
+  s = s.replace(/\b0?(\d{1,2}):(\d{2})\s*[~∼-]\s*0?(\d{1,2}):(\d{2})/g, (_, h1, m1, h2, m2) => `${toAmPmKoreanTime(h1, m1)}부터 ${toAmPmKoreanTime(h2, m2)}까지`);
+  s = s.replace(/\b0?(\d{1,2}):(\d{2})/g, (_, h1, m1) => toAmPmKoreanTime(h1, m1));
   // Blank parentheses (      ) -> 빈칸
   s = s.replace(/\(\s{2,}\)/g, ' 빈칸 ');
   // Circled letters & numbers
