@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Payment Complete | Korea Driver's License Pass</title>
+<title>Payment Complete | KoreaPass</title>
 <style>
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: #F4F6F9;
+    background: #0d1b2a;
+    color: #e0e1dd;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,43 +18,50 @@
     box-sizing: border-box;
   }
   .box {
-    background: #fff;
+    background: #1b263b;
     border-radius: 20px;
     padding: 36px 24px;
-    max-width: 420px;
+    max-width: 430px;
     width: 100%;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    border-top: 6px solid #10B981;
+    box-shadow: 0 12px 36px rgba(0,0,0,0.4);
+    border: 1.5px solid #06d6a0;
   }
   .icon { font-size: 54px; margin-bottom: 12px; }
-  h1 { font-size: 22px; color: #1E293B; margin: 0 0 10px; }
-  p { font-size: 15px; color: #475569; line-height: 1.6; margin-bottom: 20px; }
+  h1 { font-size: 22px; color: #fff; margin: 0 0 10px; }
+  p { font-size: 14.5px; color: #cbd5e1; line-height: 1.6; margin-bottom: 18px; }
   .code-box {
-    background: #ECFDF5;
-    border: 2px dashed #10B981;
+    background: rgba(6, 214, 160, 0.12);
+    border: 1.5px dashed #06d6a0;
     border-radius: 12px;
-    padding: 16px;
-    margin-bottom: 24px;
-    font-size: 16px;
+    padding: 14px;
+    margin-bottom: 20px;
+    font-size: 14.5px;
     font-weight: 800;
-    color: #065F46;
+    color: #06d6a0;
+  }
+  .order-meta {
+    font-size: 12px;
+    color: #8da4c4;
+    margin-bottom: 18px;
+    word-break: break-all;
   }
   .btn {
     display: block;
-    background: #2563EB;
-    color: #fff;
+    background: #ffd166;
+    color: #06121e;
     text-decoration: none;
     padding: 16px;
-    border-radius: 12px;
-    font-size: 17px;
+    border-radius: 99px;
+    font-size: 16px;
     font-weight: 800;
     cursor: pointer;
     border: none;
     width: 100%;
   }
   .btn:disabled {
-    background: #94A3B8;
+    background: #475569;
+    color: #cbd5e1;
     cursor: wait;
   }
 </style>
@@ -61,16 +69,15 @@
 <body>
 <div class="box" id="box-card">
   <div class="icon" id="status-icon">⏳</div>
-  <h1 id="title">결제 승인 확인 중입니다...</h1>
-  <p id="desc">잠시만 기다려 주세요.</p>
-  <div class="code-box" id="badge">
-    🔒 토스페이먼츠 최종 승인 처리 중...
-  </div>
-  <button id="btn" class="btn" onclick="goStudy()" disabled>승인 처리 중...</button>
+  <h1 id="title">Confirming payment...</h1>
+  <p id="desc">Please wait a moment.</p>
+  <div class="code-box" id="badge">🔒 Verifying with Toss Payments...</div>
+  <div class="order-meta" id="order-meta"></div>
+  <button id="btn" class="btn" onclick="goStudy()" disabled>Processing...</button>
 </div>
 <script>
   const params = new URLSearchParams(window.location.search);
-  const lang = params.get('lang') || localStorage.getItem('koreapass_pending_lang') || 'ko';
+  const lang = params.get('lang') || localStorage.getItem('koreapass_lang') || 'en';
   const paymentKey = params.get('paymentKey') || '';
   const orderId = params.get('orderId') || '';
   const amount = params.get('amount') || '';
@@ -81,60 +88,74 @@
     ko: {
       title: "결제가 정상 완료되었습니다!",
       verifying: "결제 승인 확인 중입니다...",
-      desc: "60일 무제한 올패스 권한이 즉시 활성화되었습니다.<br>지금 바로 1,000문항 전체와 실전 모의고사를 시작하세요.",
-      badge: "🎉 60일 올패스 잠금 해제 완료 (자동 적용됨)",
-      btn: "1,000문항 전체 문제 풀러 가기 👉",
+      desc: "180일(6개월) 전 언어 무제한 올패스가 즉시 활성화되었습니다.<br>지금 바로 1,000문항 전체와 실전 모의고사를 시작하세요.",
+      badge: "🎉 180일 무제한 올패스 잠금 해제 완료",
+      btn: "1,000문항 전체 문제 풀러 가기 →",
+      orderPrefix: "주문번호(복구코드): ",
       invalid: "결제 인증 정보가 확인되지 않았습니다. 메인 화면으로 이동합니다."
     },
     uz: {
       title: "To'lov muvaffaqiyatli yakunlandi!",
       verifying: "To'lov tasdiqlanmoqda...",
-      desc: "60 kunlik cheksiz All-Pass huquqi darhol faollashtirildi.<br>Hoziroq barcha 1,000 ta savol va real imtihonni boshlang!",
-      badge: "🎉 60 kunlik All-Pass ochildi (Avtomatik faollashdi)",
-      btn: "1,000 ta savolni yechishni boshlash 👉",
+      desc: "180 kunlik (6 oy) cheksiz All-Pass darhol faollashtirildi.<br>Hoziroq barcha 1,000 ta savol va haqiqiy imtihonni boshlang!",
+      badge: "🎉 180 kunlik All-Pass ochildi (Barcha tillar)",
+      btn: "1,000 ta savolni yechishni boshlash →",
+      orderPrefix: "Buyurtma kodi (saqlab qo'ying): ",
       invalid: "To'lov ma'lumotlari topilmadi. Asosiy sahifaga qaytilmoqda."
     },
     ne: {
       title: "भुक्तानी सफलतापूर्वक सम्पन्न भयो!",
       verifying: "भुक्तानी प्रमाणित हुँदैछ...",
-      desc: "६० दिने असीमित All-Pass तुरुन्तै सक्रिय भएको छ।<br>अहिले नै सम्पूर्ण १,००० प्रश्न रमक परीक्षा सुरु गर्नुहोस्!",
-      badge: "🎉 ६० दिने All-Pass अनलक भयो (स्वतः लागू)",
-      btn: "१,००० प्रश्नहरू अभ्यास गर्न जानुहोस् 👉",
+      desc: "१८० दिने (६ महिना) असीमित All-Pass तुरुन्तै सक्रिय भएको छ।<br>अहिले नै सम्पूर्ण १,००० प्रश्न र मोक परीक्षा सुरु गर्नुहोस्!",
+      badge: "🎉 १८० दिने All-Pass अनलक भयो",
+      btn: "१,००० प्रश्नहरू अभ्यास गर्न जानुहोस् →",
+      orderPrefix: "अर्डर कोड (सुरक्षित राख्नुहोस्): ",
       invalid: "भुक्तानी विवरण फेला परेन। मुख्य पृष्ठमा फर्कँदैछ।"
     },
     vi: {
-      title: "Thanh toán đã hoàn tất thành công!",
+      title: "Thanh toán thành công!",
       verifying: "Đang xác nhận thanh toán...",
-      desc: "Quyền truy cập All-Pass 60 ngày không giới hạn đã được kích hoạt.<br>Hãy bắt đầu giải toàn bộ 1.000 câu hỏi và thi thử ngay!",
-      badge: "🎉 Đã mở khóa All-Pass 60 ngày (Tự động áp dụng)",
-      btn: "Bắt đầu giải 1.000 câu hỏi ngay 👉",
+      desc: "Gói All-Pass 180 ngày (6 tháng) không giới hạn đã được kích hoạt.<br>Hãy bắt đầu giải toàn bộ 1.000 câu hỏi và thi thử ngay!",
+      badge: "🎉 Đã mở khóa All-Pass 180 ngày",
+      btn: "Bắt đầu giải 1.000 câu hỏi ngay →",
+      orderPrefix: "Mã đơn hàng (lưu để khôi phục): ",
       invalid: "Không tìm thấy thông tin thanh toán. Đang quay lại trang chính."
     },
     en: {
       title: "Payment Successfully Completed!",
       verifying: "Confirming your payment...",
-      desc: "Your 60-Day Unlimited All-Pass is now active.<br>Start practicing all 1,000 questions and full mock exams right away!",
-      badge: "🎉 60-Day All-Pass Unlocked (Automatically Applied)",
-      btn: "Start All 1,000 Questions Now 👉",
+      desc: "Your 180-Day (6-Month) Unlimited All-Pass is now active across all languages.<br>Start practicing all 1,000 questions and mock exams right away!",
+      badge: "🎉 180-Day All-Pass Unlocked",
+      btn: "Start All 1,000 Questions Now →",
+      orderPrefix: "Order / Recovery ID: ",
       invalid: "Payment parameters missing. Returning to main page."
     },
     zh: {
       title: "支付已成功完成！",
       verifying: "正在确认支付结果...",
-      desc: "60天无限畅享通关权限已立即激活。<br>现在即可开始练习全部1,000道题与全真模拟考试！",
-      badge: "🎉 60天通关权限已解锁（已自动生效）",
-      btn: "立即开始练习1,000道全真题 👉",
+      desc: "180天（6个月）无限畅享通关权限已立即激活。<br>现在即可开始练习全部1,000道真题与全真模拟考试！",
+      badge: "🎉 180天全通关权限已解锁",
+      btn: "立即开始练习1,000道全真题 →",
+      orderPrefix: "订单/恢复编号：",
       invalid: "未检测到支付验证信息，正在返回主页。"
     }
   };
 
-  const t = TEXT[lang] || TEXT.ko;
+  const t = TEXT[lang] || TEXT.en;
   document.documentElement.lang = lang;
   document.getElementById('title').innerText = t.verifying;
 
   function unlockAndRender() {
-    localStorage.setItem('koreapass_unlocked_' + lang, 'true');
-    if (orderId) localStorage.setItem('koreapass_order_' + lang, orderId);
+    const expireAt = Date.now() + (180 * 24 * 60 * 60 * 1000);
+    localStorage.setItem('koreapass_unlock_until', String(expireAt));
+    localStorage.setItem('koreapass_unlocked_all', 'true');
+    ['ko', 'uz', 'ne', 'vi', 'en', 'zh'].forEach(lc => {
+      localStorage.setItem('koreapass_unlocked_' + lc, 'true');
+    });
+    if (orderId) {
+      localStorage.setItem('koreapass_order_id', orderId);
+      document.getElementById('order-meta').innerText = t.orderPrefix + orderId;
+    }
     document.getElementById('status-icon').innerText = '✅';
     document.getElementById('title').innerText = t.title;
     document.getElementById('desc').innerHTML = t.desc;
@@ -146,7 +167,7 @@
 
   async function initPaymentConfirm() {
     if (!paymentKey || !orderId || !amount) {
-      if (localStorage.getItem('koreapass_unlocked_' + lang) === 'true') {
+      if (localStorage.getItem('koreapass_unlocked_all') === 'true' || localStorage.getItem('koreapass_unlocked_' + lang) === 'true') {
         unlockAndRender();
         return;
       }
