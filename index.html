@@ -1137,7 +1137,7 @@ function toggleSpeak() {
   const item = curDB[curIdx];
   const t = UI_TEXT[curLang] || UI_TEXT.ko;
   const btn = document.getElementById('btn-tts');
-  const mp3Url = 'audio/q/' + String(item.id).padStart(4, '0') + '.mp3';
+  const mp3Url = 'audio/q/' + String(item.id).padStart(4, '0') + '.mp3?v=3';
 
   isSpeaking = true;
   if (btn) {
@@ -1293,7 +1293,7 @@ function playPracticalVoice(id, isLocked) {
   stopPracAudioAndRec();
   activePracPlayId = id;
   renderPractical();
-  const mp3Url = 'audio/p/' + String(id).padStart(2, '0') + '.mp3';
+  const mp3Url = 'audio/p/' + String(id).padStart(2, '0') + '.mp3?v=3';
   currentPracAudio = new Audio(mp3Url);
   currentPracAudio.onended = () => {
     activePracPlayId = null;
@@ -1899,15 +1899,29 @@ function verifyKmongCode(raw) {
   return false;
 }
 
-function redeemAccessCode() {
+const REDEEM_ENDPOINT = 'https://koreapass-payment-confirm.volcano-nukki-txvxjeuy.workers.dev/redeem';
+
+const DEVICE_LIMIT_MSG = {
+  ko: "🚫 최대 등록 가능 기기 수(2대)를 초과하여 차단되었습니다.\n(본인 기기 외 타인 무단 공유가 제한됩니다.)",
+  uz: "🚫 Maksimal ruxsat etilgan qurilmalar soni (2 ta) to'lganligi sababli bloklandi!\n(Kodni boshqalarga ulashish taqiqlanadi.)",
+  ru: "🚫 Доступ заблокирован: превышен лимит устройств (максимум 2 устройства)!\n(Передача кода третьим лицам запрещена.)",
+  id: "🚫 Diblokir: Batas maksimal perangkat (2 perangkat) telah terlampaui!\n(Dilarang membagikan kode ke orang lain.)",
+  ne: "🚫 अधिकतम २ वटा डिभाइस सीमा नाघेकोले ब्लक गरियो!\n(कोड अरूलाई बाँड्न निषेध छ।)",
+  vi: "🚫 Đã chặn: Vượt quá giới hạn tối đa 2 thiết bị cho phép!\n(Nghiêm cấm chia sẻ mã cho người khác.)",
+  en: "🚫 Access Blocked: Maximum 2-device limit exceeded for this pass!\n(Account sharing is strictly prohibited.)",
+  zh: "🚫 已拦截：该通行码绑定设备已达上限（最多2台设备），禁止多人共享！"
+};
+
+async function redeemAccessCode() {
   const t = UI_TEXT[curLang] || UI_TEXT.ko;
   const ex = EXTRA_UI[curLang] || EXTRA_UI.ko;
   const inp = document.getElementById('access-code-input');
   const pinInp = document.getElementById('access-pin-input');
+  const subBtn = document.getElementById('btn-code-submit');
   const val = (inp ? inp.value : '').trim().toUpperCase();
   const pinVal = (pinInp ? pinInp.value : '').replace(/\D/g, '');
 
-  // 1) PIN-bound Single-Language Recovery Code: KP1-<LANG>-<EXPDAYHEX>-<NONCE4>-<SIG6>
+  // 1) PIN-bound + Server 2-Device Hard-Locked Recovery Code: KP1-<LANG>-<EXPDAYHEX>-<NONCE4>-<SIG6>
   const m1 = val.match(/^KP1-(UZ|RU|ID|NE|VI|EN|ZH)-([0-9A-F]+)-([A-Z0-9]{4})-([0-9A-F]{6})$/);
   if (m1) {
     if (pinVal.length !== 4) {
@@ -1929,12 +1943,40 @@ function redeemAccessCode() {
       alert(t.codeInvalid);
       return;
     }
-    activateSingleLangPass(lCode, expireMs, val);
-    if (curLang !== 'ko' && curLang !== lCode) {
-      changeLang(lCode);
+
+    const devId = localStorage.getItem('koreapass_device_id') || ('DEV_' + Math.random().toString(36).substring(2, 12));
+    localStorage.setItem('koreapass_device_id', devId);
+
+    if (subBtn) subBtn.disabled = true;
+    try {
+      const res = await fetch(REDEEM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ code: val, pin: pinVal, deviceId: devId })
+      });
+      const data = await res.json().catch(() => ({}));
+      if (subBtn) subBtn.disabled = false;
+
+      if (!res.ok || !data.ok) {
+        if (data.code === 'DEVICE_LIMIT_EXCEEDED') {
+          alert(DEVICE_LIMIT_MSG[curLang] || DEVICE_LIMIT_MSG.en);
+        } else {
+          alert(t.codeInvalid);
+        }
+        return;
+      }
+
+      activateSingleLangPass(data.lang || lCode, data.expireAt || expireMs, val);
+      if (curLang !== 'ko' && curLang !== lCode) {
+        changeLang(lCode);
+      }
+      alert(ex.recSuccessMsg(PACK_NAMES[lCode] || lCode.toUpperCase()));
+      return;
+    } catch (err) {
+      if (subBtn) subBtn.disabled = false;
+      alert('Network verification error. Please check your internet connection and try again.');
+      return;
     }
-    alert(ex.recSuccessMsg(PACK_NAMES[lCode] || lCode.toUpperCase()));
-    return;
   }
 
   // 2) Kmong All-Pass Code: KP180-XXXXXX-CC

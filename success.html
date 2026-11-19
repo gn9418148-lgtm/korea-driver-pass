@@ -333,13 +333,23 @@
 
     const devId = localStorage.getItem('koreapass_device_id') || ('DEV_' + Math.random().toString(36).substring(2, 12));
     localStorage.setItem('koreapass_device_id', devId);
+    const expirePreview = Date.now() + (180 * 24 * 60 * 60 * 1000);
+    const preRecCode = buildRecoveryCode(buyLang, expirePreview, orderId, pin4);
 
     if (CONFIRM_ENDPOINT) {
       try {
         const res = await fetch(CONFIRM_ENDPOINT, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ paymentKey, orderId, amount: Number(amount), lang: buyLang, deviceId: devId })
+          body: JSON.stringify({
+            paymentKey,
+            orderId,
+            amount: Number(amount),
+            lang: buyLang,
+            pin: pin4,
+            recCode: preRecCode,
+            deviceId: devId
+          })
         });
         const data = await res.json().catch(() => ({}));
         if (!res.ok && data.code !== 'ALREADY_PROCESSED_PAYMENT') {
