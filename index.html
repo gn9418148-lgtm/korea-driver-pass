@@ -1430,6 +1430,29 @@ function renderPractical() {
   });
 }
 
+function shuffleArray(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function buildRealisticExam40() {
+  if (!DB_EXAM || DB_EXAM.length < 40) return shuffleArray(DB_EXAM || []).slice(0, 40);
+  // Official KoROAD stratified 40-Q composition totaling exact 100 raw points:
+  // 20 x 2pt text questions (40 pts) + 20 x 3pt questions (4 multi-answer text + 6 photo + 5 illustration + 5 road sign = 60 pts) = 40 Qs / 100 pts!
+  const text2pt = shuffleArray(DB_EXAM.filter(q => (q.id <= 680 || q.id >= 966) && q.score === 2)).slice(0, 20);
+  const text3pt = shuffleArray(DB_EXAM.filter(q => (q.id <= 680 || q.id >= 966) && q.score === 3)).slice(0, 4);
+  const photos = shuffleArray(DB_EXAM.filter(q => q.id >= 681 && q.id <= 780)).slice(0, 6);
+  const illust = shuffleArray(DB_EXAM.filter(q => q.id >= 781 && q.id <= 865)).slice(0, 5);
+  const signs = shuffleArray(DB_EXAM.filter(q => q.id >= 866 && q.id <= 965)).slice(0, 5);
+  const combined = [...text2pt, ...text3pt, ...photos, ...illust, ...signs];
+  if (combined.length === 40) return shuffleArray(combined);
+  return shuffleArray(DB_EXAM).slice(0, 40);
+}
+
 function switchMode(mode) {
   stopSpeech();
   stopPracAudioAndRec();
@@ -1477,7 +1500,7 @@ function switchMode(mode) {
     document.getElementById('tab-exam').classList.add('active');
     document.getElementById('exam-bar').style.display = 'flex';
     renderPartSelector();
-    curDB = [...DB_EXAM].sort(() => Math.random() - 0.5).slice(0, 40);
+    curDB = buildRealisticExam40();
     curIdx = 0;
     startTimer();
   } else if (mode === 'wrong') {
