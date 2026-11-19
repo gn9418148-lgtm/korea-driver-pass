@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,30 +20,65 @@
   .box {
     background: #1b263b;
     border-radius: 20px;
-    padding: 36px 24px;
-    max-width: 430px;
+    padding: 32px 22px;
+    max-width: 440px;
     width: 100%;
     text-align: center;
     box-shadow: 0 12px 36px rgba(0,0,0,0.4);
     border: 1.5px solid #06d6a0;
   }
-  .icon { font-size: 54px; margin-bottom: 12px; }
-  h1 { font-size: 22px; color: #fff; margin: 0 0 10px; }
-  p { font-size: 14.5px; color: #cbd5e1; line-height: 1.6; margin-bottom: 18px; }
+  .icon { font-size: 50px; margin-bottom: 10px; }
+  h1 { font-size: 21px; color: #fff; margin: 0 0 10px; }
+  p { font-size: 14px; color: #cbd5e1; line-height: 1.55; margin-bottom: 16px; }
   .code-box {
     background: rgba(6, 214, 160, 0.12);
     border: 1.5px dashed #06d6a0;
     border-radius: 12px;
-    padding: 14px;
-    margin-bottom: 20px;
+    padding: 13px;
+    margin-bottom: 14px;
     font-size: 14.5px;
     font-weight: 800;
     color: #06d6a0;
   }
-  .order-meta {
-    font-size: 12px;
-    color: #8da4c4;
+  .recovery-card {
+    display: none;
+    background: #0d1b2a;
+    border: 1px solid #00b4d8;
+    border-radius: 12px;
+    padding: 14px;
     margin-bottom: 18px;
+    text-align: left;
+  }
+  .recovery-label { font-size: 12px; color: #38bdf8; font-weight: 700; margin-bottom: 6px; }
+  .recovery-row { display: flex; align-items: center; gap: 8px; }
+  .recovery-code {
+    flex: 1;
+    background: #132238;
+    border: 1px solid #2b3a4a;
+    border-radius: 8px;
+    padding: 9px 10px;
+    font-family: monospace;
+    font-size: 13.5px;
+    font-weight: 800;
+    color: #ffd166;
+    word-break: break-all;
+  }
+  .copy-btn {
+    background: #00b4d8;
+    color: #04131d;
+    border: 0;
+    border-radius: 8px;
+    padding: 9px 12px;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .recovery-warn { font-size: 11.5px; color: #94a3b8; margin-top: 8px; line-height: 1.45; }
+  .order-meta {
+    font-size: 11.5px;
+    color: #8da4c4;
+    margin-bottom: 16px;
     word-break: break-all;
   }
   .btn {
@@ -51,7 +86,7 @@
     background: #ffd166;
     color: #06121e;
     text-decoration: none;
-    padding: 16px;
+    padding: 15px;
     border-radius: 99px;
     font-size: 16px;
     font-weight: 800;
@@ -72,90 +107,169 @@
   <h1 id="title">Confirming payment...</h1>
   <p id="desc">Please wait a moment.</p>
   <div class="code-box" id="badge">🔒 Verifying with Toss Payments...</div>
+  <div class="recovery-card" id="recovery-card">
+    <div class="recovery-label" id="rec-label">🔑 기기 변경 / 재로그인 복구코드 (꼭 캡처·보관하세요)</div>
+    <div class="recovery-row">
+      <div class="recovery-code" id="rec-code-val">-</div>
+      <button class="copy-btn" id="rec-copy-btn" onclick="copyRecCode()">복사</button>
+    </div>
+    <div class="recovery-warn" id="rec-warn"></div>
+  </div>
   <div class="order-meta" id="order-meta"></div>
   <button id="btn" class="btn" onclick="goStudy()" disabled>Processing...</button>
 </div>
 <script>
   const params = new URLSearchParams(window.location.search);
-  const lang = params.get('lang') || localStorage.getItem('koreapass_lang') || 'en';
+  const lang = params.get('lang') || localStorage.getItem('koreapass_lang') || 'ko';
+  const rawBuyLang = params.get('buyLang') || localStorage.getItem('koreapass_pending_buy_lang') || (lang === 'ko' ? 'uz' : lang);
+  const VALID_FOREIGN = ['uz', 'ru', 'id', 'ne', 'vi', 'en', 'zh'];
+  const buyLang = VALID_FOREIGN.includes(rawBuyLang) ? rawBuyLang : 'uz';
+  const rawPin = (params.get('pin') || localStorage.getItem('koreapass_pending_pin') || '0000').replace(/\D/g, '');
+  const pin4 = rawPin.length === 4 ? rawPin : '0000';
+
   const paymentKey = params.get('paymentKey') || '';
   const orderId = params.get('orderId') || '';
   const amount = params.get('amount') || '';
 
   const CONFIRM_ENDPOINT = window.KOREAPASS_CONFIRM_URL || 'https://koreapass-payment-confirm.volcano-nukki-txvxjeuy.workers.dev/confirm';
 
+  const LANG_LABELS = {
+    uz: 'UZB (우즈베크어)',
+    ru: 'RUS (러시아어)',
+    id: 'IDN (인도네시아어)',
+    ne: 'NEP (네팔어)',
+    vi: 'VIE (베트남어)',
+    en: 'ENG (영어)',
+    zh: 'CHN (중국어)'
+  };
+
+  function computeRecoverySig(langCode, expDayHex, nonce4, p4) {
+    const payload = `KP1|${langCode.toUpperCase()}|${expDayHex.toUpperCase()}|${nonce4.toUpperCase()}|${p4}|Somsatang2026!`;
+    let h1 = 0x811c9dc5;
+    let h2 = 0x9e3779b9;
+    for (let i = 0; i < payload.length; i++) {
+      const c = payload.charCodeAt(i);
+      h1 ^= c;
+      h1 = Math.imul(h1, 0x01000193) >>> 0;
+      h2 = (Math.imul(h2 ^ c, 0x85ebca6b) + 0xc2b2ae35) >>> 0;
+    }
+    const s1 = (h1 & 0xFFFF).toString(16).toUpperCase().padStart(4, '0');
+    const s2 = (h2 & 0xFF).toString(16).toUpperCase().padStart(2, '0');
+    return s1 + s2;
+  }
+
+  function buildRecoveryCode(langCode, expireMs, ordId, p4) {
+    const expDayHex = Math.floor(expireMs / 86400000).toString(16).toUpperCase();
+    const cleanOrd = (ordId || 'KPASS').replace(/[^A-Z0-9]/gi, '').toUpperCase();
+    const nonce4 = (cleanOrd.slice(-4) || 'A1B2').padStart(4, 'X');
+    const sig6 = computeRecoverySig(langCode, expDayHex, nonce4, p4);
+    return `KP1-${langCode.toUpperCase()}-${expDayHex}-${nonce4}-${sig6}`;
+  }
+
   const TEXT = {
     ko: {
       title: "결제가 정상 완료되었습니다!",
       verifying: "결제 승인 확인 중입니다...",
-      desc: "180일(6개월) 전 언어 무제한 올패스가 즉시 활성화되었습니다.<br>지금 바로 1,000문항 전체와 실전 모의고사를 시작하세요.",
-      badge: "🎉 180일 무제한 올패스 잠금 해제 완료",
+      desc: lName => `선택하신 <b>[${lName} + 한국어 실전모드]</b> 180일 패스가 활성화되었습니다.<br>1,000문항 전체·실전 모의고사·실기 한국어 음성훈련을 지금 바로 이용하세요.`,
+      badge: lName => `🎉 [${lName} + 한국어] 180일 패스 잠금 해제 완료`,
+      recLabel: "🔑 재로그인 / 기기 복구 코드 (꼭 캡처해 두세요)",
+      recWarn: p => `• 다른 기기나 브라우저 초기화 후 재로그인 시 위 코드와 설정하신 <b>4자리 PIN(${p})</b>이 함께 필요합니다.<br>• 본인 외 무단 공유 방지를 위해 선택한 언어만 열리며 타인 공유가 제한됩니다.`,
+      copyTxt: "복사",
+      copiedTxt: "복사됨!",
       btn: "1,000문항 전체 문제 풀러 가기 →",
-      orderPrefix: "주문번호(복구코드): ",
+      orderPrefix: "주문번호: ",
       invalid: "결제 인증 정보가 확인되지 않았습니다. 메인 화면으로 이동합니다."
     },
     uz: {
       title: "To'lov muvaffaqiyatli yakunlandi!",
       verifying: "To'lov tasdiqlanmoqda...",
-      desc: "180 kunlik (6 oy) cheksiz All-Pass darhol faollashtirildi.<br>Hoziroq barcha 1,000 ta savol va haqiqiy imtihonni boshlang!",
-      badge: "🎉 180 kunlik All-Pass ochildi (Barcha tillar)",
+      desc: () => "180 kunlik <b>[O'zbek tili + Koreys tili]</b> paketi faollashtirildi.<br>1,000 ta savol, imtihon va amaliy ovoz mashqlarini boshlang!",
+      badge: () => "🎉 [UZB + KOR] 180 kunlik Pass ochildi",
+      recLabel: "🔑 Qayta kirish kodi (Skrinshot qilib saqlang!)",
+      recWarn: p => `• Boshqa telefonda qayta kirish uchun ushbu kod va <b>PIN (${p})</b> kerak bo'ladi. Boshqa shaxslarga ulashish taqiqlanadi.`,
+      copyTxt: "Nusxa",
+      copiedTxt: "Nusxalandi!",
       btn: "1,000 ta savolni yechishni boshlash →",
-      orderPrefix: "Buyurtma kodi (saqlab qo'ying): ",
-      invalid: "To'lov ma'lumotlari topilmadi. Asosiy sahifaga qaytilmoqda."
-    },
-    ne: {
-      title: "भुक्तानी सफलतापूर्वक सम्पन्न भयो!",
-      verifying: "भुक्तानी प्रमाणित हुँदैछ...",
-      desc: "१८० दिने (६ महिना) असीमित All-Pass तुरुन्तै सक्रिय भएको छ।<br>अहिले नै सम्पूर्ण १,००० प्रश्न र मोक परीक्षा सुरु गर्नुहोस्!",
-      badge: "🎉 १८० दिने All-Pass अनलक भयो",
-      btn: "१,००० प्रश्नहरू अभ्यास गर्न जानुहोस् →",
-      orderPrefix: "अर्डर कोड (सुरक्षित राख्नुहोस्): ",
-      invalid: "भुक्तानी विवरण फेला परेन। मुख्य पृष्ठमा फर्कँदैछ।"
-    },
-    vi: {
-      title: "Thanh toán thành công!",
-      verifying: "Đang xác nhận thanh toán...",
-      desc: "Gói All-Pass 180 ngày (6 tháng) không giới hạn đã được kích hoạt.<br>Hãy bắt đầu giải toàn bộ 1.000 câu hỏi và thi thử ngay!",
-      badge: "🎉 Đã mở khóa All-Pass 180 ngày",
-      btn: "Bắt đầu giải 1.000 câu hỏi ngay →",
-      orderPrefix: "Mã đơn hàng (lưu để khôi phục): ",
-      invalid: "Không tìm thấy thông tin thanh toán. Đang quay lại trang chính."
-    },
-    en: {
-      title: "Payment Successfully Completed!",
-      verifying: "Confirming your payment...",
-      desc: "Your 180-Day (6-Month) Unlimited All-Pass is now active across all languages.<br>Start practicing all 1,000 questions and mock exams right away!",
-      badge: "🎉 180-Day All-Pass Unlocked",
-      btn: "Start All 1,000 Questions Now →",
-      orderPrefix: "Order / Recovery ID: ",
-      invalid: "Payment parameters missing. Returning to main page."
-    },
-    zh: {
-      title: "支付已成功完成！",
-      verifying: "正在确认支付结果...",
-      desc: "180天（6个月）无限畅享通关权限已立即激活。<br>现在即可开始练习全部1,000道真题与全真模拟考试！",
-      badge: "🎉 180天全通关权限已解锁",
-      btn: "立即开始练习1,000道全真题 →",
-      orderPrefix: "订单/恢复编号：",
-      invalid: "未检测到支付验证信息，正在返回主页。"
+      orderPrefix: "Buyurtma: ",
+      invalid: "To'lov ma'lumotlari topilmadi."
     },
     ru: {
       title: "Оплата успешно завершена!",
       verifying: "Подтверждение оплаты...",
-      desc: "Безлимитный доступ All-Pass на 180 дней (6 месяцев) активирован.<br>Начинайте решать все 1 000 вопросов и пробные экзамены прямо сейчас!",
-      badge: "🎉 Доступ All-Pass на 180 дней открыт",
+      desc: () => "Доступ на 180 дней для пакета <b>[Русский + Корейский]</b> активирован!",
+      badge: () => "🎉 [RUS + KOR] Доступ на 180 дней открыт",
+      recLabel: "🔑 Код для повторного входа (Сохраните скриншот!)",
+      recWarn: p => `• Для входа при смене браузера нужен этот код и ваш <b>PIN (${p})</b>. Передача третьим лицам блокируется.`,
+      copyTxt: "Копир.",
+      copiedTxt: "Скопировано!",
       btn: "Перейти ко всем 1 000 вопросам →",
-      orderPrefix: "Код заказа (сохраните для восстановления): ",
-      invalid: "Данные оплаты не найдены. Возврат на главную страницу."
+      orderPrefix: "Заказ: ",
+      invalid: "Данные оплаты не найдены."
     },
     id: {
       title: "Pembayaran Berhasil!",
       verifying: "Memverifikasi pembayaran...",
-      desc: "Akses Tanpa Batas All-Pass 180 Hari (6 Bulan) telah aktif.<br>Mulai kerjakan seluruh 1.000 soal resmi dan simulasi ujian sekarang!",
-      badge: "🎉 All-Pass 180 Hari Terbuka",
+      desc: () => "Paket 180 Hari <b>[Bahasa Indonesia + Korea]</b> telah aktif!",
+      badge: () => "🎉 [IDN + KOR] Paket 180 Hari Aktif",
+      recLabel: "🔑 Kode Login Ulang (Simpan Screenshot!)",
+      recWarn: p => `• Gunakan kode ini beserta <b>PIN (${p})</b> untuk login ulang. Dilarang membagikan kode ke orang lain.`,
+      copyTxt: "Salin",
+      copiedTxt: "Tersalin!",
       btn: "Mulai Kerjakan 1.000 Soal Sekarang →",
-      orderPrefix: "Kode Pesanan (simpan untuk pemulihan): ",
-      invalid: "Data pembayaran tidak ditemukan. Kembali ke halaman utama."
+      orderPrefix: "Pesanan: ",
+      invalid: "Data pembayaran tidak ditemukan."
+    },
+    ne: {
+      title: "भुक्तानी सफलतापूर्वक सम्पन्न भयो!",
+      verifying: "भुक्तानी प्रमाणित हुँदैछ...",
+      desc: () => "१८० दिने <b>[नेपाली + कोरियन]</b> पास सक्रिय भएको छ!",
+      badge: () => "🎉 [NEP + KOR] १८० दिने पास अनलक भयो",
+      recLabel: "🔑 पुनः लगइन कोड (स्क्रिनसट राख्नुहोस्!)",
+      recWarn: p => `• अर्को डिभाइसमा लगइन गर्न यो कोड र <b>PIN (${p})</b> चाहिन्छ। अरूलाई बाँड्न निषेध छ।`,
+      copyTxt: "कपी",
+      copiedTxt: "कपी भयो!",
+      btn: "१,००० प्रश्नहरू अभ्यास गर्न जानुहोस् →",
+      orderPrefix: "अर्डर: ",
+      invalid: "भुक्तानी विवरण फेला परेन।"
+    },
+    vi: {
+      title: "Thanh toán thành công!",
+      verifying: "Đang xác nhận thanh toán...",
+      desc: () => "Gói 180 ngày <b>[Tiếng Việt + Tiếng Hàn]</b> đã được kích hoạt!",
+      badge: () => "🎉 [VIE + KOR] Đã mở khóa gói 180 ngày",
+      recLabel: "🔑 Mã đăng nhập lại (Hãy chụp màn hình lưu lại!)",
+      recWarn: p => `• Dùng mã này cùng <b>PIN (${p})</b> khi đăng nhập lại. Nghiêm cấm chia sẻ tài khoản.`,
+      copyTxt: "Sao chép",
+      copiedTxt: "Đã chép!",
+      btn: "Bắt đầu giải 1.000 câu hỏi ngay →",
+      orderPrefix: "Mã đơn: ",
+      invalid: "Không tìm thấy thông tin thanh toán."
+    },
+    en: {
+      title: "Payment Successfully Completed!",
+      verifying: "Confirming your payment...",
+      desc: () => "Your 180-Day <b>[English + Korean]</b> Pass is now active!",
+      badge: () => "🎉 [ENG + KOR] 180-Day Pass Unlocked",
+      recLabel: "🔑 Re-login / Recovery Code (Save Screenshot!)",
+      recWarn: p => `• Keep this code and your <b>4-digit PIN (${p})</b> to sign back in if cookies clear. Single-user license only.`,
+      copyTxt: "Copy",
+      copiedTxt: "Copied!",
+      btn: "Start All 1,000 Questions Now →",
+      orderPrefix: "Order ID: ",
+      invalid: "Payment parameters missing."
+    },
+    zh: {
+      title: "支付已成功完成！",
+      verifying: "正在确认支付结果...",
+      desc: () => "180天<b>【中文 + 韩文原题】</b>专属通关卡已立即激活！",
+      badge: () => "🎉 [CHN + KOR] 180天权限已解锁",
+      recLabel: "🔑 重新登录/恢复码（请务必截图保存！）",
+      recWarn: p => `• 清除缓存或更换手机登录时需输入此码与您的<b>4位PIN码(${p})</b>。仅限本人单语种使用。`,
+      copyTxt: "复制",
+      copiedTxt: "已复制！",
+      btn: "立即开始练习1,000道全真题 →",
+      orderPrefix: "订单号：",
+      invalid: "未检测到支付验证信息。"
     }
   };
 
@@ -163,21 +277,48 @@
   document.documentElement.lang = lang;
   document.getElementById('title').innerText = t.verifying;
 
+  let generatedRecCode = '';
+
+  function copyRecCode() {
+    if (!generatedRecCode) return;
+    navigator.clipboard.writeText(generatedRecCode).then(() => {
+      const b = document.getElementById('rec-copy-btn');
+      b.innerText = t.copiedTxt;
+      setTimeout(() => { b.innerText = t.copyTxt; }, 2000);
+    }).catch(() => {});
+  }
+
   function unlockAndRender() {
     const expireAt = Date.now() + (180 * 24 * 60 * 60 * 1000);
-    localStorage.setItem('koreapass_unlock_until', String(expireAt));
-    localStorage.setItem('koreapass_unlocked_all', 'true');
-    ['ko', 'uz', 'ne', 'vi', 'en', 'zh', 'ru', 'id'].forEach(lc => {
-      localStorage.setItem('koreapass_unlocked_' + lc, 'true');
-    });
+    // Clear legacy global all-language unlock so ONLY [buyLang + ko] unlock!
+    localStorage.removeItem('koreapass_unlocked_all');
+    localStorage.removeItem('koreapass_unlock_until');
+
+    localStorage.setItem('koreapass_lang_exp_' + buyLang, String(expireAt));
+    localStorage.setItem('koreapass_lang_exp_ko', String(expireAt));
+    localStorage.setItem('koreapass_unlocked_' + buyLang, 'true');
+    localStorage.setItem('koreapass_unlocked_ko', 'true');
+
+    generatedRecCode = buildRecoveryCode(buyLang, expireAt, orderId, pin4);
+    localStorage.setItem('koreapass_recovery_code_' + buyLang, generatedRecCode);
     if (orderId) {
       localStorage.setItem('koreapass_order_id', orderId);
       document.getElementById('order-meta').innerText = t.orderPrefix + orderId;
     }
+
+    const lLabel = LANG_LABELS[buyLang] || buyLang.toUpperCase();
     document.getElementById('status-icon').innerText = '✅';
     document.getElementById('title').innerText = t.title;
-    document.getElementById('desc').innerHTML = t.desc;
-    document.getElementById('badge').innerText = t.badge;
+    document.getElementById('desc').innerHTML = t.desc(lLabel);
+    document.getElementById('badge').innerText = t.badge(lLabel);
+
+    const recCard = document.getElementById('recovery-card');
+    recCard.style.display = 'block';
+    document.getElementById('rec-label').innerText = t.recLabel;
+    document.getElementById('rec-code-val').innerText = generatedRecCode;
+    document.getElementById('rec-copy-btn').innerText = t.copyTxt;
+    document.getElementById('rec-warn').innerHTML = t.recWarn(pin4);
+
     const btn = document.getElementById('btn');
     btn.disabled = false;
     btn.innerText = t.btn;
@@ -185,21 +326,20 @@
 
   async function initPaymentConfirm() {
     if (!paymentKey || !orderId || !amount) {
-      if (localStorage.getItem('koreapass_unlocked_all') === 'true' || localStorage.getItem('koreapass_unlocked_' + lang) === 'true') {
-        unlockAndRender();
-        return;
-      }
       alert(t.invalid);
       window.location.replace('./?lang=' + encodeURIComponent(lang));
       return;
     }
+
+    const devId = localStorage.getItem('koreapass_device_id') || ('DEV_' + Math.random().toString(36).substring(2, 12));
+    localStorage.setItem('koreapass_device_id', devId);
 
     if (CONFIRM_ENDPOINT) {
       try {
         const res = await fetch(CONFIRM_ENDPOINT, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ paymentKey, orderId, amount: Number(amount), lang })
+          body: JSON.stringify({ paymentKey, orderId, amount: Number(amount), lang: buyLang, deviceId: devId })
         });
         const data = await res.json().catch(() => ({}));
         if (!res.ok && data.code !== 'ALREADY_PROCESSED_PAYMENT') {
@@ -212,10 +352,7 @@
         }
       } catch (err) {
         console.error('Payment confirm error:', err);
-        window.location.replace(
-          './fail.html?lang=' + encodeURIComponent(lang) +
-          '&code=NETWORK_ERROR'
-        );
+        window.location.replace('./fail.html?lang=' + encodeURIComponent(lang) + '&code=NETWORK_ERROR');
         return;
       }
     }
@@ -224,7 +361,8 @@
   }
 
   function goStudy() {
-    window.location.href = './?lang=' + encodeURIComponent(lang);
+    const targetTab = lang === 'ko' ? 'ko' : buyLang;
+    window.location.href = './?lang=' + encodeURIComponent(targetTab);
   }
 
   initPaymentConfirm();

@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "stage": "skills",
+    "ko": "지금부터 장내기능 시험을 시작하겠습니다.",
+    "tip": {
+      "ko": "[장내기능 시작] 의자와 거울을 맞추고 안전띠를 먼저 착용한 뒤 안내 음성이 끝날 때까지 기다리세요.",
+      "uz": "[Avtodrom boshlanishi] O'rindiq va oynalarni sozlang, xavfsizlik kamarini taqing va ovoz tugashini kuting.",
+      "ru": "[Начало автодрома] Отрегулируйте сиденье и зеркала, пристегните ремень и дождитесь окончания сигнала.",
+      "id": "[Mulai Ujian Lapangan] Atur kursi & spion, pasang sabuk pengaman, tunggu suara selesai.",
+      "ne": "[ट्रायल सुरु] सिट र ऐना मिलाउनुहोस्, सिटबेल्ट बाँध्नुहोस् र आवाज सकिन पर्खनुहोस्।",
+      "vi": "[Bắt đầu thi sa hình] Chỉnh ghế, gương, thắt dây an toàn và đợi giọng nói kết thúc.",
+      "en": "[Course Test Start] Adjust seat & mirrors, fasten your seatbelt, and wait for the prompt to finish.",
+      "zh": "【场内技能开始】调整座椅和后视镜，系好安全带，等语音播报完毕后再操作。"
+    }
+  },
+  {
+    "id": 2,
+    "stage": "skills",
+    "ko": "엔진 시동을 거세요.",
+    "tip": {
+      "ko": "[5초 이내 조작] 브레이크 페달을 밟은 상태에서 시동 키를 돌리거나 시동 버튼을 누르세요.",
+      "uz": "[5 soniya ichida] Tormozni bosib turib, kalitni burang yoki START tugmasini bosing.",
+      "ru": "[За 5 секунд] Нажмите педаль тормоза и поверните ключ зажигания (или кнопку START).",
+      "id": "[Dalam 5 detik] Injak pedal rem lalu putar kunci kontak atau tekan tombol START.",
+      "ne": "[५ सेकेन्ड भित्र] ब्रेक थिचेर साँचो घुमाउनुहोस् वा START बटन थिच्नुहोस्।",
+      "vi": "[Trong 5 giây] Đạp phanh và vặn chìa khóa khởi động xe.",
+      "en": "[Within 5 sec] Press the brake pedal firmly and turn the ignition key / press START.",
+      "zh": "【5秒内操作】踩住刹车踏板，转动钥匙或按下启动按钮点火。"
+    }
+  },
+  {
+    "id": 3,
+    "stage": "skills",
+    "ko": "기어 변속 장치를 드라이브에 놓았다가 파킹 위치로 전환하세요.",
+    "tip": {
+      "ko": "[기어 점검] 브레이크를 밟은 채 기어를 D(2종) 또는 1단→중립(1종)에 넣었다가 다시 P로 올리세요.",
+      "uz": "[Uzatmalar qutisi] Tormozni bosib, richagni D ga tushiring va 2 soniyadan so'ng qayta P ga qo'ying.",
+      "ru": "[Проверка КПП] Удерживая тормоз, переведите рычаг в D, затем верните обратно в P.",
+      "id": "[Cek Transmisi] Sambil injak rem, pindahkan tuas ke D sebentar lalu kembalikan ke P.",
+      "ne": "[गियर जाँच] ब्रेक थिचेर गियर D मा राख्नुहोस् र फेरि P मा फर्काउनुहोस्।",
+      "vi": "[Kiểm tra cần số] Giữ phanh, kéo cần số về D rồi đẩy lại về P.",
+      "en": "[Gear Check] Keep brake pressed, shift into D briefly, then shift back to P.",
+      "zh": "【挡位检查】踩住刹车，将挡位挂入D挡停留片刻后再推回P挡。"
+    }
+  },
+  {
+    "id": 4,
+    "stage": "skills",
+    "ko": "전조등을 켜시오.",
+    "tip": {
+      "ko": "[헤드라이트 켜기] 핸들 왼쪽 레버 끝을 앞으로 두 번 돌려 전조등(하향등)을 켜세요.",
+      "uz": "[Farani yoqish] Rul chap tomonidagi dastak uchini 2 marta oldinga burab farani yoqing.",
+      "ru": "[Включить фары] Поверните конец левого подрулевого рычага на 2 щелчка вперёд.",
+      "id": "[Nyalakan Lampu Utama] Putar ujung tuas kiri setir 2 klik ke depan untuk menyalakan lampu.",
+      "ne": "[हेडलाइट बाल्नुहोस्] स्टेयरिङको बायाँ डण्डी २ पटक घुमाएर हेडलाइट बाल्नुहोस्।",
+      "vi": "[Bật đèn pha/cốt] Xoay đầu cần gạt bên trái vô lăng 2 nấc về phía trước.",
+      "en": "[Turn ON Headlights] Twist the tip of the left stalk forward 2 clicks.",
+      "zh": "【打开前照灯】将方向盘左侧拨杆末端向前旋转两格打开大灯。"
+    }
+  },
+  {
+    "id": 5,
+    "stage": "skills",
+    "ko": "상향등으로 변환하시오.",
+    "tip": {
+      "ko": "[하이빔 켜기] 전조등이 켜진 상태에서 왼쪽 레버를 계기판 쪽(앞쪽)으로 밀어 파란 표시등을 켜세요.",
+      "uz": "[Uzoqni yorituvchi chiroq] Chap dastakni oldinga (pribor paneli tomonga) itaring.",
+      "ru": "[Дальний свет] От성лкните левый рычаг от себя вперёд (загорится синий значок).",
+      "id": "[Lampu Jauh] Dorong tuas kiri ke arah depan menjauhi Anda.",
+      "ne": "[हाई-बिम] बायाँ डण्डीलाई अगाडि (ड्यासबोर्ड तर्फ) धकेल्नुहोस्।",
+      "vi": "[Chuyển đèn chiếu xa] Đẩy cần gạt bên trái ra phía trước mặt đồng hồ.",
+      "en": "[Switch to High Beam] Push the left stalk forward away from you.",
+      "zh": "【切换远光灯】保持大灯开启，将左侧拨杆向仪表盘方向前推。"
+    }
+  },
+  {
+    "id": 6,
+    "stage": "skills",
+    "ko": "하향등으로 변환 후 전조등을 끄시오.",
+    "tip": {
+      "ko": "[라이트 끄기] 레버를 몸 쪽으로 당겨 하향등으로 바꾼 뒤, 끝을 반대로 돌려 완전히 OFF 하세요.",
+      "uz": "[Farani o'chirish] Dastakni o'zingizga torting va uchini OFF holatiga qaytarib o'chiring.",
+      "ru": "[Ближний свет и ВЫКЛ] Потяните рычаг к себе в среднее положение и поверните конец в OFF.",
+      "id": "[Lampu Dekat & Matikan] Tarik tuas kembali ke tengah lalu putar ujungnya ke posisi OFF.",
+      "ne": "[लो-बिम र बन्द] डण्डी आफूतिर तान्नुहोस् र घुमाएर OFF गर्नुहोस्।",
+      "vi": "[Về đèn cốt và Tắt đèn] Kéo cần về vị trí giữa rồi xoay đầu cần về OFF.",
+      "en": "[Low Beam & Turn OFF] Pull stalk back to center, then twist tip to OFF.",
+      "zh": "【切回近光并关灯】将拨杆拉回原位，再将末端旋回OFF彻底关闭。"
+    }
+  },
+  {
+    "id": 7,
+    "stage": "skills",
+    "ko": "좌측 방향지시등을 켜시오.",
+    "tip": {
+      "ko": "[왼쪽 깜빡이] 핸들 왼쪽 레버를 아래로 내리세요 (우측 방향지시등이면 위로 올리세요).",
+      "uz": "[Chap povorotnik] Rul chap dastagini pastga tushiring (o'ng bo'lsa tepaga ko'taring).",
+      "ru": "[Левый поворотник] Опустите левый рычаг вниз (для правого — поднимите вверх).",
+      "id": "[Sein Kiri] Tekan tuas kiri ke bawah (jika kanan, angkat ke atas).",
+      "ne": "[बायाँ साइडलाइट] बायाँ डण्डी तल झार्नुहोस् (दायाँ भए माथि उठाउनुहोस्)।",
+      "vi": "[Bật xi-nhan trái] Gạt cần bên trái xuống dưới (xi-nhan phải thì gạt lên trên).",
+      "en": "[Left Turn Signal] Push the left stalk DOWN (up for right turn signal).",
+      "zh": "【开启左转向灯】将左侧拨杆向下拨（右转向灯则向上拨）。"
+    }
+  },
+  {
+    "id": 8,
+    "stage": "skills",
+    "ko": "방향지시등을 끄시오.",
+    "tip": {
+      "ko": "[깜빡이 끄기] 레버를 다시 가운데 중립 위치로 맞추세요.",
+      "uz": "[Povorotnikni o'chirish] Dastakni o'rta holatga qaytaring.",
+      "ru": "[Выключить поворотник] Верните рычаг в центральное положение.",
+      "id": "[Matikan Sein] Kembalikan tuas ke posisi tengah.",
+      "ne": "[साइडलाइट बन्द] डण्डीलाई बीचको स्थानमा फर्काउनुहोस्।",
+      "vi": "[Tắt xi-nhan] Đưa cần gạt trở lại vị trí giữa.",
+      "en": "[Turn OFF Signal] Return the stalk to the center neutral position.",
+      "zh": "【关闭转向灯】将左侧拨杆拨回中间位置。"
+    }
+  },
+  {
+    "id": 9,
+    "stage": "skills",
+    "ko": "와이퍼를 작동하시오.",
+    "tip": {
+      "ko": "[와이퍼 켜기] 핸들 오른쪽 레버를 한 칸 아래(또는 차종별 작동 방향)로 내려 와이퍼를 움직이세요.",
+      "uz": "[Oyna artgich (Vayper)] Rul o'ng tomonidagi dastakni pastga tushirib vayperni yoqing.",
+      "ru": "[Включить дворники] Опустите правый подрулевой рычаг на 1 позицию для работы стеклоочистителей.",
+      "id": "[Nyalakan Wiper] Gerakkan tuas kanan setir untuk menyalakan penyeka kaca.",
+      "ne": "[वाइपर चलाउनुहोस्] स्टेयरिङको दायाँ डण्डी सारेर वाइपर चलाउनुहोस्।",
+      "vi": "[Bật cần gạt nước] Gạt cần bên phải vô lăng để bật gạt mưa.",
+      "en": "[Turn ON Wipers] Move the right-hand stalk to activate the windshield wipers.",
+      "zh": "【开启雨刷】拨动方向盘右侧拨杆启动雨刮器。"
+    }
+  },
+  {
+    "id": 10,
+    "stage": "skills",
+    "ko": "좌측 방향지시등을 켜고 출발하세요.",
+    "tip": {
+      "ko": "[출발 필수 순서] ① 왼쪽 깜빡이 ON → ② 주차브레이크 해제 → ③ 기어 D → 출발 후 '삐' 소리 나면 깜빡이 OFF!",
+      "uz": "[Start tartibi] ① Chap povorotnik → ② Qo'l tormozini tushiring → ③ D uzatma → 'Bip' deganda povorotnikni o'chiring!",
+      "ru": "[Старт] ① Левый поворотник → ② Снять ручник → ③ Рычаг в D → После сигнала «бип» выключить поворотник!",
+      "id": "[Urutan Berangkat] ① Sein kiri → ② Lepas rem tangan → ③ Gigi D → Matikan sein setelah bunyi 'bip'!",
+      "ne": "[सुरु गर्ने क्रम] ① बायाँ साइडलाइट → ② ह्यान्डब्रेक खोल्नुहोस् → ③ गियर D → 'बिप' आवाज पछि साइडलाइट बन्द!",
+      "vi": "[Thứ tự xuất phát] ① Bật xi-nhan trái → ② Hạ phanh tay → ③ Vào số D → Qua vạch kêu 'bíp' thì tắt xi-nhan!",
+      "en": "[Start Sequence] ① Left signal ON → ② Release handbrake → ③ Gear D → Turn signal OFF right after the beep!",
+      "zh": "【起步顺序】①打左转向灯 → ②松手刹 → ③挂D挡起步 → 听到“嘀”声后立刻关转向灯！"
+    }
+  },
+  {
+    "id": 11,
+    "stage": "skills",
+    "ko": "돌발! 돌발!",
+    "tip": {
+      "ko": "[최다 감점 주의!] 경보음이 울리면 2초 안에 브레이크를 밟아 완전 정지하고, 3초 안에 비상점멸등(🔺)을 누르세요!",
+      "uz": "[Eng muhim!] Sirena chalinganda 2 soniyada to'liq to'xtang va 3 soniyada avariya tugmasini (🔺) bosing!",
+      "ru": "[Внимание!] При сирене остановитесь за 2 секунды и за 3 секунды нажмите кнопку аварийки (🔺)!",
+      "id": "[Awas Gagal!] Begitu bunyi darurat, injak rem berhenti total dalam 2 detik & tekan lampu hazard (🔺) dalam 3 detik!",
+      "ne": "[अति जरुरी!] साइरन बज्नासाथ २ सेकेन्डमा पूर्ण रोक्नुहोस् र ३ सेकेन्डमा हाजार्ड लाइट (🔺) थिच्नुहोस्!",
+      "vi": "[Cực kỳ quan trọng!] Nghe còi báo động: Phanh dừng hẳn trong 2 giây & bấm đèn khẩn cấp (🔺) trong 3 giây!",
+      "en": "[Emergency Stop!] Slam brake to full stop within 2 sec & press Hazard Lights (🔺) within 3 sec!",
+      "zh": "【突发情况必考】听到警报2秒内踩死刹车完全停稳，3秒内按下双闪应急灯（🔺）！"
+    }
+  },
+  {
+    "id": 12,
+    "stage": "skills",
+    "ko": "경사로 정지 구간입니다. 정지선 안에 일시정지 후 출발하세요.",
+    "tip": {
+      "ko": "[언덕길] 흰색 정지선 안에 차를 멈춰 3초 이상 정지('삐' 확인음)한 뒤 뒤로 밀리지 않게 출발하세요.",
+      "uz": "[Qiyalikda to'xtash] Oq chiziq ichida 3 soniya to'xtab turing, so'ng orqaga ketmasdan harakatlaning.",
+      "ru": "[Эстакада] Полностью остановитесь в зоне стоп-линии минимум на 3 секунды, затем плавно трогайтесь.",
+      "id": "[Tanjakan] Berhenti penuh di area garis putih minimal 3 detik sampai bunyi konfirmasi, lalu jalan.",
+      "ne": "[उकालोमा रोक्ने] सेतो रेखा भित्र ३ सेकेन्ड पूर्ण रोक्नुहोस् र पछाडि नबगी अगाडि बढ्नुहोस्।",
+      "vi": "[Dừng xe ngang dốc] Dừng hẳn trong vạch trắng trên 3 giây đợi tiếng báo nhận, rồi nhấn ga đi tiếp.",
+      "en": "[Hill Stop] Come to a complete stop inside the white box for 3+ seconds before accelerating smoothly.",
+      "zh": "【坡道定点停车】在白色停止线区域内完全停稳保持3秒以上，听到提示音后再平稳起步。"
+    }
+  },
+  {
+    "id": 13,
+    "stage": "skills",
+    "ko": "직각주차 코스에 진입하세요. 확인되었습니다.",
+    "tip": {
+      "ko": "[T자 주차] 노란 검지선을 밟지 말고 뒷바퀴가 주차 확인선을 넘어 '확인되었습니다' 음성이 나온 뒤 빠져나오세요.",
+      "uz": "[T-parkovka] Sariq chiziqni bosmang! 'Tasdiqlandi' ovozi chiqqandan keyingina tashqariga chiqing.",
+      "ru": "[Парковка 90°] Не наезжайте на жёлтую линию; выезжайте только после фразы «Подтверждено».",
+      "id": "[Parkir Lurus/T] Jangan injak garis kuning; keluar hanya setelah terdengar suara 'Terkonfirmasi'.",
+      "ne": "[T-पार्किङ] पहेंलो रेखा नछुनुहोस्; 'पुष्टि भयो' आवाज आएपछि मात्र बाहिर निस्कनुहोस्।",
+      "vi": "[Ghép xe dọc chữ T] Không đè vạch vàng; lùi đến khi nghe tiếng 'Đã xác nhận' mới được đánh lái ra.",
+      "en": "[90° T-Parking] Avoid yellow sensor lines; wait until you hear 'Confirmed' before driving out.",
+      "zh": "【直角T字倒车入库】切勿压黄线，倒车至听到“已确认”语音提示后再驶出车库。"
+    }
+  },
+  {
+    "id": 14,
+    "stage": "skills",
+    "ko": "가속 구간입니다. 시속 이십 킬로미터 이상 가속 후 감속하세요.",
+    "tip": {
+      "ko": "[가속 코스] 표지판 통과 시 시속 20km를 살짝 넘긴 뒤 즉시 브레이크로 시속 20km 미만으로 줄여 통과하세요.",
+      "uz": "[Tezlanish] Belgidan o'tishda tezlikni 20 km/s dan oshirib, darhol 20 km/s dan pastga tushiring.",
+      "ru": "[Участок разгона] Превысьте 20 км/ч у знака, затем сразу снизьте скорость ниже 20 км/ч.",
+      "id": "[Zona Akselerasi] Lewati 20 km/jam sebentar di rambu, lalu segera kurangi kembali di bawah 20 km/jam.",
+      "ne": "[गति बढाउने क्षेत्र] २० कि.मी./घण्टा कटाएर तुरुन्तै फेरि २० भन्दा कम गतिमा झार्नुहोस्।",
+      "vi": "[Đoạn tăng tốc] Đạp ga vượt trên 20 km/h qua biển báo rồi phanh giảm ngay xuống dưới 20 km/h.",
+      "en": "[Acceleration Zone] Briefly exceed 20 km/h past the sign, then slow back down under 20 km/h.",
+      "zh": "【百米加减速区间】越过标志时提速超过20km/h，随后立即踩刹车降回20km/h以下。"
+    }
+  },
+  {
+    "id": 15,
+    "stage": "road",
+    "ko": "시험을 시작합니다. 안전띠를 착용해 주세요.",
+    "tip": {
+      "ko": "[도로주행 시작 — 미착용 시 즉시 실격!] 출발 전 안전띠 착용, 사이드브레이크 해제, 좌측 깜빡이를 꼭 확인하세요.",
+      "uz": "[Shahar imtihoni] Kamar taqilmasa darhol yiqilasiz! Kamarni taqing, qo'l tormozini tushiring va chap povorotnik yoqing.",
+      "ru": "[Городской экзамен] Без ремня — мгновенная дисквалификация! Пристегнитесь, снимите ручник и включите левый поворотник.",
+      "id": "[Ujian Jalan Raya] Tanpa sabuk pengaman langsung diskualifikasi! Pasang sabuk, lepas rem tangan, nyalakan sein kiri.",
+      "ne": "[सडक परीक्षा] सिटबेल्ट नबाँधे तुरुन्त फेल! सिटबेल्ट बाँध्नुहोस्, ह्यान्डब्रेक खोल्नुहोस् र बायाँ साइडलाइट बाल्नुहोस्।",
+      "vi": "[Thi đường trường] Quên dây an toàn là trượt ngay! Thắt dây, hạ phanh tay, bật xi-nhan trái khi xuất phát.",
+      "en": "[Road Test Start] Unfastened seatbelt = instant fail! Buckle up, release handbrake, signal left.",
+      "zh": "【道路行驶开始】未系安全带直接不合格！起步前确认安全带、松手刹、打左转向灯。"
+    }
+  },
+  {
+    "id": 16,
+    "stage": "road",
+    "ko": "백오십 미터 앞 사거리에서 좌회전입니다. 미리 차로를 변경하세요.",
+    "tip": {
+      "ko": "[도로주행 좌회전] 교차로 30m 전부터 좌측 방향지시등을 켜고 미리 좌회전 차로(1차로 등)로 안전하게 진입하세요.",
+      "uz": "[Chapga burilish] Chorrahadan kamida 30m oldin chap povorotnikni yoqing va chap bo'lakka o'ting.",
+      "ru": "[Поворот налево] За 30+ метров включите левый поворотник и заранее перестройтесь в левую полосу.",
+      "id": "[Belok Kiri] Nyalakan sein kiri minimal 30m sebelum persimpangan dan pindah ke lajur belok kiri.",
+      "ne": "[बायाँ मोड] चोकभन्दा ३० मिटर अगाडि नै बायाँ साइडलाइट बालेर बायाँ लेनमा जानुहोस्।",
+      "vi": "[Rẽ trái ngã tư] Bật xi-nhan trái trước 30m và chuyển sẵn sang làn rẽ trái an toàn.",
+      "en": "[Left Turn Ahead] Signal left at least 30m before the intersection and move into the left turn lane.",
+      "zh": "【前方路口左转】提前30米以上开启左转向灯，提前变道进入左转专用车道。"
+    }
+  },
+  {
+    "id": 17,
+    "stage": "road",
+    "ko": "잠시 후 우회전입니다. 보행자에 주의하여 서행하세요.",
+    "tip": {
+      "ko": "[우회전 보행자 보호] 전방 차량 신호가 적색이면 정지선 일시정지! 건너려는 보행자가 있으면 무조건 완전 정지하세요.",
+      "uz": "[O'ngga burilish] Qizil chiroqda to'liq to'xtang! Piyoda bo'lsa, o'tib ketguncha kuting (aks holda yiqilasiz).",
+      "ru": "[Поворот направо] На красный сигнал сделайте полную остановку! При наличии пешеходов обязательно пропустите их.",
+      "id": "[Belok Kanan] Berhenti penuh saat lampu merah! Jika ada pejalan kaki, wajib berhenti sampai mereka lewat.",
+      "ne": "[दायाँ मोड] रातो बत्तीमा एकपटक पूर्ण रोक्नुहोस् र पैदलयात्री भए अनिवार्य बाटो दिनुहोस्।",
+      "vi": "[Rẽ phải chú ý người đi bộ] Đèn đỏ phải dừng hẳn trước vạch; có người đi bộ sang đường phải dừng nhường 100%.",
+      "en": "[Right Turn & Pedestrians] Full stop on red light! Yield 100% to any pedestrian crossing or waiting.",
+      "zh": "【右转注意行人】遇红灯必须先完全停车！斑马线有行人通行或等待时必须停车礼让。"
+    }
+  },
+  {
+    "id": 18,
+    "stage": "road",
+    "ko": "어린이 보호구역입니다. 시속 삼십 킬로미터 미만으로 주행하세요.",
+    "tip": {
+      "ko": "[스쿨존 — 1km만 넘어도 즉시 실격!] 표지판이 보이기 전부터 미리 브레이크를 밟아 시속 25~28km를 유지하세요!",
+      "uz": "[Maktab zonasi — 30 km/s dan oshsa darhol yiqilasiz!] Tezlikni oldindan 25~28 km/s gacha tushiring!",
+      "ru": "[Детская зона — даже 31 км/ч = мгновенный провал!] Снизьте скорость заранее до 25–28 км/ч!",
+      "id": "[Zona Sekolah — lewat 30 km/jam langsung GAGAL!] Turunkan kecepatan lebih awal ke 25~28 km/jam!",
+      "ne": "[स्कुल जोन — ३० कि.मी. नाघे तुरुन्त फेल!] अगाडि नै गति घटाएर २५~२८ कि.मी./घण्टामा चलाउनुहोस्!",
+      "vi": "[Khu vực trẻ em — Quá 30 km/h là TRƯỢT NGAY!] Giảm tốc từ sớm, giữ đều ở mức 25~28 km/h!",
+      "en": "[School Zone — Instant Fail Over 30 km/h!] Slow down early and stay safely around 25–28 km/h!",
+      "zh": "【儿童保护区——超速1公里直接挂科！】进入前提前减速，稳稳保持在25~28km/h！"
+    }
+  },
+  {
+    "id": 19,
+    "stage": "road",
+    "ko": "지정된 속도를 위반하였습니다. 속도를 줄이세요.",
+    "tip": {
+      "ko": "[제한속도 경고] 당황하지 말고 즉시 엑셀에서 발을 떼고 부드럽게 브레이크를 밟아 제한속도 아래로 낮추세요.",
+      "uz": "[Tezlik ogohlantirishi] Vahima qilmang, gazdan oyoqni olib tormozni sekin bosing va tezlikni tushiring.",
+      "ru": "[Превышение скорости] Без паники отпустите газ и плавно притормозите ниже лимита скорости.",
+      "id": "[Peringatan Kecepatan] Jangan panik, lepas pedal gas dan rem perlahan hingga di bawah batas kecepatan.",
+      "ne": "[गतिको चेतावनी] नआत्तिई ग्यास छोड्नुहोस् र हलुका ब्रेक थिचेर तोकिएको गतिभन्दा कम गर्नुहोस्।",
+      "vi": "[Cảnh báo quá tốc độ] Bình tĩnh nhả chân ga và rà phanh nhẹ để đưa xe về dưới tốc độ giới hạn.",
+      "en": "[Speed Warning] Stay calm, ease off the accelerator, and brake smoothly below the speed limit.",
+      "zh": "【超速警告】切勿慌张，立即松开油门轻踩刹车将车速降至限速以下。"
+    }
+  },
+  {
+    "id": 20,
+    "stage": "road",
+    "ko": "축하합니다. 합격입니다. 주차 브레이크를 채우고 시동을 끄세요.",
+    "tip": {
+      "ko": "[종료 마무리] 우측 깜빡이 켜고 정차 → 기어 P → 주차브레이크 당기기 → 시동 OFF 후 안전띠를 풀어야 최종 합격!",
+      "uz": "[Yakunlash] O'ng povorotnik bilan to'xtang → P uzatma → Qo'l tormozi → Dvigatelni o'chirib, keyin kamarni yeching!",
+      "ru": "[Завершение] Остановитесь с правым поворотником → Рычаг в P → Ручник → Заглушите мотор и только потом отстегнитесь!",
+      "id": "[Selesai Lulus] Menepi dengan sein kanan → Gigi P → Tarik rem tangan → Matikan mesin baru lepas sabuk!",
+      "ne": "[परीक्षा समाप्त] दायाँ साइडलाइट बालेर रोक्नुहोस् → गियर P → ह्यान्डब्रेक → इन्जिन बन्द गरेपछि मात्र बेल्ट खोल्नुहोस्!",
+      "vi": "[Kết thúc đỗ] Xi-nhan phải tấp lề → Về số P → Kéo phanh tay → Tắt máy rồi mới tháo dây an toàn!",
+      "en": "[Finish Pass] Signal right & stop → Shift to P → Set handbrake → Turn engine OFF before unbuckling!",
+      "zh": "【合格收尾】打右转向灯靠边停稳 → 挂P挡 → 拉紧手刹 → 熄火后再解开安全带！"
+    }
+  }
+]

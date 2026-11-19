@@ -36,9 +36,36 @@ main { max-width: 580px; margin: 0 auto; padding: 14px 16px 110px; }
 .lang-btn.active { background: var(--acc); color: #04131d; font-weight: 800; box-shadow: 0 2px 8px rgba(0, 180, 216, 0.4); }
 
 /* Mode Switcher Tabs */
-.mode-tabs { display: flex; gap: 6px; margin-bottom: 14px; background: #132238; padding: 4px; border-radius: 12px; border: 1px solid var(--line); }
-.tab-btn { flex: 1; border: 0; background: transparent; color: var(--sub); padding: 10px 6px; font-size: 13px; font-weight: 700; border-radius: 8px; cursor: pointer; transition: all 0.2s; }
+.mode-tabs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 5px; margin-bottom: 14px; background: #132238; padding: 4px; border-radius: 12px; border: 1px solid var(--line); }
+.tab-btn { border: 0; background: transparent; color: var(--sub); padding: 9px 4px; font-size: 12px; font-weight: 700; border-radius: 8px; cursor: pointer; transition: all 0.2s; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .tab-btn.active { background: var(--card); color: #fff; border: 1px solid var(--acc); box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+
+/* Practical Voice & Mic Cards */
+.prac-wrap { display: none; margin-bottom: 18px; }
+.prac-intro { background: linear-gradient(135deg, rgba(6,214,160,0.14), rgba(19,34,56,0.95)); border: 1.5px solid var(--ok); border-radius: 14px; padding: 14px 15px; margin-bottom: 14px; font-size: 13px; line-height: 1.5; color: #fff; }
+.prac-card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 15px; margin-bottom: 11px; }
+.prac-card.locked { opacity: 0.72; border-style: dashed; }
+.prac-top { display: flex; justify-content: space-between; align-items: center; gap: 6px; margin-bottom: 8px; flex-wrap: wrap; }
+.prac-badge { font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 6px; background: rgba(0,180,216,0.16); color: #38bdf8; }
+.prac-badge.road { background: rgba(255,209,102,0.16); color: var(--gold); }
+.prac-ko { font-size: 17px; font-weight: 800; color: #fff; margin-bottom: 6px; line-height: 1.4; }
+.prac-tip { font-size: 13.5px; color: var(--acc); margin-bottom: 11px; line-height: 1.45; }
+.prac-actions { display: flex; gap: 7px; flex-wrap: wrap; }
+.prac-btn { border: 1px solid rgba(0,180,216,0.5); background: rgba(0,180,216,0.12); color: #38bdf8; font-size: 12px; font-weight: 700; padding: 7px 12px; border-radius: 99px; cursor: pointer; }
+.prac-btn.rec { border-color: rgba(239,71,111,0.6); background: rgba(239,71,111,0.12); color: #ff758f; }
+.prac-btn.rec.recording { background: var(--no); color: #fff; animation: pulseRec 1s infinite; }
+.prac-btn.play-my { border-color: rgba(6,214,160,0.6); background: rgba(6,214,160,0.14); color: var(--ok); }
+@keyframes pulseRec { 0%, 100% { opacity: 1; } 50% { opacity: 0.55; } }
+
+/* Language Pack Picker & PIN in Paywall */
+.pack-picker { background: #132238; border: 1px solid var(--line); border-radius: 12px; padding: 12px; margin-bottom: 12px; text-align: left; }
+.pack-label { font-size: 12.5px; font-weight: 800; color: var(--gold); margin-bottom: 8px; }
+.pack-pills { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+.pack-pill { border: 1px solid var(--line); background: rgba(255,255,255,0.04); color: var(--sub); font-size: 11.5px; font-weight: 700; padding: 7px 4px; border-radius: 8px; cursor: pointer; text-align: center; }
+.pack-pill.active { background: var(--acc); border-color: var(--acc); color: #04131d; font-weight: 800; }
+.pin-box { display: flex; align-items: center; justify-content: space-between; gap: 10px; background: #132238; border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; margin-bottom: 12px; text-align: left; }
+.pin-label { font-size: 12px; color: #cbd5e1; font-weight: 700; line-height: 1.35; flex: 1; }
+.pin-input { width: 92px; background: #0d1b2a; border: 1.5px solid var(--acc); border-radius: 8px; padding: 7px 8px; color: var(--gold); font-size: 15px; font-weight: 800; text-align: center; letter-spacing: 3px; outline: none; }
 
 /* Part Selector (2-Row x 5-Col Full 1~1000 Grid — Never Hidden Off-Screen) */
 .part-selector-wrap { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; margin-bottom: 10px; }
@@ -130,9 +157,15 @@ main { max-width: 580px; margin: 0 auto; padding: 14px 16px 110px; }
   </div>
 
   <div class="mode-tabs">
-    <button class="tab-btn active" id="tab-study" onclick="switchMode('study')">📖 학습 모드</button>
-    <button class="tab-btn" id="tab-exam" onclick="switchMode('exam')">⏱️ 실전 모의고사</button>
-    <button class="tab-btn" id="tab-wrong" onclick="switchMode('wrong')">📝 오답노트 (<span id="wrong-count-badge">0</span>)</button>
+    <button class="tab-btn active" id="tab-study" onclick="switchMode('study')">📖 학습</button>
+    <button class="tab-btn" id="tab-exam" onclick="switchMode('exam')">⏱️ 모의고사</button>
+    <button class="tab-btn" id="tab-prac" onclick="switchMode('practical')">🚘 실기음성</button>
+    <button class="tab-btn" id="tab-wrong" onclick="switchMode('wrong')">📝 오답(<span id="wrong-count-badge">0</span>)</button>
+  </div>
+
+  <div class="prac-wrap" id="prac-wrap">
+    <div class="prac-intro" id="prac-intro"></div>
+    <div id="prac-list"></div>
   </div>
 
   <div class="part-selector-wrap" id="part-selector-bar"></div>
@@ -157,7 +190,7 @@ main { max-width: 580px; margin: 0 auto; padding: 14px 16px 110px; }
     </div>
   </div>
 
-  <div class="progress-wrap">
+  <div class="progress-wrap" id="main-progress-wrap">
     <div class="progress-meta">
       <span id="q-counter">문제 1 / 100</span>
       <span id="score-text">1종·2종 보통 공식 1,000제</span>
@@ -171,7 +204,7 @@ main { max-width: 580px; margin: 0 auto; padding: 14px 16px 110px; }
     <div id="guide-desc" style="color:var(--text);"></div>
   </div>
 
-  <div class="q-box">
+  <div class="q-box" id="main-q-box">
     <div class="q-head-row">
       <div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;">
         <span class="q-tag" id="q-tag">No.1 (2점)</span>
@@ -195,29 +228,63 @@ main { max-width: 580px; margin: 0 auto; padding: 14px 16px 110px; }
     </div>
   </div>
 
-  <div class="bottom-nav">
+  <div class="bottom-nav" id="main-bottom-nav">
     <button class="btn-nav" id="btn-prev" onclick="prevQ()">← 이전 문제</button>
     <button class="btn-nav primary" id="btn-next" onclick="nextQ()">다음 문제 →</button>
   </div>
 
   <div class="cta-lock" id="cta-lock-box">
-    <h3 id="lock-title">🔒 남은 990문제 + 모의고사 전체 열기</h3>
-    <p id="lock-desc">공식 1,000문항 전수 해설 + 40제 실전 모의고사 + 오답노트 무제한 (180일 올패스 · 단 1회 결제)</p>
-
-    <div id="pay-guide-box" style="background:rgba(0,180,216,0.12); border:1px solid var(--acc); border-radius:10px; padding:10px; font-size:13px; color:#fff; font-weight:600; margin-bottom:12px; text-align:center;">
-      💡 결제 수단을 선택한 뒤 약관 동의 후 아래 버튼을 누르세요
+    <div id="cta-unlocked-view" style="display:none;">
+      <h3 id="unlocked-title-el" style="color:var(--ok);">🎉 180일 패스 이용 중</h3>
+      <p id="unlocked-desc-el" style="color:#fff; margin:8px 0 0;"></p>
+      <div id="unlocked-rec-wrap" style="display:none; margin-top:12px; background:#0d1b2a; border:1px solid var(--acc); border-radius:10px; padding:10px 12px; text-align:left;">
+        <div id="unlocked-rec-label" style="font-size:11.5px; color:#38bdf8; font-weight:700; margin-bottom:5px;">🔑 재로그인 복구코드 (설정한 4자리 PIN과 함께 보관)</div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <code id="unlocked-rec-code" style="flex:1; font-size:12.5px; font-weight:800; color:var(--gold); word-break:break-all;"></code>
+          <button onclick="copySavedRecCode()" id="btn-copy-saved-rec" style="background:var(--acc); color:#04131d; border:0; border-radius:7px; padding:6px 10px; font-size:11.5px; font-weight:800; cursor:pointer;">복사</button>
+        </div>
+      </div>
+      <div id="unlocked-ord-el" style="font-size:11px; color:var(--sub); margin-top:8px;"></div>
     </div>
-    <div id="payment-method" style="margin-bottom:12px;"></div>
-    <div id="agreement" style="margin-bottom:16px;"></div>
 
-    <div style="display:flex; flex-direction:column; gap:10px;">
-      <button class="btn-buy" id="btn-price" onclick="requestPay()">⚡ 180일 무제한 올패스 시작하기 (₩7,500)</button>
-    </div>
+    <div id="cta-locked-view">
+      <h3 id="lock-title">🔒 남은 990문제 + 모의고사 + 실기음성 열기</h3>
+      <p id="lock-desc">선택 외국어 1종 + 한국어 실전모드 · 아나운서 발음 · 실기 녹음훈련 무제한 (180일 · 단 1회 결제)</p>
 
-    <button class="code-toggle" id="btn-code-toggle" onclick="toggleCodeDrawer()">🔑 이용권 코드 / 기기 복구 코드 입력</button>
-    <div class="code-drawer" id="code-drawer">
-      <input type="text" class="code-input" id="access-code-input" placeholder="KP180-XXXX-XXXX">
-      <button class="code-submit" id="btn-code-submit" onclick="redeemAccessCode()">확인</button>
+      <div class="pack-picker" id="pack-picker-box">
+        <div class="pack-label" id="pack-picker-label">🌐 잠금 해제할 언어 선택 (1회 결제 = 선택 언어 1종 + 한국어 포함)</div>
+        <div class="pack-pills" id="pack-pills-wrap">
+          <button type="button" class="pack-pill active" data-pack="uz" onclick="selectBuyLang('uz')">UZB 우즈벡</button>
+          <button type="button" class="pack-pill" data-pack="ru" onclick="selectBuyLang('ru')">RUS 러시아</button>
+          <button type="button" class="pack-pill" data-pack="id" onclick="selectBuyLang('id')">IDN 인니</button>
+          <button type="button" class="pack-pill" data-pack="ne" onclick="selectBuyLang('ne')">NEP 네팔</button>
+          <button type="button" class="pack-pill" data-pack="vi" onclick="selectBuyLang('vi')">VIE 베트남</button>
+          <button type="button" class="pack-pill" data-pack="en" onclick="selectBuyLang('en')">ENG 영어</button>
+          <button type="button" class="pack-pill" data-pack="zh" onclick="selectBuyLang('zh')">CHN 중국</button>
+        </div>
+      </div>
+
+      <div class="pin-box" id="pin-setup-box">
+        <div class="pin-label" id="pin-setup-label">🔐 본인 확인 숫자 4자리 PIN 설정<br><span style="font-size:11px; color:var(--sub); font-weight:500;">재로그인 및 타인 무단 공유 방지에 사용됩니다</span></div>
+        <input type="tel" inputmode="numeric" maxlength="4" class="pin-input" id="pin-set-input" placeholder="4자리" oninput="this.value=this.value.replace(/\D/g,'').slice(0,4)">
+      </div>
+
+      <div id="pay-guide-box" style="background:rgba(0,180,216,0.12); border:1px solid var(--acc); border-radius:10px; padding:10px; font-size:13px; color:#fff; font-weight:600; margin-bottom:12px; text-align:center;">
+        💡 결제 수단을 선택한 뒤 약관 동의 후 아래 버튼을 누르세요
+      </div>
+      <div id="payment-method" style="margin-bottom:12px;"></div>
+      <div id="agreement" style="margin-bottom:16px;"></div>
+
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <button class="btn-buy" id="btn-price" onclick="requestPay()">⚡ 180일 패스 시작하기 (₩7,500)</button>
+      </div>
+
+      <button class="code-toggle" id="btn-code-toggle" onclick="toggleCodeDrawer()">🔑 재로그인(복구코드 + PIN) / 이용권 코드 입력</button>
+      <div class="code-drawer" id="code-drawer" style="flex-wrap:wrap;">
+        <input type="text" class="code-input" id="access-code-input" placeholder="KP1-UZ-XXXX-XXXX-XXXXXX" style="min-width:170px;">
+        <input type="tel" inputmode="numeric" maxlength="4" class="code-input" id="access-pin-input" placeholder="PIN 4자리" style="max-width:96px; text-align:center;" oninput="this.value=this.value.replace(/\D/g,'').slice(0,4)">
+        <button class="code-submit" id="btn-code-submit" onclick="redeemAccessCode()" style="padding:10px 16px;">복구</button>
+      </div>
     </div>
   </div>
 
@@ -233,16 +300,214 @@ const PASS_DAYS = 180;
 const FREE_LIMIT = 10;
 
 let curLang = 'ko';
+let selectedBuyLang = 'uz';
 let curMode = 'study';
 let curIdx = 0;
 let curPart = 1;
 let answered = {};
 let DB_STUDY = [];
 let DB_EXAM = [];
+let DB_PRAC = [];
 let curDB = [];
 let timerInterval = null;
 let timeLeft = 40 * 60;
 let isSpeaking = false;
+let currentAudio = null;
+let currentPracAudio = null;
+let activePracPlayId = null;
+let mediaRecorder = null;
+let activeRecId = null;
+let recChunks = [];
+let pracRecordings = {};
+
+const PACK_NAMES = {
+  uz: 'UZB (우즈벡어)',
+  ru: 'RUS (러시아어)',
+  id: 'IDN (인도네시아어)',
+  ne: 'NEP (네팔어)',
+  vi: 'VIE (베트남어)',
+  en: 'ENG (영어)',
+  zh: 'CHN (중국어)'
+};
+
+const EXTRA_UI = {
+  ko: {
+    tabPrac: "🚘 실기음성",
+    pracIntro: "<b>🚘 시험장 장내기능·도로주행 한국어 지시음성 + 내 발음 녹음 훈련</b><br>필기 합격 후 실기 시험차 태블릿에서는 <b>100% 한국어 음성 지시</b>만 나옵니다! 실제 아나운서 음성을 듣고 내 발음을 직접 녹음·비교해 보세요. (1~3번 무료 체험 · 패스 구매 시 20개 전체 열림)",
+    stageSkills: "장내기능",
+    stageRoad: "도로주행",
+    freeTag: "무료체험",
+    lockTag: "🔒 패스전용",
+    btnListen: "🔊 성우 지시 듣기",
+    btnRec: "🎤 내 발음 녹음",
+    btnRecStop: "⏹️ 녹음 완료",
+    btnPlayMy: "▶️ 내 목소리 듣기",
+    pracLockMsg: "🔒 실기 음성·녹음 4~20번(전조등·방향지시등·돌발·어린이보호구역 등 핵심 감점 항목)은 180일 패스 전용입니다!",
+    micDenyMsg: "마이크 권한이 허용되지 않았습니다. 브라우저 주소창 옆 마이크 권한을 허용해 주세요.",
+    packLabel: "🌐 잠금 해제할 외국어 1종 선택 (한국어 실전모드는 기본 함께 열림 · 타 언어 잠금)",
+    pinLabel: "🔐 본인 확인 숫자 4자리 PIN 설정<br><span style='font-size:11px;color:var(--sub);font-weight:500;'>재로그인 및 타인 무단 공유 방지에 사용됩니다</span>",
+    pinNeedMsg: "재로그인 및 무단 공유 방지를 위해 본인만 아는 숫자 4자리 PIN(예: 1234)을 먼저 입력해 주세요.",
+    recPinNeedMsg: "재로그인 복구코드(KP1-...) 입력 시 결제할 때 설정한 숫자 4자리 PIN도 함께 입력해 주세요.",
+    recSuccessMsg: l => `✅ [${l} + 한국어] 180일 패스가 이 기기에 복구되었습니다!`,
+    unlockedPairTitle: l => `🎉 [${l} + 한국어] 180일 패스 이용 중`,
+    unlockedPairDesc: l => `선택하신 ${l}와 한국어 1,000문항·모의고사·실기음성 20종이 열려 있습니다. (다른 외국어는 별도 패스 전용)`,
+    recKeepLabel: "🔑 재로그인 복구코드 (설정한 4자리 PIN과 함께 보관하세요)"
+  },
+  uz: {
+    tabPrac: "🚘 Amaliy ovoz",
+    pracIntro: "<b>🚘 Avtodrom va shahar haydash imtihoni koreyscha ovoz + Ovoz yozish mashqi</b><br>Yozma imtihondan keyin mashinada buyruqlar <b>faqat koreys tilida</b> aytiladi! Diktor ovozini eshiting va o'z talaffuzingizni yozib solishtiring. (1~3 bepul · 4~20 Pass bilan)",
+    stageSkills: "Avtodrom",
+    stageRoad: "Shahar yo'li",
+    freeTag: "BEPUL",
+    lockTag: "🔒 PASS",
+    btnListen: "🔊 Buyruqni eshitish",
+    btnRec: "🎤 Ovozni yozish",
+    btnRecStop: "⏹️ To'xtatish",
+    btnPlayMy: "▶️ O'z ovozim",
+    pracLockMsg: "🔒 4~20-amaliy buyruqlar (fara, burilish chirog'i, to'satdan to'xtash) 180 kunlik Pass a'zolari uchun!",
+    micDenyMsg: "Mikrofon ruxsati berilmadi. Brauzer sozlamalaridan mikrofonga ruxsat bering.",
+    packLabel: "🌐 Ochiladigan til paketi (1 marta to'lov = Tanlangan 1 til + Koreys tili)",
+    pinLabel: "🔐 Shaxsiy 4 xonali PIN o'rnating<br><span style='font-size:11px;color:var(--sub);font-weight:500;'>Qayta kirish va begonalardan himoyalash uchun</span>",
+    pinNeedMsg: "Iltimos, qayta kirish uchun 4 xonali raqamli PIN (masalan: 1234) kiriting.",
+    recPinNeedMsg: "KP1 kod bilan birga to'lov vaqtida o'rnatgan 4 xonali PIN kodingizni ham kiriting.",
+    recSuccessMsg: l => `✅ [${l} + Koreys tili] 180 kunlik Pass tiklandi!`,
+    unlockedPairTitle: l => `🎉 [${l} + KOR] 180 kunlik Pass faol`,
+    unlockedPairDesc: () => "O'zbekcha + Koreyscha 1,000 savol, imtihon va 20 ta amaliy ovoz mashqi ochiq.",
+    recKeepLabel: "🔑 Qayta kirish kodi (4 xonali PIN bilan birga saqlang)"
+  },
+  ru: {
+    tabPrac: "🚘 Автодром",
+    pracIntro: "<b>🚘 Голосовые команды автодрома и города (KR) + Запись произношения</b><br>В экзаменационной машине все команды звучат <b>только на корейском языке</b>! Слушайте диктора и тренируйтесь с микрофоном. (1~3 бесплатно · 4~20 в пакете Pass)",
+    stageSkills: "Автодром",
+    stageRoad: "Город",
+    freeTag: "FREE",
+    lockTag: "🔒 PASS",
+    btnListen: "🔊 Слушать диктора",
+    btnRec: "🎤 Записать голос",
+    btnRecStop: "⏹️ Стоп",
+    btnPlayMy: "▶️ Моя запись",
+    pracLockMsg: "🔒 Команды 4~20 (фары, поворотники, экстренный тормоз) доступны в пакете Pass на 180 дней!",
+    micDenyMsg: "Нет доступа к микрофону. Разрешите доступ к микрофону в браузере.",
+    packLabel: "🌐 Выберите язык пакета (1 оплата = 1 выбранный язык + Корейский)",
+    pinLabel: "🔐 Установите личный PIN из 4 цифр<br><span style='font-size:11px;color:var(--sub);font-weight:500;'>Для повторного входа и защиты от передачи</span>",
+    pinNeedMsg: "Пожалуйста, введите 4 цифры PIN-кода (например, 1234) перед оплатой.",
+    recPinNeedMsg: "Введите также ваш 4-значный PIN, установленный при покупке.",
+    recSuccessMsg: l => `✅ Пакет [${l} + Корейский] успешно восстановлен!`,
+    unlockedPairTitle: l => `🎉 [${l} + KOR] Доступ на 180 дней активен`,
+    unlockedPairDesc: () => "Открыты все 1 000 вопросов, экзамен и 20 голосовых команд автодрома.",
+    recKeepLabel: "🔑 Код повторного входа (храните вместе с вашим PIN)"
+  },
+  id: {
+    tabPrac: "🚘 Suara Praktik",
+    pracIntro: "<b>🚘 Latihan Suara Ujian Praktik Lapangan & Jalan Raya + Rekam Suara</b><br>Saat ujian praktik di mobil KoROAD, semua aba-aba keluar dalam <b>Bahasa Korea</b>! Dengarkan suara penyiar asli & rekam suara Anda. (1~3 Gratis · 4~20 Member Pass)",
+    stageSkills: "Lapangan",
+    stageRoad: "Jalan Raya",
+    freeTag: "GRATIS",
+    lockTag: "🔒 PASS",
+    btnListen: "🔊 Dengar Aba-aba",
+    btnRec: "🎤 Rekam Suara",
+    btnRecStop: "⏹️ Selesai",
+    btnPlayMy: "▶️ Suara Saya",
+    pracLockMsg: "🔒 Aba-aba praktik 4~20 (lampu, sein, rem mendadak, zona anak) khusus paket Pass 180 Hari!",
+    micDenyMsg: "Izin mikrofon ditolak. Harap izinkan akses mikrofon di browser HP Anda.",
+    packLabel: "🌐 Pilih 1 Bahasa Paket (1x Bayar = 1 Bahasa Pilihan + Bahasa Korea)",
+    pinLabel: "🔐 Buat 4 Angka PIN Pribadi<br><span style='font-size:11px;color:var(--sub);font-weight:500;'>Untuk login ulang & mencegah akun dipakai orang lain</span>",
+    pinNeedMsg: "Silakan masukkan 4 angka PIN pribadi (contoh: 1234) terlebih dahulu.",
+    recPinNeedMsg: "Masukkan juga 4 angka PIN yang Anda buat saat pembayaran.",
+    recSuccessMsg: l => `✅ Paket [${l} + Korea] berhasil dipulihkan!`,
+    unlockedPairTitle: l => `🎉 [${l} + KOR] Pass 180 Hari Aktif`,
+    unlockedPairDesc: () => "1.000 soal Bahasa Indonesia + Korea, simulasi, dan 20 suara praktik telah terbuka.",
+    recKeepLabel: "🔑 Kode Login Ulang (Simpan bersama 4 angka PIN Anda)"
+  },
+  ne: {
+    tabPrac: "🚘 ट्रायल आवाज",
+    pracIntro: "<b>🚘 प्रयोगात्मक (ट्रायल र रोड) कोरियन आवाज + रेकर्डिङ अभ्यास</b><br>गाडी चलाउने ट्रायल परीक्षामा सबै निर्देशन <b>कोरियन भाषामा</b> आउँछ! उद्घोषकको आवाज सुन्नुहोस् र आफ्नो उच्चारण रेकर्ड गरी जाँच्नुहोस्। (१~३ निःशुल्क)",
+    stageSkills: "ट्रायल कोर्स",
+    stageRoad: "सडक परीक्षा",
+    freeTag: "निःशुल्क",
+    lockTag: "🔒 PASS",
+    btnListen: "🔊 आवाज सुन्नुहोस्",
+    btnRec: "🎤 आवाज रेकर्ड",
+    btnRecStop: "⏹️ रोक्नुहोस्",
+    btnPlayMy: "▶️ मेरो आवाज",
+    pracLockMsg: "🔒 ४ देखि २० सम्मका ट्रायल निर्देशनहरू १८० दिने Pass सदस्यका लागि मात्र हुन्!",
+    micDenyMsg: "माइक्रोफोन अनुमति प्राप्त भएन। कृपया ब्राउजरमा माइक्रोफोन अन गर्नुहोस्।",
+    packLabel: "🌐 अनलक गर्ने १ भाषा छान्नुहोस् (१ भुक्तानी = छानिएको भाषा + कोरियन)",
+    pinLabel: "🔐 ४ अंकको व्यक्तिगत PIN राख्नुहोस्<br><span style='font-size:11px;color:var(--sub);font-weight:500;'>पुनः लगइन र सुरक्षाका लागि आवश्यक</span>",
+    pinNeedMsg: "कृपया भुक्तानी अघि ४ अंकको PIN नम्बर (जस्तै: 1234) राख्नुहोस्।",
+    recPinNeedMsg: "कृपया भुक्तानी गर्दा राख्नुभएको ४ अंकको PIN पनि प्रविष्ट गर्नुहोस्।",
+    recSuccessMsg: l => `✅ [${l} + कोरियन] १८० दिने पास पुनः सक्रिय भयो!`,
+    unlockedPairTitle: l => `🎉 [${l} + KOR] १८० दिने पास सक्रिय छ`,
+    unlockedPairDesc: () => "१,००० प्रश्न, मोक परीक्षा र २० ट्रायल आवाज अभ्यास खुला छन्।",
+    recKeepLabel: "🔑 पुनः लगइन कोड (तपाईंको ४ अंकको PIN सँग सुरक्षित राख्नुहोस्)"
+  },
+  vi: {
+    tabPrac: "🚘 Khẩu lệnh thi lái",
+    pracIntro: "<b>🚘 20 Khẩu lệnh Thi Thực Hành (Sa hình & Đường trường) + Ghi âm Luyện nói</b><br>Đỗ lý thuyết bằng tiếng Việt nhưng khi lên xe thi thực hành, máy chấm điểm chỉ phát <b>khẩu lệnh tiếng Hàn</b>! Nghe giọng phát thanh viên chuẩn & ghi âm đối chiếu ngay.",
+    stageSkills: "Sa hình",
+    stageRoad: "Đường trường",
+    freeTag: "MIỄN PHÍ",
+    lockTag: "🔒 PASS",
+    btnListen: "🔊 Nghe khẩu lệnh",
+    btnRec: "🎤 Ghi âm giọng tôi",
+    btnRecStop: "⏹️ Dừng ghi",
+    btnPlayMy: "▶️ Nghe giọng tôi",
+    pracLockMsg: "🔒 Khẩu lệnh 4~20 (bật đèn, xi-nhan, phanh khẩn cấp 돌발!) dành cho gói Pass 180 ngày!",
+    micDenyMsg: "Chưa cấp quyền micro. Vui lòng cho phép trình duyệt sử dụng micro.",
+    packLabel: "🌐 Chọn 1 ngôn ngữ mở khóa (1 lần thanh toán = Ngôn ngữ đã chọn + Tiếng Hàn)",
+    pinLabel: "🔐 Đặt mã PIN 4 chữ số cá nhân<br><span style='font-size:11px;color:var(--sub);font-weight:500;'>Dùng để đăng nhập lại & chống chia sẻ trái phép</span>",
+    pinNeedMsg: "Vui lòng nhập mã PIN 4 chữ số của riêng bạn (ví dụ: 1234) trước khi thanh toán.",
+    recPinNeedMsg: "Vui lòng nhập kèm mã PIN 4 số bạn đã đặt khi thanh toán.",
+    recSuccessMsg: l => `✅ Đã khôi phục gói [${l} + Tiếng Hàn] 180 ngày!`,
+    unlockedPairTitle: l => `🎉 [${l} + KOR] Gói 180 ngày đang hoạt động`,
+    unlockedPairDesc: () => "Đã mở khóa trọn bộ 1.000 câu, thi thử và 20 khẩu lệnh thi thực hành.",
+    recKeepLabel: "🔑 Mã đăng nhập lại (Lưu giữ cùng mã PIN 4 số của bạn)"
+  },
+  en: {
+    tabPrac: "🚘 Road Voice",
+    pracIntro: "<b>🚘 Practical Course & Road Test Korean Voice Commands + Mic Trainer</b><br>Even if you take the written test in English, the in-car KoROAD tablet speaks <b>100% Korean voice commands</b>! Hear crisp announcer audio and record yourself. (1–3 Free · 4–20 Pass)",
+    stageSkills: "Course Test",
+    stageRoad: "Road Test",
+    freeTag: "FREE",
+    lockTag: "🔒 PASS",
+    btnListen: "🔊 Hear Command",
+    btnRec: "🎤 Record Mine",
+    btnRecStop: "⏹️ Stop Rec",
+    btnPlayMy: "▶️ Play My Voice",
+    pracLockMsg: "🔒 Practical voice commands 4–20 (headlights, wipers, emergency stop 돌발!) are unlocked with the 180-Day Pass!",
+    micDenyMsg: "Microphone permission denied. Please allow microphone access in your browser.",
+    packLabel: "🌐 Select 1 Language Pack (1 Payment = Chosen Language + Korean Mode)",
+    pinLabel: "🔐 Set Your 4-Digit Personal PIN<br><span style='font-size:11px;color:var(--sub);font-weight:500;'>Required for re-login & single-user protection</span>",
+    pinNeedMsg: "Please enter a 4-digit numeric PIN (e.g., 1234) for re-login protection before paying.",
+    recPinNeedMsg: "Please also enter the 4-digit PIN you set during checkout.",
+    recSuccessMsg: l => `✅ Your [${l} + Korean] 180-Day Pass has been restored!`,
+    unlockedPairTitle: l => `🎉 [${l} + KOR] 180-Day Pass Active`,
+    unlockedPairDesc: () => "All 1,000 questions, mock exams, and 20 practical voice prompts are unlocked for your pack.",
+    recKeepLabel: "🔑 Re-login Code (Save alongside your 4-digit PIN)"
+  },
+  zh: {
+    tabPrac: "🚘 路考韩语语音",
+    pracIntro: "<b>🚘 场内技能·道路行驶 考场韩语语音指令 + 录音跟读训练</b><br>笔试虽有中文，但上车考场内技能与路考时，考试车平板<b>全程只播报韩语语音指令</b>（开大灯、转向灯、突发急刹等）！听播音员标准韩音并录音自测。（前3条免费试练）",
+    stageSkills: "场内技能",
+    stageRoad: "道路路考",
+    freeTag: "免费试练",
+    lockTag: "🔒 畅学卡专享",
+    btnListen: "🔊 听考场原音",
+    btnRec: "🎤 录音跟读",
+    btnRecStop: "⏹️ 停止录音",
+    btnPlayMy: "▶️ 听我的发音",
+    pracLockMsg: "🔒 第4~20条核心扣分语音指令（前照灯、雨刷、突发急刹、儿童保护区等）为180天畅学卡专享！",
+    micDenyMsg: "未开启麦克风权限，请在浏览器设置中允许使用麦克风。",
+    packLabel: "🌐 选择解锁语种（一次付费 = 所选1种外语 + 韩文原题模式 · 其他语种独立锁定）",
+    pinLabel: "🔐 设置本人专属4位数字PIN码<br><span style='font-size:11px;color:var(--sub);font-weight:500;'>用于清除缓存后重新登录及防他人盗用</span>",
+    pinNeedMsg: "支付前请先输入4位数字PIN码（如1234），用于后续重新登录验证。",
+    recPinNeedMsg: "使用KP1恢复码重新登录时，请同时输入您支付时设置的4位PIN码。",
+    recSuccessMsg: l => `✅ 已成功恢复【${l} + 韩文】180天畅学权限！`,
+    unlockedPairTitle: l => `🎉 【${l} + 韩文】180天畅学卡生效中`,
+    unlockedPairDesc: () => "您购买的语种1,000题精析、全真模考与20条实操路考韩语语音已全部解锁。",
+    recKeepLabel: "🔑 重新登录恢复码（请与您的4位PIN码一并妥善保存）"
+  }
+};
 
 const UI_TEXT = {
   ko: {
@@ -615,33 +880,67 @@ const UI_TEXT = {
   }
 };
 
-function isPassUnlocked() {
-  const exp = Number(localStorage.getItem('koreapass_unlock_until') || '0');
-  if (exp > Date.now()) return true;
-  if (exp > 0 && exp <= Date.now()) {
-    localStorage.removeItem('koreapass_unlock_until');
-    localStorage.removeItem('koreapass_unlocked_all');
-    ['ko', 'uz', 'ne', 'vi', 'en', 'zh', 'ru', 'id'].forEach(lc => localStorage.removeItem('koreapass_unlocked_' + lc));
-    return false;
-  }
-  if (localStorage.getItem('koreapass_unlocked_all') === 'true' || localStorage.getItem('koreapass_unlocked_' + curLang) === 'true') {
-    const migratedExp = Date.now() + (PASS_DAYS * 24 * 60 * 60 * 1000);
-    localStorage.setItem('koreapass_unlock_until', String(migratedExp));
-    localStorage.setItem('koreapass_unlocked_all', 'true');
+function getUnlockedForeignLangs() {
+  const now = Date.now();
+  return ['uz', 'ru', 'id', 'ne', 'vi', 'en', 'zh'].filter(lc => {
+    const exp = Number(localStorage.getItem('koreapass_lang_exp_' + lc) || '0');
+    return exp > now;
+  });
+}
+
+function isPassUnlocked(langCheck) {
+  const lc = langCheck || curLang;
+  const now = Date.now();
+  const kmongAllExp = Number(localStorage.getItem('koreapass_kmong_all_exp') || '0');
+  if (kmongAllExp > now) return true;
+
+  const langExp = Number(localStorage.getItem('koreapass_lang_exp_' + lc) || '0');
+  if (langExp > now) return true;
+
+  if (lc === 'ko' && getUnlockedForeignLangs().length > 0) {
     return true;
   }
   return false;
 }
 
+function computeRecoverySig(langCode, expDayHex, nonce4, p4) {
+  const payload = `KP1|${langCode.toUpperCase()}|${expDayHex.toUpperCase()}|${nonce4.toUpperCase()}|${p4}|Somsatang2026!`;
+  let h1 = 0x811c9dc5;
+  let h2 = 0x9e3779b9;
+  for (let i = 0; i < payload.length; i++) {
+    const c = payload.charCodeAt(i);
+    h1 ^= c;
+    h1 = Math.imul(h1, 0x01000193) >>> 0;
+    h2 = (Math.imul(h2 ^ c, 0x85ebca6b) + 0xc2b2ae35) >>> 0;
+  }
+  const s1 = (h1 & 0xFFFF).toString(16).toUpperCase().padStart(4, '0');
+  const s2 = (h2 & 0xFF).toString(16).toUpperCase().padStart(2, '0');
+  return s1 + s2;
+}
+
+function activateSingleLangPass(foreignLang, expireMs, recCode) {
+  localStorage.removeItem('koreapass_unlocked_all');
+  localStorage.removeItem('koreapass_unlock_until');
+  localStorage.setItem('koreapass_lang_exp_' + foreignLang, String(expireMs));
+  localStorage.setItem('koreapass_lang_exp_ko', String(expireMs));
+  if (recCode) {
+    localStorage.setItem('koreapass_recovery_code_' + foreignLang, recCode);
+    localStorage.setItem('koreapass_order_id', recCode);
+  }
+  checkUnlocked();
+  render();
+  renderPartSelector();
+  if (curMode === 'practical') renderPractical();
+}
+
 function activatePassLocally(codeUsed) {
   const expireAt = Date.now() + (PASS_DAYS * 24 * 60 * 60 * 1000);
-  localStorage.setItem('koreapass_unlock_until', String(expireAt));
-  localStorage.setItem('koreapass_unlocked_all', 'true');
-  ['ko', 'uz', 'ne', 'vi', 'en', 'zh', 'ru', 'id'].forEach(lc => localStorage.setItem('koreapass_unlocked_' + lc, 'true'));
+  localStorage.setItem('koreapass_kmong_all_exp', String(expireAt));
   if (codeUsed) localStorage.setItem('koreapass_order_id', codeUsed);
   checkUnlocked();
   render();
   renderPartSelector();
+  if (curMode === 'practical') renderPractical();
 }
 
 function detectInitialLang() {
@@ -662,6 +961,7 @@ function detectInitialLang() {
 }
 
 curLang = detectInitialLang();
+selectedBuyLang = curLang === 'ko' ? (getUnlockedForeignLangs()[0] || 'uz') : curLang;
 document.documentElement.lang = curLang;
 document.querySelectorAll('.lang-btn').forEach(b => {
   const oc = b.getAttribute('onclick') || '';
@@ -678,15 +978,26 @@ fetch('questions_1000_bank.json')
       DB_STUDY = allData;
       DB_EXAM = allData;
       restoreStudyProgress();
-      if (initUrlCode && verifyPassCode(initUrlCode)) {
+      if (initUrlCode && verifyKmongCode(initUrlCode)) {
         activatePassLocally(initUrlCode);
       }
       render();
       renderPartSelector();
       updateWrongBadge();
+      syncPackPillsUI();
       checkUnlocked();
     }
   });
+
+fetch('practical_20.json')
+  .then(r => r.json())
+  .then(pdata => {
+    if (Array.isArray(pdata)) {
+      DB_PRAC = pdata;
+      if (curMode === 'practical') renderPractical();
+    }
+  })
+  .catch(() => {});
 
 function restoreStudyProgress() {
   const unlocked = isPassUnlocked();
@@ -710,7 +1021,24 @@ function saveStudyProgress() {
   }
 }
 
+function stopPracAudioAndRec() {
+  if (currentPracAudio) {
+    currentPracAudio.pause();
+    currentPracAudio.currentTime = 0;
+    currentPracAudio = null;
+  }
+  activePracPlayId = null;
+  if (mediaRecorder && mediaRecorder.state === 'recording') {
+    try { mediaRecorder.stop(); } catch (e) {}
+  }
+}
+
 function stopSpeech() {
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio.currentTime = 0;
+    currentAudio = null;
+  }
   if ('speechSynthesis' in window) {
     window.speechSynthesis.cancel();
   }
@@ -784,34 +1112,49 @@ if ('speechSynthesis' in window && window.speechSynthesis.onvoiceschanged !== un
   window.speechSynthesis.onvoiceschanged = () => { pickBestKoreanVoice(); };
 }
 
-function toggleSpeak() {
-  if (!('speechSynthesis' in window) || !curDB.length) return;
-  if (isSpeaking) {
-    stopSpeech();
-    return;
-  }
-  const item = curDB[curIdx];
+function fallbackWebSpeech(item) {
+  if (!('speechSynthesis' in window)) return;
   const qClean = formatKoreanSpeech(item.q.ko);
   const optsClean = item.options.ko.map((o, idx) => `${idx + 1}번, ${formatKoreanSpeech(o)}`).join('. ');
-  const koText = qClean + '. ' + optsClean;
   window.speechSynthesis.cancel();
-  const utter = new SpeechSynthesisUtterance(koText);
+  const utter = new SpeechSynthesisUtterance(qClean + '. ' + optsClean);
   utter.lang = 'ko-KR';
   const bestVoice = pickBestKoreanVoice();
   if (bestVoice) utter.voice = bestVoice;
   utter.rate = 0.94;
-  const t = UI_TEXT[curLang] || UI_TEXT.ko;
-  const btn = document.getElementById('btn-tts');
-  utter.onstart = () => {
-    isSpeaking = true;
-    if (btn) {
-      btn.classList.add('playing');
-      btn.innerText = t.ttsStop;
-    }
-  };
   utter.onend = stopSpeech;
   utter.onerror = stopSpeech;
   window.speechSynthesis.speak(utter);
+}
+
+function toggleSpeak() {
+  if (!curDB.length) return;
+  if (isSpeaking) {
+    stopSpeech();
+    return;
+  }
+  stopPracAudioAndRec();
+  const item = curDB[curIdx];
+  const t = UI_TEXT[curLang] || UI_TEXT.ko;
+  const btn = document.getElementById('btn-tts');
+  const mp3Url = 'audio/q/' + String(item.id).padStart(4, '0') + '.mp3';
+
+  isSpeaking = true;
+  if (btn) {
+    btn.classList.add('playing');
+    btn.innerText = t.ttsStop;
+  }
+
+  currentAudio = new Audio(mp3Url);
+  currentAudio.onended = stopSpeech;
+  currentAudio.onerror = () => {
+    currentAudio = null;
+    fallbackWebSpeech(item);
+  };
+  currentAudio.play().catch(() => {
+    currentAudio = null;
+    fallbackWebSpeech(item);
+  });
 }
 
 function renderPartSelector() {
@@ -921,8 +1264,175 @@ function updateWrongBadge() {
   if (badge) badge.innerText = getWrongIds().length;
 }
 
+function setMainQuizVisibility(show) {
+  const disp = show ? '' : 'none';
+  const prog = document.getElementById('main-progress-wrap');
+  const qbox = document.getElementById('main-q-box');
+  const bnav = document.getElementById('main-bottom-nav');
+  const gban = document.getElementById('lang-guide-banner');
+  if (prog) prog.style.display = disp;
+  if (qbox) qbox.style.display = disp;
+  if (bnav) bnav.style.display = show ? 'flex' : 'none';
+  if (!show && gban) gban.style.display = 'none';
+}
+
+function playPracticalVoice(id, isLocked) {
+  const ex = EXTRA_UI[curLang] || EXTRA_UI.ko;
+  if (isLocked) {
+    alert(ex.pracLockMsg);
+    const lockEl = document.querySelector('.cta-lock');
+    if (lockEl) lockEl.scrollIntoView({ behavior: 'smooth' });
+    return;
+  }
+  stopSpeech();
+  if (activePracPlayId === id && currentPracAudio) {
+    stopPracAudioAndRec();
+    renderPractical();
+    return;
+  }
+  stopPracAudioAndRec();
+  activePracPlayId = id;
+  renderPractical();
+  const mp3Url = 'audio/p/' + String(id).padStart(2, '0') + '.mp3';
+  currentPracAudio = new Audio(mp3Url);
+  currentPracAudio.onended = () => {
+    activePracPlayId = null;
+    currentPracAudio = null;
+    renderPractical();
+  };
+  currentPracAudio.onerror = () => {
+    activePracPlayId = null;
+    currentPracAudio = null;
+    renderPractical();
+  };
+  currentPracAudio.play().catch(() => {
+    activePracPlayId = null;
+    currentPracAudio = null;
+    renderPractical();
+  });
+}
+
+async function togglePracticalRecord(id, isLocked) {
+  const ex = EXTRA_UI[curLang] || EXTRA_UI.ko;
+  if (isLocked) {
+    alert(ex.pracLockMsg);
+    const lockEl = document.querySelector('.cta-lock');
+    if (lockEl) lockEl.scrollIntoView({ behavior: 'smooth' });
+    return;
+  }
+  stopSpeech();
+  if (currentPracAudio) {
+    currentPracAudio.pause();
+    currentPracAudio = null;
+    activePracPlayId = null;
+  }
+
+  if (mediaRecorder && mediaRecorder.state === 'recording') {
+    const stoppingSame = (activeRecId === id);
+    try { mediaRecorder.stop(); } catch (e) {}
+    if (stoppingSame) return;
+  }
+
+  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+    alert(ex.micDenyMsg);
+    return;
+  }
+
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    recChunks = [];
+    activeRecId = id;
+    mediaRecorder = new MediaRecorder(stream);
+    mediaRecorder.ondataavailable = e => {
+      if (e.data && e.data.size > 0) recChunks.push(e.data);
+    };
+    mediaRecorder.onstop = () => {
+      stream.getTracks().forEach(tr => tr.stop());
+      if (recChunks.length > 0) {
+        const blob = new Blob(recChunks, { type: mediaRecorder.mimeType || 'audio/mp4' });
+        if (pracRecordings[id]) {
+          try { URL.revokeObjectURL(pracRecordings[id]); } catch (e) {}
+        }
+        pracRecordings[id] = URL.createObjectURL(blob);
+      }
+      activeRecId = null;
+      renderPractical();
+    };
+    mediaRecorder.start();
+    renderPractical();
+    setTimeout(() => {
+      if (mediaRecorder && mediaRecorder.state === 'recording' && activeRecId === id) {
+        try { mediaRecorder.stop(); } catch (e) {}
+      }
+    }, 8000);
+  } catch (err) {
+    activeRecId = null;
+    alert(ex.micDenyMsg);
+  }
+}
+
+function playMyRecordedVoice(id) {
+  const url = pracRecordings[id];
+  if (!url) return;
+  stopSpeech();
+  stopPracAudioAndRec();
+  currentPracAudio = new Audio(url);
+  currentPracAudio.play().catch(() => {});
+}
+
+function renderPractical() {
+  const wrap = document.getElementById('prac-wrap');
+  const intro = document.getElementById('prac-intro');
+  const listEl = document.getElementById('prac-list');
+  if (!wrap || !listEl) return;
+
+  const ex = EXTRA_UI[curLang] || EXTRA_UI.ko;
+  const t = UI_TEXT[curLang] || UI_TEXT.ko;
+  const unlocked = isPassUnlocked();
+
+  intro.innerHTML = ex.pracIntro;
+  listEl.innerHTML = '';
+
+  DB_PRAC.forEach(item => {
+    const locked = !unlocked && item.id > 3;
+    const card = document.createElement('div');
+    card.className = 'prac-card' + (locked ? ' locked' : '');
+
+    const stageTxt = item.stage === 'road' ? ex.stageRoad : ex.stageSkills;
+    const stageCls = item.stage === 'road' ? 'prac-badge road' : 'prac-badge';
+    const accessBadge = locked
+      ? `<span style="font-size:11px;font-weight:800;color:var(--gold);">${ex.lockTag}</span>`
+      : (item.id <= 3 && !unlocked ? `<span style="font-size:11px;font-weight:800;color:var(--ok);">${ex.freeTag}</span>` : '');
+
+    const tipTxt = (item.tip && (item.tip[curLang] || item.tip.ko)) || '';
+    const isPlayingThis = activePracPlayId === item.id;
+    const isRecThis = activeRecId === item.id;
+    const hasMyVoice = Boolean(pracRecordings[item.id]);
+
+    card.innerHTML = `
+      <div class="prac-top">
+        <span class="${stageCls}">#${item.id} · ${stageTxt}</span>
+        ${accessBadge}
+      </div>
+      <div class="prac-ko">"${item.ko}"</div>
+      <div class="prac-tip">💡 ${tipTxt}</div>
+      <div class="prac-actions">
+        <button class="prac-btn" style="${isPlayingThis ? 'background:var(--ok);color:#04131d;border-color:var(--ok);' : ''}" onclick="playPracticalVoice(${item.id}, ${locked})">
+          ${isPlayingThis ? t.ttsStop : ex.btnListen}
+        </button>
+        <button class="prac-btn rec${isRecThis ? ' recording' : ''}" onclick="togglePracticalRecord(${item.id}, ${locked})">
+          ${isRecThis ? ex.btnRecStop : ex.btnRec}
+        </button>
+        ${hasMyVoice ? `<button class="prac-btn play-my" onclick="playMyRecordedVoice(${item.id})">${ex.btnPlayMy}</button>` : ''}
+      </div>
+    `;
+    listEl.appendChild(card);
+  });
+}
+
 function switchMode(mode) {
   stopSpeech();
+  stopPracAudioAndRec();
   const unlocked = isPassUnlocked();
   const t = UI_TEXT[curLang] || UI_TEXT.ko;
 
@@ -938,7 +1448,24 @@ function switchMode(mode) {
   document.getElementById('result-card').style.display = 'none';
   document.getElementById('tab-study').classList.remove('active');
   document.getElementById('tab-exam').classList.remove('active');
+  document.getElementById('tab-prac').classList.remove('active');
   document.getElementById('tab-wrong').classList.remove('active');
+  const pracWrap = document.getElementById('prac-wrap');
+
+  if (mode === 'practical') {
+    document.getElementById('tab-prac').classList.add('active');
+    document.getElementById('exam-bar').style.display = 'none';
+    if (timerInterval) clearInterval(timerInterval);
+    renderPartSelector();
+    setMainQuizVisibility(false);
+    if (pracWrap) pracWrap.style.display = 'block';
+    renderPractical();
+    updateWrongBadge();
+    return;
+  }
+
+  if (pracWrap) pracWrap.style.display = 'none';
+  setMainQuizVisibility(true);
 
   if (mode === 'study') {
     document.getElementById('tab-study').classList.add('active');
@@ -1016,8 +1543,9 @@ function render() {
   const item = curDB[curIdx];
   const t = UI_TEXT[curLang] || UI_TEXT.ko;
 
+  const ex = EXTRA_UI[curLang] || EXTRA_UI.ko;
   const guideBanner = document.getElementById('lang-guide-banner');
-  if (curLang === 'ko' || sessionStorage.getItem('guide_banner_closed') === 'true') {
+  if (curMode === 'practical' || curLang === 'ko' || sessionStorage.getItem('guide_banner_closed') === 'true') {
     guideBanner.style.display = 'none';
   } else {
     guideBanner.style.display = 'block';
@@ -1027,6 +1555,8 @@ function render() {
 
   document.getElementById('tab-study').innerText = t.tabStudy;
   document.getElementById('tab-exam').innerText = t.tabExam;
+  const tabPracEl = document.getElementById('tab-prac');
+  if (tabPracEl) tabPracEl.innerText = ex.tabPrac;
   const wrongCount = getWrongIds().length;
   document.getElementById('tab-wrong').innerHTML = `${t.tabWrong} (<span id="wrong-count-badge">${wrongCount}</span>)`;
   document.getElementById('btn-submit-exam').innerText = t.submitBtn;
@@ -1293,16 +1823,54 @@ function restartExam() {
   switchMode('exam');
 }
 
+function selectBuyLang(packLang) {
+  if (!PACK_NAMES[packLang]) return;
+  selectedBuyLang = packLang;
+  syncPackPillsUI();
+}
+
+function syncPackPillsUI() {
+  document.querySelectorAll('.pack-pill').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-pack') === selectedBuyLang);
+  });
+}
+
 function changeLang(lang) {
   stopSpeech();
+  stopPracAudioAndRec();
   curLang = lang;
+  if (lang !== 'ko' && PACK_NAMES[lang]) {
+    selectedBuyLang = lang;
+  }
   localStorage.setItem('koreapass_lang', lang);
   document.documentElement.lang = lang;
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
   const targetBtn = Array.from(document.querySelectorAll('.lang-btn')).find(b => (b.getAttribute('onclick') || '').includes(`'${lang}'`));
   if (targetBtn) targetBtn.classList.add('active');
+
+  const unlockedNow = isPassUnlocked(lang);
+  if (!unlockedNow) {
+    if (curMode === 'exam' || curMode === 'wrong') {
+      if (timerInterval) clearInterval(timerInterval);
+      curMode = 'study';
+      document.getElementById('exam-bar').style.display = 'none';
+      document.getElementById('result-card').style.display = 'none';
+      document.getElementById('tab-exam').classList.remove('active');
+      document.getElementById('tab-wrong').classList.remove('active');
+      document.getElementById('tab-study').classList.add('active');
+      setMainQuizVisibility(true);
+    }
+    if (curMode === 'study' && DB_STUDY.length) {
+      curPart = 1;
+      curDB = DB_STUDY.slice(0, Math.min(100, DB_STUDY.length));
+      if (curIdx >= FREE_LIMIT) curIdx = 0;
+    }
+  }
+
+  syncPackPillsUI();
   render();
   renderPartSelector();
+  if (curMode === 'practical') renderPractical();
   checkUnlocked();
   if (paymentMethodWidget && paymentMethodWidget.updateAmount) {
     try { paymentMethodWidget.updateAmount(PASS_PRICE); } catch (e) {}
@@ -1314,11 +1882,10 @@ function toggleCodeDrawer() {
   if (el) el.classList.toggle('open');
 }
 
-// Deterministic checksummed Kmong / Recovery code verifier (format: KP180-XXXXXX-CC or Toss KP_17... order ID)
-function verifyPassCode(raw) {
+// Kmong / Admin issued checksum code verifier: KP180-<6 alnum>-<2 hex checksum>
+function verifyKmongCode(raw) {
   if (!raw) return false;
   const clean = raw.trim().toUpperCase();
-  // 1) Kmong / Admin issued checksum code: KP180-<6 alnum>-<2 hex checksum>
   const m = clean.match(/^KP180-([A-Z0-9]{6})-([0-9A-F]{2})$/);
   if (m) {
     const body = m[1];
@@ -1334,13 +1901,62 @@ function verifyPassCode(raw) {
 
 function redeemAccessCode() {
   const t = UI_TEXT[curLang] || UI_TEXT.ko;
+  const ex = EXTRA_UI[curLang] || EXTRA_UI.ko;
   const inp = document.getElementById('access-code-input');
-  const val = inp ? inp.value.trim() : '';
-  if (verifyPassCode(val)) {
-    activatePassLocally(val.toUpperCase());
-  } else {
-    alert(t.codeInvalid);
+  const pinInp = document.getElementById('access-pin-input');
+  const val = (inp ? inp.value : '').trim().toUpperCase();
+  const pinVal = (pinInp ? pinInp.value : '').replace(/\D/g, '');
+
+  // 1) PIN-bound Single-Language Recovery Code: KP1-<LANG>-<EXPDAYHEX>-<NONCE4>-<SIG6>
+  const m1 = val.match(/^KP1-(UZ|RU|ID|NE|VI|EN|ZH)-([0-9A-F]+)-([A-Z0-9]{4})-([0-9A-F]{6})$/);
+  if (m1) {
+    if (pinVal.length !== 4) {
+      alert(ex.recPinNeedMsg);
+      if (pinInp) pinInp.focus();
+      return;
+    }
+    const lCode = m1[1].toLowerCase();
+    const expHex = m1[2];
+    const nonce4 = m1[3];
+    const sig6 = m1[4];
+    const expectedSig = computeRecoverySig(lCode, expHex, nonce4, pinVal);
+    if (sig6 !== expectedSig) {
+      alert(t.codeInvalid);
+      return;
+    }
+    const expireMs = (parseInt(expHex, 16) + 1) * 86400000 - 1;
+    if (expireMs <= Date.now()) {
+      alert(t.codeInvalid);
+      return;
+    }
+    activateSingleLangPass(lCode, expireMs, val);
+    if (curLang !== 'ko' && curLang !== lCode) {
+      changeLang(lCode);
+    }
+    alert(ex.recSuccessMsg(PACK_NAMES[lCode] || lCode.toUpperCase()));
+    return;
   }
+
+  // 2) Kmong All-Pass Code: KP180-XXXXXX-CC
+  if (verifyKmongCode(val)) {
+    activatePassLocally(val);
+    return;
+  }
+
+  alert(t.codeInvalid);
+}
+
+function copySavedRecCode() {
+  const codeEl = document.getElementById('unlocked-rec-code');
+  if (!codeEl || !codeEl.innerText) return;
+  navigator.clipboard.writeText(codeEl.innerText).then(() => {
+    const btn = document.getElementById('btn-copy-saved-rec');
+    if (btn) {
+      const old = btn.innerText;
+      btn.innerText = 'OK!';
+      setTimeout(() => { btn.innerText = old; }, 1800);
+    }
+  }).catch(() => {});
 }
 
 const clientKey = 'live_gck_c19zd7g4SpoJGGTtYyP1ZwvhShxUU7IXTc';
@@ -1360,44 +1976,70 @@ try {
 function checkUnlocked() {
   const unlocked = isPassUnlocked();
   const lockEl = document.getElementById('cta-lock-box');
+  const unlockedView = document.getElementById('cta-unlocked-view');
+  const lockedView = document.getElementById('cta-locked-view');
   const t = UI_TEXT[curLang] || UI_TEXT.ko;
-  if (!lockEl) return;
+  const ex = EXTRA_UI[curLang] || EXTRA_UI.ko;
+  if (!lockEl || !unlockedView || !lockedView) return;
+
+  const packLblEl = document.getElementById('pack-picker-label');
+  if (packLblEl) packLblEl.innerText = ex.packLabel;
+  const pinLblEl = document.getElementById('pin-setup-label');
+  if (pinLblEl) pinLblEl.innerHTML = ex.pinLabel;
+  syncPackPillsUI();
 
   if (unlocked) {
     lockEl.style.borderColor = 'var(--ok)';
-    const savedOrd = localStorage.getItem('koreapass_order_id');
-    lockEl.innerHTML = `
-      <h3 style="color:var(--ok);">${t.unlockedTitle}</h3>
-      <p style="color:#fff; margin:8px 0 0;">${t.unlockedDesc}</p>
-      ${savedOrd ? `<div style="font-size:11.5px; color:var(--sub); margin-top:8px;">ID: ${savedOrd}</div>` : ''}
-    `;
-  } else {
-    if (!document.getElementById('lock-title')) {
-      lockEl.style.borderColor = 'var(--gold)';
-      lockEl.innerHTML = `
-        <h3 id="lock-title">${t.lockTitle}</h3>
-        <p id="lock-desc">${t.lockDesc}</p>
-        <div id="pay-guide-box" style="background:rgba(0,180,216,0.12); border:1px solid var(--acc); border-radius:10px; padding:10px; font-size:13px; color:#fff; font-weight:600; margin-bottom:12px; text-align:center;">
-          ${t.payGuide}
-        </div>
-        <div id="payment-method" style="margin-bottom:12px;"></div>
-        <div id="agreement" style="margin-bottom:16px;"></div>
-        <div style="display:flex; flex-direction:column; gap:10px;">
-          <button class="btn-buy" id="btn-price" onclick="requestPay()">${t.btnToss}</button>
-        </div>
-        <button class="code-toggle" id="btn-code-toggle" onclick="toggleCodeDrawer()">${t.codeToggle}</button>
-        <div class="code-drawer" id="code-drawer">
-          <input type="text" class="code-input" id="access-code-input" placeholder="KP180-XXXXXX-XX">
-          <button class="code-submit" id="btn-code-submit" onclick="redeemAccessCode()">${t.codeSubmit}</button>
-        </div>
-      `;
-      try {
-        if (paymentWidget) {
-          paymentMethodWidget = paymentWidget.renderPaymentMethods('#payment-method', { value: PASS_PRICE }, { variantKey: 'DEFAULT' });
-          paymentWidget.renderAgreement('#agreement');
-        }
-      } catch (e) {}
+    unlockedView.style.display = 'block';
+    lockedView.style.display = 'none';
+
+    const unlockedForeign = getUnlockedForeignLangs();
+    const activeForeign = curLang !== 'ko' ? curLang : (unlockedForeign[0] || 'ko');
+    const packLabel = PACK_NAMES[activeForeign] || t.unlockedTitle;
+
+    const uTitle = document.getElementById('unlocked-title-el');
+    const uDesc = document.getElementById('unlocked-desc-el');
+    const uRecWrap = document.getElementById('unlocked-rec-wrap');
+    const uRecLbl = document.getElementById('unlocked-rec-label');
+    const uRecCode = document.getElementById('unlocked-rec-code');
+    const uOrd = document.getElementById('unlocked-ord-el');
+
+    if (PACK_NAMES[activeForeign]) {
+      uTitle.innerText = ex.unlockedPairTitle(packLabel);
+      uDesc.innerText = ex.unlockedPairDesc(packLabel);
+    } else {
+      uTitle.innerText = t.unlockedTitle;
+      uDesc.innerText = t.unlockedDesc;
     }
+
+    const savedRec = localStorage.getItem('koreapass_recovery_code_' + activeForeign) || '';
+    if (savedRec) {
+      uRecWrap.style.display = 'block';
+      uRecLbl.innerText = ex.recKeepLabel;
+      uRecCode.innerText = savedRec;
+    } else {
+      uRecWrap.style.display = 'none';
+    }
+
+    const savedOrd = localStorage.getItem('koreapass_order_id') || '';
+    uOrd.innerText = savedOrd ? ('Order / Pass ID: ' + savedOrd) : '';
+  } else {
+    lockEl.style.borderColor = 'var(--gold)';
+    unlockedView.style.display = 'none';
+    lockedView.style.display = 'block';
+
+    const lockTitleEl = document.getElementById('lock-title');
+    if (lockTitleEl) lockTitleEl.innerText = t.lockTitle;
+    const lockDescEl = document.getElementById('lock-desc');
+    if (lockDescEl) lockDescEl.innerText = t.lockDesc;
+    const payGuideBox = document.getElementById('pay-guide-box');
+    if (payGuideBox) payGuideBox.innerText = t.payGuide;
+    const btnPriceEl = document.getElementById('btn-price');
+    if (btnPriceEl) btnPriceEl.innerText = t.btnToss;
+    const codeToggleEl = document.getElementById('btn-code-toggle');
+    if (codeToggleEl) codeToggleEl.innerText = t.codeToggle;
+    const codeSubEl = document.getElementById('btn-code-submit');
+    if (codeSubEl) codeSubEl.innerText = t.codeSubmit;
   }
 }
 window.addEventListener('DOMContentLoaded', checkUnlocked);
@@ -1423,20 +2065,37 @@ function recoverPageInteractivity() {
 window.addEventListener('keydown', e => { if (e.key === 'Escape') setTimeout(recoverPageInteractivity, 150); });
 
 function requestPay() {
+  const ex = EXTRA_UI[curLang] || EXTRA_UI.ko;
+  const pinInp = document.getElementById('pin-set-input');
+  const pin4 = (pinInp ? pinInp.value : '').replace(/\D/g, '');
+  if (pin4.length !== 4) {
+    alert(ex.pinNeedMsg);
+    if (pinInp) {
+      pinInp.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      pinInp.focus();
+    }
+    return;
+  }
+
+  const buyPack = curLang !== 'ko' ? curLang : selectedBuyLang;
+  localStorage.setItem('koreapass_pending_buy_lang', buyPack);
+  localStorage.setItem('koreapass_pending_pin', pin4);
+
   const orderId = 'KP_' + Date.now() + '_' + Math.random().toString(36).substring(2, 6).toUpperCase();
-  const orderName = 'KoreaPass 1000 Questions 180-Day All-Pass (' + curLang.toUpperCase() + ')';
+  const orderName = 'KoreaPass 180-Day Pass (' + buyPack.toUpperCase() + ' + KO)';
 
   if (paymentWidget) {
     if (paymentMethodWidget && paymentMethodWidget.updateAmount) {
       paymentMethodWidget.updateAmount(PASS_PRICE);
     }
     const baseUrl = window.location.origin + window.location.pathname.replace(/[^/]*$/, '');
+    const qs = 'lang=' + encodeURIComponent(curLang) + '&buyLang=' + encodeURIComponent(buyPack) + '&pin=' + encodeURIComponent(pin4);
     paymentWidget.requestPayment({
       orderId: orderId,
       orderName: orderName,
       customerName: 'KoreaPass Learner',
-      successUrl: baseUrl + 'success.html?lang=' + curLang,
-      failUrl: baseUrl + 'fail.html?lang=' + curLang,
+      successUrl: baseUrl + 'success.html?' + qs,
+      failUrl: baseUrl + 'fail.html?lang=' + encodeURIComponent(curLang),
     }).catch(function (error) {
       recoverPageInteractivity();
       setTimeout(recoverPageInteractivity, 400);
