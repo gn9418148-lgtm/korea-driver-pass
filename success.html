@@ -138,6 +138,24 @@
       btn: "立即开始练习1,000道全真题 →",
       orderPrefix: "订单/恢复编号：",
       invalid: "未检测到支付验证信息，正在返回主页。"
+    },
+    ru: {
+      title: "Оплата успешно завершена!",
+      verifying: "Подтверждение оплаты...",
+      desc: "Безлимитный доступ All-Pass на 180 дней (6 месяцев) активирован.<br>Начинайте решать все 1 000 вопросов и пробные экзамены прямо сейчас!",
+      badge: "🎉 Доступ All-Pass на 180 дней открыт",
+      btn: "Перейти ко всем 1 000 вопросам →",
+      orderPrefix: "Код заказа (сохраните для восстановления): ",
+      invalid: "Данные оплаты не найдены. Возврат на главную страницу."
+    },
+    id: {
+      title: "Pembayaran Berhasil!",
+      verifying: "Memverifikasi pembayaran...",
+      desc: "Akses Tanpa Batas All-Pass 180 Hari (6 Bulan) telah aktif.<br>Mulai kerjakan seluruh 1.000 soal resmi dan simulasi ujian sekarang!",
+      badge: "🎉 All-Pass 180 Hari Terbuka",
+      btn: "Mulai Kerjakan 1.000 Soal Sekarang →",
+      orderPrefix: "Kode Pesanan (simpan untuk pemulihan): ",
+      invalid: "Data pembayaran tidak ditemukan. Kembali ke halaman utama."
     }
   };
 
@@ -149,7 +167,7 @@
     const expireAt = Date.now() + (180 * 24 * 60 * 60 * 1000);
     localStorage.setItem('koreapass_unlock_until', String(expireAt));
     localStorage.setItem('koreapass_unlocked_all', 'true');
-    ['ko', 'uz', 'ne', 'vi', 'en', 'zh'].forEach(lc => {
+    ['ko', 'uz', 'ne', 'vi', 'en', 'zh', 'ru', 'id'].forEach(lc => {
       localStorage.setItem('koreapass_unlocked_' + lc, 'true');
     });
     if (orderId) {

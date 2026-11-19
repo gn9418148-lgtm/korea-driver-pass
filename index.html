@@ -30,8 +30,9 @@ main { max-width: 580px; margin: 0 auto; padding: 14px 16px 110px; }
 .logo span { color: var(--acc); }
 
 /* Language Selector Pill */
-.lang-selector { display: flex; gap: 3px; background: #132238; padding: 4px; border-radius: 99px; border: 1px solid var(--line); }
-.lang-btn { border: 0; background: transparent; color: var(--sub); font-size: 11px; font-weight: 700; padding: 5px 8px; border-radius: 99px; cursor: pointer; transition: all 0.2s; }
+.lang-selector { display: flex; gap: 3px; background: #132238; padding: 4px; border-radius: 99px; border: 1px solid var(--line); overflow-x: auto; max-width: 100%; scrollbar-width: none; }
+.lang-selector::-webkit-scrollbar { display: none; }
+.lang-btn { flex: none; border: 0; background: transparent; color: var(--sub); font-size: 11px; font-weight: 700; padding: 5px 8px; border-radius: 99px; cursor: pointer; transition: all 0.2s; }
 .lang-btn.active { background: var(--acc); color: #04131d; font-weight: 800; box-shadow: 0 2px 8px rgba(0, 180, 216, 0.4); }
 
 /* Mode Switcher Tabs */
@@ -115,6 +116,8 @@ main { max-width: 580px; margin: 0 auto; padding: 14px 16px 110px; }
     <div class="lang-selector">
       <button class="lang-btn active" onclick="changeLang('ko')">한국어</button>
       <button class="lang-btn" onclick="changeLang('uz')">UZB</button>
+      <button class="lang-btn" onclick="changeLang('ru')">RUS</button>
+      <button class="lang-btn" onclick="changeLang('id')">IDN</button>
       <button class="lang-btn" onclick="changeLang('ne')">NEP</button>
       <button class="lang-btn" onclick="changeLang('vi')">VIE</button>
       <button class="lang-btn" onclick="changeLang('en')">ENG</button>
@@ -508,6 +511,98 @@ const UI_TEXT = {
     unlockedTitle: "🎉 180天（半年）全通关畅学卡已激活",
     unlockedDesc: "全部1,000道真题精析、模拟考场与错题本已无限制开放。",
     footerText: "出处：韩国道路交通公团（KoROAD）公开学科题库。本网站为独立第三方助考工具。<br><b>【退款说明】</b>兑换码未使用前7日内可全额退款；在线即时解锁题库后因数字内容已交付使用，恕不支持退款。"
+  },
+  ru: {
+    guideTitle: "💡 [Важно] Почему корейский текст написан крупно?",
+    guideDesc: "На экзамене в Корее нет русского языка — вопросы на ПК выходят на корейском! Запоминайте корейские ключевые слова визуально, слушайте произношение (🔊) и читайте точный перевод на русский ниже.",
+    tabStudy: "📖 Обучение",
+    tabExam: "⏱️ Экзамен (40 вопр.)",
+    tabWrong: "📝 Ошибки",
+    scoreMeta: "Права 1 и 2 класса · 1 000 вопросов",
+    ttsBtn: "🔊 Озвучка (KR)",
+    ttsStop: "⏹️ Стоп",
+    ansTitle: "ПРАВИЛЬНЫЙ ОТВЕТ",
+    explainLabel: "Русский",
+    totalLabel: "Всего",
+    numSuffix: "",
+    pickText: n => `Выберите ${n}`,
+    lockTitle: "🔒 ОТКРЫТЬ ОСТАЛЬНЫЕ 990 ВОПРОСОВ И ЭКЗАМЕН",
+    lockDesc: "Полная база 1 000 вопросов + объяснения + симулятор экзамена 40 вопросов (180 дней / 6 мес. · разовый платёж без подписок)",
+    priceAmount: PASS_PRICE,
+    btnToss: "⚡ Открыть доступ на 180 дней (₩7,500)",
+    payGuide: "💡 Выберите карту выше, отметьте согласие и нажмите кнопку оплаты ниже",
+    codeToggle: "🔑 Ввести код доступа / Восстановить на другом устройстве",
+    codeSubmit: "ОК",
+    codeInvalid: "Неверный код доступа. Проверьте код и попробуйте снова.",
+    prevBtn: "← НАЗАД",
+    nextBtn: "ДАЛЕЕ →",
+    qPrefix: "Вопр.",
+    ptText: "б.",
+    submitBtn: "Завершить тест",
+    restartBtn: "🔄 Сдать заново",
+    reviewWrongBtn: "📝 Разбор ошибок",
+    noWrongMsg: "📝 Сохранённых ошибок пока нет!\nВопросы, в которых вы ошибётесь, автоматически сохранятся здесь.",
+    partLockMsg: "🔒 900 вопросов начиная с Part 2 доступны в пакете All-Pass на 180 дней (разовый платёж ₩7,500).",
+    modeLockMsg: "🔒 Экзамен (40 вопросов) и журнал ошибок доступны в пакете All-Pass на 180 дней (₩7,500).",
+    endAlert: "10 бесплатных вопросов пройдены! Откройте все 1 000 вопросов и пробный экзамен ниже.",
+    studyCompleteMsg: n => `🎉 Все ${n} вопросов этого раздела пройдены!\nНажмите [⏱️ Экзамен] сверху для реальной проверки за 40 минут!`,
+    examEndMsg: "Последний вопрос! Нажмите [Завершить тест] вверху, чтобы узнать результат.",
+    scoreLine: (s, c, tot) => `${s} баллов (${c} из ${tot} верно)`,
+    pass12Stamp: "🎉 СДАНО: 1 и 2 КЛАСС (PASS)",
+    pass12Desc: "Поздравляем! Вы успешно набрали проходной балл для 1 класса (70+) и 2 класса (60+).",
+    pass2Stamp: "🎉 СДАНО: 2 КЛАСС (PASS)",
+    pass2Desc: "Проходной балл 2 класса (60+) набран! Повторите ошибки для 1 класса (70+).",
+    failStamp: "⚠️ НЕ СДАНО (FAIL)",
+    failDesc: "Не набрано 60 баллов. Повторите ошибки и попробуйте снова!",
+    unlockedTitle: "🎉 Доступ All-Pass на 180 дней (6 мес.) активен",
+    unlockedDesc: "Все 1 000 вопросов, объяснения на русском и симулятор экзамена открыты.",
+    footerText: "Источник: открытая база вопросов KoROAD (Корея). Независимый учебный веб-сервис.<br><b>[Правила возврата]</b> До активации кода возврат в течение 7 дней; после мгновенного открытия цифрового контента возврат не производится."
+  },
+  id: {
+    guideTitle: "💡 [Penting] SIM Indonesia Tidak Bisa Ditukar Langsung!",
+    guideDesc: "Di Korea, pemegang SIM Indonesia wajib ikut ujian tertulis, dan layar komputer ujian tidak menyediakan Bahasa Indonesia! Kenali teks asli Korea di atas, dengarkan suara 🔊, dan pahami terjemahan Indonesia di bawahnya.",
+    tabStudy: "📖 Belajar",
+    tabExam: "⏱️ Simulasi (40 Soal)",
+    tabWrong: "📝 Catatan Salah",
+    scoreMeta: "SIM Kelas 1 & 2 · 1.000 Soal Resmi",
+    ttsBtn: "🔊 Suara Korea",
+    ttsStop: "⏹️ Berhenti",
+    ansTitle: "JAWABAN BENAR",
+    explainLabel: "Bahasa Indonesia",
+    totalLabel: "Total",
+    numSuffix: "",
+    pickText: n => `Pilih ${n}`,
+    lockTitle: "🔒 BUKA 990 SOAL SISANYA & SIMULASI UJIAN",
+    lockDesc: "1.000 Soal Resmi Lengkap + Pembahasan + Simulasi 40 Soal Tanpa Batas (All-Pass 180 Hari / 6 Bulan · Sekali Bayar)",
+    priceAmount: PASS_PRICE,
+    btnToss: "⚡ Buka All-Pass 180 Hari (₩7,500 · ~Rp86rb)",
+    payGuide: "💡 Pilih kartu di atas, centang persetujuan, lalu ketuk tombol bayar di bawah",
+    codeToggle: "🔑 Masukkan Kode Akses / Pulihkan di HP Lain",
+    codeSubmit: "Aktifkan",
+    codeInvalid: "Kode akses tidak valid. Silakan periksa kembali.",
+    prevBtn: "← SEBELUMNYA",
+    nextBtn: "BERIKUTNYA →",
+    qPrefix: "Soal",
+    ptText: "poin",
+    submitBtn: "Kumpulkan Ujian",
+    restartBtn: "🔄 Ulangi Ujian",
+    reviewWrongBtn: "📝 Pelajari Soal Salah",
+    noWrongMsg: "📝 Belum ada catatan soal salah!\nSoal yang salah saat belajar atau simulasi otomatis tersimpan di sini.",
+    partLockMsg: "🔒 900 soal mulai Part 2 khusus member All-Pass 180 Hari (sekali bayar ₩7,500).",
+    modeLockMsg: "🔒 Simulasi Ujian 40 Soal & Catatan Salah khusus member All-Pass 180 Hari (₩7,500).",
+    endAlert: "10 soal coba gratis selesai! Buka seluruh 1.000 soal & simulasi ujian di bawah ini.",
+    studyCompleteMsg: n => `🎉 Selesai mempelajari ${n} soal di bagian ini!\nKetuk [⏱️ Simulasi] di atas untuk latihan ujian 40 menit!`,
+    examEndMsg: "Soal terakhir! Ketuk [Kumpulkan Ujian] di bagian atas untuk melihat nilai Anda.",
+    scoreLine: (s, c, tot) => `${s} poin (${c}/${tot} benar)`,
+    pass12Stamp: "🎉 LULUS KELAS 1 & 2 (PASS)",
+    pass12Desc: "Selamat! Anda melampaui batas lulus SIM Kelas 1 (70 poin) dan Kelas 2 (60 poin).",
+    pass2Stamp: "🎉 LULUS KELAS 2 (PASS)",
+    pass2Desc: "Lulus standar Kelas 2 (60+ poin)! Ulangi soal salah untuk target Kelas 1.",
+    failStamp: "⚠️ BELUM LULUS (FAIL)",
+    failDesc: "Nilai di bawah 60 poin. Pelajari catatan salah dan coba lagi!",
+    unlockedTitle: "🎉 All-Pass 180 Hari (6 Bulan) Aktif",
+    unlockedDesc: "Seluruh 1.000 soal, pembahasan Bahasa Indonesia, dan simulasi ujian telah terbuka.",
+    footerText: "Sumber: Bank Soal Resmi KoROAD Korea. Layanan belajar independen.<br><b>[Kebijakan Pengembalian]</b> Pengembalian penuh dalam 7 hari sebelum kode dipakai; konten digital yang langsung terbuka setelah pembayaran tidak dapat dikembalikan."
   }
 };
 
@@ -517,7 +612,7 @@ function isPassUnlocked() {
   if (exp > 0 && exp <= Date.now()) {
     localStorage.removeItem('koreapass_unlock_until');
     localStorage.removeItem('koreapass_unlocked_all');
-    ['ko', 'uz', 'ne', 'vi', 'en', 'zh'].forEach(lc => localStorage.removeItem('koreapass_unlocked_' + lc));
+    ['ko', 'uz', 'ne', 'vi', 'en', 'zh', 'ru', 'id'].forEach(lc => localStorage.removeItem('koreapass_unlocked_' + lc));
     return false;
   }
   if (localStorage.getItem('koreapass_unlocked_all') === 'true' || localStorage.getItem('koreapass_unlocked_' + curLang) === 'true') {
@@ -533,7 +628,7 @@ function activatePassLocally(codeUsed) {
   const expireAt = Date.now() + (PASS_DAYS * 24 * 60 * 60 * 1000);
   localStorage.setItem('koreapass_unlock_until', String(expireAt));
   localStorage.setItem('koreapass_unlocked_all', 'true');
-  ['ko', 'uz', 'ne', 'vi', 'en', 'zh'].forEach(lc => localStorage.setItem('koreapass_unlocked_' + lc, 'true'));
+  ['ko', 'uz', 'ne', 'vi', 'en', 'zh', 'ru', 'id'].forEach(lc => localStorage.setItem('koreapass_unlocked_' + lc, 'true'));
   if (codeUsed) localStorage.setItem('koreapass_order_id', codeUsed);
   checkUnlocked();
   render();
@@ -548,6 +643,8 @@ function detectInitialLang() {
   if (saved && UI_TEXT[saved]) return saved;
   const nav = (navigator.language || '').toLowerCase();
   if (nav.startsWith('uz')) return 'uz';
+  if (nav.startsWith('ru') || nav.startsWith('kk') || nav.startsWith('ky') || nav.startsWith('uk')) return 'ru';
+  if (nav.startsWith('id') || nav.startsWith('ms')) return 'id';
   if (nav.startsWith('ne')) return 'ne';
   if (nav.startsWith('vi')) return 'vi';
   if (nav.startsWith('zh')) return 'zh';
@@ -1203,7 +1300,9 @@ function requestPay() {
       ne: "भुक्तानी मोड्युल तयार हुँदैछ। कृपया केही बेरपछि फेरि प्रयास गर्नुहोस्।",
       vi: "Đang chuẩn bị mô-đun thanh toán. Vui lòng thử lại sau giây lát.",
       en: "Preparing payment module. Please try again in a moment.",
-      zh: "正在加载支付模块，请稍后再试。"
+      zh: "正在加载支付模块，请稍后再试。",
+      ru: "Платёжный модуль загружается. Пожалуйста, попробуйте через секунду.",
+      id: "Modul pembayaran sedang disiapkan. Silakan coba sesaat lagi."
     };
     alert(readyMsg[curLang] || readyMsg.en);
   }

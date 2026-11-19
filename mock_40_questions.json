@@ -10,7 +10,9 @@
       "ne": "मोबाइल सवारी चालक अनुमतिपत्र (मोबाइल लाइसेन्स) जारी गर्न आवश्यक सही प्रक्रिया कुन हो?",
       "vi": "Quy trình nào sau đây là đúng để được cấp giấy phép lái xe trên điện thoại di động (Mobile Driver's License)?",
       "en": "Which of the following is the correct procedure required to obtain a mobile driver's license?",
-      "zh": "下列关于申领移动驾驶证（电子驾驶证）所需程序的说法，正确的是？"
+      "zh": "下列关于申领移动驾驶证（电子驾驶证）所需程序的说法，正确的是？",
+      "ru": "Какова правильная процедура получения мобильного водительского удостоверения?",
+      "id": "Manakah prosedur yang benar untuk memperoleh SIM seluler (SIM digital)?"
     },
     "options": {
       "ko": [
@@ -48,6 +50,18 @@
         "必须使用本人名义的智能手机并通过本人身份认证进行申请。",
         "只能在警察署交通民愿室申请。",
         "无法在驾驶证考场办理签发。"
+      ],
+      "ru": [
+        "Подать заявление можно через любое мобильное приложение.",
+        "Необходимо подать заявление со смартфона, зарегистрированного на собственное имя, пройдя подтверждение личности.",
+        "Подать заявление можно только в отделе по работе с гражданами в области дорожного движения при полицейском участке.",
+        "В экзаменационном центре по выдаче водительских удостоверений его получить невозможно."
+      ],
+      "id": [
+        "Dapat diajukan melalui aplikasi seluler apa saja.",
+        "Harus diajukan menggunakan ponsel pintar atas nama sendiri disertai verifikasi identitas diri.",
+        "Hanya dapat diajukan di bagian pelayanan lalu lintas kantor polisi.",
+        "Tidak dapat diterbitkan di pusat ujian SIM."
       ]
     },
     "answer": 2,
@@ -57,7 +71,9 @@
       "ne": "मोबाइल लाइसेन्स लिनका लागि आफ्नै नामको स्मार्टफोनमा आधिकारिक एप राखी पहिचान प्रमाणीकरण गर्नुपर्छ, र यो लाइसेन्स परीक्षा केन्द्र तथा प्रहरी कार्यालय दुवैबाट प्राप्त गर्न सकिन्छ।",
       "vi": "Để cấp bằng lái xe di động, người đăng ký bắt buộc phải dùng điện thoại thông minh chính chủ, cài ứng dụng định danh chính thức và xác thực danh tính; có thể làm thủ tục tại cả trung tâm sát hạch lẫn đồn cảnh sát.",
       "en": "To obtain a mobile driver's license, you must verify your identity on a smartphone registered under your own name via the official Mobile ID app; it can be issued through both driver's license test centers and police stations.",
-      "zh": "申领移动驾驶证必须使用本人名下的智能手机安装官方移动身份证App并完成实名认证，在驾驶证考场或警察署民愿室均可办理。"
+      "zh": "申领移动驾驶证必须使用本人名下的智能手机安装官方移动身份证App并完成实名认证，在驾驶证考场或警察署民愿室均可办理。",
+      "ru": "Для получения мобильного водительского удостоверения необходимо установить официальное приложение мобильного удостоверения личности на смартфон, оформленный на ваше имя, и пройти проверку личности; выдача возможна как через экзаменационные центры, так и через полицейские участки.",
+      "id": "Untuk memperoleh SIM seluler, pemohon wajib memasang aplikasi resmi identitas seluler pada ponsel pintar yang terdaftar atas nama sendiri dan melakukan verifikasi identitas; penerbitannya dapat dilakukan melalui pusat ujian SIM maupun kantor polisi."
     }
   },
   {
@@ -71,7 +87,9 @@
       "ne": "सडक ट्राफिक नियम अनुसार सवारी चालक अनुमतिपत्र जारी गर्ने सम्बन्धी कुन भनाइ सही छैन?",
       "vi": "Theo Luật Giao thông Đường bộ, giải thích nào sau đây về việc cấp giấy phép lái xe là KHÔNG đúng?",
       "en": "Under the Road Traffic Act, which of the following statements about issuing a driver's license is INCORRECT?",
-      "zh": "根据《道路交通法令》，下列关于驾驶证签发的说明中，不正确的一项是？"
+      "zh": "根据《道路交通法令》，下列关于驾驶证签发的说明中，不正确的一项是？",
+      "ru": "Какое из следующих утверждений о выдаче водительского удостоверения согласно Закону о дорожном движении является НЕВЕРНЫМ?",
+      "id": "Berdasarkan peraturan Undang-Undang Lalu Lintas Jalan, pernyataan manakah mengenai penerbitan SIM yang TIDAK benar?"
     },
     "options": {
       "ko": [
@@ -109,6 +127,18 @@
         "无法申领英文驾驶证。",
         "可以申领移动驾驶证。",
         "驾驶证遗失时可以申请补发。"
+      ],
+      "ru": [
+        "Водительское удостоверение необходимо получить в течение 30 дней со дня успешной сдачи экзамена на права.",
+        "Водительское удостоверение на английском языке получить нельзя.",
+        "Можно получить мобильное водительское удостоверение.",
+        "В случае утери водительского удостоверения его можно восстановить (получить повторно)."
+      ],
+      "id": [
+        "SIM harus diterbitkan dalam waktu 30 hari sejak tanggal lulus ujian SIM.",
+        "SIM berbahasa Inggris tidak dapat diterbitkan.",
+        "SIM seluler dapat diterbitkan.",
+        "Jika SIM hilang, pemegang dapat mengajukan penerbitan ulang."
       ]
     },
     "answer": 2,
@@ -118,7 +148,9 @@
       "ne": "सडक ट्राफिक नियम अनुसार आवेदकले पछाडिपट्टि अंग्रेजी विवरण छापिएको अंग्रेजी सवारी चालक अनुमतिपत्र पनि लिन सक्छन्, त्यसैले 'जारी गर्न सकिँदैन' भन्ने भनाइ गलत हो।",
       "vi": "Người có nhu cầu hoàn toàn có thể đăng ký cấp giấy phép lái xe tiếng Anh (in thông tin tiếng Anh ở mặt sau), nên nói không thể cấp là sai.",
       "en": "Applicants can request and receive an English-language driver's license (with license details printed in English on the back), so stating that it cannot be issued is incorrect.",
-      "zh": "根据韩国道路交通法规，申请人可以申领背面印有英文信息的英文驾驶证，因此“无法申领英文驾驶证”的说法是错误的。"
+      "zh": "根据韩国道路交通法规，申请人可以申领背面印有英文信息的英文驾驶证，因此“无法申领英文驾驶证”的说法是错误的。",
+      "ru": "В соответствии с правилами Закона о дорожном движении желающие могут получить водительское удостоверение с дублированием данных на английском языке на оборотной стороне, поэтому утверждение о невозможности его выдачи неверно.",
+      "id": "Sesuai peraturan pelaksanaan Undang-Undang Lalu Lintas Jalan, pemohon yang menginginkan dapat memperoleh SIM berbahasa Inggris yang mencantumkan informasi SIM dalam bahasa Inggris di bagian belakang kartu, sehingga pernyataan bahwa SIM tersebut tidak dapat diterbitkan adalah salah."
     }
   },
   {
@@ -132,7 +164,9 @@
       "ne": "प्रान्तीय वा महानगर प्रहरी प्रमुखद्वारा जारी गरिएको अन्तर्राष्ट्रिय सवारी चालक अनुमतिपत्रको मान्य अवधि जारी भएको मितिले कति वर्ष हुन्छ?",
       "vi": "Giấy phép lái xe quốc tế do Giám đốc Sở Cảnh sát tỉnh/thành phố cấp có thời hạn hiệu lực mấy năm kể từ ngày cấp?",
       "en": "How many years is an International Driving Permit issued by a Provincial or Metropolitan Police Commissioner valid from the date of issuance?",
-      "zh": "由市、道警察厅长签发的国际驾驶证，其有效期自签发之日起为几年？"
+      "zh": "由市、道警察厅长签发的国际驾驶证，其有效期自签发之日起为几年？",
+      "ru": "Сколько лет со дня выдачи составляет срок действия международного водительского удостоверения, выданного начальником полицейского управления провинции или города центрального подчинения?",
+      "id": "Berapa tahun masa berlaku SIM Internasional yang diterbitkan oleh Kepala Kepolisian Provinsi atau Kota Metropolitan terhitung sejak tanggal penerbitan?"
     },
     "options": {
       "ko": [
@@ -170,6 +204,18 @@
         "2年",
         "3年",
         "4年"
+      ],
+      "ru": [
+        "1 год",
+        "2 года",
+        "3 года",
+        "4 года"
+      ],
+      "id": [
+        "1 tahun",
+        "2 tahun",
+        "3 tahun",
+        "4 tahun"
       ]
     },
     "answer": 1,
@@ -179,7 +225,9 @@
       "ne": "विदेशमा गाडी चलाउन जारी गरिने अन्तर्राष्ट्रिय सवारी चालक अनुमतिपत्रको मान्य अवधि जारी भएको मितिदेखि १ वर्ष मात्र हुन्छ।",
       "vi": "Theo Luật Giao thông Đường bộ, giấy phép lái xe quốc tế được cấp để lái xe ở nước ngoài có thời hạn hiệu lực là 1 năm kể từ ngày cấp.",
       "en": "An International Driving Permit (IDP) issued for driving abroad is valid for 1 year from the date of issuance (provided the domestic license remains valid).",
-      "zh": "为在国外驾车而向市、道警察厅长申请签发的国际驾驶证，其法定有效期为自签发之日起1年。"
+      "zh": "为在国外驾车而向市、道警察厅长申请签发的国际驾驶证，其法定有效期为自签发之日起1年。",
+      "ru": "Срок действия международного водительского удостоверения, выдаваемого для управления транспортом за рубежом, составляет 1 год со дня выдачи при условии действительности национального удостоверения.",
+      "id": "SIM Internasional yang diterbitkan untuk keperluan mengemudi di luar negeri berlaku selama 1 tahun sejak tanggal penerbitan selama SIM domestik masih berlaku."
     }
   },
   {
@@ -193,7 +241,9 @@
       "ne": "सडक ट्राफिक ऐन अनुसार १५ सिट क्षमताको आपतकालीन भ्यान पहिलो पटक चलाउन आवश्यक सही सर्त कुन हो?",
       "vi": "Theo Luật Giao thông Đường bộ, điều kiện đúng khi lần đầu muốn lái xe ô tô khách khẩn cấp 15 chỗ ngồi là gì?",
       "en": "Under the Road Traffic Act, which requirement is correct when driving a 15-passenger emergency van for the first time?",
-      "zh": "根据《道路交通法》，首次驾驶核载15人的紧急客车（面包车）时，所需的正确条件是？"
+      "zh": "根据《道路交通法》，首次驾驶核载15人的紧急客车（面包车）时，所需的正确条件是？",
+      "ru": "Какое требование является верным согласно Закону о дорожном движении при первом допуске к управлению оперативным микроавтобусом (спецтранспортом) вместимостью 15 пассажиров?",
+      "id": "Berdasarkan Undang-Undang Lalu Lintas Jalan, syarat manakah yang benar saat hendak mengemudikan mobil van darurat berkapasitas 15 penumpang untuk pertama kalinya?"
     },
     "options": {
       "ko": [
@@ -231,6 +281,18 @@
         "第1类特殊驾驶证（大型牵引车），交通安全教育2小时",
         "第1类特殊驾驶证（清障救援车），交通安全教育2小时",
         "第2类普通驾驶证，交通安全教育3小时"
+      ],
+      "ru": [
+        "Обычные права 1-го класса и 3 часа обучения по безопасности дорожного движения",
+        "Специальные права 1-го класса (крупногабаритный тягач) и 2 часа обучения по безопасности дорожного движения",
+        "Специальные права 1-го класса (эвакуатор) и 2 часа обучения по безопасности дорожного движения",
+        "Обычные права 2-го класса и 3 часа обучения по безопасности дорожного движения"
+      ],
+      "id": [
+        "SIM Kelas 1 Reguler dan pelatihan keselamatan lalu lintas 3 jam",
+        "SIM Kelas 1 Khusus (Derek Besar/Trailer Besar) dan pelatihan keselamatan lalu lintas 2 jam",
+        "SIM Kelas 1 Khusus (Mobil Derek Penyelamat) dan pelatihan keselamatan lalu lintas 2 jam",
+        "SIM Kelas 2 Reguler dan pelatihan keselamatan lalu lintas 3 jam"
       ]
     },
     "answer": 1,
@@ -240,7 +302,9 @@
       "ne": "१५ सिटको भ्यान चलाउन प्रथम श्रेणी साधारण (1종 보통) लाइसेन्स चाहिन्छ (द्वितीय श्रेणीले १० सिटसम्म मात्र मिल्छ), र आपतकालीन गाडी पहिलो पटक चलाउँदा ३ घण्टाको नयाँ सुरक्षा तालिम लिनुपर्छ।",
       "vi": "Xe khách 15 chỗ bắt buộc phải có bằng hạng 1 thông thường trở lên (bằng hạng 2 chỉ lái được xe tối đa 10 chỗ), đồng thời người lần đầu lái xe khẩn cấp phải hoàn thành 3 giờ đào tạo an toàn giao thông mới.",
       "en": "A 15-seat van requires at least a Class 1 Regular license (Class 2 Regular covers up to 10 seats only), and first-time emergency vehicle drivers must complete 3 hours of initial emergency traffic safety training.",
-      "zh": "15座客车须持有第1类普通（或大型）驾驶证才能驾驶（第2类普通仅限10座及以下），且首次驾驶紧急车辆的人员必须接受3小时的新岗交通安全教育。"
+      "zh": "15座客车须持有第1类普通（或大型）驾驶证才能驾驶（第2类普通仅限10座及以下），且首次驾驶紧急车辆的人员必须接受3小时的新岗交通安全教育。",
+      "ru": "Для управления 15-местным микроавтобусом требуются как минимум обычные права 1-го класса (обычные права 2-го класса разрешают до 10 мест включительно), а водители, впервые садящиеся за руль спецтранспорта экстренных служб, обязаны пройти 3-часовой начальный курс безопасности дорожного движения.",
+      "id": "Mobil van berkapasitas 15 penumpang memerlukan minimal SIM Kelas 1 Reguler (SIM Kelas 2 Reguler hanya untuk maksimal 10 penumpang), dan pengemudi yang baru pertama kali mengemudikan kendaraan darurat wajib mengikuti pelatihan keselamatan lalu lintas selama 3 jam."
     }
   },
   {
@@ -254,7 +318,9 @@
       "ne": "सडक ट्राफिक ऐन अनुसार सिकाइ सवारी चालक अनुमतिपत्र (प्रशिक्षण लाइसेन्स) को मान्य अवधि कति हुन्छ?",
       "vi": "Theo Luật Giao thông Đường bộ, thời hạn hiệu lực của giấy phép lái xe tập lái là bao lâu?",
       "en": "Under the Road Traffic Act, what is the validity period of a learner's permit (practice driver's license)?",
-      "zh": "根据《道路交通法》，练习驾驶证的有效期是多久？"
+      "zh": "根据《道路交通法》，练习驾驶证的有效期是多久？",
+      "ru": "Каков срок действия учебного водительского удостоверения согласно Закону о дорожном движении?",
+      "id": "Berdasarkan Undang-Undang Lalu Lintas Jalan, berapa lama masa berlaku SIM latihan (izin belajar mengemudi)?"
     },
     "options": {
       "ko": [
@@ -292,6 +358,18 @@
         "自领取之日起1年",
         "自领取之日起2年",
         "自领取之日起3年"
+      ],
+      "ru": [
+        "6 месяцев со дня получения",
+        "1 год со дня получения",
+        "2 года со дня получения",
+        "3 года со дня получения"
+      ],
+      "id": [
+        "6 bulan sejak tanggal diterima",
+        "1 tahun sejak tanggal diterima",
+        "2 tahun sejak tanggal diterima",
+        "3 tahun sejak tanggal diterima"
       ]
     },
     "answer": 2,
@@ -301,7 +379,9 @@
       "ne": "प्रशिक्षण सवारी चालक अनुमतिपत्र लिएको मितिदेखि १ वर्षसम्म मान्य हुन्छ, र यस अवधिभित्र मुख्य लाइसेन्स प्राप्त गरेमा प्रशिक्षण लाइसेन्स स्वतः निष्क्रिय हुन्छ।",
       "vi": "Giấy phép lái xe tập lái có hiệu lực trong vòng 1 năm kể từ ngày cấp; nếu người học thi đỗ và nhận bằng lái chính thức trước thời hạn đó thì bằng tập lái sẽ hết hiệu lực.",
       "en": "A learner's permit is valid for 1 year from the date of issuance, and automatically expires earlier once the holder obtains a regular Class 1 or Class 2 license.",
-      "zh": "练习驾驶证自签发之日起1年内有效；若在1年内考取第1类或第2类普通正式驾驶证，练习驾驶证即自动失效。"
+      "zh": "练习驾驶证自签发之日起1年内有效；若在1年内考取第1类或第2类普通正式驾驶证，练习驾驶证即自动失效。",
+      "ru": "Учебное водительское удостоверение действительно в течение 1 года со дня выдачи и автоматически прекращает свое действие раньше, если водитель сдает дорожный экзамен и получает обычное удостоверение.",
+      "id": "SIM latihan berlaku selama 1 tahun sejak tanggal diterbitkan, dan masa berlakunya otomatis berakhir lebih awal apabila pemegangnya telah lulus ujian praktik jalan raya dan memperoleh SIM Reguler."
     }
   },
   {
@@ -315,7 +395,9 @@
       "ne": "सडक ट्राफिक ऐन अनुसार सवारी चालक अनुमतिपत्रमा उल्लेख गरिने सर्तहरूको सङ्केत मध्ये कुन सही छैन?",
       "vi": "Theo Luật Giao thông Đường bộ, ký hiệu điều kiện ghi trên giấy phép lái xe nào sau đây là KHÔNG đúng?",
       "en": "Under the Road Traffic Act, which of the following driver's license condition codes is INCORRECTLY matched?",
-      "zh": "根据《道路交通法》驾驶证附加条件标注标准，下列驾驶证代码说明中不正确的一项是？"
+      "zh": "根据《道路交通法》驾驶证附加条件标注标准，下列驾驶证代码说明中不正确的一项是？",
+      "ru": "Какое из следующих обозначений особых условий (ограничений) в водительском удостоверении согласно Закону о дорожном движении указано НЕВЕРНО?",
+      "id": "Berdasarkan Undang-Undang Lalu Lintas Jalan, manakah pencantuman kode persyaratan khusus pada SIM berikut ini yang TIDAK benar?"
     },
     "options": {
       "ko": [
@@ -353,6 +435,18 @@
         "E：听障人士标志及凸面镜",
         "G：特殊制造及批准车辆",
         "H：右侧转向灯操作杆"
+      ],
+      "ru": [
+        "A: Механическая коробка передач",
+        "E: Опознавательный знак глухого водителя и выпуклое зеркало",
+        "G: Специально изготовленный и сертифицированный автомобиль",
+        "H: Правый рычаг указателя поворота"
+      ],
+      "id": [
+        "A: Transmisi manual",
+        "E: Tanda pengemudi tunarungu dan kaca spion cembung",
+        "G: Kendaraan yang dibuat khusus dan disetujui",
+        "H: Tuas lampu sein di sebelah kanan"
       ]
     },
     "answer": 1,
@@ -362,7 +456,9 @@
       "ne": "सवारी चालक अनुमतिपत्रको सर्त सङ्केतमा 'A' ले म्यानुअल गियर नभई 'अटोमेटिक गियर' (자동변속기) लाई जनाउँछ।",
       "vi": "Trên giấy phép lái xe Hàn Quốc, mã điều kiện 'A' có nghĩa là 'Hộp số tự động' (자동변속기), không phải hộp số sàn.",
       "en": "Condition code 'A' on a Korean driver's license stands for 'Automatic transmission' (자동변속기), not manual transmission.",
-      "zh": "驾驶证附加条件代码“A”代表限定驾驶“自动变速器（自动挡）”车辆，而非手动变速器。"
+      "zh": "驾驶证附加条件代码“A”代表限定驾驶“自动变速器（自动挡）”车辆，而非手动变速器。",
+      "ru": "Буквенный код «A» в графе условий водительского удостоверения означает ограничение «Автоматическая коробка передач», а не механическую коробку передач.",
+      "id": "Pada standar pencantuman syarat SIM di Korea, kode huruf 'A' berarti pembatasan untuk 'Transmisi otomatis', bukan transmisi manual."
     }
   },
   {
@@ -376,7 +472,9 @@
       "ne": "११ जना यात्रु क्षमता भएको भ्यानले कुल तौल ७८० किलोग्राम भएको ट्रेलर तान्नुपर्दा चालकले कुन सवारी चालक अनुमतिपत्र लिनुपर्छ?",
       "vi": "Muốn dùng xe khách 11 chỗ để kéo một rơ-moóc có tổng trọng lượng 780 kg thì người lái xe phải có loại giấy phép lái xe nào?",
       "en": "A driver intends to tow a trailer with a gross weight of 780 kg using an 11-passenger van. Which driver's licenses must the driver hold?",
-      "zh": "拟驾驶核载11人的客车牵引总重量为780公斤的挂车，驾驶人应考取哪种驾驶证组合？"
+      "zh": "拟驾驶核载11人的客车牵引总重量为780公斤的挂车，驾驶人应考取哪种驾驶证组合？",
+      "ru": "Водитель намеревается буксировать прицеп полной массой 780 килограммов с помощью пассажирского микроавтобуса вместимостью 11 человек. Какие категории водительских удостоверений должен иметь водитель?",
+      "id": "Seorang pengemudi hendak menarik kereta gandengan (trailer) dengan berat total 780 kilogram menggunakan mobil van berkapasitas 11 penumpang. Jenis SIM apa yang wajib dimiliki pengemudi tersebut?"
     },
     "options": {
       "ko": [
@@ -414,6 +512,18 @@
         "第2类普通驾驶证及第1类小型牵引车驾驶证",
         "第1类普通驾驶证及清障救援车驾驶证",
         "第2类普通驾驶证及第1类清障救援车驾驶证"
+      ],
+      "ru": [
+        "Обычные права 1-го класса и права на малогабаритный тягач (легковой прицеп)",
+        "Обычные права 2-го класса и права 1-го класса на малогабаритный тягач",
+        "Обычные права 1-го класса и права на эвакуатор",
+        "Обычные права 2-го класса и права 1-го класса на эвакуатор"
+      ],
+      "id": [
+        "SIM Kelas 1 Reguler dan SIM Derek Kecil (Trailer Kecil)",
+        "SIM Kelas 2 Reguler dan SIM Kelas 1 Derek Kecil",
+        "SIM Kelas 1 Reguler dan SIM Mobil Derek Penyelamat",
+        "SIM Kelas 2 Reguler dan SIM Kelas 1 Mobil Derek Penyelamat"
       ]
     },
     "answer": 1,
@@ -423,7 +533,9 @@
       "ne": "११ सिटको भ्यान चलाउन प्रथम श्रेणी साधारण लाइसेन्स चाहिन्छ (द्वितीय श्रेणीले १० सिटसम्म मात्र मिल्छ), र ७५० केजीभन्दा बढी ३ टनसम्मको (७८० केजी) ट्रेलर तान्न थप साना ट्रेलर (소형견인차) लाइसेन्स आवश्यक पर्छ।",
       "vi": "Để lái xe khách 11 chỗ cần có bằng hạng 1 thông thường (bằng hạng 2 chỉ lái tối đa 10 chỗ), và để kéo rơ-moóc nặng trên 750 kg đến 3 tấn (780 kg) thì cần thêm bằng xe kéo nhỏ (소형견인차).",
       "en": "Driving an 11-passenger van requires a Class 1 Regular license (Class 2 Regular only covers up to 10 passengers), and towing a trailer over 750 kg up to 3 tons (780 kg) additionally requires a Small Trailer license.",
-      "zh": "驾驶11座客车需持有第1类普通驾驶证（第2类普通仅限10座及以下），而牵引总重量超过750公斤至3吨以下（780公斤）的挂车还需加考小型牵引车驾驶证。"
+      "zh": "驾驶11座客车需持有第1类普通驾驶证（第2类普通仅限10座及以下），而牵引总重量超过750公斤至3吨以下（780公斤）的挂车还需加考小型牵引车驾驶证。",
+      "ru": "Для управления 11-местным микроавтобусом необходимы обычные права 1-го класса (права 2-го класса допускают до 10 мест), а для буксировки прицепа полной массой свыше 750 кг и до 3 тонн (780 кг) дополнительно требуются права на малогабаритный тягач.",
+      "id": "Untuk mengemudikan mobil van 11 penumpang diperlukan SIM Kelas 1 Reguler (SIM Kelas 2 Reguler hanya sampai 10 penumpang), dan untuk menarik trailer dengan berat total di atas 750 kg hingga 3 ton (780 kg) diperlukan tambahan SIM Derek Kecil."
     }
   },
   {
@@ -437,7 +549,9 @@
       "ne": "सवारी चालक अनुमतिपत्रको प्रकार अनुसार चलाउन मिल्ने सवारी साधन सम्बन्धी सही २ वटा भनाइ कुन-कुन हुन्?",
       "vi": "Hãy chọn 2 giải thích ĐÚNG về các loại xe được phép điều khiển theo từng hạng giấy phép lái xe?",
       "en": "Which TWO statements correctly describe the vehicles that can be driven by each type of driver's license?",
-      "zh": "关于各类型驾驶证准驾车型的说明，正确的2项是？"
+      "zh": "关于各类型驾驶证准驾车型的说明，正确的2项是？",
+      "ru": "Какие ДВА утверждения правильно описывают транспортные средства, которыми разрешено управлять в зависимости от категории водительского удостоверения?",
+      "id": "Manakah DUA pernyataan yang benar mengenai jenis kendaraan yang dapat dikemudikan berdasarkan masing-masing golongan SIM?"
     },
     "options": {
       "ko": [
@@ -475,6 +589,18 @@
         "持第1类普通驾驶证可以驾驶自卸卡车（翻斗车）。",
         "持第2类普通驾驶证可以驾驶250cc两轮摩托车。",
         "持第2类小型驾驶证可以驾驶轻便摩托车（原动机装置自行车）。"
+      ],
+      "ru": [
+        "С правами 1-го класса на крупногабаритный транспорт можно управлять автогудронатором (распределителем асфальта).",
+        "С обычными правами 1-го класса можно управлять самосвалом.",
+        "С обычными правами 2-го класса можно управлять двухколесным мотоциклом с объемом двигателя 250 куб. см.",
+        "С правами 2-го класса на малогабаритный транспорт (мотоциклы) можно управлять мопедом."
+      ],
+      "id": [
+        "SIM Kelas 1 Besar mengizinkan pengemudi mengoperasikan mesin penyemprot aspal.",
+        "SIM Kelas 1 Reguler mengizinkan pengemudi mengemudikan truk jungkit (dump truck).",
+        "SIM Kelas 2 Reguler mengizinkan pengemudi mengendarai sepeda motor 250 cc.",
+        "SIM Kelas 2 Kecil mengizinkan pengemudi mengendarai sepeda bermotor (moped)."
       ]
     },
     "answer": [
@@ -487,7 +613,9 @@
       "ne": "प्रथम श्रेणी ठूलो लाइसेन्सले अस्फाल्ट छर्ने मेसिन र द्वितीय श्रेणी साना लाइसेन्सले मोपेड/स्कुटर चलाउन मिल्छ। तर डम्प ट्रकका लागि प्रथम श्रेणी ठूलो र १२५ सीसीभन्दा माथिको (२५० सीसी) मोटरसाइकलका लागि द्वितीय श्रेणी साना लाइसेन्स नै चाहिन्छ।",
       "vi": "Bằng hạng 1 cỡ lớn được lái máy rải nhựa đường và bằng hạng 2 cỡ nhỏ (mô tô) được phép lái cả xe gắn máy. Ngược lại, xe ben cần bằng hạng 1 cỡ lớn và xe mô tô trên 125cc (như 250cc) bắt buộc phải có bằng hạng 2 cỡ nhỏ.",
       "en": "A Class 1 Large license covers construction equipment such as asphalt distributors, and a Class 2 Small (motorcycle) license covers motorized bicycles. Dump trucks require a Class 1 Large license, and motorcycles over 125cc (like 250cc) require a Class 2 Small license.",
-      "zh": "第1类大型驾照可驾驶沥青洒布车等工程机械，第2类小型（摩托车）驾照可驾驶轻便摩托车；而自卸卡车须持第1类大型驾照，排量超过125cc（如250cc）的摩托车须持第2类小型驾照。"
+      "zh": "第1类大型驾照可驾驶沥青洒布车等工程机械，第2类小型（摩托车）驾照可驾驶轻便摩托车；而自卸卡车须持第1类大型驾照，排量超过125cc（如250cc）的摩托车须持第2类小型驾照。",
+      "ru": "Права 1-го класса на крупногабаритный транспорт позволяют управлять строительной техникой, такой как автогудронатор, а права 2-го класса на малогабаритный транспорт дают право водить мопеды. Для управления самосвалом нужны крупногабаритные права 1-го класса, а для мотоцикла объемом свыше 125 куб. см (250 куб. см) — права 2-го класса на малогабаритный транспорт.",
+      "id": "SIM Kelas 1 Besar mencakup alat berat konstruksi seperti penyemprot aspal, dan SIM Kelas 2 Kecil (khusus sepeda motor) juga mengizinkan pengendaraan sepeda bermotor (moped). Sebaliknya, truk jungkit memerlukan SIM Kelas 1 Besar dan sepeda motor di atas 125 cc (seperti 250 cc) memerlukan SIM Kelas 2 Kecil."
     }
   },
   {
@@ -501,7 +629,9 @@
       "ne": "सडकमा १२ जना यात्रु क्षमता भएको भ्यान चलाउन चालकले कुन प्रकारको सवारी चालक अनुमतिपत्र लिनुपर्छ?",
       "vi": "Muốn lái xe ô tô khách có sức chứa 12 người trên đường thì người lái xe phải có loại giấy phép lái xe nào?",
       "en": "A driver wants to drive a passenger van with a seating capacity of 12 people on the road. Which driver's license must the driver obtain?",
-      "zh": "拟在道路上驾驶核载12人的客车（面包车），驾驶人应当考取哪种驾驶证？"
+      "zh": "拟在道路上驾驶核载12人的客车（面包车），驾驶人应当考取哪种驾驶证？",
+      "ru": "Водитель собирается управлять на дороге пассажирским микроавтобусом вместимостью 12 человек. Какое водительское удостоверение он должен получить?",
+      "id": "Seorang pengemudi ingin mengemudikan mobil van penumpang berkapasitas 12 orang di jalan raya. Jenis SIM apa yang harus dimiliki pengemudi tersebut?"
     },
     "options": {
       "ko": [
@@ -539,6 +669,18 @@
         "第1类清障救援车驾驶证",
         "第1类普通驾驶证",
         "第2类普通驾驶证"
+      ],
+      "ru": [
+        "Права 1-го класса на крупногабаритный тягач",
+        "Права 1-го класса на эвакуатор",
+        "Обычные права 1-го класса",
+        "Обычные права 2-го класса"
+      ],
+      "id": [
+        "SIM Kelas 1 Derek Besar (Trailer Besar)",
+        "SIM Kelas 1 Mobil Derek Penyelamat",
+        "SIM Kelas 1 Reguler",
+        "SIM Kelas 2 Reguler"
       ]
     },
     "answer": 3,
@@ -548,7 +690,9 @@
       "ne": "प्रथम श्रेणी साधारण (1종 보통) लाइसेन्सले १५ सिटसम्मको भ्यान चलाउन मिल्ने हुँदा १२ सिटे भ्यानका लागि यही चाहिन्छ; अन्य विकल्पहरूले १० सिटसम्म मात्र चलाउन पाउँछन्।",
       "vi": "Bằng hạng 1 thông thường cho phép lái xe khách từ 15 chỗ ngồi trở xuống nên lái được xe 12 chỗ, trong khi các loại bằng còn lại chỉ được lái xe khách tối đa 10 chỗ.",
       "en": "A Class 1 Regular license permits driving passenger vans with up to 15 seats (including 12-seat vans), whereas the other licenses listed only cover passenger vans with 10 seats or fewer.",
-      "zh": "第1类普通驾驶证准驾15座及以下客车，因此可驾驶12座面包车；其余三个选项均只能驾驶10座及以下的客车。"
+      "zh": "第1类普通驾驶证准驾15座及以下客车，因此可驾驶12座面包车；其余三个选项均只能驾驶10座及以下的客车。",
+      "ru": "Обычные права 1-го класса позволяют управлять пассажирскими микроавтобусами вместимостью до 15 человек включительно (в том числе 12-местными), тогда как остальные перечисленные категории разрешают водить микроавтобусы вместимостью не более 10 человек.",
+      "id": "SIM Kelas 1 Reguler mengizinkan pengemudi mengendarai mobil van penumpang berkapasitas hingga 15 orang (termasuk 12 penumpang), sedangkan pilihan SIM lainnya hanya mengizinkan mobil van dengan kapasitas maksimal 10 penumpang."
     }
   },
   {
@@ -562,7 +706,9 @@
       "ne": "देहायका मध्ये कसले द्वितीय श्रेणी साधारण सवारी चालक अनुमतिपत्र (2종 보통) लिन सक्छ?",
       "vi": "Trong những người sau đây, ai có thể thi lấy giấy phép lái xe hạng 2 thông thường (제2종 보통)?",
       "en": "Which of the following individuals is eligible to obtain a Class 2 Regular driver's license?",
-      "zh": "下列人员中，可以考取第2类普通驾驶证（2종 보통）的是？"
+      "zh": "下列人员中，可以考取第2类普通驾驶证（2종 보통）的是？",
+      "ru": "Кто из перечисленных лиц может получить обычные водительские права 2-го класса?",
+      "id": "Siapakah di antara orang-orang berikut yang memenuhi syarat untuk memperoleh SIM Kelas 2 Reguler?"
     },
     "options": {
       "ko": [
@@ -600,6 +746,18 @@
         "无法辨别红、绿、黄三种颜色的人",
         "年满17周岁的人",
         "听不见声音（听障）的人"
+      ],
+      "ru": [
+        "Человек, не видящий одним глазом, у которого острота зрения другого глаза составляет 0,5",
+        "Человек, не способный различать красный, зеленый и желтый цвета",
+        "Человек в возрасте 17 лет",
+        "Человек с полной потерей слуха (глухой)"
+      ],
+      "id": [
+        "Orang yang buta pada satu mata sedangkan ketajaman penglihatan mata lainnya 0,5",
+        "Orang yang tidak dapat membedakan warna merah, hijau, dan kuning",
+        "Orang yang berusia 17 tahun",
+        "Orang yang tidak dapat mendengar (tunarungu)"
       ]
     },
     "answer": 4,
@@ -609,7 +767,9 @@
       "ne": "सुन्न नसक्ने व्यक्तिले पनि (चिन्ह र कन्भेक्स ऐना जडान गर्ने सर्तमा) द्वितीय श्रेणी साधारण लाइसेन्स लिन सक्छन्। तर उमेर १८ वर्ष पूरा भएको, रातो·हरियो·पहेंलो रङ चिन्ने र एकातिर नदेख्ने भए अर्को आँखाको दृष्टि कम्तीमा ०.६ हुनुपर्छ।",
       "vi": "Người khiếm thính vẫn được phép thi lấy bằng hạng 2 thông thường (kèm điều kiện dán biển báo và lắp gương cầu lồi). Tuy nhiên người dự thi phải từ 18 tuổi trở lên, phân biệt được màu đỏ-xanh-vàng, và nếu hỏng một mắt thì mắt còn lại phải đạt thị lực từ 0.6 trở lên.",
       "en": "Deaf or hard-of-hearing individuals can obtain a Class 2 Regular license (with conditions like a decal and convex mirror). However, applicants must be at least 18, distinguish red/green/yellow, and if blind in one eye, have at least 0.6 vision in the other eye.",
-      "zh": "听障人士也可以考取第2类普通驾驶证（需粘贴听障标志并加装凸面镜）；但申请人必须年满18周岁、能辨识红绿黄三色，且单眼失明者另一只眼的视力须达到0.6以上。"
+      "zh": "听障人士也可以考取第2类普通驾驶证（需粘贴听障标志并加装凸面镜）；但申请人必须年满18周岁、能辨识红绿黄三色，且单眼失明者另一只眼的视力须达到0.6以上。",
+      "ru": "Лица с потерей слуха имеют право получить обычные права 2-го класса при соблюдении условий (установка опознавательного знака и выпуклого зеркала). При этом кандидат должен быть не моложе 18 лет, различать красный, зеленый и желтый цвета, а при слепоте на один глаз иметь остроту зрения второго глаза не ниже 0,6.",
+      "id": "Penyandang tunarungu tetap dapat memperoleh SIM Kelas 2 Reguler (dengan syarat memasang tanda tunarungu dan kaca spion cembung). Sebaliknya, pemohon harus berusia minimal 18 tahun, mampu membedakan warna merah, hijau, dan kuning, serta jika buta satu mata harus memiliki ketajaman penglihatan mata lainnya minimal 0,6."
     }
   },
   {
@@ -623,7 +783,9 @@
       "ne": "सडक ट्राफिक ऐन अनुसार मोटरजडित साइकल (원동기장치자전거 / मोपेड) को परिभाषा (मापदण्ड) कुन सही हो?",
       "vi": "Theo Luật Giao thông Đường bộ, định nghĩa (tiêu chuẩn) nào sau đây về xe gắn máy (원동기장치자전거) là đúng?",
       "en": "Under the Road Traffic Act, which of the following correctly describes the definition (standard) of a motorized bicycle (원동기장치자전거)?",
-      "zh": "下列关于《道路交通法》中“原动机装置自行车（轻便摩托车）”定义标准的说明，正确的是？"
+      "zh": "下列关于《道路交通法》中“原动机装置自行车（轻便摩托车）”定义标准的说明，正确的是？",
+      "ru": "Какое из следующих утверждений правильно описывает определение (критерий) мопеда (велосипеда с двигателем) согласно Закону о дорожном движении?",
+      "id": "Manakah pernyataan yang benar mengenai definisi (standar) sepeda bermotor (moped) menurut Undang-Undang Lalu Lintas Jalan?"
     },
     "options": {
       "ko": [
@@ -661,6 +823,18 @@
         "排量未满50cc - 最高额定功率未满0.59千瓦",
         "排量125cc以下（含125cc） - 最高额定功率11千瓦以下（含11千瓦）",
         "排量未满125cc - 最高额定功率未满11千瓦"
+      ],
+      "ru": [
+        "Рабочий объем двигателя не более 50 куб. см — максимальная номинальная мощность не более 0,59 кВт",
+        "Рабочий объем двигателя менее 50 куб. см — максимальная номинальная мощность менее 0,59 кВт",
+        "Рабочий объем двигателя не более 125 куб. см — максимальная номинальная мощность не более 11 кВт",
+        "Рабочий объем двигателя менее 125 куб. см — максимальная номинальная мощность менее 11 кВт"
+      ],
+      "id": [
+        "Kapasitas mesin 50 cc atau kurang — daya keluaran terukur maksimum 0,59 kilowatt atau kurang",
+        "Kapasitas mesin kurang dari 50 cc — daya keluaran terukur maksimum kurang dari 0,59 kilowatt",
+        "Kapasitas mesin 125 cc atau kurang — daya keluaran terukur maksimum 11 kilowatt atau kurang",
+        "Kapasitas mesin kurang dari 125 cc — daya keluaran terukur maksimum kurang dari 11 kilowatt"
       ]
     },
     "answer": 3,
@@ -670,7 +844,9 @@
       "ne": "सडक ट्राफिक ऐन अनुसार मोटरजडित साइकल भन्नाले इन्जिन क्षमता १२५ सीसी वा सोभन्दा कम (विद्युतीय भए अधिकतम ११ किलोवाट वा सोभन्दा कम) भएको दुईपाङ्ग्रे सवारीलाई बुझाउँछ।",
       "vi": "Theo Luật Giao thông Đường bộ, xe gắn máy (원동기장치자전거) là xe hai bánh có dung tích xi-lanh từ 125cc trở xuống, hoặc công suất định mức tối đa từ 11 kW trở xuống đối với xe chạy điện (lưu ý là 'trở xuống' chứ không phải 'dưới').",
       "en": "Under the Road Traffic Act, a motorized bicycle is defined as a two-wheeled or motor-equipped vehicle with an engine displacement of 125cc or less, or a maximum rated output of 11 kW or less if electric-powered (note 'or less', inclusive).",
-      "zh": "根据《道路交通法》，原动机装置自行车是指排量在125cc以下（含125cc；纯电动时最高额定功率在11千瓦以下，含11千瓦）的两轮机动车，注意是“以下”而非“未满”。"
+      "zh": "根据《道路交通法》，原动机装置自行车是指排量在125cc以下（含125cc；纯电动时最高额定功率在11千瓦以下，含11千瓦）的两轮机动车，注意是“以下”而非“未满”。",
+      "ru": "Согласно Закону о дорожном движении к мопедам (велосипедам с двигателем) относятся двухколесные и оснащенные двигателем транспортные средства с рабочим объемом двигателя не более 125 куб. см включительно или, при наличии электродвигателя, максимальной номинальной мощностью не более 11 кВт включительно.",
+      "id": "Menurut Undang-Undang Lalu Lintas Jalan, sepeda bermotor didefinisikan sebagai kendaraan roda dua atau kendaraan bermotor dengan kapasitas silinder 125 cc atau kurang (maksimal 125 cc), atau daya keluaran terukur maksimum 11 kW atau kurang jika bertenaga listrik."
     }
   },
   {
@@ -684,7 +860,9 @@
       "ne": "सडक ट्राफिक ऐन अनुसार प्रथम श्रेणी ठूलो लाइसेन्स (1종 대형) परीक्षामा सहभागी हुन पाउने मापदण्ड कुन हो? (दुईपाङ्ग्रे सवारीको अनुभव बाहेक)",
       "vi": "Theo Luật Giao thông Đường bộ, tiêu chuẩn nào sau đây đủ điều kiện dự thi giấy phép lái xe hạng 1 cỡ lớn (제1종 대형)? (Không tính kinh nghiệm lái xe mô tô hai bánh)",
       "en": "Under the Road Traffic Act, what is the eligibility requirement to take the Class 1 Large driver's license exam? (Excluding motorcycle driving experience)",
-      "zh": "根据《道路交通法》，下列哪项符合报考第1类大型驾驶证（1종 대형）的资格标准？（不含两轮摩托车驾驶经历）"
+      "zh": "根据《道路交通法》，下列哪项符合报考第1类大型驾驶证（1종 대형）的资格标准？（不含两轮摩托车驾驶经历）",
+      "ru": "Каков критерий допуска к сдаче экзамена на водительские права 1-го класса для крупногабаритного транспорта согласно Закону о дорожном движении? (Стаж вождения двухколесных мотоциклов не учитывается)",
+      "id": "Manakah syarat kelayakan untuk mengikuti ujian SIM Kelas 1 Besar menurut Undang-Undang Lalu Lintas Jalan? (Tidak termasuk pengalaman mengendarai sepeda motor)"
     },
     "options": {
       "ko": [
@@ -722,6 +900,18 @@
         "具有1年以上汽车驾驶经历且年满18周岁的人",
         "具有6个月以上汽车驾驶经历且年满19周岁的人",
         "具有1年以上汽车驾驶经历且年满19周岁的人"
+      ],
+      "ru": [
+        "Лицо в возрасте 18 лет со стажем вождения автомобиля не менее 6 месяцев",
+        "Лицо в возрасте 18 лет со стажем вождения автомобиля не менее 1 года",
+        "Лицо в возрасте 19 лет со стажем вождения автомобиля не менее 6 месяцев",
+        "Лицо в возрасте 19 лет со стажем вождения автомобиля не менее 1 года"
+      ],
+      "id": [
+        "Orang berusia 18 tahun dengan pengalaman mengemudi mobil minimal 6 bulan",
+        "Orang berusia 18 tahun dengan pengalaman mengemudi mobil minimal 1 tahun",
+        "Orang berusia 19 tahun dengan pengalaman mengemudi mobil minimal 6 bulan",
+        "Orang berusia 19 tahun dengan pengalaman mengemudi mobil minimal 1 tahun"
       ]
     },
     "answer": 4,
@@ -731,7 +921,9 @@
       "ne": "प्रथम श्रेणी ठूलो (1종 대형) लाइसेन्स परीक्षा दिन कम्तीमा १९ वर्ष उमेर पूरा भएको र दुईपाङ्ग्रे बाहेकको सवारी चलाएको कम्तीमा १ वर्षको अनुभव हुनुपर्छ।",
       "vi": "Để dự thi bằng lái hạng 1 cỡ lớn (제1종 대형), người đăng ký phải từ đủ 19 tuổi trở lên và có ít nhất 1 năm kinh nghiệm lái xe ô tô (không tính xe hai bánh).",
       "en": "To take the Class 1 Large driver's license exam, an applicant must be at least 19 years old and have at least 1 year of motor vehicle driving experience (excluding motorcycles).",
-      "zh": "报考第1类大型驾驶证须同时满足年满19周岁且拥有1年以上汽车驾驶经历（不含两轮摩托车）两个条件。"
+      "zh": "报考第1类大型驾驶证须同时满足年满19周岁且拥有1年以上汽车驾驶经历（不含两轮摩托车）两个条件。",
+      "ru": "Для сдачи экзамена на права 1-го класса для крупногабаритного транспорта кандидат должен достичь возраста 19 лет и иметь стаж управления автомобилем (за исключением мотоциклов) не менее 1 года.",
+      "id": "Untuk mengikuti ujian SIM Kelas 1 Besar, peserta harus berusia minimal 19 tahun dan memiliki pengalaman mengemudikan kendaraan bermotor roda empat atau lebih (tidak termasuk sepeda motor) minimal 1 tahun."
     }
   },
   {
@@ -745,7 +937,9 @@
       "ne": "सडक ट्राफिक नियम अनुसार विदेश जाँदा सवारी चालक अनुमतिपत्रको योग्यता परीक्षण (नवीकरण जाँच) म्याद सार्ने सम्बन्धी कुन भनाइ गलत छ?",
       "vi": "Theo Luật Giao thông Đường bộ, giải thích nào sau đây là SAI về việc xin hoãn kiểm tra sức khỏe định kỳ (đổi bằng lái) khi xuất cảnh ra nước ngoài?",
       "en": "Under the Road Traffic Act, which statement is INCORRECT regarding postponing a driver's license aptitude test (renewal exam) due to overseas departure?",
-      "zh": "根据《道路交通法令》，关于出国时申请延期办理驾驶证适性检查（审验换证）的说明，错误的一项是？"
+      "zh": "根据《道路交通法令》，关于出国时申请延期办理驾驶证适性检查（审验换证）的说明，错误的一项是？",
+      "ru": "Какое утверждение об отсрочке регулярной проверки профпригодности (медосмотра для продления водительских прав) в связи с выездом за границу согласно Закону о дорожном движении является ОШИБОЧНЫМ?",
+      "id": "Berdasarkan peraturan Undang-Undang Lalu Lintas Jalan, pernyataan manakah yang SALAH mengenai penundaan tes kelayakan (pemeriksaan perpanjangan SIM) karena keberangkatan ke luar negeri?"
     },
     "options": {
       "ko": [
@@ -783,6 +977,18 @@
         "出国后不能由代理人代为申请适性检查延期。",
         "申请适性检查延期时，须提交电子机票（E-ticket）等能证明出国事实的材料。",
         "延期申请获批后，须在回国之日起3个月内接受适性检查。"
+      ],
+      "ru": [
+        "Заявление об отсрочке проверки профпригодности следует подать до выезда из страны.",
+        "После выезда водителя за границу представитель не может подать заявление об отсрочке проверки вместо него.",
+        "При подаче заявления об отсрочке необходимо предоставить документы, подтверждающие факт выезда, например электронный авиабилет.",
+        "В случае одобрения отсрочки водитель обязан пройти проверку профпригодности в течение 3 месяцев после возвращения в страну."
+      ],
+      "id": [
+        "Permohonan penundaan tes kelayakan diajukan sebelum berangkat ke luar negeri.",
+        "Setelah keberangkatan ke luar negeri, perwakilan tidak dapat mengajukan permohonan penundaan tes kelayakan atas nama pemegang SIM.",
+        "Saat mengajukan penundaan tes kelayakan, pemohon harus menyerahkan dokumen bukti keberangkatan seperti tiket elektronik.",
+        "Jika permohonan penundaan disetujui, pemegang SIM wajib menjalani tes kelayakan dalam waktu 3 bulan setelah kembali ke Korea."
       ]
     },
     "answer": 2,
@@ -792,7 +998,9 @@
       "ne": "विदेश प्रस्थान गरिसकेपछि पनि परिवार वा प्रतिनिधि मार्फत योग्यता परीक्षण म्याद सार्ने निवेदन दिन मिल्छ, त्यसैले 'प्रतिनिधिले निवेदन दिन सकिँदैन' भन्ने भनाइ गलत छ।",
       "vi": "Ngay cả sau khi chủ bằng lái đã xuất cảnh ra nước ngoài, người đại diện hợp pháp vẫn có thể nộp đơn xin hoãn kiểm tra định kỳ thay, và chủ bằng phải khám trong vòng 3 tháng kể từ khi về nước.",
       "en": "Even after the license holder has departed overseas, a proxy/representative can submit an application to postpone the aptitude test on their behalf; once back in Korea, the test must be taken within 3 months.",
-      "zh": "即使本人已经出国，也可以委托代理人代办驾驶证适性检查延期申请，且回国后3个月内完成审验即可，因此第2项说法错误。"
+      "zh": "即使本人已经出国，也可以委托代理人代办驾驶证适性检查延期申请，且回国后3个月内完成审验即可，因此第2项说法错误。",
+      "ru": "Если водитель не может пройти проверку профпригодности из-за пребывания за рубежом, заявление об отсрочке может подать через представителя (например, члена семьи) даже после выезда водителя из страны, а пройти проверку необходимо в течение 3 месяцев после возвращения.",
+      "id": "Meskipun pemegang SIM sudah berangkat ke luar negeri, anggota keluarga atau perwakilan tetap dapat mengajukan permohonan penundaan tes kelayakan atas namanya, dan tes tersebut wajib ditempuh dalam waktu 3 bulan sejak tanggal kepulangan."
     }
   },
   {
@@ -806,7 +1014,9 @@
       "ne": "सडक ड्राइभिङ परीक्षामा अनुत्तीर्ण भएको व्यक्तिले अनुत्तीर्ण भएको मितिले ( ) बितेपछि मात्र फेरि सडक परीक्षा दिन पाउँछ। खाली ठाउँमा सही अवधि कुन हो?",
       "vi": "Người trượt kỳ thi lái xe trên đường trường chỉ được dự thi lại sau khi qua ( ) kể từ ngày trượt. Đáp án đúng điền vào ( ) là gì?",
       "en": "A person who fails the on-road driving test may retake the test after ( ) have passed from the date of failure. Which of the following correctly fills in the blank?",
-      "zh": "道路驾驶考试不合格的人员，自不合格之日起满（ ）后方可重新报考道路驾驶考试。括号内正确的标准是？"
+      "zh": "道路驾驶考试不合格的人员，自不合格之日起满（ ）后方可重新报考道路驾驶考试。括号内正确的标准是？",
+      "ru": "Лицо, не сдавшее экзамен по вождению в дорожных условиях, может повторно сдать его по истечении ( ) со дня неудачной попытки. Какой вариант правильно заполняет пропуск?",
+      "id": "Orang yang tidak lulus ujian praktik mengemudi di jalan raya dapat mengikuti ujian ulang setelah melewati ( ) sejak tanggal ketidaklulusan. Manakah jawaban yang tepat untuk mengisi bagian kosong tersebut?"
     },
     "options": {
       "ko": [
@@ -844,6 +1054,18 @@
         "3日",
         "5日",
         "7日"
+      ],
+      "ru": [
+        "1 дня",
+        "3 дней",
+        "5 дней",
+        "7 дней"
+      ],
+      "id": [
+        "1 hari",
+        "3 hari",
+        "5 hari",
+        "7 hari"
       ]
     },
     "answer": 2,
@@ -853,7 +1075,9 @@
       "ne": "सडक ट्राफिक नियम अनुसार सडक ड्राइभिङ परीक्षामा फेल भएको मितिले ३ दिन बितेपछि मात्र पुनः परीक्षामा सहभागी हुन पाइन्छ।",
       "vi": "Theo Nghị định hướng dẫn Luật Giao thông Đường bộ, thí sinh trượt phần thi lái xe trên đường trường phải đợi qua 3 ngày kể từ ngày thi trượt mới được thi lại.",
       "en": "Under the Enforcement Decree of the Road Traffic Act, an applicant who fails the on-road driving test must wait until 3 days have passed from the date of failure before retaking it.",
-      "zh": "根据《道路交通法施行令》，道路驾驶考试（路考）不合格者须自不合格之日起满3日后方可重新预约应试。"
+      "zh": "根据《道路交通法施行令》，道路驾驶考试（路考）不合格者须自不合格之日起满3日后方可重新预约应试。",
+      "ru": "В соответствии с Постановлением об исполнении Закона о дорожном движении кандидат, не сдавший практический экзамен на площадке или в городе, имеет право на пересдачу по истечении 3 дней со дня провала экзамена.",
+      "id": "Berdasarkan Peraturan Pelaksanaan Undang-Undang Lalu Lintas Jalan, peserta yang gagal dalam ujian praktik lapangan maupun ujian mengemudi jalan raya baru dapat mengikuti ujian ulang setelah lewat 3 hari sejak tanggal gagal."
     }
   },
   {
@@ -867,7 +1091,9 @@
       "ne": "'असल चालक माइलेज' (착한운전 마일리지) प्रणाली सम्बन्धी उपयुक्त नभएका २ वटा भनाइ कुन-कुन हुन्?",
       "vi": "Hãy chọn 2 giải thích KHÔNG phù hợp về chế độ 'Điểm thưởng lái xe an toàn' (착한운전 마일리지)?",
       "en": "Which TWO statements are INCORRECT regarding the 'Good Driving Mileage' (착한운전 마일리지) program?",
-      "zh": "关于“文明驾驶里程积分（착한운전 마일리지）”制度的说明，不恰当的2项是？"
+      "zh": "关于“文明驾驶里程积分（착한운전 마일리지）”制度的说明，不恰当的2项是？",
+      "ru": "Какие ДВА утверждения о программе «Мили за примерное вождение» являются НЕВЕРНЫМИ?",
+      "id": "Manakah DUA pernyataan yang TIDAK tepat mengenai program 'Poin Mengemudi Patuh' (Good Driving Mileage)?"
     },
     "options": {
       "ko": [
@@ -905,6 +1131,18 @@
         "当驾驶人面临暂扣驾驶证处分时，可用于抵扣累计罚分。",
         "未缴清违章罚款或过怠金的人员也可以参与无违章、无事故承诺。",
         "在承诺履行期间若引发交通事故或违反交通法规，则不能再次申请承诺。"
+      ],
+      "ru": [
+        "Это программа, предоставляющая реальные поощрения водителям, добросовестно соблюдающим правила дорожного движения.",
+        "Если водителю грозит приостановление действия прав, накопленные баллы можно вычесть из общей суммы штрафных баллов.",
+        "Водители с неоплаченными дорожными или административными штрафами также могут подписать обязательство об отсутствии нарушений и ДТП в рамках программы.",
+        "Если в период действия обязательства водитель станет виновником ДТП или нарушит ПДД, он больше никогда не сможет повторно дать такое обязательство."
+      ],
+      "id": [
+        "Program ini memberikan insentif nyata bagi pengemudi yang mematuhi dan mempraktikkan aturan lalu lintas dengan baik.",
+        "Jika pengemudi terkena sanksi penangguhan SIM, poin yang terkumpul dapat digunakan untuk mengurangi akumulasi poin pelanggaran.",
+        "Pengemudi yang masih memiliki tunggakan denda pelanggaran atau denda administratif tetap dapat mengikuti janji bebas pelanggaran dan bebas kecelakaan.",
+        "Jika pengemudi menyebabkan kecelakaan atau melanggar aturan lalu lintas selama masa janji berlangsung, ia tidak dapat mendaftar janji kembali selamanya."
       ]
     },
     "answer": [
@@ -917,7 +1155,9 @@
       "ne": "जरिवाना तिर्न बाँकी भएकाले चुक्ता नगरी यस प्रतिज्ञामा भाग लिन पाउँदैनन्, र प्रतिज्ञा अवधिमा नियम उल्लंघन वा दुर्घटना भए तापनि भोलिपल्टैदेखि पुनः नयाँ प्रतिज्ञा गर्न सकिन्छ।",
       "vi": "Người chưa nộp phạt giao thông thì không thể đăng ký tham gia cam kết cho đến khi nộp xong; ngoài ra dù có vi phạm hay gây tai nạn trong kỳ cam kết thì vẫn được phép đăng ký cam kết lại ngay từ ngày hôm sau.",
       "en": "Drivers with unpaid traffic fines or penalties cannot join the pledge until they pay them off, and even if a driver violates a rule or causes an accident during the pledge year, they can sign up again starting the next day.",
-      "zh": "有未缴罚款或滞纳金的驾驶人须缴清后才能参与承诺；且即使在承诺期间发生违章或事故，次日起仍可重新申请承诺。"
+      "zh": "有未缴罚款或滞纳金的驾驶人须缴清后才能参与承诺；且即使在承诺期间发生违章或事故，次日起仍可重新申请承诺。",
+      "ru": "Водители, имеющие задолженность по штрафам, не могут участвовать в программе до полной оплаты штрафов, а в случае нарушения ПДД или совершения ДТП во время срока обязательства водитель может оформить новое обязательство уже со следующего дня.",
+      "id": "Pengemudi yang memiliki tunggakan denda tidak dapat mendaftar program ini sebelum melunasi seluruh dendanya, dan meskipun terjadi pelanggaran atau kecelakaan selama periode janji, pengemudi tetap dapat mendaftar ulang mulai keesokan harinya."
     }
   },
   {
@@ -931,7 +1171,9 @@
       "ne": "मोटरजडित साइकल अन्तर्गत व्यक्तिगत मोबिलिटी साधन (개인형 이동장치, जस्तै इलेक्ट्रिक किकबोर्ड) को परिभाषा सम्बन्धी कुन भनाइ सही छैन?",
       "vi": "Giải thích nào sau đây là KHÔNG đúng về định nghĩa thiết bị di chuyển cá nhân (개인형 이동장치) thuộc nhóm xe gắn máy?",
       "en": "Which of the following statements is INCORRECT regarding the legal definition of a Personal Mobility Device (개인형 이동장치)?",
-      "zh": "关于原动机装置自行车中“个人移动装置（如电动滑板车等）”定义的说明，不正确的一项是？"
+      "zh": "关于原动机装置自行车中“个人移动装置（如电动滑板车等）”定义的说明，不正确的一项是？",
+      "ru": "Какое из следующих утверждений об определении средства индивидуальной мобильности (среди мопедов) является НЕВЕРНЫМ?",
+      "id": "Manakah pernyataan yang TIDAK benar mengenai definisi alat mobilitas pribadi (Personal Mobility) dalam kategori sepeda bermotor?"
     },
     "options": {
       "ko": [
@@ -969,6 +1211,18 @@
         "车体重量必须未满30公斤。",
         "“自行车等”是指自行车与个人移动装置。",
         "以时速25公里以上行驶时，电动机须停止工作。"
+      ],
+      "ru": [
+        "Угол преодолеваемого подъема должен быть менее 25 градусов.",
+        "Собственная масса транспортного средства должна быть менее 30 килограммов.",
+        "Термин «велосипеды и т. п.» обозначает велосипеды и средства индивидуальной мобильности.",
+        "При движении со скоростью 25 км/ч и выше электродвигатель должен отключаться."
+      ],
+      "id": [
+        "Sudut tanjakan maksimumnya harus kurang dari 25 derajat.",
+        "Berat rangka kendaraannya harus kurang dari 30 kilogram.",
+        "Istilah 'sepeda dan sejenisnya' mencakup sepeda dan alat mobilitas pribadi.",
+        "Motor listriknya harus berhenti bekerja saat melaju dengan kecepatan 25 km/jam atau lebih."
       ]
     },
     "answer": 1,
@@ -978,7 +1232,9 @@
       "ne": "व्यक्तिगत मोबिलिटी साधनको तौल ३० केजीभन्दा कम र २५ कि.मि./घण्टा माथि मोटर बन्द हुने नियम छ, तर उकालो चढ्ने कोण (२५ डिग्री) बारे कानूनमा कुनै प्रावधान छैन।",
       "vi": "Thiết bị di chuyển cá nhân được quy định có trọng lượng dưới 30 kg và ngắt động cơ khi đạt từ 25 km/h trở lên; luật không hề quy định giới hạn về góc leo dốc.",
       "en": "A Personal Mobility Device is defined as weighing under 30 kg with a motor that cuts off at 25 km/h or above; the law does not specify any uphill angle requirement.",
-      "zh": "《道路交通法》规定个人移动装置须车重未满30公斤且时速达25公里以上时电机断电，法律并未对爬坡角度作出规定。"
+      "zh": "《道路交通法》规定个人移动装置须车重未满30公斤且时速达25公里以上时电机断电，法律并未对爬坡角度作出规定。",
+      "ru": "Средство индивидуальной мобильности определяется как устройство массой менее 30 кг, электродвигатель которого прекращает работу на скорости 25 км/ч и выше, при этом никаких законодательных норм относительно угла подъема (менее 25 градусов) не установлено.",
+      "id": "Alat mobilitas pribadi didefinisikan sebagai perangkat dengan berat kurang dari 30 kg yang motor listriknya otomatis mati pada kecepatan 25 km/jam atau lebih; undang-undang tidak mengatur syarat sudut tanjakan kurang dari 25 derajat."
     }
   },
   {
@@ -992,7 +1248,9 @@
       "ne": "सडक ट्राफिक ऐन अनुसार व्यक्तिगत मोबिलिटी साधन (개인형 이동장치) को मापदण्ड सम्बन्धी सही भनाइ कुन हो?",
       "vi": "Giải thích nào sau đây là ĐÚNG về tiêu chuẩn của thiết bị di chuyển cá nhân theo Luật Giao thông Đường bộ?",
       "en": "Which of the following correctly describes the legal standard for a Personal Mobility Device under the Road Traffic Act?",
-      "zh": "下列关于《道路交通法》中个人移动装置标准的说明，正确的一项是？"
+      "zh": "下列关于《道路交通法》中个人移动装置标准的说明，正确的一项是？",
+      "ru": "Ниже приведены утверждения о критериях средств индивидуальной мобильности согласно Закону о дорожном движении. Какое из них ВЕРНО?",
+      "id": "Berikut adalah penjelasan mengenai standar alat mobilitas pribadi menurut Undang-Undang Lalu Lintas Jalan. Manakah pernyataan yang BENAR?"
     },
     "options": {
       "ko": [
@@ -1030,6 +1288,18 @@
         "包含仅靠电机动力无法单独行驶的脚踏助力型（PAS）电动自行车。",
         "是指装有最高额定功率11千瓦以下原动机且车体重量未满35公斤的车辆。",
         "车体重量必须未满30公斤。"
+      ],
+      "ru": [
+        "Среди моторных средств электродвигатель должен прекращать работу при движении со скоростью 20 км/ч и выше.",
+        "Включает электровелосипеды с системой помощи педалированию, которые не могут двигаться исключительно за счет тяги электродвигателя.",
+        "Означает транспортное средство с двигателем максимальной номинальной мощностью не более 11 кВт и собственной массой менее 35 килограммов.",
+        "Собственная масса устройства должна составлять менее 30 килограммов."
+      ],
+      "id": [
+        "Merupakan kendaraan bermotor yang motor listriknya harus berhenti bekerja saat melaju pada kecepatan 20 km/jam atau lebih.",
+        "Termasuk sepeda listrik bersistem bantuan kayuh yang tidak dapat bergerak hanya dengan tenaga motor listrik saja.",
+        "Merupakan kendaraan bermotor dengan daya keluaran terukur maksimum 11 kilowatt atau kurang dan berat kendaraan kurang dari 35 kilogram.",
+        "Berat kendaraannya harus kurang dari 30 kilogram."
       ]
     },
     "answer": 4,
@@ -1039,7 +1309,9 @@
       "ne": "व्यक्तिगत मोबिलिटी साधनको तौल ३० केजीभन्दा कम र गति सीमा २५ कि.मि./घण्टा हुनुपर्छ; साथै पेडल असिस्ट (PAS) विद्युतीय साइकल चाहिँ साइकल वर्गमा पर्छ, व्यक्तिगत मोबिलिटी साधनमा पर्दैन।",
       "vi": "Thiết bị di chuyển cá nhân phải có trọng lượng dưới 30 kg (không phải 35 kg) và ngắt điện ở 25 km/h (không phải 20 km/h); xe đạp điện trợ lực đạp (PAS) được phân loại là xe đạp chứ không phải thiết bị di chuyển cá nhân.",
       "en": "A Personal Mobility Device must weigh under 30 kg (not 35 kg) with a motor cutoff at 25 km/h (not 20 km/h); PAS-type e-bikes are classified as bicycles rather than personal mobility devices.",
-      "zh": "个人移动装置车体重量须未满30公斤（非35公斤），且时速25公里以上（非20公里）断电；脚踏助力型（PAS）电动自行车属于自行车，仅纯电门（Throttle）型才归为个人移动装置。"
+      "zh": "个人移动装置车体重量须未满30公斤（非35公斤），且时速25公里以上（非20公里）断电；脚踏助力型（PAS）电动自行车属于自行车，仅纯电门（Throttle）型才归为个人移动装置。",
+      "ru": "Средство индивидуальной мобильности должно иметь массу менее 30 кг (а не 35 кг), а его двигатель должен отключаться при скорости 25 км/ч и выше (а не 20 км/ч); электровелосипеды с системой помощи педалированию классифицируются как обычные велосипеды, а не как средства индивидуальной мобильности.",
+      "id": "Alat mobilitas pribadi harus memiliki berat kendaraan kurang dari 30 kg (bukan 35 kg) dengan motor listrik yang berhenti bekerja pada kecepatan 25 km/jam ke atas (bukan 20 km/jam), sedangkan sepeda listrik dengan sistem bantuan kayuh dikategorikan sebagai sepeda, bukan alat mobilitas pribadi."
     }
   },
   {
@@ -1053,7 +1325,9 @@
       "ne": "देहायका मध्ये कुन २ वटा कारणले सवारी चालक अनुमतिपत्र लिन नपाउने अयोग्यता अवधि २ वर्ष हुन्छ?",
       "vi": "Trong các trường hợp sau đây, 2 lý do nào dẫn đến thời gian cấm thi lấy lại giấy phép lái xe là 2 năm?",
       "en": "Which TWO of the following violations result in a 2-year disqualification period from obtaining a driver's license?",
-      "zh": "下列情形中，驾驶证禁考期（取得欠格期间）为2年的2项事由是？"
+      "zh": "下列情形中，驾驶证禁考期（取得欠格期间）为2年的2项事由是？",
+      "ru": "Какие ДВЕ из перечисленных причин влекут за собой 2-летний срок лишения права на получение водительского удостоверения?",
+      "id": "Manakah DUA pelanggaran berikut yang mengakibatkan masa larangan (diskualifikasi) memperoleh SIM selama 2 tahun?"
     },
     "options": {
       "ko": [
@@ -1091,6 +1365,18 @@
         "替他人代考驾驶证考试时",
         "因殴打执勤交警被立案并吊销驾驶证时",
         "酒后驾车引发3次以上交通事故时"
+      ],
+      "ru": [
+        "Управление транспортным средством без водительского удостоверения 3 раза",
+        "Сдача экзамена на получение водительского удостоверения вместо другого лица",
+        "Аннулирование прав после возбуждения дела за нападение на сотрудника дорожной полиции при исполнении",
+        "Совершение 3 и более дорожно-транспортных происшествий при вождении в состоянии алкогольного опьянения"
+      ],
+      "id": [
+        "Mengemudi tanpa SIM sebanyak 3 kali",
+        "Mengikuti ujian SIM sebagai joki untuk menggantikan orang lain",
+        "SIM dicabut karena diproses hukum akibat menyerang petugas polisi lalu lintas yang sedang bertugas",
+        "Menyebabkan kecelakaan lalu lintas sebanyak 3 kali atau lebih saat mengemudi dalam keadaan mabuk"
       ]
     },
     "answer": [
@@ -1103,7 +1389,9 @@
       "ne": "बिना लाइसेन्स ३ पटक गाडी चलाउँदा र अर्काको नाममा परीक्षा दिँदा २ वर्षसम्म लाइसेन्स लिन पाइँदैन। प्रहरी कुटपिटमा १ वर्ष र मापसे गरी ३ पटकभन्दा बढी दुर्घटना गराउँदा ३ वर्षको अयोग्यता अवधि लागू हुन्छ।",
       "vi": "Lái xe không bằng lái 3 lần và thi hộ bằng lái cho người khác đều bị cấm thi lấy bằng trong 2 năm; còn hành hung cảnh sát bị cấm 1 năm và lái xe say rượu gây tai nạn từ 3 lần trở lên bị cấm 3 năm.",
       "en": "Driving without a license 3 times and taking a license test by proxy each carry a 2-year disqualification period, whereas assaulting an officer carries 1 year and causing 3+ DUI accidents carries 3 years.",
-      "zh": "无证驾驶满3次以及替他人代考驾照的禁考期均为2年；而殴打执勤警察被吊销驾照的禁考期为1年，酒驾引发3次以上交通事故的禁考期为3年。"
+      "zh": "无证驾驶满3次以及替他人代考驾照的禁考期均为2年；而殴打执勤警察被吊销驾照的禁考期为1年，酒驾引发3次以上交通事故的禁考期为3年。",
+      "ru": "Трехкратное вождение без прав и сдача экзамена за другого человека влекут запрет на получение прав сроком на 2 года, тогда как при аннулировании прав за нападение на полицейского срок ограничения составляет 1 год, а при совершении 3 и более ДТП в нетрезвом виде — 3 года.",
+      "id": "Tertangkap mengemudi tanpa SIM sebanyak 3 kali serta menjadi joki ujian SIM masing-masing dikenai masa larangan memperoleh SIM selama 2 tahun, sedangkan pencabutan akibat menyerang polisi dikenai larangan 1 tahun dan menyebabkan 3 kali atau lebih kecelakaan karena mabuk dikenai larangan 3 tahun."
     }
   },
   {
@@ -1117,7 +1405,9 @@
       "ne": "सडक ट्राफिक नियम अनुसार अंग्रेजी सवारी चालक अनुमतिपत्र सम्बन्धी कुन भनाइ सही छैन? (जेनेभा वा भियना महासन्धिमा आबद्ध राष्ट्रहरूमा सीमित)",
       "vi": "Theo Luật Giao thông Đường bộ, giải thích nào sau đây về giấy phép lái xe tiếng Anh là KHÔNG đúng? (Giới hạn ở các nước tham gia Công ước Geneva hoặc Công ước Vienna)",
       "en": "Under the Road Traffic Act, which statement about the English-language driver's license is INCORRECT? (Limited to Geneva or Vienna Convention contracting countries)",
-      "zh": "根据《道路交通法令》，关于英文驾驶证的说明中不正确的一项是？（仅限日内瓦公约或维也纳公约缔约国）"
+      "zh": "根据《道路交通法令》，关于英文驾驶证的说明中不正确的一项是？（仅限日内瓦公约或维也纳公约缔约国）",
+      "ru": "Какое утверждение о водительском удостоверении на английском языке согласно Закону о дорожном движении является НЕВЕРНЫМ? (Только для стран — участниц Женевской или Венской конвенции)",
+      "id": "Berdasarkan peraturan Undang-Undang Lalu Lintas Jalan, pernyataan manakah mengenai SIM berbahasa Inggris yang TIDAK benar? (Terbatas pada negara anggota Konvensi Jenewa atau Konvensi Wina)"
     },
     "options": {
       "ko": [
@@ -1155,6 +1445,18 @@
         "在认可英文驾驶证的国家，无论停留期限多长均可一直使用。",
         "在不认可英文驾驶证的国家，须随身携带韩国驾驶证、国际驾驶证及护照。",
         "是在驾驶证背面用英文标注驾驶证信息的证件。"
+      ],
+      "ru": [
+        "В странах, признающих удостоверение на английском языке, можно управлять автомобилем без отдельного нотариально заверенного перевода.",
+        "В странах, признающих удостоверение на английском языке, им можно пользоваться независимо от срока пребывания.",
+        "В странах, не признающих такое удостоверение, необходимо иметь при себе корейские права, международное водительское удостоверение и загранпаспорт.",
+        "Оно представляет собой водительское удостоверение, на оборотной стороне которого данные продублированы на английском языке."
+      ],
+      "id": [
+        "Di negara yang mengakui SIM berbahasa Inggris, pemegang dapat mengemudi tanpa surat terjemahan yang dilegalisasi notaris.",
+        "Di negara yang mengakui SIM berbahasa Inggris, SIM tersebut dapat digunakan tanpa batas waktu lama tinggal.",
+        "Di negara yang tidak mengakui SIM berbahasa Inggris, pengemudi wajib membawa SIM Korea, SIM Internasional, dan paspor.",
+        "SIM tersebut mencantumkan rincian informasi SIM dalam bahasa Inggris pada bagian belakang kartu."
       ]
     },
     "answer": 2,
@@ -1164,7 +1466,9 @@
       "ne": "अंग्रेजी लाइसेन्स मान्यता दिने देशमा पनि सामान्यतया करिब ३ महिना जति छोटो अवधिका लागि मात्र चलाउन पाइन्छ; लामो समय बस्दा सम्बन्धित देशकै लाइसेन्स लिनुपर्छ।",
       "vi": "Ngay cả tại các nước chấp nhận bằng lái tiếng Anh, thời hạn được phép lái xe tùy thuộc từng nước và thường chỉ áp dụng ngắn hạn khoảng 3 tháng; nếu cư trú dài hạn phải đổi hoặc thi bằng lái sở tại.",
       "en": "Even in countries that recognize the English-language license, usage is typically limited to short stays (such as around 3 months depending on the country), so long-term residents must obtain a local license.",
-      "zh": "即使在认可韩国英文驾驶证的国家，允许驾车的期限也因国而异（大多仅限3个月左右的短期停留），长期居留时仍须考取或换领当地驾驶证。"
+      "zh": "即使在认可韩国英文驾驶证的国家，允许驾车的期限也因国而异（大多仅限3个月左右的短期停留），长期居留时仍须考取或换领当地驾驶证。",
+      "ru": "Даже в странах, признающих корейское водительское удостоверение на английском языке, срок его действия ограничен краткосрочным пребыванием (обычно около 3 месяцев в зависимости от страны), поэтому при длительном проживании необходимо получить местные права.",
+      "id": "Meskipun berada di negara yang mengakui SIM berbahasa Inggris, masa izin mengemudinya berbeda di tiap negara dan umumnya hanya berlaku untuk kunjungan singkat (sekitar 3 bulan), sehingga untuk tinggal jangka panjang wajib memperoleh SIM lokal negara setempat."
     }
   },
   {
@@ -1178,7 +1482,9 @@
       "ne": "सडक ट्राफिक ऐन अनुसार बिजुलीबाट चल्ने मोटरजडित साइकल भन्नाले अधिकतम रेटेड पावर ( ) वा सोभन्दा कम भएको दुईपाङ्ग्रे सवारी हो। खाली ठाउँमा सही मान कुन हो?",
       "vi": "Theo Luật Giao thông Đường bộ, xe gắn máy chạy bằng điện là xe hai bánh có công suất định mức tối đa từ ( ) trở xuống. Giá trị đúng điền vào ( ) là gì?",
       "en": "Under the Road Traffic Act, when powered by electricity, a motorized bicycle is a two-wheeled vehicle with a maximum rated output of ( ) or less. What belongs in the blank?",
-      "zh": "根据《道路交通法》，以电力驱动的原动机装置自行车（轻便摩托车）是指最高额定功率在（ ）以下的两轮机动车。括号内正确的标准是？"
+      "zh": "根据《道路交通法》，以电力驱动的原动机装置自行车（轻便摩托车）是指最高额定功率在（ ）以下的两轮机动车。括号内正确的标准是？",
+      "ru": "Согласно Закону о дорожном движении мопедом с электрическим приводом считается двухколесное транспортное средство с максимальной номинальной мощностью не более ( ). Какое значение должно стоять в скобках?",
+      "id": "Berdasarkan Undang-Undang Lalu Lintas Jalan, apabila digerakkan oleh tenaga listrik, sepeda bermotor (moped) adalah kendaraan roda dua dengan daya keluaran terukur maksimum ( ) atau kurang. Manakah angka yang tepat untuk mengisi bagian kosong tersebut?"
     },
     "options": {
       "ko": [
@@ -1216,6 +1522,18 @@
         "9千瓦",
         "5千瓦",
         "0.59千瓦"
+      ],
+      "ru": [
+        "11 киловатт",
+        "9 киловатт",
+        "5 киловатт",
+        "0,59 киловатта"
+      ],
+      "id": [
+        "11 kilowatt",
+        "9 kilowatt",
+        "5 kilowatt",
+        "0,59 kilowatt"
       ]
     },
     "answer": 1,
@@ -1225,7 +1543,9 @@
       "ne": "सडक ट्राफिक ऐन अनुसार इन्धनबाट चल्ने भए १२५ सीसी र बिजुलीबाट चल्ने भए अधिकतम ११ किलोवाट (11 kW) वा सोभन्दा कम क्षमताको दुईपाङ्ग्रे सवारीलाई मोटरजडित साइकल भनिन्छ।",
       "vi": "Theo Luật Giao thông Đường bộ, xe gắn máy được quy định có dung tích từ 125cc trở xuống đối với động cơ xăng, hoặc công suất định mức tối đa từ 11 kilowatt (11 kW) trở xuống đối với xe điện.",
       "en": "Under the Road Traffic Act, a motorized bicycle has an engine displacement of 125cc or less for combustion engines, or a maximum rated output of 11 kilowatts (11 kW) or less when powered by electricity.",
-      "zh": "根据《道路交通法》，原动机装置自行车的标准为燃油排量125cc以下，或纯电驱动时最高额定功率在11千瓦（11kW）以下。"
+      "zh": "根据《道路交通法》，原动机装置自行车的标准为燃油排量125cc以下，或纯电驱动时最高额定功率在11千瓦（11kW）以下。",
+      "ru": "Согласно Закону о дорожном движении к мопедам относятся двухколесные транспортные средства с рабочим объемом двигателя внутреннего сгорания до 125 куб. см включительно или, при работе на электричестве, с максимальной номинальной мощностью до 11 киловатт (11 кВт) включительно.",
+      "id": "Menurut Undang-Undang Lalu Lintas Jalan, sepeda bermotor memiliki kapasitas mesin 125 cc atau kurang untuk mesin pembakaran dalam, atau daya keluaran terukur maksimum 11 kilowatt (11 kW) atau kurang apabila bertenaga listrik."
     }
   },
   {
@@ -1239,7 +1559,9 @@
       "ne": "सडक सवारी ऐनमा व्यवस्था गरिएको \"कर्ब लाइन (पेटीको ढुङ्गाको रेखा)\" (연석선) को सही परिभाषा कुन हो?",
       "vi": "Theo Luật Giao thông Đường bộ, định nghĩa nào sau đây về \"đường bó vỉa\" (연석선) là đúng?",
       "en": "Which of the following correctly defines a \"curb line\" (연석선) under the Road Traffic Act?",
-      "zh": "下列哪项符合《道路交通法》中关于“路缘石线”（연석선）的正确定义？"
+      "zh": "下列哪项符合《道路交通法》中关于“路缘石线”（연석선）的正确定义？",
+      "ru": "Какое из следующих определений «бордюрной линии» согласно Закону о дорожном движении является верным?",
+      "id": "Manakah definisi 'garis kerb' (garis pembatas tepi jalan) yang benar menurut Undang-Undang Lalu Lintas Jalan?"
     },
     "options": {
       "ko": [
@@ -1277,6 +1599,18 @@
         "使汽车排成一列在道路指定部分通行的线",
         "用石头等连接而成、用于分隔车行道与人行道的线",
         "用于区分车道与车道的线"
+      ],
+      "ru": [
+        "Линия, предназначенная для четкого разделения направлений движения транспортных средств",
+        "Линия, направляющая автомобили для движения в один ряд по определенному участку дороги",
+        "Непрерывная линия из камня или аналогичного материала, отделяющая проезжую часть от тротуара",
+        "Линия, служащая для разделения полос движения между собой"
+      ],
+      "id": [
+        "Garis untuk memisahkan arah lalu lintas kendaraan secara jelas",
+        "Garis yang memandu kendaraan bermotor agar berjalan satu baris pada bagian jalan yang ditentukan",
+        "Garis bersambung yang terbuat dari batu atau bahan serupa yang memisahkan jalur kendaraan (badan jalan) dan trotoar",
+        "Garis yang digunakan untuk memisahkan lajur lalu lintas yang satu dengan lajur lainnya"
       ]
     },
     "answer": 3,
@@ -1286,7 +1620,9 @@
       "ne": "सडक सवारी ऐनको दफा २ अनुसार 'कर्ब लाइन' (연석선) भन्नाले गाडी गुड्ने सडक र पैदलयात्री हिँड्ने पेटीलाई छुट्याउने ढुङ्गा आदिले बनेको रेखालाई जनाउँछ।",
       "vi": "Theo Điều 2 Luật Giao thông Đường bộ, \"đường bó vỉa\" (연석선) là đường nối bằng đá hoặc vật liệu tương tự nhằm phân tách phần đường xe chạy với vỉa hè.",
       "en": "Under Article 2 of the Road Traffic Act, a \"curb line\" refers to a continuous line of stones or similar materials that separates the roadway from the sidewalk.",
-      "zh": "根据《道路交通法》第2条定义，“路缘石线”是指由石块等连接而成、用来分隔车行道和人行道的界线。"
+      "zh": "根据《道路交通法》第2条定义，“路缘石线”是指由石块等连接而成、用来分隔车行道和人行道的界线。",
+      "ru": "Согласно статье 2 Закона о дорожном движении бордюрная линия — это непрерывная линия из бордюрного камня или подобных материалов, разделяющая проезжую часть и тротуар.",
+      "id": "Berdasarkan Pasal 2 Undang-Undang Lalu Lintas Jalan, garis kerb adalah garis bersambung dari susunan batu atau material sejenis yang memisahkan jalur lalu lintas kendaraan dengan trotoar pejalan kaki."
     }
   },
   {
@@ -1300,7 +1636,9 @@
       "ne": "सडक सवारी ऐन अनुसार व्यक्तिगत मोबिलिटी उपकरण (इलेक्ट्रिक किकबोर्ड आदि) सम्बन्धी सही भनाइ कुन हो?",
       "vi": "Theo Luật Giao thông Đường bộ, nội dung nào sau đây về phương tiện di chuyển cá nhân (xe điện cân bằng/scooter điện) là đúng?",
       "en": "Which of the following statements regarding Personal Mobility Devices (PMDs) is correct under the Road Traffic Act?",
-      "zh": "根据《道路交通法》，关于个人移动装置（电动滑板车等）的正确说法是？"
+      "zh": "根据《道路交通法》，关于个人移动装置（电动滑板车等）的正确说法是？",
+      "ru": "Какое утверждение, касающееся средств индивидуальной мобильности, является правильным согласно Закону о дорожном движении?",
+      "id": "Manakah pernyataan yang benar terkait alat mobilitas pribadi menurut Undang-Undang Lalu Lintas Jalan?"
     },
     "options": {
       "ko": [
@@ -1338,6 +1676,18 @@
         "已主动交回驾驶证的65岁以上人员可以驾驶。",
         "年满13岁的人员无需考取驾驶证即可驾驶。",
         "通过人行横道时，必须下车推行或搬运个人移动装置步行通过。"
+      ],
+      "ru": [
+        "Разрешается управлять устройством с превышением допустимого числа пассажиров.",
+        "Управлять им может лицо в возрасте 65 лет и старше, добровольно сдавшее водительское удостоверение.",
+        "Лица в возрасте 13 лет и старше могут управлять им без получения водительского удостоверения.",
+        "При пересечении дороги по пешеходному переходу необходимо спешиться и идти пешком, ведя или неся средство индивидуальной мобильности."
+      ],
+      "id": [
+        "Boleh dikendarai melebihi kapasitas jumlah penumpang yang ditentukan.",
+        "Boleh dikendarai oleh orang berusia 65 tahun ke atas yang telah mengembalikan SIM-nya.",
+        "Boleh dikendarai oleh orang berusia 13 tahun ke atas tanpa memiliki SIM.",
+        "Saat menyeberang melalui zebra cross (penyeberangan pejalan kaki), pengendara wajib turun dan berjalan kaki sambil menuntun atau membawa alat mobilitas pribadi tersebut."
       ]
     },
     "answer": 4,
@@ -1347,7 +1697,9 @@
       "ne": "व्यक्तिगत मोबिलिटी उपकरण चलाउन कम्तीमा मोपेड लाइसेन्स चाहिन्छ र क्षमताभन्दा बढी यात्रु बोक्न पाइँदैन। जेब्रा क्रसिङ पार गर्दा अनिवार्य रूपमा ओर्लिएर उपकरण डोर्‍याउँदै वा बोकेर हिँड्नुपर्छ।",
       "vi": "Người điều khiển phương tiện di chuyển cá nhân bắt buộc phải có bằng lái (từ bằng xe gắn máy trở lên, đủ 16 tuổi) và không được chở quá số người quy định. Khi qua vạch đi bộ, bắt buộc phải xuống xe dắt hoặc bê qua đường.",
       "en": "Operating a personal mobility device requires at least a motorized bicycle license (age 16+), and exceeding passenger capacity is prohibited. When crossing a crosswalk, riders must dismount and push or carry the device.",
-      "zh": "驾驶个人移动装置必须持有原动机装置自行车及以上的驾驶证（满16周岁），且严禁超载。使用人行横道过马路时，必须下车推行或搬运通过。"
+      "zh": "驾驶个人移动装置必须持有原动机装置自行车及以上的驾驶证（满16周岁），且严禁超载。使用人行横道过马路时，必须下车推行或搬运通过。",
+      "ru": "Для управления средством индивидуальной мобильности необходимы права не ниже категории мопеда (выдаются с 16 лет), перевозить лишних пассажиров запрещено, а на пешеходном переходе водитель обязан спешиться и переходить дорогу пешком, катя или неся устройство.",
+      "id": "Mengendarai alat mobilitas pribadi mewajibkan kepemilikan minimal SIM sepeda bermotor (usia 16 tahun ke atas) dan dilarang melebihi kapasitas penumpang; saat melewati zebra cross, pengendara wajib turun dan menuntun atau mengangkat perangkatnya sambil berjalan kaki."
     }
   },
   {
@@ -1361,7 +1713,9 @@
       "ne": "पहिलो पटक सवारी चालक अनुमतिपत्र नवीकरण गर्ने अवधि परीक्षा पास गरेको मितिले १० वर्ष (पास गरेको दिन ६५ वर्षदेखि ७५ वर्ष मुनिका व्यक्तिका लागि ( ㉠ ) वर्ष, ७५ वर्ष वा सोभन्दा माथिका लागि ( ㉡ ) वर्ष, र एउटा आँखा नदेख्ने तर वर्ग १ साधारण लाइसेन्स प्राप्त गरेका व्यक्तिका लागि ( ㉢ ) वर्ष) पुग्ने वर्षको जन्मदिनको अगाडि र पछाडि प्रत्येक ( ㉣ ) महिना भित्र हो। कोष्ठकमा राखिने संख्याको जोडा मध्ये कुन गलत छ?",
       "vi": "Thời hạn gia hạn bằng lái xe lần đầu được tính từ ngày đỗ kỳ thi sát hạch là 10 năm (người từ đủ 65 tuổi đến dưới 75 tuổi vào ngày đỗ là ( ㉠ ) năm, người từ 75 tuổi trở lên là ( ㉡ ) năm, người hỏng một mắt lấy bằng Hạng 1 Thông thường là ( ㉢ ) năm), trong vòng ( ㉣ ) tháng trước và sau ngày sinh nhật của năm đến hạn đó. Cặp số điền vào ngoặc nào sau đây là SAI?",
       "en": "The initial driver's license renewal period is within ( ㉣ ) months before and after the holder's birthday in the year marking 10 years from the date of passing the license exam (( ㉠ ) years for those aged 65 to under 75 on the passing date, ( ㉡ ) years for those aged 75 or older, and ( ㉢ ) years for persons blind in one eye who obtained a Type 1 Regular license). Which number pairing for the blanks is INCORRECT?",
-      "zh": "首次驾驶证换证期限自通过驾驶证考试之日起算满10年（考试合格当日年满65岁未满75岁者为 ( ㉠ ) 年，75岁以上者为 ( ㉡ ) 年，单眼失明并取得第1类普通驾驶证者为 ( ㉢ ) 年）所在年份的生日前后各 ( ㉣ ) 个月以内。下列括号内填入的数字对应错误的是？"
+      "zh": "首次驾驶证换证期限自通过驾驶证考试之日起算满10年（考试合格当日年满65岁未满75岁者为 ( ㉠ ) 年，75岁以上者为 ( ㉡ ) 年，单眼失明并取得第1类普通驾驶证者为 ( ㉢ ) 年）所在年份的生日前后各 ( ㉣ ) 个月以内。下列括号内填入的数字对应错误的是？",
+      "ru": "Первый срок замены (продления) водительского удостоверения составляет в пределах ( ㉣ ) месяцев до и после дня рождения владельца в том году, когда истекает 10 лет со дня сдачи экзамена на права (для лиц от 65 до 75 лет на день сдачи экзамена — ( ㉠ ) лет, для лиц 75 лет и старше — ( ㉡ ) года, а для лиц, не видящих одним глазом и получивших обычные права 1-го класса, — ( ㉢ ) года). Какое соответствие чисел для пропусков указано НЕВЕРНО?",
+      "id": "Periode perpanjangan SIM pertama kali adalah dalam waktu masing-masing ( ㉣ ) bulan sebelum dan sesudah tanggal ulang tahun pada tahun genap 10 tahun terhitung sejak tanggal lulus ujian SIM (( ㉠ ) tahun bagi yang berusia 65 tahun hingga kurang dari 75 tahun pada tanggal lulus ujian, ( ㉡ ) tahun bagi yang berusia 75 tahun ke atas, serta ( ㉢ ) tahun bagi tunanetra satu mata yang memperoleh SIM Kelas 1 Reguler). Manakah pasangan angka untuk bagian kosong yang SALAH?"
     },
     "options": {
       "ko": [
@@ -1399,6 +1753,18 @@
         "㉡ : 3",
         "㉢ : 3",
         "㉣ : 3"
+      ],
+      "ru": [
+        "㉠ : 5",
+        "㉡ : 3",
+        "㉢ : 3",
+        "㉣ : 3"
+      ],
+      "id": [
+        "㉠ : 5",
+        "㉡ : 3",
+        "㉢ : 3",
+        "㉣ : 3"
       ]
     },
     "answer": 4,
@@ -1408,7 +1774,9 @@
       "ne": "सडक सवारी ऐनको दफा ८७ अनुसार लाइसेन्स नवीकरण गर्ने म्याद तोकिएको वर्षको जन्मदिनको अगाडि र पछाडि ६-६ महिना (㉣ = ६) भित्र हुन्छ, त्यसैले ㉣ : ३ गलत हो।",
       "vi": "Theo Điều 87 Luật Giao thông Đường bộ, thời hạn gia hạn bằng lái xe là trong vòng 6 tháng trước và sau ngày sinh nhật của năm đến hạn, do đó số đúng ở ㉣ phải là 6 chứ không phải 3.",
       "en": "Under Article 87 of the Road Traffic Act, the driver's license renewal window is within 6 months before and after the holder's birthday in the applicable year, so ㉣ must be 6 rather than 3.",
-      "zh": "根据《道路交通法》第87条规定，驾驶证换证期限为到期年份生日前后各6个月以内，因此㉣处应填“6”而非“3”。"
+      "zh": "根据《道路交通法》第87条规定，驾驶证换证期限为到期年份生日前后各6个月以内，因此㉣处应填“6”而非“3”。",
+      "ru": "Согласно статье 87 Закона о дорожном движении период первичного продления водительского удостоверения составляет 6 месяцев до и 6 месяцев после дня рождения в соответствующем году, поэтому на месте ㉣ должно стоять число 6, а не 3.",
+      "id": "Berdasarkan Pasal 87 Undang-Undang Lalu Lintas Jalan, batas waktu perpanjangan SIM pertama adalah dalam waktu 6 bulan sebelum dan 6 bulan sesudah hari ulang tahun pada tahun jatuh tempo, sehingga angka yang tepat untuk ㉣ adalah 6, bukan 3."
     }
   },
   {
@@ -1422,7 +1790,9 @@
       "ne": "सडक सवारी नियम अनुसार सवारी चालक अनुमतिपत्र लिन चाहने व्यक्तिको पहिचान प्रमाणित गर्ने प्रक्रिया सम्बन्धी तलका भनाइमध्ये कुन गलत छ?",
       "vi": "Dưới đây là giải thích về thủ tục xác minh nhân thân đối với người xin cấp bằng lái xe theo pháp lệnh giao thông đường bộ. Câu nào SAI?",
       "en": "The following statements describe the identity verification procedure for a person applying for a driver's license under the Road Traffic Act. Which one is INCORRECT?",
-      "zh": "下列是《道路交通法令》中关于申领驾驶证人员身份核验程序的说明，错误的是？"
+      "zh": "下列是《道路交通法令》中关于申领驾驶证人员身份核验程序的说明，错误的是？",
+      "ru": "Ниже описана процедура подтверждения личности лица, желающего получить водительское удостоверение согласно Закону о дорожном движении. Какое утверждение ОШИБОЧНО?",
+      "id": "Berikut adalah penjelasan mengenai prosedur verifikasi identitas bagi pemohon penerbitan SIM menurut Undang-Undang Lalu Lintas Jalan. Manakah pernyataan yang SALAH?"
     },
     "options": {
       "ko": [
@@ -1460,6 +1830,18 @@
         "无法通过身份证件或指纹信息核实本人身份的，不得参加考试。",
         "无需征得申请人同意，即可通过电子方式比对核验指纹信息。",
         "拒绝接受本人身份核验的，可拒绝核发驾驶证。"
+      ],
+      "ru": [
+        "В случае утери регистрационной карты резидента допускается предъявление справки-подтверждения о подаче заявления на ее повторную выдачу.",
+        "Если подтвердить личность с помощью удостоверения личности или отпечатков пальцев невозможно, кандидат не допускается к сдаче экзамена.",
+        "Сверка и проверка информации об отпечатках пальцев электронным способом могут проводиться без согласия заявителя.",
+        "В случае отказа заявителя от прохождения процедуры подтверждения личности в выдаче водительского удостоверения может быть отказано."
+      ],
+      "id": [
+        "Jika Kartu Tanda Penduduk hilang, verifikasi dapat menggunakan surat keterangan permohonan penerbitan KTP.",
+        "Jika identitas tidak dapat diverifikasi melalui kartu identitas maupun data sidik jari, pemohon tidak dapat mengikuti ujian.",
+        "Data sidik jari dapat dicocokkan dan diverifikasi secara elektronik tanpa persetujuan pemohon.",
+        "Jika pemohon menolak proses verifikasi identitas, penerbitan SIM dapat ditolak."
       ]
     },
     "answer": 3,
@@ -1469,7 +1851,9 @@
       "ne": "परिचयपत्र पेश गर्न नसक्ने व्यक्तिको औंठाछाप विद्युतीय माध्यमबाट भिडाएर पहिचान जाँच गर्ने कार्य निवेदकको इच्छा र सहमति भएमा मात्र गर्न पाइन्छ।",
       "vi": "Khi người đăng ký không xuất trình được giấy tờ tùy thân, việc đối chiếu vân tay bằng phương thức điện tử chỉ được thực hiện khi có sự đồng ý (theo nguyện vọng) của người đăng ký.",
       "en": "Under the Road Traffic Act, electronic fingerprint matching to verify identity when an applicant cannot present an ID is permitted only when the applicant requests or consents to it.",
-      "zh": "根据《道路交通法》规定，无法出示身份证件时，只有在申请人本人自愿同意的情况下，方可通过电子方式比对指纹信息核实身份。"
+      "zh": "根据《道路交通法》规定，无法出示身份证件时，只有在申请人本人自愿同意的情况下，方可通过电子方式比对指纹信息核实身份。",
+      "ru": "Согласно Закону о дорожном движении, если заявитель не может предъявить удостоверение личности, электронная сверка отпечатков пальцев для подтверждения личности допускается только по желанию (с согласия) самого заявителя.",
+      "id": "Berdasarkan Undang-Undang Lalu Lintas Jalan, pencocokan informasi sidik jari secara elektronik bagi pemohon yang tidak membawa kartu identitas hanya dapat dilakukan apabila pemohon menghendaki atau menyetujuinya."
     }
   },
   {
@@ -1483,7 +1867,9 @@
       "ne": "हाइड्रोजन ठूला यात्रुवाहक बस (३६ सिट वा सोभन्दा बढी) नयाँ चलाउन लाग्ने चालकका लागि विशेष तालिम सञ्चालन गर्ने संस्था कुन हो?",
       "vi": "Cơ quan nào sau đây thực hiện đào tạo đặc biệt cho tài xế mới bắt đầu lái xe khách cỡ lớn chạy bằng khí hydro (từ 36 chỗ ngồi trở lên)?",
       "en": "Which organization conducts mandatory special safety training for drivers newly operating a large hydrogen passenger bus (seating capacity of 36 or more)?",
-      "zh": "下列哪一机构负责对新驾驶大型氢燃料客车（核载36座以上）的驾驶人实施特别安全教育？"
+      "zh": "下列哪一机构负责对新驾驶大型氢燃料客车（核载36座以上）的驾驶人实施特别安全教育？",
+      "ru": "Какая организация проводит обязательное специальное обучение для водителей, впервые приступающих к управлению крупногабаритным водородным автобусом (вместимостью 36 и более пассажиров)?",
+      "id": "Lembaga manakah yang menyelenggarakan pelatihan keselamatan khusus bagi pengemudi baru bus penumpang besar bertenaga hidrogen (kapasitas 36 penumpang atau lebih)?"
     },
     "options": {
       "ko": [
@@ -1521,6 +1907,18 @@
         "韩国产业安全公团（한국산업안전공단）",
         "韩国道路交通公团（한국도로교통공단）",
         "韩国道路公社（한국도로공사）"
+      ],
+      "ru": [
+        "Корейская корпорация газовой безопасности",
+        "Корейское агентство по охране труда и промышленной безопасности",
+        "Корейское управление дорожного движения",
+        "Корейская дорожная корпорация (скоростных автомагистралей)"
+      ],
+      "id": [
+        "Korporasi Keselamatan Gas Korea",
+        "Badan Keselamatan dan Kesehatan Kerja Korea",
+        "Otoritas Lalu Lintas Jalan Korea",
+        "Korporasi Jalan Tol Korea"
       ]
     },
     "answer": 1,
@@ -1530,7 +1928,9 @@
       "ne": "उच्च चाप ग्यास सुरक्षा व्यवस्थापन नियम अनुसार ३६ सिट वा सोभन्दा माथिको हाइड्रोजन बसका नयाँ चालकले कोरिया ग्यास सुरक्षा संस्थान (한국가스안전공사) बाट विशेष सुरक्षा तालिम लिनुपर्छ।",
       "vi": "Theo Luật Quản lý An toàn Khí áp suất cao, tài xế mới lái xe buýt chạy bằng hydro từ 36 chỗ trở lên bắt buộc phải hoàn thành khóa đào tạo an toàn đặc biệt tại Tổng công ty An toàn Khí đốt Hàn Quốc (한국가스안전공사).",
       "en": "Under the High-Pressure Gas Safety Control Act Enforcement Rules, new drivers of large hydrogen buses (36 seats or more) must receive special safety training from the Korea Gas Safety Corporation (KGS).",
-      "zh": "根据《高压气体安全管理法施行规则》，新驾驶36座以上大型氢能客车的驾驶员必须在韩国燃气安全公社接受特别安全教育。"
+      "zh": "根据《高压气体安全管理法施行规则》，新驾驶36座以上大型氢能客车的驾驶员必须在韩国燃气安全公社接受特别安全教育。",
+      "ru": "В соответствии с правилами исполнения Закона об управлении безопасностью газов высокого давления водители, впервые садящиеся за руль крупногабаритных водородных автобусов (на 36 мест и более), обязаны пройти специальное обучение в Корейской корпорации газовой безопасности.",
+      "id": "Berdasarkan Peraturan Pelaksanaan Undang-Undang Pengelolaan Keselamatan Gas Bertekanan Tinggi, pengemudi yang baru akan mengoperasikan bus besar berbahan bakar hidrogen (36 kursi ke atas) wajib mengikuti pelatihan khusus di Korporasi Keselamatan Gas Korea."
     }
   },
   {
@@ -1544,7 +1944,9 @@
       "ne": "ट्राफिक नियम उल्लंघनका कारण लाइसेन्स निलम्बनमा पर्न सक्ने सम्भावना भएको व्यक्तिले (मादक पदार्थ सेवन बाहेक) विशेष ट्राफिक सुरक्षा सिफारिस तालिम लिन कसलाई निवेदन दिनुपर्छ?",
       "vi": "Theo Luật Giao thông Đường bộ, người có nguy cơ bị đình chỉ hiệu lực bằng lái xe do vi phạm luật giao thông (trừ lái xe khi say rượu) muốn tham gia khóa giáo dục an toàn giao thông đặc biệt khuyến khích thì phải nộp đơn cho ai?",
       "en": "Under the Road Traffic Act, to whom must a person at risk of driver's license suspension due to traffic violations (excluding drunk driving) apply in order to take recommended special traffic safety education?",
-      "zh": "根据《道路交通法》，因违反交通法规而可能面临暂扣驾驶证处分的人员（酒驾除外）若想参加特别交通安全劝导教育，应向谁提出申请？"
+      "zh": "根据《道路交通法》，因违反交通法规而可能面临暂扣驾驶证处分的人员（酒驾除外）若想参加特别交通安全劝导教育，应向谁提出申请？",
+      "ru": "Согласно Закону о дорожном движении, к кому должно обратиться с заявлением лицо, которому грозит приостановление действия водительского удостоверения за нарушение правил дорожного движения, чтобы пройти рекомендованное специальное обучение по безопасности дорожного движения? (за исключением вождения в нетрезвом виде)",
+      "id": "Berdasarkan Undang-Undang Lalu Lintas Jalan, kepada siapa seseorang yang berpotensi dijatuhi sanksi penangguhan masa berlaku SIM karena pelanggaran aturan lalu lintas harus mengajukan permohonan untuk mengikuti pendidikan keselamatan lalu lintas khusus yang dianjurkan? (kecuali mengemudi dalam keadaan mabuk)"
     },
     "options": {
       "ko": [
@@ -1582,6 +1984,18 @@
         "居住地地方自治团体长",
         "驾驶证考试场场长",
         "市·道警察厅长"
+      ],
+      "ru": [
+        "Председателю Корейской корпорации безопасности дорожного движения",
+        "Главе органа местного самоуправления по месту жительства",
+        "Директору экзаменационного центра по выдаче водительских удостоверений",
+        "Начальнику полицейского управления города или провинции"
+      ],
+      "id": [
+        "Ketua Otoritas Lalu Lintas Jalan Korea",
+        "Kepala pemerintah daerah sesuai alamat domisili",
+        "Kepala Kantor Ujian SIM",
+        "Kepala Kepolisian Kota atau Provinsi"
       ]
     },
     "answer": 4,
@@ -1591,7 +2005,9 @@
       "ne": "सडक सवारी ऐनको दफा ७३(३) अनुसार विशेष ट्राफिक सुरक्षा सिफारिस तालिम लिन चाहने व्यक्तिले सहर वा प्रान्तीय प्रहरी प्रमुख (시·도경찰청장) समक्ष निवेदन दिनुपर्छ।",
       "vi": "Theo khoản 3 Điều 73 Luật Giao thông Đường bộ, người muốn tham gia giáo dục an toàn giao thông đặc biệt diện khuyến khích phải nộp đơn đăng ký lên Giám đốc Cơ quan Cảnh sát Tỉnh/Thành phố (시·도경찰청장).",
       "en": "Under Article 73(3) of the Road Traffic Act, drivers wishing to take recommended special traffic safety education must apply to the Commissioner of a City/Provincial Police Agency.",
-      "zh": "根据《道路交通法》第73条第3款规定，申请参加特别交通安全劝导教育的人员，应当向市·道警察厅长提出申请。"
+      "zh": "根据《道路交通法》第73条第3款规定，申请参加特别交通安全劝导教育的人员，应当向市·道警察厅长提出申请。",
+      "ru": "Согласно пункту 3 статьи 73 Закона о дорожном движении, водители, желающие пройти рекомендованное специальное обучение по безопасности дорожного движения, должны подать заявление начальнику полицейского управления города или провинции.",
+      "id": "Berdasarkan Pasal 73 ayat (3) Undang-Undang Lalu Lintas Jalan, pengemudi yang ingin mengikuti pendidikan keselamatan lalu lintas khusus yang dianjurkan harus mengajukan permohonan kepada Kepala Kepolisian Kota atau Provinsi."
     }
   },
   {
@@ -1605,7 +2021,9 @@
       "ne": "सडक सवारी नियम अनुसार एउटा आँखा नदेख्ने व्यक्तिले वर्ग १ साधारण (1종 보통) लाइसेन्स लिन चाहेमा अर्को आँखाको ज्योति कम्तीमा ( ), तेर्सो दृष्टि क्षेत्र कम्तीमा ( ) डिग्री, ठाडो दृष्टि क्षेत्र २० डिग्री र केन्द्रीय २० डिग्री भित्र अन्धो दाग नभएको हुनुपर्छ। खाली ठाउँमा मिल्ने सही मापदण्ड कुन हो?",
       "vi": "Theo pháp lệnh giao thông đường bộ, người hỏng một mắt muốn lấy bằng lái xe Hạng 1 Thông thường thì mắt còn lại phải có thị lực từ ( ) trở lên, thị trường ngang từ ( ) độ trở lên, thị trường dọc từ 20 độ trở lên và không có điểm mù hoặc bán manh trong vùng thị trường trung tâm 20 độ. Con số đúng điền vào ngoặc là?",
       "en": "Under the Road Traffic Act, if a person blind in one eye wishes to obtain a Type 1 Regular license, the other eye must have visual acuity of at least ( ), a horizontal visual field of at least ( ) degrees, a vertical visual field of at least 20 degrees, and no scotoma or hemianopsia within 20 degrees of central vision. Which values correctly fill the blanks?",
-      "zh": "根据《道路交通法令》，单眼失明者若想考取第1类普通驾驶证，另一只眼的视力须达到（ ）以上，水平视野（ ）度以上，垂直视野20度以上，且中心视野20度内无暗点和偏盲。括号中正确的标准是？"
+      "zh": "根据《道路交通法令》，单眼失明者若想考取第1类普通驾驶证，另一只眼的视力须达到（ ）以上，水平视野（ ）度以上，垂直视野20度以上，且中心视野20度内无暗点和偏盲。括号中正确的标准是？",
+      "ru": "Согласно Закону о дорожном движении, если человек, не видящий одним глазом, желает получить обычное водительское удостоверение 1-го класса, острота зрения другого глаза должна составлять не менее ( ), горизонтальное поле зрения — не менее ( ) градусов, вертикальное поле зрения — не менее 20 градусов, а в пределах 20 градусов центрального поля зрения не должно быть скотомы и гемианопсии. Какие значения правильно заполняют пропуски?",
+      "id": "Berdasarkan peraturan Undang-Undang Lalu Lintas Jalan, apabila seseorang yang tidak dapat melihat dengan satu mata ingin memperoleh SIM Tipe 1 Biasa, mata lainnya harus memiliki ketajaman penglihatan minimal ( ), bidang pandang horizontal minimal ( ) derajat, bidang pandang vertikal minimal 20 derajat, serta tidak terdapat skotoma maupun hemianopsia dalam 20 derajat bidang pandang tengah. Angka manakah yang tepat untuk mengisi tanda kurung tersebut?"
     },
     "options": {
       "ko": [
@@ -1643,6 +2061,18 @@
         "0.6, 80",
         "0.7, 100",
         "0.8, 120"
+      ],
+      "ru": [
+        "0.5, 50",
+        "0.6, 80",
+        "0.7, 100",
+        "0.8, 120"
+      ],
+      "id": [
+        "0.5, 50",
+        "0.6, 80",
+        "0.7, 100",
+        "0.8, 120"
       ]
     },
     "answer": 4,
@@ -1652,7 +2082,9 @@
       "ne": "सडक सवारी ऐन नियमावलीको दफा ४५ अनुसार एउटा आँखा नदेख्ने व्यक्तिले वर्ग १ साधारण लाइसेन्स लिन अर्को आँखाको दृष्टि कम्तीमा ०.८ र तेर्सो दृष्टि क्षेत्र कम्तीमा १२० डिग्री हुनुपर्छ।",
       "vi": "Theo Điều 45 Nghị định thi hành Luật Giao thông Đường bộ, người hỏng một mắt muốn lấy bằng Hạng 1 Thông thường phải đạt thị lực mắt còn lại tối thiểu 0.8 và góc nhìn ngang tối thiểu 120 độ.",
       "en": "Under Article 45 of the Enforcement Decree of the Road Traffic Act, a monocular applicant for a Type 1 Regular license must have at least 0.8 visual acuity and at least 120 degrees of horizontal visual field in the sighted eye.",
-      "zh": "根据《道路交通法施行令》第45条规定，单眼失明人员申请第1类普通驾驶证时，另一只眼的视力须达0.8以上，且水平视野须达120度以上。"
+      "zh": "根据《道路交通法施行令》第45条规定，单眼失明人员申请第1类普通驾驶证时，另一只眼的视力须达0.8以上，且水平视野须达120度以上。",
+      "ru": "Согласно статье 45 Указа об исполнении Закона о дорожном движении, кандидат без зрения на один глаз для получения обычного водительского удостоверения 1-го класса должен иметь остроту зрения видящего глаза не менее 0,8 и горизонтальное поле зрения не менее 120 градусов.",
+      "id": "Berdasarkan Pasal 45 Peraturan Pelaksanaan Undang-Undang Lalu Lintas Jalan, pemohon SIM Tipe 1 Biasa yang hanya melihat dengan satu mata wajib memiliki ketajaman penglihatan minimal 0,8 dan bidang pandang horizontal minimal 120 derajat pada mata yang berfungsi."
     }
   },
   {
@@ -1666,7 +2098,9 @@
       "ne": "वर्ग १ सवारी चालक अनुमतिपत्र प्राप्त गरेका ६५ वर्ष वा सोभन्दा माथि र ७५ वर्ष मुनिका व्यक्तिले (एउटा आँखा नदेख्ने बाहेक) कति वर्षको अन्तरालमा नियमित योग्यता परीक्षण (적성검사) गराउनुपर्छ?",
       "vi": "Người từ đủ 65 tuổi đến dưới 75 tuổi có bằng lái xe Hạng 1 (trừ người hỏng một mắt) phải kiểm tra sức khỏe định kỳ (적성검사) mấy năm một lần?",
       "en": "How often must a Type 1 driver's license holder aged 65 to under 75 (excluding persons blind in one eye) undergo a regular aptitude/medical examination?",
-      "zh": "持有第1类驾驶证且年满65岁未满75岁的人员（单眼失明者除外），须每隔几年接受一次定期适性检查（体检）？"
+      "zh": "持有第1类驾驶证且年满65岁未满75岁的人员（单眼失明者除外），须每隔几年接受一次定期适性检查（体检）？",
+      "ru": "Как часто обладатель водительского удостоверения 1-го класса в возрасте от 65 до 75 лет (за исключением лиц, не видящих одним глазом) обязан проходить регулярную проверку профессиональной пригодности?",
+      "id": "Setiap berapa tahun pemegang SIM Tipe 1 yang berusia 65 tahun ke atas hingga di bawah 75 tahun (kecuali penyandang tunanetra satu mata) wajib menjalani pemeriksaan kelayakan berkala?"
     },
     "options": {
       "ko": [
@@ -1704,6 +2138,18 @@
         "每5年",
         "每10年",
         "每15年"
+      ],
+      "ru": [
+        "Каждые 3 года",
+        "Каждые 5 лет",
+        "Каждые 10 лет",
+        "Каждые 15 лет"
+      ],
+      "id": [
+        "Setiap 3 tahun",
+        "Setiap 5 tahun",
+        "Setiap 10 tahun",
+        "Setiap 15 tahun"
       ]
     },
     "answer": 2,
@@ -1713,7 +2159,9 @@
       "ne": "सडक सवारी ऐनको दफा ८७ अनुसार ६५ देखि ७५ वर्ष मुनिका चालकले प्रत्येक ५ वर्षमा नियमित योग्यता परीक्षण गराउनुपर्छ (७५ वर्ष माथिका र एक आँखा नदेख्ने वर्ग १ साधारण चालकले भने ३ वर्षमा)।",
       "vi": "Theo Điều 87 Luật Giao thông Đường bộ, người lái xe từ đủ 65 đến dưới 75 tuổi phải kiểm tra sức khỏe định kỳ 5 năm một lần (người từ 75 tuổi trở lên hoặc người hỏng một mắt có bằng Hạng 1 Thông thường là 3 năm một lần).",
       "en": "Under Article 87 of the Road Traffic Act, drivers aged 65 to under 75 must undergo a regular aptitude test every 5 years (whereas those aged 75+ or monocular Type 1 Regular holders must take it every 3 years).",
-      "zh": "根据《道路交通法》第87条规定，65岁以上未满75岁的第1类驾驶证持有人须每5年接受一次定期适性检查（75岁以上及单眼失明的第1类普通驾照持有人为每3年一次）。"
+      "zh": "根据《道路交通法》第87条规定，65岁以上未满75岁的第1类驾驶证持有人须每5年接受一次定期适性检查（75岁以上及单眼失明的第1类普通驾照持有人为每3年一次）。",
+      "ru": "Согласно статье 87 Закона о дорожном движении, водители в возрасте от 65 до 75 лет с удостоверением 1-го класса обязаны проходить регулярную проверку пригодности каждые 5 лет (тогда как лица от 75 лет и водители без зрения на один глаз — каждые 3 года).",
+      "id": "Berdasarkan Pasal 87 Undang-Undang Lalu Lintas Jalan, pemegang SIM Tipe 1 berusia 65 hingga di bawah 75 tahun wajib menjalani pemeriksaan kelayakan berkala setiap 5 tahun, sedangkan pengemudi berusia 75 tahun ke atas atau tunanetra satu mata wajib menjalaninya setiap 3 tahun."
     }
   },
   {
@@ -1727,7 +2175,9 @@
       "ne": "सवारी चालक अनुमतिपत्र सहर वा प्रान्तीय प्रहरी प्रमुखलाई फिर्ता बुझाउनुपर्ने २ वटा कारण कुन-कुन हुन्?",
       "vi": "Hai trường hợp nào sau đây bắt buộc phải nộp lại bằng lái xe cho Giám đốc Cơ quan Cảnh sát Tỉnh/Thành phố?",
       "en": "Which TWO of the following are grounds requiring a driver to surrender their driver's license to the Commissioner of a City/Provincial Police Agency?",
-      "zh": "必须向市·道警察厅长交回驾驶证的2种情形是？"
+      "zh": "必须向市·道警察厅长交回驾驶证的2种情形是？",
+      "ru": "В каких двух случаях водитель обязан сдать водительское удостоверение начальнику полицейского управления города или провинции?",
+      "id": "Manakah 2 alasan yang mengharuskan pengemudi menyerahkan kembali SIM kepada Kepala Kepolisian Kota atau Provinsi?"
     },
     "options": {
       "ko": [
@@ -1765,6 +2215,18 @@
         "受到暂扣（停止效力）驾驶证处分时",
         "收到驾驶证临时适性检查通知时",
         "驾驶证定期适性检查期限已过6个月时"
+      ],
+      "ru": [
+        "При получении предписания об аннулировании водительского удостоверения",
+        "При получении предписания о приостановлении действия водительского удостоверения",
+        "При получении уведомления о внеочередной проверке пригодности",
+        "По истечении 6 месяцев со срока регулярной проверки пригодности"
+      ],
+      "id": [
+        "Saat dijatuhi sanksi pencabutan SIM",
+        "Saat dijatuhi sanksi penangguhan masa berlaku SIM",
+        "Saat menerima pemberitahuan pemeriksaan kelayakan sewaktu-waktu",
+        "Saat batas waktu pemeriksaan kelayakan berkala telah lewat 6 bulan"
       ]
     },
     "answer": [
@@ -1777,7 +2239,9 @@
       "ne": "लाइसेन्स खारेज वा निलम्बनमा परेमा (तथा हराएको लाइसेन्स पुनः बनाएपछि पुरानो भेटिएमा वा सिकाइ लाइसेन्स वाहकले साधारण लाइसेन्स पाएमा) ७ दिनभित्र प्रान्तीय प्रहरी प्रमुखलाई बुझाउनुपर्छ।",
       "vi": "Khi bị hủy hoặc bị đình chỉ hiệu lực bằng lái xe (cũng như khi tìm lại được bằng cũ sau khi đã cấp lại, hoặc đổi từ bằng tập lái sang bằng chính thức), người lái phải nộp lại bằng cho Cơ quan Cảnh sát Tỉnh/Thành phố trong vòng 7 ngày.",
       "en": "A driver must surrender their license within 7 days to the City/Provincial Police Commissioner when their license is revoked or suspended (as well as when a lost license is found after reissuance, or when a learner's permit holder obtains a regular license).",
-      "zh": "驾驶证被吊销或暂扣时（以及补办后找回原证、持练习驾照考取正式普通驾照时），必须在7日内向住所地管辖的市·道警察厅长交回驾驶证。"
+      "zh": "驾驶证被吊销或暂扣时（以及补办后找回原证、持练习驾照考取正式普通驾照时），必须在7日内向住所地管辖的市·道警察厅长交回驾驶证。",
+      "ru": "Водитель обязан сдать водительское удостоверение начальнику полицейского управления города или провинции в течение 7 дней при аннулировании удостоверения или приостановлении его действия (а также при нахождении утерянного удостоверения после перевыпуска или получении постоянных прав взамен учебных).",
+      "id": "Pengemudi wajib menyerahkan SIM kepada Kepala Kepolisian Kota atau Provinsi dalam waktu 7 hari apabila terkena sanksi pencabutan SIM atau penangguhan masa berlaku SIM (serta saat menemukan kembali SIM yang hilang setelah diterbitkan ulang atau saat pemegang SIM latihan memperoleh SIM reguler)."
     }
   },
   {
@@ -1791,7 +2255,9 @@
       "ne": "सडक सवारी ऐन अनुसार सवारी चालक अनुमतिपत्र नवीकरण गर्ने अवधिलाई सही रूपमा व्याख्या गरिएको कुन हो? (६५ वर्ष मुनिका चालकका लागि मात्र)",
       "vi": "Theo Luật Giao thông Đường bộ, câu nào giải thích ĐÚNG về thời hạn gia hạn bằng lái xe? (Chỉ áp dụng cho tài xế dưới 65 tuổi)",
       "en": "Which of the following correctly describes the driver's license renewal period under the Road Traffic Act? (Limited to drivers under age 65)",
-      "zh": "根据《道路交通法》，关于驾驶证换证期限的正确说明是？（仅限未满65岁的驾驶人）"
+      "zh": "根据《道路交通法》，关于驾驶证换证期限的正确说明是？（仅限未满65岁的驾驶人）",
+      "ru": "Какое утверждение правильно описывает срок замены (продления) водительского удостоверения согласно Закону о дорожном движении? (только для водителей младше 65 лет)",
+      "id": "Manakah pernyataan yang benar mengenai masa perpanjangan SIM berdasarkan Undang-Undang Lalu Lintas Jalan? (Khusus bagi pengemudi berusia di bawah 65 tahun)"
     },
     "options": {
       "ko": [
@@ -1829,6 +2295,18 @@
         "自通过驾驶证考试之日起算满10年所在年份的生日前后各4个月以内",
         "自通过驾驶证考试之日起算满10年所在年份的生日前后各6个月以内",
         "自通过驾驶证考试之日起算满10年所在年份的生日前后各8个月以内"
+      ],
+      "ru": [
+        "В течение 2 месяцев до и 2 месяцев после дня рождения в году, когда исполняется 10 лет со дня сдачи экзамена на водительское удостоверение",
+        "В течение 4 месяцев до и 4 месяцев после дня рождения в году, когда исполняется 10 лет со дня сдачи экзамена на водительское удостоверение",
+        "В течение 6 месяцев до и 6 месяцев после дня рождения в году, когда исполняется 10 лет со дня сдачи экзамена на водительское удостоверение",
+        "В течение 8 месяцев до и 8 месяцев после дня рождения в году, когда исполняется 10 лет со дня сдачи экзамена на водительское удостоверение"
+      ],
+      "id": [
+        "Dalam waktu masing-masing 2 bulan sebelum dan sesudah tanggal ulang tahun pada tahun genap 10 tahun sejak tanggal lulus ujian SIM",
+        "Dalam waktu masing-masing 4 bulan sebelum dan sesudah tanggal ulang tahun pada tahun genap 10 tahun sejak tanggal lulus ujian SIM",
+        "Dalam waktu masing-masing 6 bulan sebelum dan sesudah tanggal ulang tahun pada tahun genap 10 tahun sejak tanggal lulus ujian SIM",
+        "Dalam waktu masing-masing 8 bulan sebelum dan sesudah tanggal ulang tahun pada tahun genap 10 tahun sejak tanggal lulus ujian SIM"
       ]
     },
     "answer": 3,
@@ -1838,7 +2316,9 @@
       "ne": "सडक सवारी ऐनको दफा ८७ (सन् २०२६ देखि लागू) अनुसार ६५ वर्ष मुनिका चालकको लाइसेन्स नवीकरण अवधि परीक्षा पास गरेको १० वर्ष पुग्ने वर्षको जन्मदिनको अगाडि र पछाडि ६-६ महिना भित्र हो।",
       "vi": "Theo Điều 87 Luật Giao thông Đường bộ (áp dụng từ 01/01/2026), thời hạn gia hạn bằng lái đối với người dưới 65 tuổi là trong vòng 6 tháng trước và 6 tháng sau ngày sinh nhật của năm tròn 10 năm kể từ ngày đỗ sát hạch.",
       "en": "Under Article 87 of the Road Traffic Act (effective Jan 1, 2026), the renewal window for drivers under age 65 is within 6 months before and 6 months after their birthday in the 10th year from passing the exam.",
-      "zh": "根据2026年1月1日起施行的《道路交通法》第87条规定，未满65岁驾驶人的换证期限为考试合格满10年所在年份的生日前后各6个月以内。"
+      "zh": "根据2026年1月1日起施行的《道路交通法》第87条规定，未满65岁驾驶人的换证期限为考试合格满10年所在年份的生日前后各6个月以内。",
+      "ru": "Согласно статье 87 Закона о дорожном движении, для водителей младше 65 лет период продления водительского удостоверения составляет 6 месяцев до и 6 месяцев после дня рождения в году, когда истекает 10 лет со дня сдачи экзамена.",
+      "id": "Berdasarkan Pasal 87 Undang-Undang Lalu Lintas Jalan, masa perpanjangan SIM bagi pengemudi di bawah usia 65 tahun adalah dalam kurun 6 bulan sebelum dan 6 bulan sesudah hari ulang tahun pada tahun ke-10 sejak lulus ujian SIM."
     }
   },
   {
@@ -1852,7 +2332,9 @@
       "ne": "सडक सवारी नियम अनुसार तलका मध्ये कसले अंग्रेजी भाषाको सवारी चालक अनुमतिपत्र (영문운전면허증) प्राप्त गर्न सक्दैन?",
       "vi": "Theo pháp lệnh giao thông đường bộ, trường hợp nào sau đây KHÔNG được cấp bằng lái xe song ngữ tiếng Anh (영문운전면허증)?",
       "en": "Under the Road Traffic Act, which of the following applicants CANNOT be issued an English-language driver's license (영문운전면허증)?",
-      "zh": "根据《道路交通法令》，下列哪类人员不能申领英文版驾驶证（背面印有英文信息的韩国驾照）？"
+      "zh": "根据《道路交通法令》，下列哪类人员不能申领英文版驾驶证（背面印有英文信息的韩国驾照）？",
+      "ru": "Кто из перечисленных лиц НЕ может получить водительское удостоверение с дублированием данных на английском языке согласно Закону о дорожном движении?",
+      "id": "Berdasarkan peraturan Undang-Undang Lalu Lintas Jalan, siapakah di antara berikut ini yang TIDAK dapat memperoleh SIM berbahasa Inggris?"
     },
     "options": {
       "ko": [
@@ -1890,6 +2372,18 @@
         "通过驾驶证适性检查后申请换发驾驶证的情况",
         "申请将外国驾驶证换领为韩国国内驾驶证的情况",
         "申请核发练习驾驶证（연습운전면허증）的情况"
+      ],
+      "ru": [
+        "Лицо, подающее заявление на получение удостоверения после успешной сдачи экзамена на права",
+        "Лицо, подающее заявление на получение удостоверения после прохождения проверки пригодности",
+        "Лицо, подающее заявление об обмене иностранного водительского удостоверения на национальное",
+        "Лицо, подающее заявление на получение учебного водительского удостоверения"
+      ],
+      "id": [
+        "Saat mengajukan permohonan SIM setelah lulus ujian SIM",
+        "Saat mengajukan permohonan SIM setelah lulus pemeriksaan kelayakan berkala",
+        "Saat mengajukan permohonan penukaran SIM asing menjadi SIM domestik Korea",
+        "Saat mengajukan permohonan untuk SIM latihan"
       ]
     },
     "answer": 4,
@@ -1899,7 +2393,9 @@
       "ne": "सडक सवारी नियमावलीको नियम ७८ अनुसार सिकाइ सवारी चालक अनुमतिपत्र (연습운전면허) वाहकलाई अंग्रेजी भाषाको चालक अनुमतिपत्र जारी गरिँदैन।",
       "vi": "Theo Điều 78 Quy tắc thi hành Luật Giao thông Đường bộ, người giữ bằng lái xe tập lái (연습운전면허) không thuộc đối tượng được cấp bằng lái xe tiếng Anh.",
       "en": "Under Article 78 of the Enforcement Rules of the Road Traffic Act, learner's permit holders are not eligible to receive an English-language driver's license.",
-      "zh": "根据《道路交通法施行规则》第78条规定，练习驾驶证持有人不属于英文版驾驶证的签发对象。"
+      "zh": "根据《道路交通法施行规则》第78条规定，练习驾驶证持有人不属于英文版驾驶证的签发对象。",
+      "ru": "Согласно статье 78 Правил исполнения Закона о дорожном движении, обладателям учебного водительского удостоверения права на английском языке не выдаются.",
+      "id": "Berdasarkan Pasal 78 Peraturan Pelaksanaan Undang-Undang Lalu Lintas Jalan, pemegang SIM latihan tidak memenuhi syarat untuk diterbitkan SIM berbahasa Inggris."
     }
   },
   {
@@ -1913,7 +2409,9 @@
       "ne": "सडक सवारी नियम अनुसार वर्ग २ साधारण लाइसेन्स (제2종 보통면허) ले चलाउन नमिल्ने सवारी साधन कुन हो?",
       "vi": "Theo pháp lệnh giao thông đường bộ, bằng lái xe Hạng 2 Thông thường (제2종 보통면허) KHÔNG được phép lái loại xe nào sau đây?",
       "en": "Under the Road Traffic Act, which of the following vehicles CANNOT be driven with a Type 2 Regular license (제2종 보통면허)?",
-      "zh": "根据《道路交通法令》，持有第2类普通驾驶证（제2종 보통면허）不能驾驶的车辆是？"
+      "zh": "根据《道路交通法令》，持有第2类普通驾驶证（제2종 보통면허）不能驾驶的车辆是？",
+      "ru": "Каким из перечисленных транспортных средств НЕЛЬЗЯ управлять с обычным водительским удостоверением 2-го класса согласно Закону о дорожном движении?",
+      "id": "Berdasarkan peraturan Undang-Undang Lalu Lintas Jalan, kendaraan manakah yang TIDAK dapat dikemudikan dengan SIM Tipe 2 Biasa?"
     },
     "options": {
       "ko": [
@@ -1951,6 +2449,18 @@
         "核载10人以下的小型客车/面包车",
         "乘用轿车",
         "载重量2.5吨的载货汽车"
+      ],
+      "ru": [
+        "Эвакуатор (аварийно-спасательный буксировочный автомобиль)",
+        "Микроавтобус вместимостью менее 10 пассажиров",
+        "Легковой автомобиль",
+        "Грузовой автомобиль грузоподъемностью 2,5 тонны"
+      ],
+      "id": [
+        "Mobil derek penyelamat",
+        "Mobil penumpang van dengan kapasitas kurang dari 10 orang",
+        "Mobil penumpang sedan",
+        "Truk barang dengan daya angkut 2,5 ton"
       ]
     },
     "answer": 1,
@@ -1960,7 +2470,9 @@
       "ne": "वर्ग २ साधारण लाइसेन्सले कार, १० सिटसम्मको भ्यान र ४ टनसम्मको ट्रक चलाउन मिल्छ, तर रेकर/उद्धार गाडी (구난자동차) चलाउन वर्ग १ विशेष (구난차) लाइसेन्स नै चाहिन्छ।",
       "vi": "Bằng Hạng 2 Thông thường được lái xe con, xe khách từ 10 chỗ trở xuống và xe tải đến 4 tấn; riêng xe cứu hộ (구난자동차) bắt buộc phải có bằng Hạng 1 Đặc biệt (xe cứu hộ).",
       "en": "A Type 2 Regular license covers passenger cars, vans seating up to 10 people, and freight trucks up to 4 tons, whereas driving a recovery vehicle (tow truck) requires a Type 1 Special (Recovery Vehicle) license.",
-      "zh": "第2类普通驾照可驾驶轿车、10座及以下客车和4吨及以下货车；而驾驶清障救援车（구난자동차）必须持有第1类特殊（清障车）驾照。"
+      "zh": "第2类普通驾照可驾驶轿车、10座及以下客车和4吨及以下货车；而驾驶清障救援车（구난자동차）必须持有第1类特殊（清障车）驾照。",
+      "ru": "Обычное удостоверение 2-го класса позволяет управлять легковыми автомобилями, микроавтобусами вместимостью до 10 человек и грузовиками грузоподъемностью до 4 тонн, тогда как для управления эвакуатором требуется специальное водительское удостоверение 1-го класса.",
+      "id": "SIM Tipe 2 Biasa mencakup mobil penumpang, van berkapasitas hingga 10 orang, serta truk barang dengan daya angkut hingga 4 ton, sedangkan untuk mengemudikan mobil derek diperlukan SIM Tipe 1 Khusus."
     }
   },
   {
@@ -1974,7 +2486,9 @@
       "ne": "सवारी चालक अनुमतिपत्र परीक्षामा अनियमितता (चिटिङ) गरी परीक्षा रद्द गरिएको व्यक्तिले कारबाही भएको मितिदेखि ( ) सम्म सम्बन्धित परीक्षा दिन पाउँदैन। खाली ठाउँमा मिल्ने सही अवधि कुन हो?",
       "vi": "Người có kết quả thi bị hủy do gian lận trong kỳ thi sát hạch lái xe sẽ không được dự thi kỳ thi đó trong vòng ( ) kể từ ngày có quyết định xử lý. Đáp án đúng điền vào ngoặc là?",
       "en": "A person whose driver's license exam is invalidated due to cheating is barred from taking that exam for ( ) from the date of the disposition. Which period correctly fills the blank?",
-      "zh": "因在驾驶证考试中作弊而被判考试无效的人员，自处分之日起（ ）内不得参加该项考试。括号中正确的标准是？"
+      "zh": "因在驾驶证考试中作弊而被判考试无效的人员，自处分之日起（ ）内不得参加该项考试。括号中正确的标准是？",
+      "ru": "Лицо, результаты экзамена на водительское удостоверение которого были аннулированы из-за нечестного поведения (списывания или обмана), лишается права сдавать соответствующий экзамен в течение ( ) со дня вынесения такого решения. Какой срок является правильным?",
+      "id": "Seseorang yang ujian SIM-nya dibatalkan karena tindakan kecurangan dilarang mengikuti ujian tersebut selama ( ) terhitung sejak tanggal penetapan sanksi. Jangka waktu manakah yang tepat untuk mengisi tanda kurung tersebut?"
     },
     "options": {
       "ko": [
@@ -2012,6 +2526,18 @@
         "3年",
         "4年",
         "5年"
+      ],
+      "ru": [
+        "2 года",
+        "3 года",
+        "4 года",
+        "5 лет"
+      ],
+      "id": [
+        "2 tahun",
+        "3 tahun",
+        "4 tahun",
+        "5 tahun"
       ]
     },
     "answer": 1,
@@ -2021,7 +2547,9 @@
       "ne": "सडक सवारी ऐनको दफा ८४-२ अनुसार परीक्षामा चिट चोरेर वा अनियमितता गरेर परीक्षा रद्द भएको व्यक्तिले कारबाही भएको मितिले २ वर्षसम्म सो परीक्षा दिन पाउँदैन।",
       "vi": "Theo Điều 84-2 Luật Giao thông Đường bộ, người gian lận bị hủy kết quả thi sát hạch sẽ bị cấm dự thi lại kỳ thi đó trong thời hạn 2 năm kể từ ngày bị xử lý.",
       "en": "Under Article 84-2 of the Road Traffic Act, anyone whose exam is invalidated for cheating is disqualified from retaking that exam for 2 years from the date of the penalty.",
-      "zh": "根据《道路交通法》第84条之2规定，因作弊被判考试无效的人员，自处分决定之日起2年内不得参加该项考试。"
+      "zh": "根据《道路交通法》第84条之2规定，因作弊被判考试无效的人员，自处分决定之日起2年内不得参加该项考试。",
+      "ru": "Согласно статье 84-2 Закона о дорожном движении, лицо, чей экзамен был признан недействительным из-за мошенничества или списывания, не допускается к повторной сдаче этого экзамена в течение 2 лет со дня вынесения решения.",
+      "id": "Berdasarkan Pasal 84-2 Undang-Undang Lalu Lintas Jalan, peserta yang ujiannya dinyatakan tidak sah akibat kecurangan dilarang mengikuti kembali ujian tersebut selama 2 tahun sejak tanggal sanksi ditetapkan."
     }
   },
   {
@@ -2035,7 +2563,9 @@
       "ne": "सडक सवारी नियम अनुसार तलका मध्ये कुन अवस्था लाइसेन्स नवीकरण वा नियमित योग्यता परीक्षण म्याद सार्ने (स्थगन गर्ने) कारण होइन?",
       "vi": "Theo pháp lệnh giao thông đường bộ, trường hợp nào sau đây KHÔNG phải là lý do được hoãn gia hạn bằng lái xe hoặc hoãn kiểm tra sức khỏe định kỳ?",
       "en": "Under the Road Traffic Act, which of the following is NOT a valid ground for postponing driver's license renewal or a regular aptitude examination?",
-      "zh": "根据《道路交通法令》，下列哪项不属于可以申请延期换领驾驶证或延期定期适性检查的正当理由？"
+      "zh": "根据《道路交通法令》，下列哪项不属于可以申请延期换领驾驶证或延期定期适性检查的正当理由？",
+      "ru": "Что из перечисленного НЕ является законным основанием для отсрочки замены водительского удостоверения или регулярной проверки пригодности согласно Закону о дорожном движении?",
+      "id": "Berdasarkan peraturan Undang-Undang Lalu Lintas Jalan, manakah di antara berikut ini yang BUKAN merupakan alasan sah untuk menunda perpanjangan SIM atau pemeriksaan kelayakan berkala?"
     },
     "options": {
       "ko": [
@@ -2073,6 +2603,18 @@
         "因疾病无法行动的情况",
         "依《军人人事法》作为陆、海、空军副士官（士官）以上干部服役的情况",
         "遭受灾害或灾难的情况"
+      ],
+      "ru": [
+        "Пребывание за границей",
+        "Невозможность передвигаться из-за болезни",
+        "Прохождение действительной военной службы в звании унтер-офицера и выше в сухопутных войсках, военно-морских или военно-воздушных силах согласно Закону о военном персонале",
+        "Пострадавшее положение в результате стихийного бедствия или катастрофы"
+      ],
+      "id": [
+        "Sedang berada di luar negeri",
+        "Tidak dapat bergerak karena sakit",
+        "Sedang berdinas aktif sebagai bintara atau perwira ke atas di Angkatan Darat, Laut, atau Udara berdasarkan Undang-Undang Kepegawaian Militer",
+        "Sedang tertimpa bencana alam atau musibah"
       ]
     },
     "answer": 3,
@@ -2082,7 +2624,9 @@
       "ne": "सैनिक सेवाका कारण नवीकरण म्याद सार्ने सुविधा साधारण सिपाही (병) वा वैकल्पिक सेवामा रहेकालाई मात्र दिइन्छ; सार्जेन्ट वा अधिकृत स्तरका क्याडर (부사관 이상) लाई यो छुट हुँदैन।",
       "vi": "Lý do hoãn gia hạn bằng lái vì nghĩa vụ quân sự chỉ áp dụng cho binh sĩ nghĩa vụ và nhân viên phục vụ thay thế, không áp dụng cho hạ sĩ quan hay sĩ quan chuyên nghiệp.",
       "en": "Postponement due to military service applies strictly to enlisted conscripts (and alternative service personnel), not to professional non-commissioned officers or commissioned officers.",
-      "zh": "因服兵役申请延期仅限于普通义务兵及替代役人员，副士官（士官）及以上的职业军官干部不属于延期对象。"
+      "zh": "因服兵役申请延期仅限于普通义务兵及替代役人员，副士官（士官）及以上的职业军官干部不属于延期对象。",
+      "ru": "Отсрочка в связи с военной службой предоставляется исключительно рядовым военнослужащим по призыву и лицам на альтернативной службе, но не распространяется на кадровых унтер-офицеров и офицеров.",
+      "id": "Penundaan karena dinas militer hanya berlaku bagi prajurit wajib militer tamtama atau peserta layanan alternatif, bukan bagi bintara maupun perwira karier."
     }
   },
   {
@@ -2096,7 +2640,9 @@
       "ne": "सडक सवारी नियम अनुसार लाइसेन्स नवीकरण गर्ने म्याद थपेको (स्थगन पाएको) व्यक्तिले सो कारण समाप्त भएको मितिले ( ) भित्र लाइसेन्स नवीकरण गरी लिनुपर्छ। खाली ठाउँमा मिल्ने सही अवधि कुन हो?",
       "vi": "Theo pháp lệnh giao thông đường bộ, người được hoãn thời hạn gia hạn bằng lái xe phải gia hạn và nhận bằng lái mới trong vòng ( ) kể từ ngày lý do xin hoãn chấm dứt. Đáp án đúng điền vào ngoặc là?",
       "en": "Under the Road Traffic Act, a person granted a postponement of their driver's license renewal period must renew their license within ( ) from the date the reason for postponement ceases to exist. Which period is correct?",
-      "zh": "根据《道路交通法令》，获准延期换领驾驶证的人员，须自延期事由消失之日起（ ）内换领驾驶证。括号中正确的标准是？"
+      "zh": "根据《道路交通法令》，获准延期换领驾驶证的人员，须自延期事由消失之日起（ ）内换领驾驶证。括号中正确的标准是？",
+      "ru": "Согласно Закону о дорожном движении, лицо, получившее отсрочку срока продления водительского удостоверения, обязано обновить и получить удостоверение в течение ( ) со дня прекращения действия причины отсрочки. Какой срок является верным?",
+      "id": "Berdasarkan peraturan Undang-Undang Lalu Lintas Jalan, seseorang yang memperoleh penundaan masa perpanjangan SIM wajib memperpanjang SIM-nya dalam waktu ( ) sejak tanggal berakhirnya alasan penundaan tersebut. Manakah jangka waktu yang benar?"
     },
     "options": {
       "ko": [
@@ -2134,6 +2680,18 @@
         "3个月",
         "6个月",
         "12个月"
+      ],
+      "ru": [
+        "1 месяца",
+        "3 месяцев",
+        "6 месяцев",
+        "12 месяцев"
+      ],
+      "id": [
+        "1 bulan",
+        "3 bulan",
+        "6 bulan",
+        "12 bulan"
       ]
     },
     "answer": 2,
@@ -2143,7 +2701,9 @@
       "ne": "सडक सवारी ऐन नियमावलीको दफा ५५(३) अनुसार म्याद सार्नुको कारण समाप्त भएको (जस्तै विदेशबाट फर्किएको) मितिले ३ महिनाभित्र लाइसेन्स नवीकरण गरिसक्नुपर्छ।",
       "vi": "Theo khoản 3 Điều 55 Nghị định thi hành Luật Giao thông Đường bộ, sau khi lý do hoãn kết thúc (ví dụ sau khi nhập cảnh về nước), người lái phải hoàn tất gia hạn bằng lái trong vòng 3 tháng.",
       "en": "Under Article 55(3) of the Enforcement Decree of the Road Traffic Act, once the ground for postponement ends (e.g., returning from abroad), the license must be renewed within 3 months.",
-      "zh": "根据《道路交通法施行令》第55条第3款规定，获准延期换证的人员必须在延期事由消除之日起3个月内完成驾驶证换领。"
+      "zh": "根据《道路交通法施行令》第55条第3款规定，获准延期换证的人员必须在延期事由消除之日起3个月内完成驾驶证换领。",
+      "ru": "Согласно пункту 3 статьи 55 Указа об исполнении Закона о дорожном движении, после прекращения причины отсрочки (например, возвращения из-за границы) водительское удостоверение необходимо продлить в течение 3 месяцев.",
+      "id": "Berdasarkan Pasal 55 ayat (3) Peraturan Pelaksanaan Undang-Undang Lalu Lintas Jalan, setelah alasan penundaan berakhir, pengemudi wajib memperpanjang SIM dalam waktu 3 bulan."
     }
   },
   {
@@ -2157,7 +2717,9 @@
       "ne": "निम्न हाइड्रोजन सवारी चालकहरूमध्ये उच्च चाप ग्यास व्यवस्थापन नियम अनुसार विशेष तालिम लिनुपर्ने लक्षित वर्ग कुन हो?",
       "vi": "Trong số những người lái xe chạy bằng khí hydro dưới đây, đối tượng nào bắt buộc phải tham gia đào tạo đặc biệt theo pháp lệnh quản lý khí áp suất cao?",
       "en": "Among the following hydrogen vehicle drivers, who is required to complete special safety training under the High-Pressure Gas Safety Control Act?",
-      "zh": "下列氢燃料汽车驾驶人中，属于《高压气体安全管理法令》规定的特别安全教育对象的是？"
+      "zh": "下列氢燃料汽车驾驶人中，属于《高压气体安全管理法令》规定的特别安全教育对象的是？",
+      "ru": "Кто из перечисленных водителей водородных автомобилей обязан пройти специальное обучение согласно законодательству о контроле безопасности газов высокого давления?",
+      "id": "Di antara pengemudi kendaraan berbahan bakar hidrogen berikut ini, siapakah yang wajib mengikuti pendidikan keselamatan khusus berdasarkan peraturan Undang-Undang Pengendalian Keselamatan Gas Bertekanan Tinggi?"
     },
     "options": {
       "ko": [
@@ -2195,6 +2757,18 @@
         "大型氢燃料客车（核载36座以上）驾驶人",
         "氢燃料载货汽车驾驶人",
         "氢燃料特种作业车驾驶人"
+      ],
+      "ru": [
+        "Водители легковых водородных автомобилей",
+        "Водители больших водородных пассажирских автобусов (вместимостью 36 и более мест)",
+        "Водители грузовых водородных автомобилей",
+        "Водители специальных водородных автомобилей"
+      ],
+      "id": [
+        "Pengemudi mobil penumpang hidrogen",
+        "Pengemudi bus penumpang besar hidrogen (kapasitas 36 kursi atau lebih)",
+        "Pengemudi truk barang hidrogen",
+        "Pengemudi kendaraan khusus hidrogen"
       ]
     },
     "answer": 2,
@@ -2204,7 +2778,9 @@
       "ne": "उच्च चाप ग्यास सुरक्षा व्यवस्थापन नियम अनुसार साधारण हाइड्रोजन कार चालक नभई धेरै यात्रु बोक्ने ३६ सिट वा सोभन्दा माथिको हाइड्रोजन बसका चालकले अनिवार्य विशेष तालिम लिनुपर्छ।",
       "vi": "Theo Quy tắc thi hành Luật Quản lý An toàn Khí áp suất cao, tài xế điều khiển xe khách cỡ lớn chạy bằng hydro từ 36 chỗ ngồi trở lên thuộc diện bắt buộc phải hoàn thành khóa đào tạo an toàn đặc biệt.",
       "en": "Under the Enforcement Rules of the High-Pressure Gas Safety Control Act, mandatory special safety training applies specifically to drivers of large hydrogen buses with a seating capacity of 36 or more.",
-      "zh": "根据《高压气体安全管理法施行规则》第51条及附表31规定，核载36座以上的大型氢燃料客车驾驶人必须接受特别安全教育。"
+      "zh": "根据《高压气体安全管理法施行规则》第51条及附表31规定，核载36座以上的大型氢燃料客车驾驶人必须接受特别安全教育。",
+      "ru": "Согласно Правилам исполнения Закона о контроле безопасности газов высокого давления, обязательное специальное обучение по безопасности распространяется на водителей больших водородных автобусов вместимостью 36 и более пассажиров.",
+      "id": "Berdasarkan Peraturan Pelaksanaan Undang-Undang Pengendalian Keselamatan Gas Bertekanan Tinggi, kewajiban pendidikan keselamatan khusus berlaku bagi pengemudi bus besar berbahan bakar hidrogen dengan kapasitas tempat duduk 36 orang atau lebih."
     }
   },
   {
@@ -2218,7 +2794,9 @@
       "ne": "सडक सवारी ऐन अनुसार मादक पदार्थ सेवन रोक्ने यन्त्र (Ignition Interlock) जडान गर्ने सर्तमा लाइसेन्स प्राप्त गरेका चालकले पालना गर्नुपर्ने नियमबारे सही भनाइ कुन हो?",
       "vi": "Theo Luật Giao thông Đường bộ, câu nào sau đây giải thích ĐÚNG về quy định tuân thủ đối với người được cấp bằng lái xe có điều kiện phải gắn thiết bị ngăn chặn lái xe khi say rượu?",
       "en": "Under the Road Traffic Act, which statement is CORRECT regarding compliance rules for holders of a conditional driver's license requiring an ignition interlock device (anti-drunk-driving device)?",
-      "zh": "根据《道路交通法》，关于取得附带安装防酒驾装置（酒精锁）条件驾驶证的驾驶人应遵守事项，正确的说明是？"
+      "zh": "根据《道路交通法》，关于取得附带安装防酒驾装置（酒精锁）条件驾驶证的驾驶人应遵守事项，正确的说明是？",
+      "ru": "Какое из утверждений верно описывает обязанности водителя, получившего условное водительское удостоверение с требованием установки алкозамка (устройства предотвращения вождения в нетрезвом виде), согласно Закону о дорожном движении?",
+      "id": "Manakah pernyataan yang BENAR mengenai kewajiban pengemudi pemegang SIM bersyarat dengan pemasangan alat pencegah mengemudi dalam keadaan mabuk berdasarkan Undang-Undang Lalu Lintas Jalan?"
     },
     "options": {
       "ko": [
@@ -2256,6 +2834,18 @@
         "驾驶未安装防酒驾装置或装置不符合安装标准的车辆时，下达1个月内整改命令。",
         "明知因维修拆卸、改动等导致防酒驾装置失效仍驾驶该车辆时，暂扣驾驶证。",
         "因酒驾导致的禁考期满后，自取得仅限驾驶安装防酒驾装置车辆的条件性驾照之时起，只能驾驶装有该装置的车辆。"
+      ],
+      "ru": [
+        "Управление автомобилем с установленным алкозамком без его регистрации в полицейском управлении города или провинции влечет приостановление действия прав.",
+        "При управлении автомобилем без алкозамка или с устройством, не соответствующим нормам установки, выдается предписание об устранении нарушения в течение 1 месяца.",
+        "Управление автомобилем с заведомо неисправным алкозамком вследствие разборки, вмешательства или иных действий при ремонте влечет приостановление действия прав.",
+        "С момента получения условных прав после истечения срока лишения за нетрезвое вождение разрешается управлять исключительно транспортными средствами, оборудованными алкозамком."
+      ],
+      "id": [
+        "Mengemudikan kendaraan berfitur alat pencegah mengemudi mabuk tanpa mendaftarkannya ke Kepolisian Kota atau Provinsi akan dikenai sanksi penangguhan SIM.",
+        "Mengemudikan kendaraan tanpa alat pencegah mengemudi mabuk atau dengan alat yang tidak sesuai standar akan dikenai perintah perbaikan dalam waktu 1 bulan.",
+        "Mengemudikan kendaraan padahal mengetahui fungsi alat tersebut menurun akibat pembongkaran atau manipulasi saat perawatan akan dikenai sanksi penangguhan SIM.",
+        "Sejak memperoleh SIM bersyarat setelah masa pencabutan akibat mengemudi mabuk berakhir, pengemudi hanya boleh mengoperasikan kendaraan yang dipasangi alat tersebut."
       ]
     },
     "answer": 4,
@@ -2265,7 +2855,9 @@
       "ne": "सर्तसहितको लाइसेन्स वाहकले मापसे रोक्ने यन्त्र जडित गाडी मात्र चलाउन पाउँछ। दर्ता नगरी चलाएमा, यन्त्र नभएको गाडी चलाएमा वा बिग्रेको यन्त्र भएको गाडी चलाएमा लाइसेन्स निलम्बन नभई सिधै खारेज (취소) हुन्छ।",
       "vi": "Người có bằng lái điều kiện chỉ được phép lái xe đã gắn thiết bị ngăn lái xe say rượu; nếu lái xe chưa đăng ký, xe không gắn thiết bị hoặc thiết bị mất tác dụng thì bằng lái sẽ bị HỦY (tước bằng) ngay lập tức chứ không phải chỉ bị đình chỉ.",
       "en": "Conditional license holders may drive only vehicles fitted with an ignition interlock device; driving an unregistered vehicle, a vehicle without a compliant device, or a vehicle with a tampered device results in mandatory license revocation, not mere suspension.",
-      "zh": "持有条件性驾照者只能驾驶装有防酒驾装置的车辆；若驾驶未登记车辆、未装合格装置车辆或明知装置失效仍驾驶的，均直接吊销驾驶证（而非暂扣或整改）。"
+      "zh": "持有条件性驾照者只能驾驶装有防酒驾装置的车辆；若驾驶未登记车辆、未装合格装置车辆或明知装置失效仍驾驶的，均直接吊销驾驶证（而非暂扣或整改）。",
+      "ru": "Обладатели условного удостоверения имеют право управлять только автомобилями с установленным алкозамком; управление незарегистрированным автомобилем, автомобилем без соответствующего устройства или с поврежденным устройством влечет обязательное аннулирование прав, а не просто приостановление.",
+      "id": "Pemegang SIM bersyarat hanya diizinkan mengemudikan kendaraan yang dilengkapi alat pencegah mengemudi mabuk; pelanggaran seperti mengemudikan kendaraan yang belum terdaftar, tanpa alat sesuai standar, atau alat yang dimanipulasi berakibat pencabutan SIM secara wajib, bukan sekadar penangguhan."
     }
   },
   {
@@ -2279,7 +2871,9 @@
       "ne": "चालकले नक्कली पेट्रोलियम पदार्थ (नक्कली इन्धन) हो भन्ने जान्दाजान्दै गाडीको इन्धनको रूपमा प्रयोग गरेमा कस्तो सजाय हुन्छ?",
       "vi": "Mức xử phạt đối với tài xế biết rõ là xăng dầu giả nhưng vẫn sử dụng làm nhiên liệu cho xe là bao nhiêu?",
       "en": "What is the penalty standard if a driver knowingly uses counterfeit petroleum products (fake fuel) as vehicle fuel?",
-      "zh": "驾驶人明知是假冒石油制品（假油）仍作为车辆燃料使用时，处罚标准是？"
+      "zh": "驾驶人明知是假冒石油制品（假油）仍作为车辆燃料使用时，处罚标准是？",
+      "ru": "Какое наказание предусмотрено для водителя, который заведомо использует поддельные нефтепродукты (фальсифицированное топливо) в качестве автомобильного топлива?",
+      "id": "Apa standar sanksi apabila pengemudi dengan sengaja menggunakan produk bahan bakar minyak palsu sebagai bahan bakar kendaraan?"
     },
     "options": {
       "ko": [
@@ -2317,6 +2911,18 @@
         "处以50万韩元～100万韩元罚款（过怠金）",
         "处以200万韩元～2000万韩元罚款（过怠金）",
         "不予处罚。"
+      ],
+      "ru": [
+        "Административный штраф от 50 тысяч до 100 тысяч вон",
+        "Административный штраф от 500 тысяч до 1 миллиона вон",
+        "Административный штраф от 2 миллионов до 20 миллионов вон",
+        "Наказание не предусмотрено."
+      ],
+      "id": [
+        "Denda administratif 50.000 won hingga 100.000 won",
+        "Denda administratif 500.000 won hingga 1 juta won",
+        "Denda administratif 2 juta won hingga 20 juta won",
+        "Tidak dikenai sanksi."
       ]
     },
     "answer": 3,
@@ -2326,7 +2932,9 @@
       "ne": "पेट्रोलियम सम्बन्धी ऐन अनुसार नक्कली इन्धन हो भन्ने जान्दाजान्दै गाडीमा प्रयोग गरेमा प्रयोग गरिएको परिमाण अनुसार २० लाख वनदेखि २ करोड वनसम्म जरिवाना लाग्न सक्छ।",
       "vi": "Theo Nghị định thi hành Luật Kinh doanh Dầu mỏ, hành vi biết rõ xăng dầu giả mà vẫn sử dụng cho phương tiện sẽ bị phạt tiền từ 2 triệu won đến 20 triệu won tùy theo lượng tiêu thụ.",
       "en": "Under the Petroleum and Alternative Fuel Business Act Enforcement Decree, knowingly using fake fuel in a vehicle is subject to an administrative fine ranging from 2 million won to 20 million won depending on usage volume.",
-      "zh": "根据《石油及石油替代燃料事业法施行令》规定，明知是假油仍作为汽车燃料使用的，视使用量可处以200万至2000万韩元罚款。"
+      "zh": "根据《石油及石油替代燃料事业法施行令》规定，明知是假油仍作为汽车燃料使用的，视使用量可处以200万至2000万韩元罚款。",
+      "ru": "Согласно Указу об исполнении Закона о бизнесе в сфере нефти и альтернативного топлива, за заведомое использование поддельного автомобильного топлива налагается административный штраф от 2 до 20 миллионов вон в зависимости от объема использования.",
+      "id": "Berdasarkan Peraturan Pelaksanaan Undang-Undang Usaha Minyak Bumi dan Bahan Bakar Alternatif, penggunaan bahan bakar minyak palsu secara sengaja pada kendaraan dikenai denda administratif sebesar 2 juta won hingga 20 juta won tergantung jumlah pemakaiannya."
     }
   },
   {
@@ -2340,7 +2948,9 @@
       "ne": "तलका मध्ये विद्युतीय सवारी साधन (EV) चार्जिङ सुविधाको बारेमा गलत भनाइ कुन हो?",
       "vi": "Câu nào sau đây là SAI khi nói về cơ sở sạc xe điện?",
       "en": "Which of the following statements about electric vehicle (EV) charging facilities is INCORRECT?",
-      "zh": "下列关于电动汽车充电设施的说法中，错误的是？"
+      "zh": "下列关于电动汽车充电设施的说法中，错误的是？",
+      "ru": "Какое из следующих утверждений о зарядных станциях для электромобилей является НЕВЕРНЫМ?",
+      "id": "Manakah pernyataan berikut mengenai fasilitas pengisian daya kendaraan listrik yang SALAH?"
     },
     "options": {
       "ko": [
@@ -2378,6 +2988,18 @@
         "电动车充电方式分为使用交流电（AC）的慢充方式和使用直流电（DC）的快充方式。",
         "公共充电桩仅限事先登记过的车辆使用。",
         "若拥有本人名下的土地，可以安装个人专用充电设施。"
+      ],
+      "ru": [
+        "Общественные зарядные устройства — это зарядные станции, установленные в зонах отдыха на трассах, у крупных супермаркетов, государственных учреждений и т. д.",
+        "Способы зарядки электромобилей делятся на медленную зарядку переменным током и быструю зарядку постоянным током.",
+        "Общественными зарядными устройствами могут пользоваться только предварительно зарегистрированные транспортные средства.",
+        "При наличии собственного земельного участка можно установить индивидуальное зарядное устройство."
+      ],
+      "id": [
+        "Pengisi daya umum adalah stasiun pengisian yang dipasang di tempat istirahat jalan tol, pasar swalayan besar, kantor pemerintahan, dan sebagainya.",
+        "Metode pengisian daya mobil listrik terdiri atas pengisian lambat menggunakan arus bolak-balik dan pengisian cepat menggunakan arus searah.",
+        "Pengisi daya umum hanya dapat digunakan oleh kendaraan yang telah didaftarkan sebelumnya.",
+        "Jika memiliki lahan pribadi sendiri, pemilik dapat memasang fasilitas pengisian daya pribadi."
       ]
     },
     "answer": 3,
@@ -2387,7 +3009,9 @@
       "ne": "सार्वजनिक चार्जरहरू पूर्व-दर्ता गरिएका गाडीमा मात्र सीमित हुँदैनन्; विद्युतीय गाडी भएका जुनसुकै चालकले प्रयोग गर्न सक्छन्।",
       "vi": "Trạm sạc công cộng dành cho mọi người lái xe điện đều có thể sử dụng chứ không giới hạn chỉ những xe đã đăng ký trước.",
       "en": "Public EV chargers are open to any electric vehicle driver and are not restricted solely to pre-registered vehicles.",
-      "zh": "公共充电桩面向所有驾驶电动汽车的车主开放使用，并非仅限事先登记的车辆。"
+      "zh": "公共充电桩面向所有驾驶电动汽车的车主开放使用，并非仅限事先登记的车辆。",
+      "ru": "Общественные зарядные станции доступны любому водителю электромобиля и не ограничиваются только предварительно зарегистрированными автомобилями.",
+      "id": "Fasilitas pengisi daya umum terbuka untuk digunakan oleh setiap pengemudi mobil listrik dan tidak dibatasi hanya untuk kendaraan yang telah didaftarkan sebelumnya."
     }
   },
   {
@@ -2401,7 +3025,9 @@
       "ne": "गाडीमा नक्कली इन्धन (नक्कली पेट्रोल/डिजेल) हाल्दा देखिन सक्ने समस्यामा नपर्ने कुन हो?",
       "vi": "Vấn đề nào sau đây KHÔNG phải là sự cố có thể xảy ra cho xe ô tô khi đổ phải xăng dầu giả?",
       "en": "Which of the following is NOT a problem that can occur in a vehicle when refueled with counterfeit petroleum (fake fuel)?",
-      "zh": "加注假冒石油（假油）时，汽车可能出现的问题不包括哪一项？"
+      "zh": "加注假冒石油（假油）时，汽车可能出现的问题不包括哪一项？",
+      "ru": "Что из перечисленного НЕ относится к неисправностям, которые могут возникнуть в автомобиле при заправке поддельным топливом?",
+      "id": "Manakah yang BUKAN merupakan masalah yang dapat terjadi pada kendaraan apabila diisi dengan bahan bakar minyak palsu?"
     },
     "options": {
       "ko": [
@@ -2439,6 +3065,18 @@
         "喷油嘴损坏导致动力输出及燃油经济性下降",
         "润滑性提高使发动机摩擦力减小从而导致动力下降",
         "输送燃油的高压油泵损坏导致熄火"
+      ],
+      "ru": [
+        "Повышение шума двигателя из-за коррозии и повреждения системы подачи топлива",
+        "Снижение мощности и топливной экономичности из-за поломки топливных форсунок",
+        "Падение мощности из-за уменьшения трения в двигателе вследствие повышения смазывающей способности",
+        "Самопроизвольная остановка двигателя из-за поломки топливного насоса высокого давления"
+      ],
+      "id": [
+        "Suara mesin menjadi lebih bising akibat korosi dan kerusakan pada sistem pasokan bahan bakar",
+        "Penurunan tenaga mesin dan efisiensi bahan bakar akibat kerusakan injektor bahan bakar",
+        "Penurunan tenaga mesin akibat berkurangnya gesekan mesin karena meningkatnya daya pelumasan",
+        "Mesin mati mendadak akibat kerusakan pompa bahan bakar bertekanan tinggi"
       ]
     },
     "answer": 3,
@@ -2448,7 +3086,9 @@
       "ne": "नक्कली इन्धन प्रयोग गर्दा चिप्लोपना (लुब्रिकेसन) बढ्ने नभई घट्छ, जसले गर्दा घर्षण बढेर हाइ-प्रेसर पम्प र इन्जेक्टर बिग्रिन पुग्छ।",
       "vi": "Xăng dầu giả không làm tăng độ bôi trơn mà ngược lại làm giảm khả năng bôi trơn, gây tăng ma sát và làm hỏng bơm cao áp cũng như kim phun nhiên liệu.",
       "en": "Fake fuel decreases lubricity rather than increasing it, which increases friction and damages the high-pressure fuel pump and fuel injectors.",
-      "zh": "使用假油不会提高润滑性，反而会导致润滑性下降、摩擦力增大，进而造成高压油泵和喷油嘴损坏。"
+      "zh": "使用假油不会提高润滑性，反而会导致润滑性下降、摩擦力增大，进而造成高压油泵和喷油嘴损坏。",
+      "ru": "Использование поддельного топлива снижает, а не повышает смазывающую способность, что увеличивает трение и приводит к поломке топливного насоса высокого давления и форсунок.",
+      "id": "Penggunaan bahan bakar minyak palsu justru menurunkan daya pelumasan sehingga meningkatkan gesekan serta merusak pompa bahan bakar bertekanan tinggi dan injektor."
     }
   }
 ]
