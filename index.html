@@ -40,12 +40,16 @@ main { max-width: 580px; margin: 0 auto; padding: 14px 16px 110px; }
 .tab-btn { flex: 1; border: 0; background: transparent; color: var(--sub); padding: 10px 6px; font-size: 13px; font-weight: 700; border-radius: 8px; cursor: pointer; transition: all 0.2s; }
 .tab-btn.active { background: var(--card); color: #fff; border: 1px solid var(--acc); box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
 
-/* Part Selector */
-.part-selector-wrap { display: flex; align-items: center; gap: 8px; overflow-x: auto; padding-bottom: 8px; margin-bottom: 14px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
-.part-selector-wrap::-webkit-scrollbar { display: none; }
-.part-btn { flex: none; background: rgba(255,255,255,0.04); border: 1px solid var(--line); color: var(--sub); font-size: 12.5px; font-weight: 700; padding: 7px 13px; border-radius: 20px; cursor: pointer; transition: all 0.2s; white-space: nowrap; }
-.part-btn:hover { background: rgba(255,255,255,0.08); color: #fff; }
-.part-btn.active { background: var(--acc); border-color: var(--acc); color: #000; font-weight: 800; box-shadow: 0 2px 10px rgba(0, 180, 216, 0.4); }
+/* Part Selector (2-Row x 5-Col Full 1~1000 Grid — Never Hidden Off-Screen) */
+.part-selector-wrap { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; margin-bottom: 10px; }
+.part-btn { background: rgba(255,255,255,0.04); border: 1px solid var(--line); color: var(--sub); font-size: 11.5px; font-weight: 700; padding: 7px 4px; border-radius: 10px; cursor: pointer; transition: all 0.2s; text-align: center; line-height: 1.25; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.part-btn:hover { background: rgba(255,255,255,0.09); color: #fff; }
+.part-btn.active { background: var(--acc); border-color: var(--acc); color: #04131d; font-weight: 800; box-shadow: 0 2px 10px rgba(0, 180, 216, 0.4); }
+.jump-bar { display: flex; align-items: center; justify-content: flex-end; gap: 6px; margin-bottom: 12px; font-size: 12px; color: var(--sub); }
+.jump-input { width: 78px; background: #132238; border: 1px solid var(--line); border-radius: 8px; padding: 5px 8px; color: #fff; font-size: 12.5px; font-weight: 700; text-align: center; outline: none; }
+.jump-input:focus { border-color: var(--acc); }
+.jump-btn { background: rgba(0, 180, 216, 0.16); border: 1px solid rgba(0, 180, 216, 0.5); color: #38bdf8; font-size: 12px; font-weight: 800; padding: 5px 11px; border-radius: 8px; cursor: pointer; }
+.jump-btn:hover { background: var(--acc); color: #04131d; }
 
 /* Exam Simulator Status Bar */
 .exam-bar { display: none; background: #1a0f1d; border: 1.5px solid var(--no); border-radius: 12px; padding: 12px 16px; margin-bottom: 16px; align-items: center; justify-content: space-between; }
@@ -132,6 +136,11 @@ main { max-width: 580px; margin: 0 auto; padding: 14px 16px 110px; }
   </div>
 
   <div class="part-selector-wrap" id="part-selector-bar"></div>
+  <div class="jump-bar" id="jump-bar">
+    <span id="jump-label">#1~1000:</span>
+    <input type="number" min="1" max="1000" class="jump-input" id="jump-q-input" placeholder="1~1000" onkeydown="if(event.key==='Enter')jumpToQuestion()">
+    <button class="jump-btn" id="jump-q-btn" onclick="jumpToQuestion()">GO</button>
+  </div>
 
   <div class="exam-bar" id="exam-bar">
     <div class="timer">⏱️ <span id="timer-val">40:00</span></div>
@@ -254,7 +263,7 @@ const UI_TEXT = {
     lockDesc: "1,000문항 전수 해설 + 40제 실전 모의고사 + 오답노트 무제한 (180일 올패스 · 월 자동결제 없음)",
     priceAmount: PASS_PRICE,
     btnToss: "⚡ 180일 무제한 올패스 시작하기 (7,500원)",
-    payGuide: "💡 위에서 카드를 먼저 선택하고 약관 동의 후 아래 버튼을 누르세요",
+    payGuide: "💡 위에서 결제수단 선택 → 약관 동의 후 아래 버튼 클릭 (PC에서 카드사 보안프로그램 로딩 시 [토스페이·카카오페이·앱카드 QR] 선택하면 무설치 3초 결제!)",
     codeToggle: "🔑 이용권 코드 / 다른 기기 복구 입력",
     codeSubmit: "등록",
     codeInvalid: "유효하지 않은 이용권 코드입니다. 코드를 다시 확인해 주세요.",
@@ -714,6 +723,55 @@ function stopSpeech() {
   }
 }
 
+const NATIVE_KO_ONES = ['', '한', '두', '세', '네', '다섯', '여섯', '일곱', '여덟', '아홉'];
+const NATIVE_KO_TENS = ['', '열', '스무', '서른', '마흔', '쉰', '예순', '일흔', '여든', '아흔'];
+
+function toNativeKoreanModNum(numStr) {
+  const n = parseInt(numStr, 10);
+  if (isNaN(n) || n <= 0 || n >= 100) return numStr;
+  const t = Math.floor(n / 10);
+  const o = n % 10;
+  if (n === 20) return '스무';
+  const tensWord = t === 2 && o > 0 ? '스물' : NATIVE_KO_TENS[t];
+  return tensWord + NATIVE_KO_ONES[o];
+}
+
+function formatKoreanSpeech(raw) {
+  if (!raw) return '';
+  let s = String(raw);
+  // Normalize clock ranges like 08:00 ~ 20:00 -> 8시부터 20시까지
+  s = s.replace(/\b0?(\d{1,2}):00\s*[~∼-]\s*0?(\d{1,2}):00/g, (_, h1, h2) => `${toNativeKoreanModNum(h1)} 시부터 ${toNativeKoreanModNum(h2)} 시까지`);
+  s = s.replace(/\b0?(\d{1,2}):(\d{2})/g, (_, h1, m1) => m1 === '00' ? `${toNativeKoreanModNum(h1)} 시` : `${toNativeKoreanModNum(h1)} 시 ${parseInt(m1, 10)}분`);
+  // Blank parentheses (      ) -> 빈칸
+  s = s.replace(/\(\s{2,}\)/g, ' 빈칸 ');
+  // Circled letters & numbers
+  const symMap = { 'Ⓐ': 'A', 'Ⓑ': 'B', 'Ⓒ': 'C', 'Ⓓ': 'D', 'Ⓔ': 'E', '①': '첫째, ', '②': '둘째, ', '③': '셋째, ', '④': '넷째, ', '⑤': '다섯째, ' };
+  s = s.replace(/[ⒶⒷⒸⒹⒺ①②③④⑤]/g, ch => symMap[ch] || ch);
+  // Middle dots & wave ranges
+  s = s.replace(/[ㆍ･·]/g, ', ');
+  s = s.replace(/\s*[∼~]\s*/g, '에서 ');
+  // Native Korean counters: 가지, 시간, 명, 대, 곳, 군데, 바퀴, 살, 개(개월 제외), 시(시시/시간 제외)
+  s = s.replace(/(\d{1,2})\s*(가지|시간|명|대|곳|군데|바퀴|살)/g, (_, d, unit) => `${toNativeKoreanModNum(d)} ${unit}`);
+  s = s.replace(/(\d{1,2})\s*개(?!월)/g, (_, d) => `${toNativeKoreanModNum(d)} 개`);
+  s = s.replace(/(\d{1,2})\s*시(?!시|간)/g, (_, d) => `${toNativeKoreanModNum(d)} 시`);
+  return s;
+}
+
+function pickBestKoreanVoice() {
+  if (!('speechSynthesis' in window)) return null;
+  const voices = window.speechSynthesis.getVoices() || [];
+  const koVoices = voices.filter(v => (v.lang || '').toLowerCase().startsWith('ko'));
+  if (!koVoices.length) return null;
+  return (
+    koVoices.find(v => /premium|enhanced|natural|siri|neural/i.test(v.name)) ||
+    koVoices.find(v => /yuna|유나|google/i.test(v.name)) ||
+    koVoices[0]
+  );
+}
+if ('speechSynthesis' in window && window.speechSynthesis.onvoiceschanged !== undefined) {
+  window.speechSynthesis.onvoiceschanged = () => { pickBestKoreanVoice(); };
+}
+
 function toggleSpeak() {
   if (!('speechSynthesis' in window) || !curDB.length) return;
   if (isSpeaking) {
@@ -721,11 +779,15 @@ function toggleSpeak() {
     return;
   }
   const item = curDB[curIdx];
-  const koText = item.q.ko + '. ' + item.options.ko.map((o, idx) => `${idx + 1}번, ${o}`).join('. ');
+  const qClean = formatKoreanSpeech(item.q.ko);
+  const optsClean = item.options.ko.map((o, idx) => `${idx + 1}번, ${formatKoreanSpeech(o)}`).join('. ');
+  const koText = qClean + '. ' + optsClean;
   window.speechSynthesis.cancel();
   const utter = new SpeechSynthesisUtterance(koText);
   utter.lang = 'ko-KR';
-  utter.rate = 0.93;
+  const bestVoice = pickBestKoreanVoice();
+  if (bestVoice) utter.voice = bestVoice;
+  utter.rate = 0.94;
   const t = UI_TEXT[curLang] || UI_TEXT.ko;
   const btn = document.getElementById('btn-tts');
   utter.onstart = () => {
@@ -742,12 +804,21 @@ function toggleSpeak() {
 
 function renderPartSelector() {
   const bar = document.getElementById('part-selector-bar');
+  const jumpBar = document.getElementById('jump-bar');
   if (!bar) return;
   if (curMode !== 'study') {
     bar.style.display = 'none';
+    if (jumpBar) jumpBar.style.display = 'none';
     return;
   }
-  bar.style.display = 'flex';
+  bar.style.display = 'grid';
+  if (jumpBar) {
+    jumpBar.style.display = 'flex';
+    const jl = document.getElementById('jump-label');
+    const jb = document.getElementById('jump-q-btn');
+    if (jl) jl.innerText = curLang === 'ko' ? '문제 번호 바로 이동 (1~1000):' : '#1~1000:';
+    if (jb) jb.innerText = curLang === 'ko' ? '이동' : 'GO';
+  }
   bar.innerHTML = '';
   const unlocked = isPassUnlocked();
   const totalParts = Math.ceil(DB_STUDY.length / 100) || 10;
@@ -756,10 +827,37 @@ function renderPartSelector() {
     const endQ = Math.min(p * 100, DB_STUDY.length);
     const btn = document.createElement('button');
     btn.className = 'part-btn' + (p === curPart ? ' active' : '');
-    btn.innerText = (p > 1 && !unlocked ? '🔒 ' : '') + `Part ${p} (${startQ}~${endQ})`;
+    btn.innerText = (p > 1 && !unlocked ? '🔒 ' : '') + `${startQ}~${endQ}`;
     btn.onclick = () => selectPart(p);
     bar.appendChild(btn);
   }
+}
+
+function jumpToQuestion() {
+  if (!DB_STUDY.length) return;
+  const inp = document.getElementById('jump-q-input');
+  const qNum = parseInt(inp ? inp.value : '', 10);
+  if (isNaN(qNum) || qNum < 1 || qNum > DB_STUDY.length) {
+    alert(curLang === 'ko' ? '1번부터 1,000번 사이의 문제 번호를 입력해 주세요.' : 'Please enter a question number between 1 and 1,000.');
+    return;
+  }
+  const unlocked = isPassUnlocked();
+  const t = UI_TEXT[curLang] || UI_TEXT.ko;
+  if (!unlocked && qNum > FREE_LIMIT) {
+    alert(t.partLockMsg);
+    const lockEl = document.querySelector('.cta-lock');
+    if (lockEl) lockEl.scrollIntoView({ behavior: 'smooth' });
+    return;
+  }
+  stopSpeech();
+  curPart = Math.ceil(qNum / 100);
+  const startIdx = (curPart - 1) * 100;
+  const endIdx = Math.min(curPart * 100, DB_STUDY.length);
+  curDB = DB_STUDY.slice(startIdx, endIdx);
+  curIdx = (qNum - 1) % 100;
+  saveStudyProgress();
+  render();
+  renderPartSelector();
 }
 
 function selectPart(p) {
@@ -1074,6 +1172,15 @@ function prevQ() {
     curIdx--;
     saveStudyProgress();
     render();
+  } else if (curMode === 'study' && isPassUnlocked() && curPart > 1) {
+    curPart--;
+    const startIdx = (curPart - 1) * 100;
+    const endIdx = Math.min(curPart * 100, DB_STUDY.length);
+    curDB = DB_STUDY.slice(startIdx, endIdx);
+    curIdx = curDB.length - 1;
+    saveStudyProgress();
+    render();
+    renderPartSelector();
   }
 }
 
@@ -1094,9 +1201,19 @@ function nextQ() {
     saveStudyProgress();
     render();
   } else {
-    if (curMode === 'study') {
+    const totalParts = Math.ceil(DB_STUDY.length / 100) || 10;
+    if (curMode === 'study' && unlocked && curPart < totalParts) {
+      curPart++;
+      const startIdx = (curPart - 1) * 100;
+      const endIdx = Math.min(curPart * 100, DB_STUDY.length);
+      curDB = DB_STUDY.slice(startIdx, endIdx);
+      curIdx = 0;
+      saveStudyProgress();
+      render();
+      renderPartSelector();
+    } else if (curMode === 'study') {
       if (unlocked) {
-        alert(t.studyCompleteMsg(curDB.length));
+        alert(t.studyCompleteMsg(DB_STUDY.length));
       } else {
         alert(t.endAlert);
         const lockEl = document.querySelector('.cta-lock');
@@ -1273,6 +1390,26 @@ function checkUnlocked() {
 }
 window.addEventListener('DOMContentLoaded', checkUnlocked);
 
+function recoverPageInteractivity() {
+  document.documentElement.style.overflow = '';
+  document.documentElement.style.pointerEvents = '';
+  document.body.style.overflow = '';
+  document.body.style.pointerEvents = '';
+  document.body.style.position = '';
+  // Remove orphaned full-screen invisible overlays left behind when PC nProtect / ISP modal cancels
+  document.querySelectorAll('body > div, body > iframe').forEach(el => {
+    if (el.id === 'cta-lock-box' || el.tagName === 'MAIN') return;
+    const cs = window.getComputedStyle(el);
+    const idCls = ((el.id || '') + ' ' + (el.className || '')).toLowerCase();
+    if (cs.position === 'fixed' && parseInt(cs.zIndex || '0', 10) > 9999) {
+      if (idCls.includes('tosspayments') || idCls.includes('nprotect') || el.innerHTML.trim() === '') {
+        el.remove();
+      }
+    }
+  });
+}
+window.addEventListener('keydown', e => { if (e.key === 'Escape') setTimeout(recoverPageInteractivity, 150); });
+
 function requestPay() {
   const orderId = 'KP_' + Date.now() + '_' + Math.random().toString(36).substring(2, 6).toUpperCase();
   const orderName = 'KoreaPass 1000 Questions 180-Day All-Pass (' + curLang.toUpperCase() + ')';
@@ -1289,6 +1426,8 @@ function requestPay() {
       successUrl: baseUrl + 'success.html?lang=' + curLang,
       failUrl: baseUrl + 'fail.html?lang=' + curLang,
     }).catch(function (error) {
+      recoverPageInteractivity();
+      setTimeout(recoverPageInteractivity, 400);
       if (error.code !== 'USER_CANCEL') {
         alert(error.message);
       }
