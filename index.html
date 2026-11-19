@@ -145,7 +145,7 @@ main { max-width: 580px; margin: 0 auto; padding: 14px 16px 110px; }
   <div class="top">
     <div class="logo">KOREA<span>PASS</span></div>
     <div class="lang-selector">
-      <button class="lang-btn active" onclick="changeLang('ko')">한국어</button>
+      <button class="lang-btn active" onclick="changeLang('ko')">🇰🇷 한국어실전</button>
       <button class="lang-btn" onclick="changeLang('uz')">UZB</button>
       <button class="lang-btn" onclick="changeLang('ru')">RUS</button>
       <button class="lang-btn" onclick="changeLang('id')">IDN</button>
@@ -210,7 +210,10 @@ main { max-width: 580px; margin: 0 auto; padding: 14px 16px 110px; }
         <span class="q-tag" id="q-tag">No.1 (2점)</span>
         <span class="q-tag" id="multi-badge" style="display:none; color:#000; background:var(--acc);">2개 선택</span>
       </div>
-      <button class="btn-tts" id="btn-tts" onclick="toggleSpeak()">🔊 한국어 발음 듣기</button>
+      <div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;">
+        <button class="btn-tts" id="btn-hide-trans" onclick="toggleHideTrans()" style="display:none; border-color:rgba(255,209,102,0.55); background:rgba(255,209,102,0.12); color:var(--gold);">👁️ 번역 숨김(실전)</button>
+        <button class="btn-tts" id="btn-tts" onclick="toggleSpeak()">🔊 한국어 발음 듣기</button>
+      </div>
     </div>
 
     <div class="q-title-trans" id="q-title-ko" style="font-size:18.5px; font-weight:800; color:#fff; line-height:1.45; margin-bottom:8px; white-space:pre-line;"></div>
@@ -235,16 +238,19 @@ main { max-width: 580px; margin: 0 auto; padding: 14px 16px 110px; }
 
   <div class="cta-lock" id="cta-lock-box">
     <div id="cta-unlocked-view" style="display:none;">
-      <h3 id="unlocked-title-el" style="color:var(--ok);">🎉 180일 패스 이용 중</h3>
-      <p id="unlocked-desc-el" style="color:#fff; margin:8px 0 0;"></p>
-      <div id="unlocked-rec-wrap" style="display:none; margin-top:12px; background:#0d1b2a; border:1px solid var(--acc); border-radius:10px; padding:10px 12px; text-align:left;">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:8px; flex-wrap:wrap;">
+        <h3 id="unlocked-title-el" style="color:var(--ok); font-size:15px; margin:0;">🎉 180일 패스 이용 중</h3>
+        <button type="button" id="btn-toggle-rec" onclick="toggleSavedRecCode()" style="display:none; background:rgba(0,180,216,0.14); border:1px solid rgba(0,180,216,0.45); color:#38bdf8; font-size:11.5px; font-weight:700; padding:5px 10px; border-radius:99px; cursor:pointer;">🔑 복구코드 보기 ▾</button>
+      </div>
+      <p id="unlocked-desc-el" style="color:var(--sub); font-size:12.5px; margin:6px 0 0; text-align:left;"></p>
+      <div id="unlocked-rec-wrap" style="display:none; margin-top:10px; background:#0d1b2a; border:1px solid var(--acc); border-radius:10px; padding:10px 12px; text-align:left;">
         <div id="unlocked-rec-label" style="font-size:11.5px; color:#38bdf8; font-weight:700; margin-bottom:5px;">🔑 재로그인 복구코드 (설정한 4자리 PIN과 함께 보관)</div>
         <div style="display:flex; align-items:center; gap:8px;">
           <code id="unlocked-rec-code" style="flex:1; font-size:12.5px; font-weight:800; color:var(--gold); word-break:break-all;"></code>
           <button onclick="copySavedRecCode()" id="btn-copy-saved-rec" style="background:var(--acc); color:#04131d; border:0; border-radius:7px; padding:6px 10px; font-size:11.5px; font-weight:800; cursor:pointer;">복사</button>
         </div>
+        <div id="unlocked-ord-el" style="font-size:10.5px; color:var(--sub); margin-top:6px;"></div>
       </div>
-      <div id="unlocked-ord-el" style="font-size:11px; color:var(--sub); margin-top:8px;"></div>
     </div>
 
     <div id="cta-locked-view">
@@ -319,6 +325,23 @@ let mediaRecorder = null;
 let activeRecId = null;
 let recChunks = [];
 let pracRecordings = {};
+let hideTrans = false;
+
+const HIDE_TRANS_LABELS = {
+  ko: { off: '👁️ 번역 숨김(실전)', on: '👁️ 번역 보기' },
+  uz: { off: '👁️ Tarjimani yashirish', on: '👁️ Tarjimani ko\'rish' },
+  ru: { off: '👁️ Скрыть перевод', on: '👁️ Показать перевод' },
+  id: { off: '👁️ Sembunyikan Terjemahan', on: '👁️ Tampilkan Terjemahan' },
+  ne: { off: '👁️ अनुवाद लुकाउनुहोस्', on: '👁️ अनुवाद हेर्नुहोस्' },
+  vi: { off: '👁️ Ẩn bản dịch', on: '👁️ Hiện bản dịch' },
+  en: { off: '👁️ Hide Translation', on: '👁️ Show Translation' },
+  zh: { off: '👁️ 隐藏翻译(实战)', on: '👁️ 显示翻译' }
+};
+
+function toggleHideTrans() {
+  hideTrans = !hideTrans;
+  render();
+}
 
 const PACK_NAMES = {
   uz: 'UZB (우즈벡어)',
@@ -1623,7 +1646,20 @@ function render() {
 
   document.getElementById('q-title-ko').innerText = item.q.ko;
   const qTransBox = document.getElementById('q-title-trans');
-  if (curLang === 'ko') {
+  const hideTransBtn = document.getElementById('btn-hide-trans');
+  const htLbl = HIDE_TRANS_LABELS[curLang] || HIDE_TRANS_LABELS.en;
+  if (hideTransBtn) {
+    if (curLang === 'ko') {
+      hideTransBtn.style.display = 'none';
+    } else {
+      hideTransBtn.style.display = 'inline-block';
+      hideTransBtn.innerText = hideTrans ? htLbl.on : htLbl.off;
+      hideTransBtn.style.background = hideTrans ? 'var(--gold)' : 'rgba(255,209,102,0.12)';
+      hideTransBtn.style.color = hideTrans ? '#04131d' : 'var(--gold)';
+    }
+  }
+
+  if (curLang === 'ko' || hideTrans) {
     qTransBox.style.display = 'none';
   } else {
     qTransBox.style.display = 'block';
@@ -1675,7 +1711,7 @@ function render() {
     const transTxt = transOpts[i] || '';
     let innerHtml = `<span class="num">${optNum}</span><div style="flex:1;">`;
     innerHtml += `<div class="opt-text" style="font-size:15.5px; font-weight:700; color:#fff;">${koTxt}</div>`;
-    if (curLang !== 'ko' && transTxt && transTxt !== koTxt) {
+    if (curLang !== 'ko' && !hideTrans && transTxt && transTxt !== koTxt) {
       innerHtml += `<div style="font-size:13.5px; color:var(--acc); margin-top:4px; line-height:1.35; font-weight:500;">↳ ${transTxt}</div>`;
     }
     innerHtml += `</div>`;
@@ -2024,6 +2060,27 @@ function copySavedRecCode() {
   }).catch(() => {});
 }
 
+let isRecExpanded = false;
+const REC_TOGGLE_LABELS = {
+  ko: { show: '🔑 복구코드 보기 ▾', hide: '🔑 복구코드 숨기기 ▴' },
+  uz: { show: '🔑 Kodni ko\'rish ▾', hide: '🔑 Yashirish ▴' },
+  ru: { show: '🔑 Показать код ▾', hide: '🔑 Скрыть код ▴' },
+  id: { show: '🔑 Lihat Kode ▾', hide: '🔑 Sembunyikan ▴' },
+  ne: { show: '🔑 कोड हेर्नुहोस् ▾', hide: '🔑 लुकाउनुहोस् ▴' },
+  vi: { show: '🔑 Xem mã ▾', hide: '🔑 Ẩn mã ▴' },
+  en: { show: '🔑 Show Code ▾', hide: '🔑 Hide Code ▴' },
+  zh: { show: '🔑 查看恢复码 ▾', hide: '🔑 隐藏恢复码 ▴' }
+};
+
+function toggleSavedRecCode() {
+  isRecExpanded = !isRecExpanded;
+  const uRecWrap = document.getElementById('unlocked-rec-wrap');
+  const btn = document.getElementById('btn-toggle-rec');
+  const lbl = REC_TOGGLE_LABELS[curLang] || REC_TOGGLE_LABELS.en;
+  if (uRecWrap) uRecWrap.style.display = isRecExpanded ? 'block' : 'none';
+  if (btn) btn.innerText = isRecExpanded ? lbl.hide : lbl.show;
+}
+
 const clientKey = 'live_gck_c19zd7g4SpoJGGTtYyP1ZwvhShxUU7IXTc';
 const customerKey = localStorage.getItem('koreapass_cust_key') || ('CUST_' + Math.random().toString(36).substring(2, 11));
 localStorage.setItem('koreapass_cust_key', customerKey);
@@ -2055,6 +2112,7 @@ function checkUnlocked() {
 
   if (unlocked) {
     lockEl.style.borderColor = 'var(--ok)';
+    lockEl.style.padding = '14px 16px';
     unlockedView.style.display = 'block';
     lockedView.style.display = 'none';
 
@@ -2068,6 +2126,8 @@ function checkUnlocked() {
     const uRecLbl = document.getElementById('unlocked-rec-label');
     const uRecCode = document.getElementById('unlocked-rec-code');
     const uOrd = document.getElementById('unlocked-ord-el');
+    const btnToggleRec = document.getElementById('btn-toggle-rec');
+    const recToggleLbl = REC_TOGGLE_LABELS[curLang] || REC_TOGGLE_LABELS.en;
 
     if (PACK_NAMES[activeForeign]) {
       uTitle.innerText = ex.unlockedPairTitle(packLabel);
@@ -2079,10 +2139,15 @@ function checkUnlocked() {
 
     const savedRec = localStorage.getItem('koreapass_recovery_code_' + activeForeign) || '';
     if (savedRec) {
-      uRecWrap.style.display = 'block';
+      if (btnToggleRec) {
+        btnToggleRec.style.display = 'inline-block';
+        btnToggleRec.innerText = isRecExpanded ? recToggleLbl.hide : recToggleLbl.show;
+      }
+      uRecWrap.style.display = isRecExpanded ? 'block' : 'none';
       uRecLbl.innerText = ex.recKeepLabel;
       uRecCode.innerText = savedRec;
     } else {
+      if (btnToggleRec) btnToggleRec.style.display = 'none';
       uRecWrap.style.display = 'none';
     }
 
@@ -2090,6 +2155,7 @@ function checkUnlocked() {
     uOrd.innerText = savedOrd ? ('Order / Pass ID: ' + savedOrd) : '';
   } else {
     lockEl.style.borderColor = 'var(--gold)';
+    lockEl.style.padding = '22px';
     unlockedView.style.display = 'none';
     lockedView.style.display = 'block';
 
