@@ -1,0 +1,182 @@
+{
+"1": {
+"en": "The course skills test starts now.",
+"zh": "现在开始场地技能考试。",
+"vi": "Bây giờ bắt đầu bài thi sa hình.",
+"ru": "Сейчас начинается экзамен на автодроме.",
+"id": "Ujian keterampilan di lapangan dimulai sekarang.",
+"ne": "अब मैदान परीक्षा सुरु हुन्छ।",
+"uz": "Hozir avtodrom imtihoni boshlanadi."
+},
+"2": {
+"en": "Start the engine.",
+"zh": "请发动引擎。",
+"vi": "Hãy khởi động máy.",
+"ru": "Заведите двигатель.",
+"id": "Nyalakan mesin.",
+"ne": "इन्जिन स्टार्ट गर्नुहोस्।",
+"uz": "Dvigatelni yoqing."
+},
+"3": {
+"en": "Put the gear in Drive, then shift back to Park.",
+"zh": "请将挡位挂到D挡，再换回P挡。",
+"vi": "Chuyển cần số sang D, rồi chuyển lại về P.",
+"ru": "Переключите рычаг в положение D, затем обратно в P.",
+"id": "Pindahkan gigi ke D, lalu kembali ke P.",
+"ne": "गियर D मा राख्नुहोस्, त्यसपछि फेरि P मा फर्काउनुहोस्।",
+"uz": "Uzatmani D holatiga qo'ying, so'ng yana P holatiga qaytaring."
+},
+"4": {
+"en": "Turn on the headlights.",
+"zh": "请打开前大灯。",
+"vi": "Hãy bật đèn pha.",
+"ru": "Включите фары.",
+"id": "Nyalakan lampu depan.",
+"ne": "हेडलाइट बाल्नुहोस्।",
+"uz": "Old chiroqlarni yoqing."
+},
+"5": {
+"en": "Switch to high beam.",
+"zh": "请切换到远光灯。",
+"vi": "Chuyển sang đèn chiếu xa.",
+"ru": "Переключите на дальний свет.",
+"id": "Ganti ke lampu jauh.",
+"ne": "हाई बिममा बदल्नुहोस्।",
+"uz": "Uzoq yorug'likka o'tkazing."
+},
+"6": {
+"en": "Switch to low beam, then turn off the headlights.",
+"zh": "请切换到近光灯，然后关闭前大灯。",
+"vi": "Chuyển sang đèn chiếu gần rồi tắt đèn pha.",
+"ru": "Переключите на ближний свет, затем выключите фары.",
+"id": "Ganti ke lampu dekat, lalu matikan lampu depan.",
+"ne": "लो बिममा बदलेर हेडलाइट निभाउनुहोस्।",
+"uz": "Yaqin yorug'likka o'tkazing, so'ng old chiroqlarni o'chiring."
+},
+"7": {
+"en": "Turn on the left turn signal.",
+"zh": "请打开左转向灯。",
+"vi": "Hãy bật xi nhan trái.",
+"ru": "Включите левый указатель поворота.",
+"id": "Nyalakan lampu sein kiri.",
+"ne": "बायाँ इन्डिकेटर बाल्नुहोस्।",
+"uz": "Chap burilish chirog'ini yoqing."
+},
+"8": {
+"en": "Turn off the turn signal.",
+"zh": "请关闭转向灯。",
+"vi": "Hãy tắt xi nhan.",
+"ru": "Выключите указатель поворота.",
+"id": "Matikan lampu sein.",
+"ne": "इन्डिकेटर निभाउनुहोस्।",
+"uz": "Burilish chirog'ini o'chiring."
+},
+"9": {
+"en": "Turn on the wipers.",
+"zh": "请打开雨刷。",
+"vi": "Hãy bật cần gạt nước.",
+"ru": "Включите стеклоочистители.",
+"id": "Nyalakan wiper.",
+"ne": "वाइपर चलाउनुहोस्।",
+"uz": "Oyna tozalagichni yoqing."
+},
+"10": {
+"en": "Turn on the left signal and drive off.",
+"zh": "请打开左转向灯后起步。",
+"vi": "Bật xi nhan trái rồi xuất phát.",
+"ru": "Включите левый поворотник и начинайте движение.",
+"id": "Nyalakan sein kiri, lalu mulai jalan.",
+"ne": "बायाँ इन्डिकेटर बालेर गाडी अघि बढाउनुहोस्।",
+"uz": "Chap burilish chirog'ini yoqib, harakatni boshlang."
+},
+"11": {
+"en": "Emergency! Emergency!",
+"zh": "突发！突发！",
+"vi": "Khẩn cấp! Khẩn cấp!",
+"ru": "Внезапно! Внезапно!",
+"id": "Darurat! Darurat!",
+"ne": "आपतकाल! आपतकाल!",
+"uz": "Favqulodda! Favqulodda!"
+},
+"12": {
+"en": "Hill stop section. Stop inside the stop line, then drive off.",
+"zh": "坡道停车区。请在停止线内暂停后再起步。",
+"vi": "Đoạn dừng dốc. Dừng trong vạch dừng rồi xuất phát.",
+"ru": "Участок остановки на подъёме. Остановитесь у стоп-линии, затем трогайтесь.",
+"id": "Area berhenti di tanjakan. Berhenti di dalam garis, lalu jalan lagi.",
+"ne": "उकालोमा रोक्ने खण्ड। रोक्ने रेखाभित्र रोकेर फेरि अघि बढ्नुहोस्।",
+"uz": "Qiyalikda to'xtash qismi. To'xtash chizig'i ichida to'xtab, so'ng yo'lga chiqing."
+},
+"13": {
+"en": "Enter the right-angle parking course. Confirmed.",
+"zh": "请进入直角停车路线。已确认。",
+"vi": "Vào bài đỗ xe vuông góc. Đã xác nhận.",
+"ru": "Въезжайте на площадку перпендикулярной парковки. Подтверждено.",
+"id": "Masuk ke jalur parkir siku. Sudah dikonfirmasi.",
+"ne": "समकोण पार्किङ कोर्समा प्रवेश गर्नुहोस्। पुष्टि भयो।",
+"uz": "To'g'ri burchakli parkovka yo'lagiga kiring. Tasdiqlandi."
+},
+"14": {
+"en": "Acceleration section. Speed up above 20 km/h, then slow down.",
+"zh": "加速区。请加速到每小时20公里以上后再减速。",
+"vi": "Đoạn tăng tốc. Tăng trên 20 km/h rồi giảm tốc.",
+"ru": "Участок разгона. Разгонитесь выше 20 км/ч, затем снизьте скорость.",
+"id": "Area akselerasi. Percepat di atas 20 km/jam, lalu perlambat.",
+"ne": "गति बढाउने खण्ड। २० कि.मि./घण्टाभन्दा माथि गति बढाएर फेरि घटाउनुहोस्।",
+"uz": "Tezlashish qismi. Soatiga 20 km dan oshiring, so'ng sekinlashing."
+},
+"15": {
+"en": "The road test starts now. Please fasten your seat belt.",
+"zh": "道路考试开始。请系好安全带。",
+"vi": "Bắt đầu thi đường trường. Hãy thắt dây an toàn.",
+"ru": "Начинается экзамен на дороге. Пристегните ремень безопасности.",
+"id": "Ujian jalan raya dimulai. Pasang sabuk pengaman.",
+"ne": "सडक परीक्षा सुरु हुन्छ। सिटबेल्ट लगाउनुहोस्।",
+"uz": "Yo'l imtihoni boshlanadi. Xavfsizlik kamarini taqing."
+},
+"16": {
+"en": "Turn left at the intersection 150 meters ahead. Change lanes in advance.",
+"zh": "前方150米十字路口左转。请提前变更车道。",
+"vi": "Rẽ trái ở ngã tư phía trước 150 mét. Hãy chuyển làn trước.",
+"ru": "Через 150 метров на перекрёстке поворот налево. Заранее перестройтесь.",
+"id": "Belok kiri di perempatan 150 meter di depan. Pindah lajur lebih awal.",
+"ne": "१५० मिटर अगाडिको चोकमा बायाँ मोड्नुहोस्। पहिल्यै लेन बदल्नुहोस्।",
+"uz": "150 metr oldindagi chorrahada chapga buriling. Oldindan qatorni o'zgartiring."
+},
+"17": {
+"en": "Right turn ahead. Slow down and watch for pedestrians.",
+"zh": "即将右转。请注意行人，减速慢行。",
+"vi": "Sắp rẽ phải. Chú ý người đi bộ và đi chậm.",
+"ru": "Скоро поворот направо. Снизьте скорость и следите за пешеходами.",
+"id": "Sebentar lagi belok kanan. Pelan-pelan dan waspadai pejalan kaki.",
+"ne": "केही बेरमा दायाँ मोड। पैदलयात्रीलाई ध्यान दिँदै बिस्तारै चलाउनुहोस्।",
+"uz": "Birozdan so'ng o'ngga burilish. Piyodalarga e'tibor berib, sekin yuring."
+},
+"18": {
+"en": "School zone. Drive below 30 km/h.",
+"zh": "儿童保护区。请以每小时30公里以下行驶。",
+"vi": "Khu vực bảo vệ trẻ em. Chạy dưới 30 km/h.",
+"ru": "Зона защиты детей. Двигайтесь медленнее 30 км/ч.",
+"id": "Zona perlindungan anak. Berkendara di bawah 30 km/jam.",
+"ne": "बालबालिका सुरक्षा क्षेत्र। ३० कि.मि./घण्टाभन्दा कममा चलाउनुहोस्।",
+"uz": "Bolalar himoya hududi. Soatiga 30 km dan past tezlikda yuring."
+},
+"19": {
+"en": "You exceeded the speed limit. Slow down.",
+"zh": "您已超速。请减速。",
+"vi": "Bạn đã vượt quá tốc độ. Hãy giảm tốc.",
+"ru": "Вы превысили скорость. Снизьте скорость.",
+"id": "Anda melebihi batas kecepatan. Kurangi kecepatan.",
+"ne": "तपाईंले गति सीमा नाघ्नुभयो। गति घटाउनुहोस्।",
+"uz": "Siz tezlikni oshirdingiz. Tezlikni kamaytiring."
+},
+"20": {
+"en": "Congratulations, you passed. Apply the parking brake and turn off the engine.",
+"zh": "恭喜，您合格了。请拉上驻车制动并熄火。",
+"vi": "Chúc mừng, bạn đã đỗ. Kéo phanh tay và tắt máy.",
+"ru": "Поздравляем, вы сдали. Затяните стояночный тормоз и заглушите двигатель.",
+"id": "Selamat, Anda lulus. Pasang rem tangan dan matikan mesin.",
+"ne": "बधाई छ, तपाईं पास हुनुभयो। पार्किङ ब्रेक लगाएर इन्जिन बन्द गर्नुहोस्।",
+"uz": "Tabriklaymiz, siz o'tdingiz. Qo'l tormozini torting va dvigatelni o'chiring."
+}
+}

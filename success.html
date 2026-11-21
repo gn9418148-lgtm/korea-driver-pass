@@ -303,6 +303,7 @@
     localStorage.setItem('koreapass_recovery_code_' + buyLang, generatedRecCode);
     if (orderId) {
       localStorage.setItem('koreapass_order_id', orderId);
+      localStorage.setItem('koreapass_toss_order', orderId);
       document.getElementById('order-meta').innerText = t.orderPrefix + orderId;
     }
 

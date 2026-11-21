@@ -286,6 +286,7 @@ main { max-width: 580px; margin: 0 auto; padding: 14px 16px 110px; }
       </div>
 
       <button class="code-toggle" id="btn-code-toggle" onclick="toggleCodeDrawer()">🔑 재로그인(복구코드 + PIN) / 이용권 코드 입력</button>
+      <a href="https://t.me/koreapass_help_bot" target="_blank" rel="noopener" class="code-toggle" style="display:block;text-align:center;text-decoration:none;margin-top:8px;">💬 Telegram 문의 · Support · Поддержка · Hỗ trợ · Bantuan · सहायता · 客服</a>
       <div class="code-drawer" id="code-drawer" style="flex-wrap:wrap;">
         <input type="text" class="code-input" id="access-code-input" placeholder="KP1-UZ-XXXX-XXXX-XXXXXX" style="min-width:170px;">
         <input type="tel" inputmode="numeric" maxlength="4" class="code-input" id="access-pin-input" placeholder="PIN 4자리" style="max-width:96px; text-align:center;" oninput="this.value=this.value.replace(/\D/g,'').slice(0,4)">
@@ -380,7 +381,7 @@ const EXTRA_UI = {
   },
   uz: {
     tabPrac: "🚘 Amaliy ovoz",
-    pracIntro: "<b>🚘 Avtodrom va shahar haydash imtihoni koreyscha ovoz + Ovoz yozish mashqi</b><br>Yozma imtihondan keyin mashinada buyruqlar <b>faqat koreys tilida</b> aytiladi! Diktor ovozini eshiting va o'z talaffuzingizni yozib solishtiring. (1~3 bepul · 4~20 Pass bilan)",
+    pracIntro: "<b>🚘 Avtodrom va shahar haydash imtihoni koreyscha ovoz + Ovoz yozish mashqi</b><br>Yozma imtihondan keyin mashinada buyruqlar <b>faqat koreys tilida</b> aytiladi! Diktor ovozini eshiting va o'z talaffuzingizni yozib solishtiring. (1~3 bepul · 4~20 Pass bilan)<br>🗣 <b>Nega ona tili ham?</b> Imtihonda qo'lingiz rulda — matnni o'qib bo'lmaydi. Har bir koreyscha buyruqdan keyin o'zbekcha ma'nosi ovozda keladi: eshiting → darhol bajaring.",
     stageSkills: "Avtodrom",
     stageRoad: "Shahar yo'li",
     freeTag: "BEPUL",
@@ -402,7 +403,7 @@ const EXTRA_UI = {
   },
   ru: {
     tabPrac: "🚘 Автодром",
-    pracIntro: "<b>🚘 Голосовые команды автодрома и города (KR) + Запись произношения</b><br>В экзаменационной машине все команды звучат <b>только на корейском языке</b>! Слушайте диктора и тренируйтесь с микрофоном. (1~3 бесплатно · 4~20 в пакете Pass)",
+    pracIntro: "<b>🚘 Голосовые команды автодрома и города (KR) + Запись произношения</b><br>В экзаменационной машине все команды звучат <b>только на корейском языке</b>! Слушайте диктора и тренируйтесь с микрофоном. (1~3 бесплатно · 4~20 в пакете Pass)<br>🗣 <b>Зачем родной язык?</b> На экзамене руки на руле — читать текст некогда. После каждой корейской команды звучит её смысл по-русски: услышал → сразу сделал.",
     stageSkills: "Автодром",
     stageRoad: "Город",
     freeTag: "FREE",
@@ -424,7 +425,7 @@ const EXTRA_UI = {
   },
   id: {
     tabPrac: "🚘 Suara Praktik",
-    pracIntro: "<b>🚘 Latihan Suara Ujian Praktik Lapangan & Jalan Raya + Rekam Suara</b><br>Saat ujian praktik di mobil KoROAD, semua aba-aba keluar dalam <b>Bahasa Korea</b>! Dengarkan suara penyiar asli & rekam suara Anda. (1~3 Gratis · 4~20 Member Pass)",
+    pracIntro: "<b>🚘 Latihan Suara Ujian Praktik Lapangan & Jalan Raya + Rekam Suara</b><br>Saat ujian praktik di mobil KoROAD, semua aba-aba keluar dalam <b>Bahasa Korea</b>! Dengarkan suara penyiar asli & rekam suara Anda. (1~3 Gratis · 4~20 Member Pass)<br>🗣 <b>Kenapa ada bahasa ibu?</b> Saat ujian tangan di setir — tidak bisa membaca teks. Setelah tiap aba-aba Korea, artinya dibacakan dalam Bahasa Indonesia: dengar → langsung lakukan.",
     stageSkills: "Lapangan",
     stageRoad: "Jalan Raya",
     freeTag: "GRATIS",
@@ -446,7 +447,7 @@ const EXTRA_UI = {
   },
   ne: {
     tabPrac: "🚘 ट्रायल आवाज",
-    pracIntro: "<b>🚘 प्रयोगात्मक (ट्रायल र रोड) कोरियन आवाज + रेकर्डिङ अभ्यास</b><br>गाडी चलाउने ट्रायल परीक्षामा सबै निर्देशन <b>कोरियन भाषामा</b> आउँछ! उद्घोषकको आवाज सुन्नुहोस् र आफ्नो उच्चारण रेकर्ड गरी जाँच्नुहोस्। (१~३ निःशुल्क)",
+    pracIntro: "<b>🚘 प्रयोगात्मक (ट्रायल र रोड) कोरियन आवाज + रेकर्डिङ अभ्यास</b><br>गाडी चलाउने ट्रायल परीक्षामा सबै निर्देशन <b>कोरियन भाषामा</b> आउँछ! उद्घोषकको आवाज सुन्नुहोस् र आफ्नो उच्चारण रेकर्ड गरी जाँच्नुहोस्। (१~३ निःशुल्क)<br>🗣 <b>नेपाली आवाज किन?</b> परीक्षामा हात स्टेयरिङमा हुन्छ — पाठ पढ्न मिल्दैन। हरेक कोरियन निर्देशनपछि त्यसको अर्थ नेपालीमा सुनिन्छ: सुन्नुहोस् → तुरुन्तै गर्नुहोस्।",
     stageSkills: "ट्रायल कोर्स",
     stageRoad: "सडक परीक्षा",
     freeTag: "निःशुल्क",
@@ -468,7 +469,7 @@ const EXTRA_UI = {
   },
   vi: {
     tabPrac: "🚘 Khẩu lệnh thi lái",
-    pracIntro: "<b>🚘 20 Khẩu lệnh Thi Thực Hành (Sa hình & Đường trường) + Ghi âm Luyện nói</b><br>Đỗ lý thuyết bằng tiếng Việt nhưng khi lên xe thi thực hành, máy chấm điểm chỉ phát <b>khẩu lệnh tiếng Hàn</b>! Nghe giọng phát thanh viên chuẩn & ghi âm đối chiếu ngay.",
+    pracIntro: "<b>🚘 20 Khẩu lệnh Thi Thực Hành (Sa hình & Đường trường) + Ghi âm Luyện nói</b><br>Đỗ lý thuyết bằng tiếng Việt nhưng khi lên xe thi thực hành, máy chấm điểm chỉ phát <b>khẩu lệnh tiếng Hàn</b>! Nghe giọng phát thanh viên chuẩn & ghi âm đối chiếu ngay.<br>🗣 <b>Vì sao có giọng tiếng Việt?</b> Khi thi, tay bạn đặt trên vô lăng — không thể đọc chữ. Sau mỗi khẩu lệnh tiếng Hàn sẽ có giọng đọc nghĩa tiếng Việt: nghe → làm ngay.",
     stageSkills: "Sa hình",
     stageRoad: "Đường trường",
     freeTag: "MIỄN PHÍ",
@@ -490,7 +491,7 @@ const EXTRA_UI = {
   },
   en: {
     tabPrac: "🚘 Road Voice",
-    pracIntro: "<b>🚘 Practical Course & Road Test Korean Voice Commands + Mic Trainer</b><br>Even if you take the written test in English, the in-car KoROAD tablet speaks <b>100% Korean voice commands</b>! Hear crisp announcer audio and record yourself. (1–3 Free · 4–20 Pass)",
+    pracIntro: "<b>🚘 Practical Course & Road Test Korean Voice Commands + Mic Trainer</b><br>Even if you take the written test in English, the in-car KoROAD tablet speaks <b>100% Korean voice commands</b>! Hear crisp announcer audio and record yourself. (1–3 Free · 4–20 Pass)<br>🗣 <b>Why your native language?</b> During the test your hands are on the wheel — you can't read text. After each Korean command you hear its meaning in your language: hear it → do it.",
     stageSkills: "Course Test",
     stageRoad: "Road Test",
     freeTag: "FREE",
@@ -512,7 +513,7 @@ const EXTRA_UI = {
   },
   zh: {
     tabPrac: "🚘 路考韩语语音",
-    pracIntro: "<b>🚘 场内技能·道路行驶 考场韩语语音指令 + 录音跟读训练</b><br>笔试虽有中文，但上车考场内技能与路考时，考试车平板<b>全程只播报韩语语音指令</b>（开大灯、转向灯、突发急刹等）！听播音员标准韩音并录音自测。（前3条免费试练）",
+    pracIntro: "<b>🚘 场内技能·道路行驶 考场韩语语音指令 + 录音跟读训练</b><br>笔试虽有中文，但上车考场内技能与路考时，考试车平板<b>全程只播报韩语语音指令</b>（开大灯、转向灯、突发急刹等）！听播音员标准韩音并录音自测。（前3条免费试练）<br>🗣 <b>为什么加中文语音？</b> 考试时双手握方向盘，没法看文字。每条韩语指令后会播放中文意思：听到 → 立刻执行。",
     stageSkills: "场内技能",
     stageRoad: "道路路考",
     freeTag: "免费试练",
@@ -1014,6 +1015,8 @@ fetch('questions_1000_bank.json')
     }
   });
 
+let PRAC_NATIVE = {};
+fetch('practical_native.json?v=1').then(r=>r.json()).then(j=>{PRAC_NATIVE=j; if (curMode==='practical') renderPractical();}).catch(()=>{});
 fetch('practical_20.json')
   .then(r => r.json())
   .then(pdata => {
@@ -1321,6 +1324,14 @@ function playPracticalVoice(id, isLocked) {
   const mp3Url = 'audio/p/' + String(id).padStart(2, '0') + '.mp3?v=3';
   currentPracAudio = new Audio(mp3Url);
   currentPracAudio.onended = () => {
+    const nat = PRAC_NATIVE[String(id)];
+    if (curLang !== 'ko' && nat && nat[curLang] && activePracPlayId === id) {
+      currentPracAudio = new Audio('audio/pn/' + curLang + '/' + String(id).padStart(2, '0') + '.mp3?v=1');
+      const done = () => { activePracPlayId = null; currentPracAudio = null; renderPractical(); };
+      currentPracAudio.onended = done; currentPracAudio.onerror = done;
+      setTimeout(() => { if (currentPracAudio) currentPracAudio.play().catch(done); }, 600);
+      return;
+    }
     activePracPlayId = null;
     currentPracAudio = null;
     renderPractical();
@@ -1440,6 +1451,7 @@ function renderPractical() {
         ${accessBadge}
       </div>
       <div class="prac-ko">"${item.ko}"</div>
+      ${(curLang !== 'ko' && PRAC_NATIVE[String(item.id)] && PRAC_NATIVE[String(item.id)][curLang]) ? `<div class="prac-tip" style="font-weight:700;">🗣 ${PRAC_NATIVE[String(item.id)][curLang]}</div>` : ''}
       <div class="prac-tip">💡 ${tipTxt}</div>
       <div class="prac-actions">
         <button class="prac-btn" style="${isPlayingThis ? 'background:var(--ok);color:#04131d;border-color:var(--ok);' : ''}" onclick="playPracticalVoice(${item.id}, ${locked})">
@@ -1586,8 +1598,19 @@ function isQuestionGraded(item, userAns) {
   return userAns !== undefined;
 }
 
+// 11/20 열람 시작 기록(주문당 처음 한 번 · 환불 판단용 · 개인정보 없음)
+function logFirstOpen() {
+  try {
+    if (localStorage.getItem('koreapass_open_logged')) return;
+    const oid = localStorage.getItem('koreapass_toss_order') || localStorage.getItem('koreapass_order_id');
+    if (!oid) return;
+    localStorage.setItem('koreapass_open_logged', '1');
+    fetch('https://koreapass-payment-confirm.volcano-nukki-txvxjeuy.workers.dev/open', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({orderId: oid, lang: curLang, mode: curMode})}).catch(()=>{});
+  } catch (e) {}
+}
 function render() {
   if (!curDB.length) return;
+  logFirstOpen();
   const item = curDB[curIdx];
   const t = UI_TEXT[curLang] || UI_TEXT.ko;
 
