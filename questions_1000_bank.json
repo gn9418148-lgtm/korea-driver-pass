@@ -5512,8 +5512,8 @@
       "uz": [
         "3 million von gacha ma'muriy jarima",
         "5 million von gacha ma'muriy jarima",
-        "1 yilgacha ozodlikdan mahrum qilish yoki 10 million von gacha jarima",
-        "2 yilgacha ozodlikdan mahrum qilish yoki 20 million von gacha jarima"
+        "1 yilgacha ozodlikdan mahrum qilish yoki 10 million von gacha jinoiy jarima",
+        "2 yilgacha ozodlikdan mahrum qilish yoki 20 million von gacha jinoiy jarima"
       ],
       "ne": [
         "३० लाख वोनसम्मको प्रशासनिक जरिवाना",
@@ -9162,7 +9162,7 @@
         "Elektr samokatning yo'lovchi sig'imi 1 kishi.",
         "O'zini muvozanatlovchi ikki g'ildirakli elektr transport vositasining yo'lovchi sig'imi 1 kishi.",
         "Faqat elektr dvigatel kuchi bilan harakatlana oladigan velosiped uchun yo'lovchi sig'imi 1 kishi.",
-        "Yo'lovchi sig'imini buzgan taqdirda 40 000 von miqdorida jarima solinadi."
+        "Yo'lovchi sig'imini buzgan taqdirda 40 000 von miqdorida qoidabuzarlik uchun jarima solinadi."
       ],
       "ne": [
         "इलेक्ट्रिक किकबोर्ड (स्कुटर) को यात्रु क्षमता १ जना हो।",
@@ -9391,9 +9391,9 @@
       ],
       "uz": [
         "Jazolanmaydi.",
-        "100 ming von gacha jarima yoki qamoq jazosi beriladi.",
-        "200 ming von gacha jarima yoki qamoq jazosi beriladi.",
-        "300 ming von gacha jarima yoki qamoq jazosi beriladi."
+        "100 ming von gacha jinoiy jarima yoki qamoq jazosi beriladi.",
+        "200 ming von gacha jinoiy jarima yoki qamoq jazosi beriladi.",
+        "300 ming von gacha jinoiy jarima yoki qamoq jazosi beriladi."
       ],
       "ne": [
         "कुनै सजाय हुँदैन।",
@@ -9435,9 +9435,9 @@
     "answer": 4,
     "explain": {
       "ko": "도로교통법 제45조(과로한 때 등의 운전 금지), 제154조(벌칙) 30만 원 이하의 벌금이나 구류에 처한다. 제3호 제45 조를 위반하여 과로ㆍ질병으로 인하여 정상적으로 운전하지 못할 우려가 있는 상태에서 자동차등 또는 노면전차 를 운전한 사람(다만, 개인형 이동장치를 운전하는 경우는 제외한다)",
-      "uz": "Yo'l harakati to'g'risidagi qonunning 45-moddasi (Haddan tashqari charchaganda va shu kabi holatlarda haydashni taqiqlash), 154-modda (Jazo choralari): 300 ming vongacha jarima yoki ma'muriy qamoq (구류) bilan jazolanadi. 3-kichik band: 45-moddani buzib, haddan tashqari charchoq yoki kasallik tufayli normal hayday olmasligi ehtimoli bo'lgan holatda avtomobil va shu kabilar yoki tramvayni haydagan shaxs (biroq shaxsiy harakatlanish vositasini haydagan holat bundan mustasno).",
+      "uz": "Yo'l harakati to'g'risidagi qonunning 45-moddasi (Haddan tashqari charchaganda va shu kabi holatlarda haydashni taqiqlash), 154-modda (Jazo choralari): 300 ming vongacha jarima yoki qisqa muddatli qamoq (구류) (구류) bilan jazolanadi. 3-kichik band: 45-moddani buzib, haddan tashqari charchoq yoki kasallik tufayli normal hayday olmasligi ehtimoli bo'lgan holatda avtomobil va shu kabilar yoki tramvayni haydagan shaxs (biroq shaxsiy harakatlanish vositasini haydagan holat bundan mustasno).",
       "ne": "सडक ट्राफिक ऐन धारा ४५ (अत्यधिक थकान भएको बेला आदिमा सवारी चलाउन निषेध), धारा १५४ (दण्ड): ३ लाख वोन वा सोभन्दा कम जरिवाना वा थुनाको सजाय हुन्छ। बुँदा ३: धारा ४५ उल्लङ्घन गरी अत्यधिक थकान वा रोगका कारण सामान्य रूपमा सवारी चलाउन नसक्ने सम्भावना भएको अवस्थामा सवारी साधन आदि वा ट्राम चलाउने व्यक्ति (तर व्यक्तिगत गतिशीलता उपकरण (पर्सनल मोबिलिटी डिभाइस) चलाउने अवस्था बाहेक)।",
-      "vi": "Luật Giao thông Đường bộ Điều 45 (Cấm lái xe khi quá mệt mỏi, v.v.), Điều 154 (Hình phạt): Bị phạt tiền từ 300.000 won trở xuống hoặc tạm giữ. Mục 3: Người vi phạm Điều 45, lái ô tô, v.v. hoặc tàu điện mặt đất trong tình trạng có nguy cơ không thể lái xe bình thường do quá mệt mỏi, bệnh tật (tuy nhiên, trừ trường hợp lái thiết bị di chuyển cá nhân).",
+      "vi": "Luật Giao thông Đường bộ Điều 45 (Cấm lái xe khi quá mệt mỏi, v.v.), Điều 154 (Hình phạt): Bị phạt tiền từ 300.000 won trở xuống hoặc câu lưu. Mục 3: Người vi phạm Điều 45, lái ô tô, v.v. hoặc tàu điện mặt đất trong tình trạng có nguy cơ không thể lái xe bình thường do quá mệt mỏi, bệnh tật (tuy nhiên, trừ trường hợp lái thiết bị di chuyển cá nhân).",
       "en": "Road Traffic Act Article 45 (Prohibition of Driving While Overworked, etc.) and Article 154 (Penalties): Punishable by a fine of not more than 300,000 won or detention. Subparagraph 3: A person who, in violation of Article 45, drove a motor vehicle, etc. or a tram in a state in which there was concern that they could not drive normally due to overwork or illness (excluding, however, a person driving a personal mobility device).",
       "zh": "《道路交通法》第45条（禁止过度疲劳等情况下驾驶）、第154条（罚则）：处30万韩元以下罚金或拘留。第3项：违反第45条，在因过度疲劳、疾病而恐无法正常驾驶的状态下驾驶汽车等或有轨电车的人员（但驾驶个人移动装置的情况除外）。",
       "ru": "Закон о дорожном движении, статья 45 (Запрет управления в состоянии переутомления и т. п.), статья 154 (Наказание): наказывается штрафом до 300 тыс. вон или арестом (구류). Подпункт 3: лицо, нарушившее статью 45 и управлявшее автомобилем и т. п. или трамваем в состоянии, когда существовало опасение, что оно не сможет нормально управлять из-за переутомления или болезни (за исключением случая управления средством индивидуальной мобильности).",
@@ -9544,10 +9544,10 @@
         "최초 위반 시 혈중알코올농도 0.08퍼센트 이상 0.2퍼센트 미만의 경우 1년 이상 2년 이하의 징역이나 5백만 원 이상 1천 만 원 이하의 벌금"
       ],
       "uz": [
-        "Birinchi marta qoidabuzarlikda qondagi alkogol miqdori 0,2 foiz va undan yuqori bo'lsa, 2 yildan 5 yilgacha ozodlikdan mahrum qilish yoki 10 milliondan 20 million von gacha jarima",
-        "Alkogol tekshiruvidan bosh tortish bo'yicha 1 marta qoidabuzarlikda 1 yildan 5 yilgacha ozodlikdan mahrum qilish yoki 5 milliondan 20 million von gacha jarima",
-        "5 yil oldin mast holda haydagani uchun jarima jazosi olib, qondagi alkogol miqdori 0,05 foiz bilan qayta qoidabuzarlik qilgan bo'lsa, 1 yilgacha ozodlikdan mahrum qilish yoki 5 million von gacha jarima",
-        "Birinchi marta qoidabuzarlikda qondagi alkogol miqdori 0,08 foizdan 0,2 foizgacha bo'lsa, 1 yildan 2 yilgacha ozodlikdan mahrum qilish yoki 5 milliondan 10 million von gacha jarima"
+        "Birinchi marta qoidabuzarlikda qondagi alkogol miqdori 0,2 foiz va undan yuqori bo'lsa, 2 yildan 5 yilgacha ozodlikdan mahrum qilish yoki 10 milliondan 20 million von gacha jinoiy jarima",
+        "Alkogol tekshiruvidan bosh tortish bo'yicha 1 marta qoidabuzarlikda 1 yildan 5 yilgacha ozodlikdan mahrum qilish yoki 5 milliondan 20 million von gacha jinoiy jarima",
+        "5 yil oldin mast holda haydagani uchun jarima jazosi olib, qondagi alkogol miqdori 0,05 foiz bilan qayta qoidabuzarlik qilgan bo'lsa, 1 yilgacha ozodlikdan mahrum qilish yoki 5 million von gacha jinoiy jarima",
+        "Birinchi marta qoidabuzarlikda qondagi alkogol miqdori 0,08 foizdan 0,2 foizgacha bo'lsa, 1 yildan 2 yilgacha ozodlikdan mahrum qilish yoki 5 milliondan 10 million von gacha jinoiy jarima"
       ],
       "ne": [
         "पहिलो पटक उल्लङ्घन गर्दा रगतमा अल्कोहलको मात्रा ०.२ प्रतिशत वा सोभन्दा बढी भएमा २ वर्षदेखि ५ वर्षसम्म कैद वा १ करोडदेखि २ करोड वोनसम्म जरिवाना",
@@ -10020,7 +10020,7 @@
       "uz": [
         "Ma'muriy jarima solinishi mumkin.",
         "Haydovchilik guvohnomasi vaqtincha to'xtatilishi mumkin.",
-        "Qamoq yoki jarima jazosi beriladi.",
+        "Qamoq yoki jinoiy jarima jazosi beriladi.",
         "Jazolanmaydi."
       ],
       "ne": [
@@ -10063,9 +10063,9 @@
     "answer": 3,
     "explain": {
       "ko": "도로교통법 제154조(벌칙) 30만 원 이하의 벌금이나 구류에 처한다. 제3호 제45조를 위반하여 과로ㆍ질병으로 인하 여 정상적으로 운전하지 못할 우려가 있는 상태에서 자동차등 또는 노면전차를 운전한 사람(다만, 개인형 이동장치 를 운전하는 경우는 제외한다)",
-      "uz": "Yo'l harakati to'g'risidagi qonunning 154-moddasi (Jazo choralari): 300 ming vongacha jarima yoki ma'muriy qamoq bilan jazolanadi. 3-kichik band: 45-moddani buzib, haddan tashqari charchoq yoki kasallik tufayli normal hayday olmasligi ehtimoli bo'lgan holatda avtomobil va shu kabilar yoki tramvayni haydagan shaxs (biroq shaxsiy harakatlanish vositasini haydagan holat bundan mustasno).",
+      "uz": "Yo'l harakati to'g'risidagi qonunning 154-moddasi (Jazo choralari): 300 ming vongacha jarima yoki qisqa muddatli qamoq (구류) bilan jazolanadi. 3-kichik band: 45-moddani buzib, haddan tashqari charchoq yoki kasallik tufayli normal hayday olmasligi ehtimoli bo'lgan holatda avtomobil va shu kabilar yoki tramvayni haydagan shaxs (biroq shaxsiy harakatlanish vositasini haydagan holat bundan mustasno).",
       "ne": "सडक ट्राफिक ऐन दफा १५४ (दण्ड) ३ लाख वन (३०만 원) वा सोभन्दा कम जरिवाना वा हिरासत (구류) को सजाय हुन्छ। खण्ड ३: दफा ४५ उल्लङ्घन गरी थकान वा रोगका कारण सामान्य रूपमा सवारी चलाउन नसक्ने चिन्ता हुने अवस्थामा मोटरगाडी आदि वा ट्राम चलाउने व्यक्ति (तर व्यक्तिगत गतिशीलता साधन चलाउने अवस्था बाहेक)",
-      "vi": "Điều 154 Luật Giao thông Đường bộ (Hình phạt): Bị phạt tiền đến 300.000 won hoặc tạm giữ (구류). Mục 3: Người vi phạm Điều 45, lái ô tô, v.v. hoặc xe điện mặt đất trong trạng thái có nguy cơ không thể lái xe bình thường do mệt mỏi quá độ hoặc bệnh tật (tuy nhiên loại trừ trường hợp lái thiết bị di chuyển cá nhân).",
+      "vi": "Điều 154 Luật Giao thông Đường bộ (Hình phạt): Bị phạt tiền đến 300.000 won hoặc câu lưu. Mục 3: Người vi phạm Điều 45, lái ô tô, v.v. hoặc xe điện mặt đất trong trạng thái có nguy cơ không thể lái xe bình thường do mệt mỏi quá độ hoặc bệnh tật (tuy nhiên loại trừ trường hợp lái thiết bị di chuyển cá nhân).",
       "en": "Road Traffic Act Article 154 (Penalties): Punishable by a fine of not more than 300,000 won or detention. Subparagraph 3: A person who, in violation of Article 45, drove a motor vehicle, etc. or a tram in a state in which there was concern that they could not drive normally due to overwork or illness (excluding, however, a person driving a personal mobility device).",
       "zh": "《道路交通法》第154条（罚则）：处30万韩元以下罚金或拘留。第3项：违反第45条，在因过度疲劳、疾病而恐无法正常驾驶的状态下驾驶汽车等或有轨电车的人员（但驾驶个人移动装置的情况除外）。",
       "ru": "Закон о дорожном движении, статья 154 (Наказание): наказывается штрафом до 300 тыс. вон или арестом (구류). Подпункт 3: лицо, нарушившее статью 45 и управлявшее автомобилем и т. п. или трамваем в состоянии, когда существовало опасение, что оно не сможет нормально управлять из-за переутомления или болезни (за исключением случая управления средством индивидуальной мобильности).",
@@ -10560,10 +10560,10 @@
         "원동기장치자전거, 6개월 이하의 징역 또는 300만 원 이하의 벌금"
       ],
       "uz": [
-        "Ikki g'ildirakli muvozanatli elektr transport vositasi; 1 yilgacha ozodlikdan mahrum qilish yoki 5 million vongacha jarima",
-        "Ikki g'ildirakli avtomobil; 6 oygacha ozodlikdan mahrum qilish yoki 3 million vongacha jarima",
-        "Maxsus avtomobil; 2 yilgacha ozodlikdan mahrum qilish yoki 5 million vongacha jarima",
-        "Motorli velosiped; 6 oygacha ozodlikdan mahrum qilish yoki 3 million vongacha jarima"
+        "Ikki g'ildirakli muvozanatli elektr transport vositasi; 1 yilgacha ozodlikdan mahrum qilish yoki 5 million vongacha jinoiy jarima",
+        "Ikki g'ildirakli avtomobil; 6 oygacha ozodlikdan mahrum qilish yoki 3 million vongacha jinoiy jarima",
+        "Maxsus avtomobil; 2 yilgacha ozodlikdan mahrum qilish yoki 5 million vongacha jinoiy jarima",
+        "Motorli velosiped; 6 oygacha ozodlikdan mahrum qilish yoki 3 million vongacha jinoiy jarima"
       ],
       "ne": [
         "इलेक्ट्रिक दुई-पाङ्ग्रे ब्यालेन्स सवारी, १ वर्षसम्म कैद वा ५० लाख वनसम्म जरिवाना",
@@ -10637,8 +10637,8 @@
         "1년 6월 이상의 유기징역에 처한다."
       ],
       "uz": [
-        "7 yilgacha ozodlikdan mahrum qilish yoki 10 million vongacha jarima bilan jazolanadi.",
-        "10 yilgacha ozodlikdan mahrum qilish yoki 20 million vongacha jarima bilan jazolanadi.",
+        "7 yilgacha ozodlikdan mahrum qilish yoki 10 million vongacha jinoiy jarima bilan jazolanadi.",
+        "10 yilgacha ozodlikdan mahrum qilish yoki 20 million vongacha jinoiy jarima bilan jazolanadi.",
         "Kamida 1 yil muddatga ozodlikdan mahrum qilish bilan jazolanadi.",
         "Kamida 1 yil 6 oy muddatga ozodlikdan mahrum qilish bilan jazolanadi."
       ],
@@ -10947,8 +10947,8 @@
       "uz": [
         "60 000 von miqdorida qoidabuzarlik uchun jarima to'lash to'g'risida xabarnoma oladi.",
         "30 000 von miqdorida ma'muriy jarima solinadi.",
-        "6 oygacha ozodlikdan mahrum qilish yoki 2 million vongacha jarima bilan jazolanadi.",
-        "1 yilgacha ozodlikdan mahrum qilish yoki 5 million vongacha jarima bilan jazolanadi."
+        "6 oygacha ozodlikdan mahrum qilish yoki 2 million vongacha jinoiy jarima bilan jazolanadi.",
+        "1 yilgacha ozodlikdan mahrum qilish yoki 5 million vongacha jinoiy jarima bilan jazolanadi."
       ],
       "ne": [
         "६०,००० वनको ट्राफिक जरिवाना (सिटेसन) को सूचना प्राप्त हुन्छ।",
@@ -12254,7 +12254,7 @@
         "운전자는 어린이 보호구역 내 신호기가 없는 횡단보도 앞에서는 반드시 서행하여야 한다."
       ],
       "uz": [
-        "Haydovchi piyodalar ustuvor bo'lgan yo'lda sekin yurmasdan yoki qisqa to'xtamasdan piyodalarning harakatiga to'sqinlik qilsa, jarima solinadi.",
+        "Haydovchi piyodalar ustuvor bo'lgan yo'lda sekin yurmasdan yoki qisqa to'xtamasdan piyodalarning harakatiga to'sqinlik qilsa, qoidabuzarlik uchun jarima solinadi.",
         "Yo'ldan tashqari joylarda haydayotgan haydovchilarga ham piyodalarni himoya qilish majburiyati yuklatiladi.",
         "Piyoda piyodalar o'tish joyidan o'tmoqchi bo'lganda, haydovchi o'sha piyodalar o'tish joyi oldida to'xtab o'tishi (qisqa to'xtashi) shart.",
         "Haydovchi bolalarni himoya qilish hududidagi (maktab zonasi) svetofor yo'q piyodalar o'tish joyi oldida albatta sekin yurishi shart."
@@ -12410,7 +12410,7 @@
       "uz": [
         "Piyodalar ustuvor yo'lida piyodalar faqat yo'lning o'ng chetidan yurishlari mumkin.",
         "Haydovchilarga sekinlashish, vaqtincha to'xtash kabi turli xil piyodalarni himoya qilish majburiyatlari yuklatiladi.",
-        "Piyodalarni himoya qilish majburiyatini bajarmagan taqdirda, yengil avtomobil uchun 40 000 von jarima va 10 jarima balli qo'llaniladi.",
+        "Piyodalarni himoya qilish majburiyatini bajarmagan taqdirda, yengil avtomobil uchun 40 000 von qoidabuzarlik uchun jarima va 10 jarima balli qo'llaniladi.",
         "Politsiya bo'limi boshlig'i piyodalarni himoya qilish uchun zarur deb topsa, transport vositalarining harakat tezligini 20 km/soat gacha cheklashi mumkin."
       ],
       "ne": [
@@ -18201,10 +18201,10 @@
         "시속 80킬로미터를 초과한 속도로 운전한 사람은 50만 원 이하의 벌금 또는 구류"
       ],
       "uz": [
-        "Maksimal tezlikdan soatiga 100 km dan ortiq tezlikda 3 marta va undan ko‘p haydagan shaxsga 5 million vongacha jarima yoki ma'muriy qamoq",
-        "Maksimal tezlikdan soatiga 100 km dan ortiq tezlikda 3 marta va undan ko‘p haydagan shaxsga 1 yilgacha ozodlikdan mahrum qilish yoki 5 million vongacha jarima",
-        "Maksimal tezlikdan soatiga 100 km dan ortiq tezlikda 2 marta haydagan shaxsga 3 million vongacha jarima",
-        "Maksimal tezlikdan soatiga 80 km dan ortiq tezlikda haydagan shaxsga 500 ming vongacha jarima yoki ma'muriy qamoq"
+        "Maksimal tezlikdan soatiga 100 km dan ortiq tezlikda 3 marta va undan ko‘p haydagan shaxsga 5 million vongacha jinoiy jarima yoki qisqa muddatli qamoq (구류)",
+        "Maksimal tezlikdan soatiga 100 km dan ortiq tezlikda 3 marta va undan ko‘p haydagan shaxsga 1 yilgacha ozodlikdan mahrum qilish yoki 5 million vongacha jinoiy jarima",
+        "Maksimal tezlikdan soatiga 100 km dan ortiq tezlikda 2 marta haydagan shaxsga 3 million vongacha jinoiy jarima",
+        "Maksimal tezlikdan soatiga 80 km dan ortiq tezlikda haydagan shaxsga 500 ming vongacha jinoiy jarima yoki qisqa muddatli qamoq (구류)"
       ],
       "ne": [
         "अधिकतम गतिभन्दा प्रति घण्टा १०० कि.मि. बढी गतिमा ३ पटक वा सोभन्दा बढी चलाउने व्यक्तिलाई ५० लाख वोनसम्म जरिवाना वा थुना",
@@ -18248,7 +18248,7 @@
       "ko": "①② 도로교통법 제151조의2 제2호 최고속도보다 시속 100킬로미터를 초과한 속도로 3회 이상 자동차등을 운전한 사람은 1년 이하의 징역이나 500만 원 이하의 벌금, ③ 도로교통법 제153조 제2항 제2호 최고속도보다 시속 100킬로미터를 초과한 속도로 자동차등을 운전한 사람은 100만 원 이하의 벌금 또는 구류 ④ 도로교통법 제154조 제9호 최고속도보다 시속 80킬로미터를 초과한 속도로 자동차 등을 운전한 사람 30만 원 이하의 벌금 또는 구류",
       "uz": "①② Yo‘l harakati to‘g‘risidagi qonun 151-2-modda, 2-band: maksimal tezlikdan soatiga 100 km dan ortiq tezlikda 3 marta yoki undan ko‘p avtomobil va hokazolarni boshqargan shaxs 1 yilgacha ozodlikdan mahrum qilish yoki 5 million vongacha jarima bilan jazolanadi. ③ 153-modda 2-qism 2-band: maksimal tezlikdan soatiga 100 km dan ortiq tezlikda boshqargan shaxs 1 million vongacha jarima yoki ma’muriy qamoqqa olinadi. ④ 154-modda 9-band: maksimal tezlikdan soatiga 80 km dan ortiq tezlikda boshqargan shaxs 300 ming vongacha jarima yoki ma’muriy qamoqqa olinadi.",
       "ne": "①② सडक ट्राफिक ऐन धारा 151-2 बुँदा 2: अधिकतम गतिभन्दा प्रतिघण्टा 100 किलोमिटर बढी गतिमा 3 पटक वा सोभन्दा बढी मोटरगाडी आदि चलाउने व्यक्तिलाई 1 वर्षसम्म कैद वा 5 लाख वोन (500만 원) सम्म जरिवाना, ③ सडक ट्राफिक ऐन धारा 153 उपधारा 2 बुँदा 2: अधिकतम गतिभन्दा प्रतिघण्टा 100 किलोमिटर बढी गतिमा मोटरगाडी आदि चलाउने व्यक्तिलाई 1 लाख वोन (100만 원) सम्म जरिवाना वा हिरासत (구류), ④ सडक ट्राफिक ऐन धारा 154 बुँदा 9: अधिकतम गतिभन्दा प्रतिघण्टा 80 किलोमिटर बढी गतिमा मोटरगाडी आदि चलाउने व्यक्तिलाई 30 हजार वोन (30만 원) सम्म जरिवाना वा हिरासत।",
-      "vi": "①② Điều 151-2 mục 2 Luật Giao thông Đường bộ: Người lái ô tô, v.v. từ 3 lần trở lên với tốc độ vượt tốc độ tối đa trên 100 km/h thì bị phạt tù đến 1 năm hoặc phạt tiền đến 5 triệu won. ③ Điều 153 khoản 2 mục 2 Luật Giao thông Đường bộ: Người lái ô tô, v.v. với tốc độ vượt tốc độ tối đa trên 100 km/h thì bị phạt tiền đến 1 triệu won hoặc tạm giữ (구류). ④ Điều 154 mục 9 Luật Giao thông Đường bộ: Người lái ô tô, v.v. với tốc độ vượt tốc độ tối đa trên 80 km/h thì bị phạt tiền đến 300.000 won hoặc tạm giữ (구류).",
+      "vi": "①② Điều 151-2 mục 2 Luật Giao thông Đường bộ: Người lái ô tô, v.v. từ 3 lần trở lên với tốc độ vượt tốc độ tối đa trên 100 km/h thì bị phạt tù đến 1 năm hoặc phạt tiền đến 5 triệu won. ③ Điều 153 khoản 2 mục 2 Luật Giao thông Đường bộ: Người lái ô tô, v.v. với tốc độ vượt tốc độ tối đa trên 100 km/h thì bị phạt tiền đến 1 triệu won hoặc câu lưu. ④ Điều 154 mục 9 Luật Giao thông Đường bộ: Người lái ô tô, v.v. với tốc độ vượt tốc độ tối đa trên 80 km/h thì bị phạt tiền đến 300.000 won hoặc câu lưu.",
       "en": "①② Road Traffic Act Article 151-2, Item 2: A person who has driven a motor vehicle, etc. 3 or more times at a speed exceeding the maximum speed by 100 kilometers per hour is punished by imprisonment for up to 1 year or a fine of up to 5 million won. ③ Road Traffic Act Article 153, Paragraph 2, Item 2: A person who has driven a motor vehicle, etc. at a speed exceeding the maximum speed by 100 kilometers per hour is punished by a fine of up to 1 million won or detention. ④ Road Traffic Act Article 154, Item 9: A person who has driven a motor vehicle, etc. at a speed exceeding the maximum speed by 80 kilometers per hour is punished by a fine of up to 300,000 won or detention.",
       "zh": "①②《道路交通法》第151条之2第2项：以超过最高限速每小时100公里以上的速度驾驶汽车等3次以上者，处1年以下有期徒刑或500万韩元以下罚金。③第153条第2款第2项：以超过最高限速每小时100公里以上的速度驾驶汽车等者，处100万韩元以下罚金或拘留。④第154条第9项：以超过最高限速每小时80公里以上的速度驾驶汽车等者，处30万韩元以下罚金或拘留。",
       "ru": "①② Закон о дорожном движении, статья 151-2, подпункт 2: лицо, 3 и более раз управлявшее автомобилем и т. п. со скоростью, превышающей максимальную на 100 километров в час, наказывается лишением свободы на срок до 1 года либо штрафом до 5 млн вон. ③ Закон о дорожном движении, статья 153, пункт 2, подпункт 2: лицо, управлявшее автомобилем и т. п. со скоростью, превышающей максимальную на 100 километров в час, наказывается штрафом до 1 млн вон либо арестом (구류). ④ Закон о дорожном движении, статья 154, подпункт 9: лицо, управлявшее автомобилем и т. п. со скоростью, превышающей максимальную на 80 километров в час, наказывается штрафом до 300 тыс. вон либо арестом (구류).",
@@ -22313,7 +22313,7 @@
       ],
       "uz": [
         "Bolalarni himoya qilish hududi boshlang'ich maktabning asosiy kirish eshigidan 100 metr radiusdagi yo'lning ma'lum bir qismini anglatadi.",
-        "Bolalarni himoya qilish hududi ichida soat 08:00 dan 20:00 gacha to'xtash va to'xtab turish qoidasini buzgan taqdirda jarima oshiriladi.",
+        "Bolalarni himoya qilish hududi ichida soat 08:00 dan 20:00 gacha to'xtash va to'xtab turish qoidasini buzgan taqdirda qoidabuzarlik uchun jarima oshiriladi.",
         "Bolalarni himoya qilish hududida o'rnatilgan svetoforlarning piyodalar o'tish vaqti bolalarning eng yuqori yurish tezligiga asoslanadi.",
         "Bolalarni himoya qilish hududi ichida soat 08:00 dan 20:00 gacha piyodalarni himoya qilish majburiyati bajarilmasa, jarima ballari 2 barobar ko'payadi."
       ],
@@ -23864,10 +23864,10 @@
         "5년 이하의 징역이나 2천만 원 이하의 벌금"
       ],
       "uz": [
-        "1 yildan 15 yilgacha ozodlikdan mahrum qilish yoki 5 million vondan 30 million vongacha jarima",
+        "1 yildan 15 yilgacha ozodlikdan mahrum qilish yoki 5 million vondan 30 million vongacha jinoiy jarima",
         "Umrbod yoki 5 yil va undan ortiq ozodlikdan mahrum qilish",
-        "2 yilgacha ozodlikdan mahrum qilish yoki 5 million vongacha jarima",
-        "5 yilgacha ozodlikdan mahrum qilish yoki 20 million vongacha jarima"
+        "2 yilgacha ozodlikdan mahrum qilish yoki 5 million vongacha jinoiy jarima",
+        "5 yilgacha ozodlikdan mahrum qilish yoki 20 million vongacha jinoiy jarima"
       ],
       "ne": [
         "१ वर्षदेखि १५ वर्षसम्म कैद वा ५० लाख वोनदेखि ३ करोड वोनसम्म जरिवाना",
@@ -24018,10 +24018,10 @@
         "50만 원 이하의 벌금이나 구류"
       ],
       "uz": [
-        "200 000 vongacha jarima yoki ma'muriy qamoq",
-        "300 000 vongacha jarima yoki ma'muriy qamoq",
-        "400 000 vongacha jarima yoki ma'muriy qamoq",
-        "500 000 vongacha jarima yoki ma'muriy qamoq"
+        "200 000 vongacha jinoiy jarima yoki qisqa muddatli qamoq (구류)",
+        "300 000 vongacha jinoiy jarima yoki qisqa muddatli qamoq (구류)",
+        "400 000 vongacha jinoiy jarima yoki qisqa muddatli qamoq (구류)",
+        "500 000 vongacha jinoiy jarima yoki qisqa muddatli qamoq (구류)"
       ],
       "ne": [
         "२ लाख वनसम्म जरिवाना वा थुना",
@@ -24030,10 +24030,10 @@
         "५ लाख वनसम्म जरिवाना वा थुना"
       ],
       "vi": [
-        "Phạt tiền đến 200.000 KRW hoặc tạm giữ hành chính",
-        "Phạt tiền đến 300.000 KRW hoặc tạm giữ hành chính",
-        "Phạt tiền đến 400.000 KRW hoặc tạm giữ hành chính",
-        "Phạt tiền đến 500.000 KRW hoặc tạm giữ hành chính"
+        "Phạt tiền đến 200.000 KRW hoặc câu lưu",
+        "Phạt tiền đến 300.000 KRW hoặc câu lưu",
+        "Phạt tiền đến 400.000 KRW hoặc câu lưu",
+        "Phạt tiền đến 500.000 KRW hoặc câu lưu"
       ],
       "en": [
         "Fine of up to 200,000 KRW or misdemeanor detention",
@@ -24063,9 +24063,9 @@
     "answer": 2,
     "explain": {
       "ko": "도로교통법 제53조, 제154조 어린이통학버스 보호자를 태우지 아니하고 운행하는 어린이통학버스에 보호자 동승 표지를 부착한 사람은 30만 원 이하의 벌금이나 구류에 처한다.",
-      "uz": "Yo'l harakati to'g'risidagi qonunning 53- va 154-moddalariga ko'ra, hamrohlik qiluvchi kattalar bo'lmagan holda harakatlanayotgan bolalar maktab avtobusiga 'Katta yoshli hamroh mavjud' belgisini yopishtirgan shaxs 300 000 vongacha jarima yoki ma'muriy qamoq bilan jazolanadi.",
+      "uz": "Yo'l harakati to'g'risidagi qonunning 53- va 154-moddalariga ko'ra, hamrohlik qiluvchi kattalar bo'lmagan holda harakatlanayotgan bolalar maktab avtobusiga 'Katta yoshli hamroh mavjud' belgisini yopishtirgan shaxs 300 000 vongacha jarima yoki qisqa muddatli qamoq (구류) bilan jazolanadi.",
       "ne": "सडक ट्राफिक ऐन धारा 53, धारा 154: बाल यातायात बसमा अभिभावक नचढाई गुडिरहेको बाल यातायात बसमा अभिभावक सहयात्री चिन्ह टाँस्ने व्यक्तिलाई 300,000 वोन (30만 원) सम्म जरिवाना वा हिरासत (구류) को सजाय दिइन्छ।",
-      "vi": "Luật Giao thông Đường bộ Điều 53, Điều 154: Người dán biểu thị người giám hộ đi cùng lên xe buýt đưa đón trẻ em đang chạy mà không chở người giám hộ của xe buýt đưa đón trẻ em thì bị phạt tiền từ 300.000 won trở xuống hoặc tạm giữ.",
+      "vi": "Luật Giao thông Đường bộ Điều 53, Điều 154: Người dán biểu thị người giám hộ đi cùng lên xe buýt đưa đón trẻ em đang chạy mà không chở người giám hộ của xe buýt đưa đón trẻ em thì bị phạt tiền từ 300.000 won trở xuống hoặc câu lưu.",
       "en": "Road Traffic Act Articles 53 and 154: A person who attaches the guardian-on-board sign to a children's commuter bus operating without a guardian on board is punished by a fine of up to 300,000 won or detention.",
       "zh": "根据《道路交通法》第53条及第154条，在未搭乘监护人而行驶的儿童校车上粘贴“监护人随乘标识”的人员，将被处以30万韩元以下罚金或拘留。",
       "ru": "Закон о дорожном движении, статьи 53 и 154: лицо, прикрепившее знак совместной поездки сопровождающего лица (보호자 동승 표지) к детскому школьному автобусу, который ездит без сопровождающего лица (보호자), наказывается штрафом (벌금) до 300 000 вон или арестом (구류).",
@@ -24326,10 +24326,10 @@
         "경운기 운전자가 보행자보호를 불이행하는 경우 범칙금은 3만 원이다."
       ],
       "uz": [
-        "Samosval haydovchisi svetofor ishorasini buzsa, jarima miqdori 130 000 von bo'ladi.",
-        "Yengil avtomobil haydovchisi keksa piyodaning harakatlanishiga to'sqinlik qilsa, jarima miqdori 70 000 von bo'ladi.",
-        "Velosiped haydovchisi piyodalar o'tish joyidan o'tayotgan keksa piyodaning o'tishiga to'sqinlik qilsa, jarima miqdori 50 000 von bo'ladi.",
-        "Motoblok haydovchisi piyodani himoya qilish majburiyatini bajarmasa, jarima miqdori 30 000 von bo'ladi."
+        "Samosval haydovchisi svetofor ishorasini buzsa, qoidabuzarlik uchun jarima miqdori 130 000 von bo'ladi.",
+        "Yengil avtomobil haydovchisi keksa piyodaning harakatlanishiga to'sqinlik qilsa, qoidabuzarlik uchun jarima miqdori 70 000 von bo'ladi.",
+        "Velosiped haydovchisi piyodalar o'tish joyidan o'tayotgan keksa piyodaning o'tishiga to'sqinlik qilsa, qoidabuzarlik uchun jarima miqdori 50 000 von bo'ladi.",
+        "Motoblok haydovchisi piyodani himoya qilish majburiyatini bajarmasa, qoidabuzarlik uchun jarima miqdori 30 000 von bo'ladi."
       ],
       "ne": [
         "डम्प ट्रक चालकले ट्राफिक संकेत उल्लंघन गरेमा जरिवाना १ लाख ३० हजार वन हुन्छ।",
@@ -25103,9 +25103,9 @@
       ],
       "uz": [
         "Avtomobil haydovchisi svetofor ishorasi o'zgarganda darhol qo'zg'almasdan, atrofni ko'zdan kechirib sekin harakat boshlaydi.",
-        "Yengil avtomobil haydovchisi soat 8:00 dan 20:00 gacha bo'lgan vaqtda svetofor ishorasini buzib o'tsa, 120 000 von jarima solinadi.",
+        "Yengil avtomobil haydovchisi soat 8:00 dan 20:00 gacha bo'lgan vaqtda svetofor ishorasini buzib o'tsa, 120 000 von qoidabuzarlik uchun jarima solinadi.",
         "Velosiped haydovchisi ham hali kesib o'tib ulgurmagan keksa kishi bo'lsa, uning xavfsiz o'tib olishi uchun kutib turadi.",
-        "Ikki g'ildirakli transport vositasi haydovchisi soat 8:00 dan 20:00 gacha piyodalar o'tish joyida piyoda o'tishiga to'sqinlik qilsa, 90 000 von jarima solinadi."
+        "Ikki g'ildirakli transport vositasi haydovchisi soat 8:00 dan 20:00 gacha piyodalar o'tish joyida piyoda o'tishiga to'sqinlik qilsa, 90 000 von qoidabuzarlik uchun jarima solinadi."
       ],
       "ne": [
         "ट्राफिक बत्ती परिवर्तन हुनासाथ कार चालकले तुरुन्तै नहिँडी वरिपरि हेरेर बिस्तारै अगाडि बढाउनुपर्छ।",
@@ -25179,7 +25179,7 @@
         "노인들이 잘 보일 수 있도록 규정보다 신호등을 크게 설치할 수 있다."
       ],
       "uz": [
-        "Soat 8:00 dan 20:00 gacha cheklangan tezlik buzilganda jarima miqdori oshiriladi.",
+        "Soat 8:00 dan 20:00 gacha cheklangan tezlik buzilganda qoidabuzarlik uchun jarima miqdori oshiriladi.",
         "Piyodalar svetofori vaqti oddiy yo'ldagi piyodalar svetoforidan uzunroq bo'ladi.",
         "Yo'l bo'yi avtoturargohini tashkil etish mumkin emas.",
         "Keksalarga yaxshi ko'rinishi uchun svetoforlar belgilangan me'yordan kattaroq qilib o'rnatilishi mumkin."
@@ -25567,7 +25567,7 @@
         "Keksalar himoya hududidan o'tayotganda xavfli vaziyat yuzaga kelishiga tayyor turgan holda ehtiyotkorlik bilan haydash kerak.",
         "Keksalarni himoya qilish belgisi keksalar himoya hududi ichida keksalarni himoya qilishni ko'rsatadigan belgidir.",
         "Keksalarni himoya qilish belgisi keksalar himoya hududidagi yo'lning o'rtasiga o'rnatiladi.",
-        "Yengil avtomobil haydovchisi keksalar himoya hududida soat 10:00 da piyodalar o'tish joyidan o'tayotgan piyodaning o'tishiga to'sqinlik qilsa, 120 000 von jarima solinadi."
+        "Yengil avtomobil haydovchisi keksalar himoya hududida soat 10:00 da piyodalar o'tish joyidan o'tayotgan piyodaning o'tishiga to'sqinlik qilsa, 120 000 von qoidabuzarlik uchun jarima solinadi."
       ],
       "ne": [
         "ज्येष्ठ नागरिक सुरक्षा क्षेत्रबाट गुज्रिँदा जोखिमपूर्ण अवस्था आउन सक्ने भएकाले सचेत भई सवारी चलाउनु पर्दछ।",
@@ -30848,7 +30848,7 @@
         "Uxlab qolib haydashning oldini olish uchun yo'l yoqasida (chetki qismida) to'xtab dam olish.",
         "Quyosh chiqishi manzarasidan zavqlanish uchun yo'l yoqasida to'xtab turish.",
         "Avtomagistralning harakat bo'laklarida tirbandlik bo'lganda yo'l yoqasi bo'ylab harakatlanish.",
-        "Zaruriy sababsiz yo'l yoqasi bo'ylab harakatlangan yengil avtomobil haydovchisining jarima miqdori 60 000 vondir."
+        "Zaruriy sababsiz yo'l yoqasi bo'ylab harakatlangan yengil avtomobil haydovchisining qoidabuzarlik uchun jarima miqdori 60 000 vondir."
       ],
       "ne": [
         "निद्रामा सवारी चलाउनबाट जोगिन रोड सोल्डर (आकस्मिक किनारा) मा रोकेर आराम गर्ने।",
@@ -37135,7 +37135,7 @@
       "uz": [
         "Haydovchi xavfsizlik kamarini taqmagan taqdirda 30 000 von ma'muriy jarima solinadi.",
         "Odatda bo'yin qismidagi qamchisimon jarohatlanish 2 nuqtali kamarda ko'proq yuzaga keladi.",
-        "13 yoshdan kichik bolalar xavfsizlik kamarini taqmasa, 60 000 von jarima solinadi.",
+        "13 yoshdan kichik bolalar xavfsizlik kamarini taqmasa, 60 000 von qoidabuzarlik uchun jarima solinadi.",
         "Xavfsizlik kamarlari 2 nuqtali, 3 nuqtali va 4 nuqtali turlarga bo'linadi."
       ],
       "ne": [
@@ -38768,7 +38768,7 @@
         "형사입건된 경우 벌점 40점"
       ],
       "uz": [
-        "2 yilgacha ozodlikdan mahrum qilish yoki 5 million vongacha jarima",
+        "2 yilgacha ozodlikdan mahrum qilish yoki 5 million vongacha jinoiy jarima",
         "Aniqlangan zahoti guvohnomani to'xtatib turish",
         "Qamoqqa olingan taqdirda guvohnomani bekor qilish",
         "Jinoiy ish qo'zg'atilgan taqdirda 40 jarima bali"
@@ -38925,7 +38925,7 @@
         "Jazo berilmaydi.",
         "30 000 von miqdorida jarima to'lash xabarnomasi beriladi.",
         "40 000 von ma'muriy jarima solinadi.",
-        "100 000 vongacha jarima yoki ma'muriy qamoq jazosi beriladi."
+        "100 000 vongacha jinoiy jarima yoki qisqa muddatli qamoq (구류) jazosi beriladi."
       ],
       "ne": [
         "कुनै सजाय हुँदैन।",
@@ -38937,7 +38937,7 @@
         "Không bị xử phạt.",
         "Ra thông báo xử phạt vi phạm với mức tiền phạt 30.000 won.",
         "Phạt tiền hành chính 40.000 won.",
-        "Phạt tiền đến 100.000 won hoặc tạm giữ hành chính."
+        "Phạt tiền đến 100.000 won hoặc câu lưu."
       ],
       "en": [
         "No punishment is imposed.",
@@ -39002,7 +39002,7 @@
         "Jazo berilmaydi.",
         "70 000 von ma'muriy jarima solinadi.",
         "100 000 von miqdorida jarima to'lash xabarnomasi beriladi.",
-        "100 000 vongacha jarima yoki ma'muriy qamoq jazosi beriladi."
+        "100 000 vongacha jinoiy jarima yoki qisqa muddatli qamoq (구류) jazosi beriladi."
       ],
       "ne": [
         "कुनै सजाय हुँदैन।",
@@ -39014,7 +39014,7 @@
         "Không bị xử phạt.",
         "Phạt tiền hành chính 70.000 won.",
         "Ra thông báo xử phạt vi phạm với mức tiền phạt 100.000 won.",
-        "Phạt tiền đến 100.000 won hoặc tạm giữ hành chính."
+        "Phạt tiền đến 100.000 won hoặc câu lưu."
       ],
       "en": [
         "No punishment is imposed.",
@@ -39239,7 +39239,7 @@
         "Jazo berilmaydi.",
         "100 000 von ma'muriy jarima solinadi.",
         "120 000 von miqdorida jarima to'lash xabarnomasi beriladi.",
-        "300 000 vongacha jarima yoki ma'muriy qamoq jazosi beriladi."
+        "300 000 vongacha jinoiy jarima yoki qisqa muddatli qamoq (구류) jazosi beriladi."
       ],
       "ne": [
         "कुनै सजाय हुँदैन।",
@@ -39251,7 +39251,7 @@
         "Không bị xử phạt.",
         "Phạt tiền hành chính 100.000 won.",
         "Ra thông báo xử phạt vi phạm với mức tiền phạt 120.000 won.",
-        "Phạt tiền đến 300.000 won hoặc tạm giữ hành chính."
+        "Phạt tiền đến 300.000 won hoặc câu lưu."
       ],
       "en": [
         "No punishment is imposed.",
@@ -39281,9 +39281,9 @@
     "answer": 3,
     "explain": {
       "ko": "주·정차된 차만 손괴하는 교통사고를 일으키고 피해자에게 인적사항을 제공하지 아니한 사람은 도로교통법 제 156조(벌칙)에 의한 처벌기준은 20만 원 이하의 벌금이나 구류 또는 과료이다. 실제는 도로교통법 시행령 별표8에 의해 승용자동차등은 범칙금 12만 원으로 통고처분 된다.",
-      "uz": "To'xtagan yoki to'xtab turgan avtomobilnigina shikastlagan yo'l-transport hodisasini sodir etib, jabrlanuvchiga shaxsiy ma'lumotlarini bermagan shaxs uchun Yo'l harakati to'g'risidagi qonunning 156-moddasi (Jazo choralari)ga ko'ra jazo mezoni 200 ming vongacha jarima yoki ma'muriy qamoq yoki yengil jarima (과료) dir. Aslida Yo'l harakati to'g'risidagi qonun ijro qarorining 8-ilovasiga ko'ra yengil avtomobil va shu kabilar uchun 120 ming von jarima bilan ogohlantirish bilan jazolanadi (통고처분).",
+      "uz": "To'xtagan yoki to'xtab turgan avtomobilnigina shikastlagan yo'l-transport hodisasini sodir etib, jabrlanuvchiga shaxsiy ma'lumotlarini bermagan shaxs uchun Yo'l harakati to'g'risidagi qonunning 156-moddasi (Jazo choralari)ga ko'ra jazo mezoni 200 ming vongacha jarima yoki qisqa muddatli qamoq (구류) yoki yengil jarima (과료) dir. Aslida Yo'l harakati to'g'risidagi qonun ijro qarorining 8-ilovasiga ko'ra yengil avtomobil va shu kabilar uchun 120 ming von jarima bilan ogohlantirish bilan jazolanadi (통고처분).",
       "ne": "पार्क गरिएको वा रोकिएको गाडीमा मात्र क्षति पुर्‍याउने सवारी दुर्घटना गराई पीडितलाई व्यक्तिगत विवरण उपलब्ध नगराउने व्यक्तिलाई सडक यातायात ऐन दफा १५६ (सजाय) अनुसार २ लाख वनसम्म जरिवाना, थुना वा सामान्य जरिवाना हुने व्यवस्था छ। व्यवहारमा सडक यातायात ऐन कार्यान्वयन नियमावली अनुसूची ८ बमोजिम यात्रुवाहक कार आदिका लागि १ लाख २० हजार वन जरिवानाको सूचना (प्यानल्टी नोटिस) जारी गरिन्छ।",
-      "vi": "Người gây ra tai nạn giao thông chỉ làm hư hỏng xe đang đỗ hoặc dừng và không cung cấp thông tin cá nhân cho người bị hại sẽ có mức phạt theo Điều 156 (Hình phạt) Luật Giao thông đường bộ là phạt tiền đến 200.000 won, tạm giữ hoặc phạt tiền nhẹ. Trên thực tế, theo Phụ lục 8 Nghị định thi hành Luật Giao thông đường bộ, đối với xe ô tô con, v.v. sẽ ra thông báo xử phạt vi phạm với mức tiền phạt 120.000 won.",
+      "vi": "Người gây ra tai nạn giao thông chỉ làm hư hỏng xe đang đỗ hoặc dừng và không cung cấp thông tin cá nhân cho người bị hại sẽ có mức phạt theo Điều 156 (Hình phạt) Luật Giao thông đường bộ là phạt tiền đến 200.000 won, câu lưu hoặc phạt tiền nhẹ. Trên thực tế, theo Phụ lục 8 Nghị định thi hành Luật Giao thông đường bộ, đối với xe ô tô con, v.v. sẽ ra thông báo xử phạt vi phạm với mức tiền phạt 120.000 won.",
       "en": "A person who caused a traffic accident that damaged only a stopped or parked vehicle and did not provide personal information to the victim is subject to the punishment standard under Article 156 (Penalties) of the Road Traffic Act of a fine of up to 200,000 won, detention, or a minor fine (gwaryo). In practice, under Annex 8 of the Enforcement Decree of the Road Traffic Act, a notice disposition is issued with a fine (beomchikgeum) of 120,000 won for passenger cars, etc.",
       "zh": "引发仅损坏停放或临时停车车辆的交通事故却未向受害人提供个人信息的，依据《道路交通法》第156条（罚则），处罚标准为20万韩元以下罚金、拘留或科料。实际执法中，依据《道路交通法施行令》附表8，对乘用车等作出12万韩元罚款的通告处分。",
       "ru": "Лицо, совершившее ДТП с повреждением только припаркованных или остановленных транспортных средств и не предоставившее потерпевшему сведения о себе, по статье 156 (Наказания) Закона о дорожном движении подлежит наказанию по критерию: штраф (벌금) до 200 000 вон, арест (구류) или мелкий штраф (과료). Фактически же согласно Приложению 8 к Указу об исполнении Закона о дорожном движении для легковых автомобилей и т. п. применяется уведомительное постановление с штрафом (범칙금) 120 000 вон.",
@@ -39313,10 +39313,10 @@
         "2년 이상 5년 이하의 징역이나 1천만 원 이상 2천만 원 이하의 벌금"
       ],
       "uz": [
-        "1 yilgacha ozodlikdan mahrum qilish yoki 5 million vongacha jarima",
-        "2 yilgacha ozodlikdan mahrum qilish yoki 10 million vongacha jarima",
-        "3 yilgacha ozodlikdan mahrum qilish yoki 15 million vongacha jarima",
-        "2 yildan 5 yilgacha ozodlikdan mahrum qilish yoki 10 million vondan 20 million vongacha jarima"
+        "1 yilgacha ozodlikdan mahrum qilish yoki 5 million vongacha jinoiy jarima",
+        "2 yilgacha ozodlikdan mahrum qilish yoki 10 million vongacha jinoiy jarima",
+        "3 yilgacha ozodlikdan mahrum qilish yoki 15 million vongacha jinoiy jarima",
+        "2 yildan 5 yilgacha ozodlikdan mahrum qilish yoki 10 million vondan 20 million vongacha jinoiy jarima"
       ],
       "ne": [
         "१ वर्षसम्म कैद वा ५० लाख वनसम्म जरिवाना",
@@ -39392,7 +39392,7 @@
       "uz": [
         "Yong'inga qarshi kurashish to'g'risidagi asosiy qonunga ko'ra, o't o'chirish mashinasining chiqishiga to'sqinlik qilgan taqdirda maksimal 2 million von ma'muriy jarima solinadi.",
         "Qon ta'minoti transport vositasi yaqinlashayotganda yo'l bermasdan tezlikni oshirish harakati jazolanmaydi.",
-        "Yo'l harakati to'g'risidagi qonunga ko'ra, tezkor transport vositasiga yo'l bermasa, maksimal 200 000 von jarima yoki ma'muriy qamoq jazosiga tortilishi mumkin.",
+        "Yo'l harakati to'g'risidagi qonunga ko'ra, tezkor transport vositasiga yo'l bermasa, maksimal 200 000 von jinoiy jarima yoki qisqa muddatli qamoq (구류) jazosiga tortilishi mumkin.",
         "Tezkor transport vositalariga o't o'chirish mashinalari, tez yordam mashinalari, qon ta'minoti mashinalari, hayoti xavf ostida bo'lgan bemor yoki jarohatlanganlar uchun qon tashiyotgan avtomobillar va boshqalar kiradi."
       ],
       "ne": [
@@ -39404,7 +39404,7 @@
       "vi": [
         "Theo Luật Cơ bản về phòng cháy chữa cháy, trường hợp gây trở ngại cho xe chữa cháy xuất phát sẽ bị phạt tiền hành chính tối đa 2 triệu won.",
         "Hành vi không nhường đường mà tăng tốc khi xe cung cấp máu đang tiến lại gần thì không bị xử phạt.",
-        "Theo Luật Giao thông đường bộ, nếu không nhường đường cho xe ưu tiên có thể bị phạt tiền tối đa 200.000 won hoặc tạm giữ hành chính.",
+        "Theo Luật Giao thông đường bộ, nếu không nhường đường cho xe ưu tiên có thể bị phạt tiền tối đa 200.000 won hoặc câu lưu.",
         "Xe ưu tiên bao gồm xe chữa cháy, xe cứu thương, xe cung cấp máu, xe ô tô đang vận chuyển máu cho bệnh nhân hoặc người bị thương trong tình trạng nguy kịch đến tính mạng, v.v."
       ],
       "en": [
@@ -39435,9 +39435,9 @@
     "answer": 2,
     "explain": {
       "ko": "① ｢소방기본법｣ 제56조제2항제3의2 소방자동차 출동에 지장을 준 자에 대해 200만원이하의 과태료를 부과한다. ③ ｢도로교통법｣ 제156조제3호, 도로교통법 제29조(긴급자동차우선통행)제4항, 제5항에 의거, 20만원이하의 벌금 이나 구류 또는 과료에 처한다. ④ ｢도로교통법｣ 제2조제22호, ｢도로교통법시행령｣ 제1항, 제2항",
-      "uz": "① ｢O't o'chirish asosiy qonuni｣ning 56-moddasi 2-bandi 3-2-kichik band: o't o'chirish mashinasining chiqishiga xalaqit bergan shaxsga 2 million vongacha ma'muriy jarima solinadi. ③ ｢Yo'l harakati to'g'risidagi qonun｣ning 156-moddasi 3-kichik band, Yo'l harakati to'g'risidagi qonunning 29-moddasi (Shoshilinch avtomobilning ustuvor harakati) 4-band, 5-bandga asosan, 200 ming vongacha jarima yoki ma'muriy qamoq yoki yengil jarima bilan jazolanadi. ④ ｢Yo'l harakati to'g'risidagi qonun｣ning 2-moddasi 22-kichik band, ｢Yo'l harakati to'g'risidagi qonun ijro qarori｣ 1-band, 2-band.",
+      "uz": "① ｢O't o'chirish asosiy qonuni｣ning 56-moddasi 2-bandi 3-2-kichik band: o't o'chirish mashinasining chiqishiga xalaqit bergan shaxsga 2 million vongacha ma'muriy jarima solinadi. ③ ｢Yo'l harakati to'g'risidagi qonun｣ning 156-moddasi 3-kichik band, Yo'l harakati to'g'risidagi qonunning 29-moddasi (Shoshilinch avtomobilning ustuvor harakati) 4-band, 5-bandga asosan, 200 ming vongacha jarima yoki qisqa muddatli qamoq (구류) yoki yengil jarima bilan jazolanadi. ④ ｢Yo'l harakati to'g'risidagi qonun｣ning 2-moddasi 22-kichik band, ｢Yo'l harakati to'g'risidagi qonun ijro qarori｣ 1-band, 2-band.",
       "ne": "① ｢अग्नि नियन्त्रण आधारभूत ऐन (소방기본법)｣ दफा ५६ उपदफा २ खण्ड ३-२: दमकल सवारीको खटाइमा बाधा पुर्‍याउने व्यक्तिलाई २० लाख वन (२००만원) वा सोभन्दा कम प्रशासनिक जरिवाना लगाइन्छ। ③ ｢सडक ट्राफिक ऐन｣ दफा १५६ खण्ड ३, सडक ट्राफिक ऐन दफा २९ (आपत्कालीन सवारीको प्राथमिकता) उपदफा ४, ५ अनुसार २ लाख वन (२०만원) वा सोभन्दा कम जरिवाना वा हिरासत वा सानो जरिवाना (과료) को सजाय हुन्छ। ④ ｢सडक ट्राफिक ऐन｣ दफा २ खण्ड २२, ｢सडक ट्राफिक ऐन कार्यान्वयन आदेश｣ उपदफा १, २",
-      "vi": "① «Luật Cơ bản về Phòng cháy chữa cháy» Điều 56 khoản 2 mục 3-2: Người gây trở ngại cho việc xuất động của xe cứu hỏa bị phạt hành chính (과태료) đến 2 triệu won. ③ Theo «Luật Giao thông Đường bộ» Điều 156 mục 3, Điều 29 (Quyền ưu tiên đi trước của xe ưu tiên) khoản 4, khoản 5, bị phạt tiền đến 200.000 won hoặc tạm giữ (구류) hoặc phạt nhẹ (과료). ④ «Luật Giao thông Đường bộ» Điều 2 mục 22, «Nghị định thi hành Luật Giao thông Đường bộ» khoản 1, khoản 2.",
+      "vi": "① «Luật Cơ bản về Phòng cháy chữa cháy» Điều 56 khoản 2 mục 3-2: Người gây trở ngại cho việc xuất động của xe cứu hỏa bị phạt hành chính (과태료) đến 2 triệu won. ③ Theo «Luật Giao thông Đường bộ» Điều 156 mục 3, Điều 29 (Quyền ưu tiên đi trước của xe ưu tiên) khoản 4, khoản 5, bị phạt tiền đến 200.000 won hoặc câu lưu hoặc phạt nhẹ (과료). ④ «Luật Giao thông Đường bộ» Điều 2 mục 22, «Nghị định thi hành Luật Giao thông Đường bộ» khoản 1, khoản 2.",
       "en": "① Framework Act on Fire Services Article 56, Paragraph 2, subparagraph 3-2: An administrative fine of up to 2 million won is imposed on a person who has obstructed the dispatch of a fire engine. ③ Under Road Traffic Act Article 156, subparagraph 3 and Road Traffic Act Article 29 (Priority Passage of Emergency Vehicles), Paragraphs 4 and 5, the person is punished by a fine of up to 200,000 won, detention, or a minor fine (과료). ④ Road Traffic Act Article 2, subparagraph 22, and Enforcement Decree of the Road Traffic Act Paragraphs 1 and 2.",
       "zh": "① 《消防基本法》第56条第2款第3项之2：对妨碍消防车出动的人，处以200万韩元以下罚款。③ 依《道路交通法》第156条第3项、《道路交通法》第29条（紧急汽车优先通行）第4款、第5款，处20万韩元以下罚金或拘留或科料。④ 《道路交通法》第2条第22项、《道路交通法施行令》第1款、第2款。",
       "ru": "① Основной закон о пожаротушении, статья 56, пункт 2, подпункт 3-2: лицу, помешавшему выезду пожарного автомобиля, налагается штраф (과태료) до 2 000 000 вон. ③ В соответствии с подпунктом 3 статьи 156 Закона о дорожном движении, пунктами 4 и 5 статьи 29 Закона о дорожном движении (Приоритетный проезд специальных автомобилей) наказывается штрафом (벌금) до 200 000 вон, арестом (구류) или мелким штрафом (과료). ④ Закон о дорожном движении, статья 2, подпункт 22; Указ о применении Закона о дорожном движении, пункты 1 и 2.",
@@ -40006,10 +40006,10 @@
         "1년 이상 5년 이하의 징역이나 500만 원 이상 2천만 원 이하의 벌금"
       ],
       "uz": [
-        "1 yildan 2 yilgacha ozodlikdan mahrum qilish yoki 5 million vongacha jarima",
-        "1 yildan 3 yilgacha ozodlikdan mahrum qilish yoki 10 million vongacha jarima",
-        "1 yildan 4 yilgacha ozodlikdan mahrum qilish yoki 5 milliondan 10 million vongacha jarima",
-        "1 yildan 5 yilgacha ozodlikdan mahrum qilish yoki 5 milliondan 20 million vongacha jarima"
+        "1 yildan 2 yilgacha ozodlikdan mahrum qilish yoki 5 million vongacha jinoiy jarima",
+        "1 yildan 3 yilgacha ozodlikdan mahrum qilish yoki 10 million vongacha jinoiy jarima",
+        "1 yildan 4 yilgacha ozodlikdan mahrum qilish yoki 5 milliondan 10 million vongacha jinoiy jarima",
+        "1 yildan 5 yilgacha ozodlikdan mahrum qilish yoki 5 milliondan 20 million vongacha jinoiy jarima"
       ],
       "ne": [
         "१ वर्षदेखि २ वर्षसम्म कैद वा ५० लाख वोनसम्म जरिवाना",
@@ -40083,10 +40083,10 @@
         "2년 이하의 징역 또는 2,000만원 이하의 벌금"
       ],
       "uz": [
-        "1 yilgacha ozodlikdan mahrum qilish yoki 10 000 000 vongacha jarima",
-        "1 yilgacha ozodlikdan mahrum qilish yoki 20 000 000 vongacha jarima",
-        "2 yilgacha ozodlikdan mahrum qilish yoki 10 000 000 vongacha jarima",
-        "2 yilgacha ozodlikdan mahrum qilish yoki 20 000 000 vongacha jarima"
+        "1 yilgacha ozodlikdan mahrum qilish yoki 10 000 000 vongacha jinoiy jarima",
+        "1 yilgacha ozodlikdan mahrum qilish yoki 20 000 000 vongacha jinoiy jarima",
+        "2 yilgacha ozodlikdan mahrum qilish yoki 10 000 000 vongacha jinoiy jarima",
+        "2 yilgacha ozodlikdan mahrum qilish yoki 20 000 000 vongacha jinoiy jarima"
       ],
       "ne": [
         "१ वर्षसम्म कैद वा १ करोड वोनसम्म जरिवाना",
@@ -40161,7 +40161,7 @@
       ],
       "uz": [
         "20 000 von ma'muriy jarima solinadi.",
-        "30 000 von jarima to'g'risida xabarnoma chorasi qo'llaniladi.",
+        "30 000 von qoidabuzarlik uchun jarima to'g'risida xabarnoma chorasi qo'llaniladi.",
         "300 000 vongacha jarima (jinoiy jarima) bilan jazolanadi.",
         "Hech qanday jazo yoki chora qo'llanilmaydi."
       ],
@@ -40237,10 +40237,10 @@
         "제한속도기준 시속 20킬로미터 이하 – 범칙금 2만 원"
       ],
       "uz": [
-        "Cheklangan tezlikdan soatiga 60 km dan ortiq va 80 km gacha oshirganda – 120 000 von jarima",
-        "Cheklangan tezlikdan soatiga 40 km dan ortiq va 60 km gacha oshirganda – 80 000 von jarima",
-        "Cheklangan tezlikdan soatiga 20 km dan ortiq va 40 km gacha oshirganda – 50 000 von jarima",
-        "Cheklangan tezlikdan soatiga 20 km gacha oshirganda – 20 000 von jarima"
+        "Cheklangan tezlikdan soatiga 60 km dan ortiq va 80 km gacha oshirganda – 120 000 von qoidabuzarlik uchun jarima",
+        "Cheklangan tezlikdan soatiga 40 km dan ortiq va 60 km gacha oshirganda – 80 000 von qoidabuzarlik uchun jarima",
+        "Cheklangan tezlikdan soatiga 20 km dan ortiq va 40 km gacha oshirganda – 50 000 von qoidabuzarlik uchun jarima",
+        "Cheklangan tezlikdan soatiga 20 km gacha oshirganda – 20 000 von qoidabuzarlik uchun jarima"
       ],
       "ne": [
         "गति सीमाभन्दा प्रति घण्टा ६० किमीभन्दा बढी र ८० किमी वा सोभन्दा कम नाघेमा – १२०,००० वोन जरिवाना",
@@ -40625,7 +40625,7 @@
         "200 000 vongacha jinoiy jarima, qamoq yoki kichik jarima.",
         "300 000 vongacha jinoiy jarima yoki qamoq",
         "500 000 vongacha jinoiy jarima yoki qamoq",
-        "6 oygacha ozodlikdan mahrum qilish yoki 2 000 000 vongacha jarima"
+        "6 oygacha ozodlikdan mahrum qilish yoki 2 000 000 vongacha jinoiy jarima"
       ],
       "ne": [
         "२ लाख वोनसम्मको जरिवाना, थुना वा सानो जरिवाना।",
@@ -40634,9 +40634,9 @@
         "६ महिनासम्म कैद वा २० लाख वोनसम्म जरिवाना"
       ],
       "vi": [
-        "Phạt tiền từ 200.000 won trở xuống, tạm giữ hoặc phạt tiền nhẹ.",
-        "Phạt tiền từ 300.000 won trở xuống hoặc tạm giữ",
-        "Phạt tiền từ 500.000 won trở xuống hoặc tạm giữ",
+        "Phạt tiền từ 200.000 won trở xuống, câu lưu hoặc phạt tiền nhẹ.",
+        "Phạt tiền từ 300.000 won trở xuống hoặc câu lưu",
+        "Phạt tiền từ 500.000 won trở xuống hoặc câu lưu",
         "Phạt tù từ 6 tháng trở xuống hoặc phạt tiền từ 2.000.000 won trở xuống"
       ],
       "en": [
@@ -40667,9 +40667,9 @@
     "answer": 1,
     "explain": {
       "ko": "개인형 이동장치를 무면허 운전한 경우에는 도로교통법 제156조(벌칙)에 의해 처벌기준은 20만 원 이하 벌금이나 구류 또는 과료이다. 실제 처벌은 도로교통법 시행령 별표8에 의해 범칙금 10만 원으로 통고처분 된다.",
-      "uz": "Shaxsiy harakatlanish vositasini haydovchilik guvohnomasisiz boshqargan taqdirda, Yo'l harakati to'g'risidagi qonunning 156-moddasi (Jazo qoidalari) bo'yicha jazo mezoni 200 000 vongacha jarima, ma'muriy qamoq yoki kichik jarima hisoblanadi. Amaldagi jazo esa Yo'l harakati to'g'risidagi qonunni amalga oshirish qarorining 8-ilovasiga muvofiq 100 000 von miqdoridagi jarima xabarnomasi (범칙금 통고처분) bilan belgilanadi.",
+      "uz": "Shaxsiy harakatlanish vositasini haydovchilik guvohnomasisiz boshqargan taqdirda, Yo'l harakati to'g'risidagi qonunning 156-moddasi (Jazo qoidalari) bo'yicha jazo mezoni 200 000 vongacha jarima, qisqa muddatli qamoq (구류) yoki kichik jarima hisoblanadi. Amaldagi jazo esa Yo'l harakati to'g'risidagi qonunni amalga oshirish qarorining 8-ilovasiga muvofiq 100 000 von miqdoridagi jarima xabarnomasi (범칙금 통고처분) bilan belgilanadi.",
       "ne": "सवारी चालक अनुमतिपत्रबिना व्यक्तिगत गतिशीलता उपकरण (पर्सनल मोबिलिटी डिभाइस) चलाएमा सडक ट्राफिक ऐनको धारा १५६ (सजाय सम्बन्धी व्यवस्था) अनुसार सजायको मापदण्ड २ लाख वोनसम्मको जरिवाना, थुना वा सानो जरिवाना हो। वास्तविक कारबाहीमा सडक ट्राफिक ऐन कार्यान्वयन नियमावलीको अनुसूची ८ अनुसार १ लाख वोनको जरिवानासहितको सूचना कारबाही गरिन्छ।",
-      "vi": "Trường hợp lái phương tiện di chuyển cá nhân không có bằng lái, theo Điều 156 (Điều khoản xử phạt) Luật Giao thông đường bộ, mức xử phạt là phạt tiền từ 200.000 won trở xuống, tạm giữ (câu lưu) hoặc phạt tiền nhẹ (khoản phạt nhỏ). Trên thực tế, theo Phụ lục 8 Nghị định thi hành Luật Giao thông đường bộ, người vi phạm sẽ bị xử phạt thông báo với tiền phạt vi phạm 100.000 won.",
+      "vi": "Trường hợp lái phương tiện di chuyển cá nhân không có bằng lái, theo Điều 156 (Điều khoản xử phạt) Luật Giao thông đường bộ, mức xử phạt là phạt tiền từ 200.000 won trở xuống, câu lưu (câu lưu) hoặc phạt tiền nhẹ (khoản phạt nhỏ). Trên thực tế, theo Phụ lục 8 Nghị định thi hành Luật Giao thông đường bộ, người vi phạm sẽ bị xử phạt thông báo với tiền phạt vi phạm 100.000 won.",
       "en": "When operating a personal mobility device without a license, under Article 156 (Penal Provisions) of the Road Traffic Act, the penalty standard is a criminal fine of not more than 200,000 KRW, detention, or a minor fine. In actual enforcement, under Attached Table 8 of the Enforcement Decree of the Road Traffic Act, a disposition of notification with a penalty fine of 100,000 KRW is issued.",
       "zh": "无证驾驶个人移动装置时，依据《道路交通法》第156条（罚则），处罚标准为20万韩元以下罚金、拘留或科料。实际处罚中，依据《道路交通法实施令》附表8，以10万韩元反则金作出通知处分。",
       "ru": "При управлении средством индивидуальной мобильности без водительского удостоверения по статье 156 (Наказания) Закона о дорожном движении критерий наказания — штраф (벌금) до 200 000 вон, арест (구류) или мелкий штраф (과료). Фактически наказание назначается уведомительным постановлением со штрафом (범칙금) 100 000 вон согласно Приложению 8 к Указу об исполнении Закона о дорожном движении.",
@@ -41164,10 +41164,10 @@
         "5년 이하의 징역 또는 5천만원 이하의 벌금"
       ],
       "uz": [
-        "2 yilgacha ozodlikdan mahrum qilish yoki 20 million vongacha jarima",
-        "3 yilgacha ozodlikdan mahrum qilish yoki 30 million vongacha jarima",
-        "4 yilgacha ozodlikdan mahrum qilish yoki 40 million vongacha jarima",
-        "5 yilgacha ozodlikdan mahrum qilish yoki 50 million vongacha jarima"
+        "2 yilgacha ozodlikdan mahrum qilish yoki 20 million vongacha jinoiy jarima",
+        "3 yilgacha ozodlikdan mahrum qilish yoki 30 million vongacha jinoiy jarima",
+        "4 yilgacha ozodlikdan mahrum qilish yoki 40 million vongacha jinoiy jarima",
+        "5 yilgacha ozodlikdan mahrum qilish yoki 50 million vongacha jinoiy jarima"
       ],
       "ne": [
         "२ वर्षसम्मको कैद वा २ करोड वोनसम्मको जरिवाना",
@@ -41241,10 +41241,10 @@
         "1년 이상 5년 이하의 징역이나 500만 원 이상 2천만 원 이하의 벌금"
       ],
       "uz": [
-        "1 yildan 6 yilgacha ozodlikdan mahrum qilish yoki 5 million vondan 30 million vongacha jarima",
-        "2 yildan 6 yilgacha ozodlikdan mahrum qilish yoki 5 million vondan 20 million vongacha jarima",
-        "3 yildan 5 yilgacha ozodlikdan mahrum qilish yoki 10 million vondan 30 million vongacha jarima",
-        "1 yildan 5 yilgacha ozodlikdan mahrum qilish yoki 5 million vondan 20 million vongacha jarima"
+        "1 yildan 6 yilgacha ozodlikdan mahrum qilish yoki 5 million vondan 30 million vongacha jinoiy jarima",
+        "2 yildan 6 yilgacha ozodlikdan mahrum qilish yoki 5 million vondan 20 million vongacha jinoiy jarima",
+        "3 yildan 5 yilgacha ozodlikdan mahrum qilish yoki 10 million vondan 30 million vongacha jinoiy jarima",
+        "1 yildan 5 yilgacha ozodlikdan mahrum qilish yoki 5 million vondan 20 million vongacha jinoiy jarima"
       ],
       "ne": [
         "१ वर्षदेखि ६ वर्षसम्म कैद वा ५० लाखदेखि ३ करोड वोनसम्म जरिवाना",
@@ -41318,10 +41318,10 @@
         "2년 이상 5년 이하의 징역이나 1천만 원 이상 2천만 원 이하의 벌금"
       ],
       "uz": [
-        "2 yilgacha ozodlikdan mahrum qilish yoki 5 million vongacha jarima",
-        "3 yilgacha ozodlikdan mahrum qilish yoki 5 million vondan 10 million vongacha jarima",
-        "1 yildan 2 yilgacha ozodlikdan mahrum qilish yoki 5 million vondan 10 million vongacha jarima",
-        "2 yildan 5 yilgacha ozodlikdan mahrum qilish yoki 10 million vondan 20 million vongacha jarima"
+        "2 yilgacha ozodlikdan mahrum qilish yoki 5 million vongacha jinoiy jarima",
+        "3 yilgacha ozodlikdan mahrum qilish yoki 5 million vondan 10 million vongacha jinoiy jarima",
+        "1 yildan 2 yilgacha ozodlikdan mahrum qilish yoki 5 million vondan 10 million vongacha jinoiy jarima",
+        "2 yildan 5 yilgacha ozodlikdan mahrum qilish yoki 10 million vondan 20 million vongacha jinoiy jarima"
       ],
       "ne": [
         "२ वर्षसम्म कैद वा ५० लाख वोनसम्म जरिवाना",
@@ -42710,10 +42710,10 @@
         "원동기장치자전거 무면허운전 – 50만 원 이하의 벌금이나 구류"
       ],
       "uz": [
-        "Qondagi alkogol miqdori 0,2% va undan yuqori bo'lgan holda mast holatda haydagan shaxs – 1 yildan 2 yilgacha ozodlikdan mahrum qilish yoki 10 million vongacha jarima",
-        "Guruh bo'lib xavfli harakat qilgan shaxs – 2 yilgacha ozodlikdan mahrum qilish yoki 5 million vongacha jarima",
-        "Qo'pol (xavfli) haydagan shaxs – 1 yilgacha ozodlikdan mahrum qilish yoki 5 million vongacha jarima",
-        "Motorli velosipedni guvohnomasiz haydash – 500 ming vongacha jarima yoki ma'muriy qamoq"
+        "Qondagi alkogol miqdori 0,2% va undan yuqori bo'lgan holda mast holatda haydagan shaxs – 1 yildan 2 yilgacha ozodlikdan mahrum qilish yoki 10 million vongacha jinoiy jarima",
+        "Guruh bo'lib xavfli harakat qilgan shaxs – 2 yilgacha ozodlikdan mahrum qilish yoki 5 million vongacha jinoiy jarima",
+        "Qo'pol (xavfli) haydagan shaxs – 1 yilgacha ozodlikdan mahrum qilish yoki 5 million vongacha jinoiy jarima",
+        "Motorli velosipedni guvohnomasiz haydash – 500 ming vongacha jinoiy jarima yoki qisqa muddatli qamoq (구류)"
       ],
       "ne": [
         "रगतमा अल्कोहलको मात्रा ०.२% वा सोभन्दा बढी भई मादक पदार्थ सेवन गरी सवारी चलाउने व्यक्ति – १ वर्षदेखि २ वर्षसम्म कैद वा १ करोड वनसम्म जरिवाना",
@@ -42725,7 +42725,7 @@
         "Người lái xe khi nồng độ cồn trong máu từ 0,2% trở lên – phạt tù từ 1 năm đến 2 năm hoặc phạt tiền đến 10 triệu won",
         "Người thực hiện hành vi gây nguy hiểm tập thể – phạt tù đến 2 năm hoặc phạt tiền đến 5 triệu won",
         "Người lái xe ẩu – phạt tù đến 1 năm hoặc phạt tiền đến 5 triệu won",
-        "Lái xe đạp gắn máy không có giấy phép – phạt tiền đến 500.000 won hoặc tạm giữ"
+        "Lái xe đạp gắn máy không có giấy phép – phạt tiền đến 500.000 won hoặc câu lưu"
       ],
       "en": [
         "Driving under the influence with a blood alcohol concentration of 0.2% or higher – imprisonment for 1 to 2 years or a fine of up to 10 million KRW",
@@ -42758,9 +42758,9 @@
     ],
     "explain": {
       "ko": "① 혈중알콜농도 0.2% 이상으로 음주운전(1회 위반한 경우) – 2년 이상 5년 이하의 징역이나 1천만 원 이상 2천만 원 이하의 벌금   ② 공동위험행위 – 2년 이하의 징역이나 500만 원 이하의 벌금 ③ 난폭운전 – 1년 이하의 징역이 나 500만 원 이하의 벌금  ④ 원동기장치자전거 무면허운전 – 30만 원 이하의 벌금이나 구류",
-      "uz": "① Qondagi alkogol miqdori 0,2% va undan yuqori holda mast holatda haydash (1-marta qoidabuzarlik) – 2 yildan 5 yilgacha ozodlikdan mahrum qilish yoki 10 milliondan 20 million vongacha jarima ② Guruh bo'lib xavfli harakat qilish – 2 yilgacha ozodlikdan mahrum qilish yoki 5 million vongacha jarima ③ Qo'pol (xavfli) haydash – 1 yilgacha ozodlikdan mahrum qilish yoki 5 million vongacha jarima ④ Motorli velosipedni haydovchilik guvohnomasisiz haydash – 300 ming vongacha jarima yoki ma'muriy qamoq",
+      "uz": "① Qondagi alkogol miqdori 0,2% va undan yuqori holda mast holatda haydash (1-marta qoidabuzarlik) – 2 yildan 5 yilgacha ozodlikdan mahrum qilish yoki 10 milliondan 20 million vongacha jarima ② Guruh bo'lib xavfli harakat qilish – 2 yilgacha ozodlikdan mahrum qilish yoki 5 million vongacha jarima ③ Qo'pol (xavfli) haydash – 1 yilgacha ozodlikdan mahrum qilish yoki 5 million vongacha jarima ④ Motorli velosipedni haydovchilik guvohnomasisiz haydash – 300 ming vongacha jarima yoki qisqa muddatli qamoq (구류)",
       "ne": "① ०.२% वा सोभन्दा बढी रगतमा अल्कोहलको मात्रा भई मादक पदार्थ सेवन गरी सवारी चलाएको (पहिलो पटक उल्लंघन) – २ वर्षदेखि ५ वर्षसम्म कैद वा १ करोडदेखि २ करोड वनसम्म जरिवाना ② सामूहिक खतरनाक कार्य – २ वर्षसम्म कैद वा ५० लाख वनसम्म जरिवाना ③ लापरबाहीपूर्ण सवारी चालन – १ वर्षसम्म कैद वा ५० लाख वनसम्म जरिवाना ④ मोटरजडित साइकल बिना लाइसेन्स चलाएमा – ३ लाख वनसम्म जरिवाना वा थुना",
-      "vi": "① Lái xe khi nồng độ cồn trong máu từ 0,2% trở lên (vi phạm lần đầu) – phạt tù từ 2 năm đến 5 năm hoặc phạt tiền từ 10 triệu đến 20 triệu won ② Hành vi gây nguy hiểm tập thể – phạt tù đến 2 năm hoặc phạt tiền đến 5 triệu won ③ Lái xe ẩu – phạt tù đến 1 năm hoặc phạt tiền đến 5 triệu won ④ Lái xe đạp gắn máy không có giấy phép – phạt tiền đến 300.000 won hoặc tạm giữ",
+      "vi": "① Lái xe khi nồng độ cồn trong máu từ 0,2% trở lên (vi phạm lần đầu) – phạt tù từ 2 năm đến 5 năm hoặc phạt tiền từ 10 triệu đến 20 triệu won ② Hành vi gây nguy hiểm tập thể – phạt tù đến 2 năm hoặc phạt tiền đến 5 triệu won ③ Lái xe ẩu – phạt tù đến 1 năm hoặc phạt tiền đến 5 triệu won ④ Lái xe đạp gắn máy không có giấy phép – phạt tiền đến 300.000 won hoặc câu lưu",
       "en": "① Drunk driving with a blood alcohol concentration of 0.2% or higher (1st offense) – imprisonment for 2 to 5 years or a fine of 10 million to 20 million KRW ② Joint dangerous act – imprisonment for up to 2 years or a fine of up to 5 million KRW ③ Reckless driving – imprisonment for up to 1 year or a fine of up to 5 million KRW ④ Unlicensed driving of a motorized bicycle – a fine of up to 300,000 KRW or detention",
       "zh": "① 血液酒精浓度0.2%以上酒后驾驶（初犯）– 2年以上5年以下有期徒刑或1千万韩元以上2千万韩元以下罚金 ② 共同危险行为 – 2年以下有期徒刑或500万韩元以下罚金 ③ 鲁莽驾驶 – 1年以下有期徒刑或500万韩元以下罚金 ④ 无证驾驶原动机装置自行车 – 30万韩元以下罚金或拘留",
       "ru": "① Вождение в состоянии опьянения с концентрацией алкоголя в крови 0,2% и выше (при первом нарушении) — лишение свободы на срок от 2 до 5 лет или штраф от 10 до 20 млн вон ② Совместные опасные действия — лишение свободы на срок до 2 лет или штраф до 5 млн вон ③ Агрессивное вождение — лишение свободы на срок до 1 года или штраф до 5 млн вон ④ Управление мопедом (원동기장치자전거) без водительского удостоверения — штраф до 300 000 вон или арест",
@@ -42791,7 +42791,7 @@
       ],
       "uz": [
         "Mast holatda deb hisoblash uchun yetarli asos bo'lgan shaxsning politsiya xodimi tomonidan o'tkaziladigan tekshiruvni qiyinlashtirish maqsadida qo'shimcha spirtli ichimlik ichishi bunga kiradi.",
-        "Avtomobil va h.k.ni boshqarganidan keyin alkogol o'lchoviga to'sqinlik qilish harakatini sodir etgan taqdirda 1 yilgacha ozodlikdan mahrum qilish yoki 5 million vongacha jarima solinadi.",
+        "Avtomobil va h.k.ni boshqarganidan keyin alkogol o'lchoviga to'sqinlik qilish harakatini sodir etgan taqdirda 1 yilgacha ozodlikdan mahrum qilish yoki 5 million vongacha jinoiy jarima solinadi.",
         "Mast holatda deb hisoblash uchun yetarli asos bo'lgan shaxsning qondagi alkogol miqdoriga ta'sir qilishi mumkin bo'lgan dori vositalari kabi Ichki ishlar va xavfsizlik vazirligi qarorida belgilangan narsalardan foydalanish harakati bunga kiradi.",
         "Mast holatda deb hisoblash uchun yetarli asos bo'lgan shaxsning velosiped boshqarganidan keyin alkogol o'lchoviga to'sqinlik qilish harakatini sodir etishi bunga kirmaydi."
       ],
@@ -42838,9 +42838,9 @@
     ],
     "explain": {
       "ko": "제44조(술에 취한 상태에서의 운전 금지)제5항 술에 취한 상태에 있다고 인정할 만한 상당한 이유가 있는 사람은 자동차등, 노면전차 또는 자전거를 운전한 후 제2항 또는 제3항에 따른 측정을 곤란하게 할 목적으로 추가로 술을 마시거나 혈중알코올농도에 영향을 줄 수 있는 의약품 등 행정안전부령으로 정하는 물품을 사용하는 행위(이하 “음주측정방해행위”라 한다. 이하 같다)를 하여서는 아니 된다. 제148조의2(벌칙)제2항 다음 각 호의 어느 하나에 해당하는 사람은 1년 이상 5년 이하의 징역이나 500만원 이상 2천만원 이하의 벌금에 처한다. 2. 술에 취한 상태에 있다고 인정할 만한 상당한 이유가 있는 사람으로서 제44조제5항을 위반하여 자동차등 또는 노면전차를 운전한 후 음주측정방해행위를 한 사람 제156조(벌칙) 다음 각 호의 어느 하나에 해당하는 사람은 20만원 이하의 벌금이나 구류 또는 과료(科料)에 처한다. 12의2. 술에 취한 상태에 있다고 인정할 만한 상당한 이유가 있는 사람으로서 제44조제5항을 위반하여 자전거등을 운전한 후 음주측정방해행위를 한 사람",
-      "uz": "44-modda (Mast holatda haydashni taqiqlash) 5-qism: Mast holatda deb hisoblash uchun yetarli asos bo'lgan shaxs avtomobil va h.k., tramvay yoki velosipedni boshqarganidan keyin 2- yoki 3-qismga muvofiq o'lchovni qiyinlashtirish maqsadida qo'shimcha spirtli ichimlik ichishi yoki qondagi alkogol miqdoriga ta'sir qilishi mumkin bo'lgan dori vositalari kabi Ichki ishlar va xavfsizlik vazirligi qarorida belgilangan narsalardan foydalanish harakatini (keyingi o'rinlarda 'alkogol o'lchoviga to'sqinlik qilish harakati' deb yuritiladi) sodir etmasligi kerak. 148-2-modda (Jazo) 2-qism: Quyidagi bandlardan biriga mos keladigan shaxs 1 yildan 5 yilgacha ozodlikdan mahrum qilish yoki 5 milliondan 20 million vongacha jarima bilan jazolanadi: 2. Mast holatda deb hisoblash uchun yetarli asos bo'lgan shaxs sifatida 44-modda 5-qismini buzib, avtomobil va h.k. yoki tramvayni boshqarganidan keyin alkogol o'lchoviga to'sqinlik qilish harakatini sodir etgan shaxs. 156-modda (Jazo): Quyidagi bandlardan biriga mos keladigan shaxs 200 ming vongacha jarima, ma'muriy qamoq yoki mayda jarima bilan jazolanadi: 12-2. Mast holatda deb hisoblash uchun yetarli asos bo'lgan shaxs sifatida 44-modda 5-qismini buzib, velosiped va h.k.ni boshqarganidan keyin alkogol o'lchoviga to'sqinlik qilish harakatini sodir etgan shaxs.",
+      "uz": "44-modda (Mast holatda haydashni taqiqlash) 5-qism: Mast holatda deb hisoblash uchun yetarli asos bo'lgan shaxs avtomobil va h.k., tramvay yoki velosipedni boshqarganidan keyin 2- yoki 3-qismga muvofiq o'lchovni qiyinlashtirish maqsadida qo'shimcha spirtli ichimlik ichishi yoki qondagi alkogol miqdoriga ta'sir qilishi mumkin bo'lgan dori vositalari kabi Ichki ishlar va xavfsizlik vazirligi qarorida belgilangan narsalardan foydalanish harakatini (keyingi o'rinlarda 'alkogol o'lchoviga to'sqinlik qilish harakati' deb yuritiladi) sodir etmasligi kerak. 148-2-modda (Jazo) 2-qism: Quyidagi bandlardan biriga mos keladigan shaxs 1 yildan 5 yilgacha ozodlikdan mahrum qilish yoki 5 milliondan 20 million vongacha jarima bilan jazolanadi: 2. Mast holatda deb hisoblash uchun yetarli asos bo'lgan shaxs sifatida 44-modda 5-qismini buzib, avtomobil va h.k. yoki tramvayni boshqarganidan keyin alkogol o'lchoviga to'sqinlik qilish harakatini sodir etgan shaxs. 156-modda (Jazo): Quyidagi bandlardan biriga mos keladigan shaxs 200 ming vongacha jarima, qisqa muddatli qamoq (구류) yoki mayda jarima bilan jazolanadi: 12-2. Mast holatda deb hisoblash uchun yetarli asos bo'lgan shaxs sifatida 44-modda 5-qismini buzib, velosiped va h.k.ni boshqarganidan keyin alkogol o'lchoviga to'sqinlik qilish harakatini sodir etgan shaxs.",
       "ne": "धारा ४४ (मादक पदार्थ सेवन गरेको अवस्थामा सवारी चलाउन निषेध) को उपधारा ५: मादक पदार्थ सेवन गरेको अवस्थामा रहेको भनी मान्ने पर्याप्त कारण भएको व्यक्तिले मोटर वाहन आदि, ट्राम वा साइकल चलाएपछि उपधारा २ वा ३ बमोजिमको जाँचलाई कठिन बनाउने उद्देश्यले थप मदिरा पिउने वा रगतमा अल्कोहलको मात्रामा असर पार्न सक्ने औषधि लगायत गृह तथा सुरक्षा मन्त्रालयको नियमले तोकेको सामग्री प्रयोग गर्ने कार्य (यसपछि 'मापसे जाँचमा बाधा पुर्‍याउने कार्य' भनिने) गर्नु हुँदैन। धारा १४८-२ (सजाय) को उपधारा २: देहायका कुनै पनि खण्डमा पर्ने व्यक्तिलाई १ वर्षदेखि ५ वर्षसम्म कैद वा ५० लाखदेखि २ करोड वनसम्म जरिवाना हुनेछ: २. मादक पदार्थ सेवन गरेको अवस्थामा रहेको भनी मान्ने पर्याप्त कारण भएको व्यक्तिले धारा ४४(५) उल्लंघन गरी मोटर वाहन आदि वा ट्राम चलाएपछि मापसे जाँचमा बाधा पुर्‍याउने कार्य गरेको व्यक्ति। धारा १५६ (सजाय): देहायका कुनै पनि खण्डमा पर्ने व्यक्तिलाई २ लाख वनसम्म जरिवाना, थुना वा सानो जरिवाना हुनेछ: १२-२. मादक पदार्थ सेवन गरेको अवस्थामा रहेको भनी मान्ने पर्याप्त कारण भएको व्यक्तिले धारा ४४(५) उल्लंघन गरी साइकल आदि चलाएपछि मापसे जाँचमा बाधा पुर्‍याउने कार्य गरेको व्यक्ति।",
-      "vi": "Điều 44 (Cấm lái xe trong tình trạng say rượu) Khoản 5: Người có lý do chính đáng để nhận định đang ở trong tình trạng say rượu không được phép sau khi điều khiển xe ô tô, v.v., tàu điện mặt đất hoặc xe đạp lại uống thêm rượu hoặc sử dụng các vật phẩm do Thông tư của Bộ Hành chính và An toàn quy định như dược phẩm có thể ảnh hưởng đến nồng độ cồn trong máu nhằm mục đích gây khó khăn cho việc đo lường theo Khoản 2 hoặc Khoản 3 (sau đây gọi là 'hành vi cản trở đo nồng độ cồn'). Điều 148-2 (Xử phạt) Khoản 2: Người thuộc một trong các trường hợp sau đây sẽ bị phạt tù từ 1 năm đến 5 năm hoặc phạt tiền từ 5 triệu đến 20 triệu won: 2. Người có lý do chính đáng để nhận định đang trong tình trạng say rượu đã vi phạm Khoản 5 Điều 44 bằng hành vi cản trở đo nồng độ cồn sau khi điều khiển xe ô tô, v.v. hoặc tàu điện mặt đất. Điều 156 (Xử phạt): Người thuộc một trong các trường hợp sau đây sẽ bị phạt tiền đến 200.000 won, tạm giữ hoặc phạt vi cảnh: 12-2. Người có lý do chính đáng để nhận định đang trong tình trạng say rượu đã vi phạm Khoản 5 Điều 44 bằng hành vi cản trở đo nồng độ cồn sau khi điều khiển xe đạp, v.v.",
+      "vi": "Điều 44 (Cấm lái xe trong tình trạng say rượu) Khoản 5: Người có lý do chính đáng để nhận định đang ở trong tình trạng say rượu không được phép sau khi điều khiển xe ô tô, v.v., tàu điện mặt đất hoặc xe đạp lại uống thêm rượu hoặc sử dụng các vật phẩm do Thông tư của Bộ Hành chính và An toàn quy định như dược phẩm có thể ảnh hưởng đến nồng độ cồn trong máu nhằm mục đích gây khó khăn cho việc đo lường theo Khoản 2 hoặc Khoản 3 (sau đây gọi là 'hành vi cản trở đo nồng độ cồn'). Điều 148-2 (Xử phạt) Khoản 2: Người thuộc một trong các trường hợp sau đây sẽ bị phạt tù từ 1 năm đến 5 năm hoặc phạt tiền từ 5 triệu đến 20 triệu won: 2. Người có lý do chính đáng để nhận định đang trong tình trạng say rượu đã vi phạm Khoản 5 Điều 44 bằng hành vi cản trở đo nồng độ cồn sau khi điều khiển xe ô tô, v.v. hoặc tàu điện mặt đất. Điều 156 (Xử phạt): Người thuộc một trong các trường hợp sau đây sẽ bị phạt tiền đến 200.000 won, câu lưu hoặc phạt vi cảnh: 12-2. Người có lý do chính đáng để nhận định đang trong tình trạng say rượu đã vi phạm Khoản 5 Điều 44 bằng hành vi cản trở đo nồng độ cồn sau khi điều khiển xe đạp, v.v.",
       "en": "Article 44 (Prohibition of Driving While Intoxicated), Paragraph 5: A person for whom there is considerable reason to believe that the person is in a state of intoxication must not, after driving a motor vehicle, etc., a tram, or a bicycle, perform an act of drinking additional alcohol or using an item prescribed by Ordinance of the Ministry of the Interior and Safety, such as medicines that may affect blood alcohol concentration, for the purpose of making the measurement under Paragraph 2 or 3 difficult (hereinafter \"act of obstructing alcohol measurement\"; the same applies hereinafter). Article 148-2 (Penalties), Paragraph 2: A person falling under any of the following shall be punished by imprisonment of not less than 1 year and not more than 5 years or a fine of not less than 5 million won and not more than 20 million won. 2. A person for whom there is considerable reason to believe that the person is in a state of intoxication and who, in violation of Article 44(5), performed an act of obstructing alcohol measurement after driving a motor vehicle, etc. or a tram. Article 156 (Penalties): A person falling under any of the following shall be punished by a fine of up to 200,000 won, detention, or a minor fine (科料). 12-2. A person for whom there is considerable reason to believe that the person is in a state of intoxication and who, in violation of Article 44(5), performed an act of obstructing alcohol measurement after driving a bicycle, etc.",
       "zh": "第44条（禁止酒后驾驶）第5款：有充分理由认定处于醉酒状态的人，在驾驶汽车等、有轨电车或自行车后，不得以使第2款或第3款规定的检测变得困难为目的，实施追加饮酒或使用行政安全部令规定的可能影响血液酒精浓度的药品等物品的行为（以下称“妨碍酒精检测行为”）。第148条之2（罚则）第2款：符合下列各项之一者，处1年以上5年以下有期徒刑或500万韩元以上2千万韩元以下罚金：2. 有充分理由认定处于醉酒状态的人，违反第44条第5款规定，在驾驶汽车等或有轨电车后实施妨碍酒精检测行为者。第156条（罚则）：符合下列各项之一者，处20万韩元以下罚金、拘留或科料：12之2. 有充分理由认定处于醉酒状态的人，违反第44条第5款规定，在驾驶自行车等后实施妨碍酒精检测行为者。",
       "ru": "Статья 44 (Запрет вождения в состоянии опьянения), пункт 5: Лицо, в отношении которого есть достаточные основания считать, что оно находится в состоянии опьянения, не должно после управления автомобилем и т. п., трамваем или велосипедом с целью затруднить измерение по пункту 2 или 3 дополнительно употреблять алкоголь или использовать лекарственные средства и иные предметы, определяемые приказом министра внутренних дел и безопасности, которые могут повлиять на концентрацию алкоголя в крови (далее — «действия, препятствующие измерению алкоголя»; далее то же). Статья 148-2 (Наказания), пункт 2: Лицо, подпадающее под любой из следующих подпунктов, наказывается лишением свободы на срок от 1 года до 5 лет либо штрафом (벌금) от 5 000 000 до 20 000 000 вон. 2. Лицо, в отношении которого есть достаточные основания считать, что оно находится в состоянии опьянения, которое в нарушение пункта 5 статьи 44 после управления автомобилем и т. п. или трамваем совершило действия, препятствующие измерению алкоголя. Статья 156 (Наказания): Лицо, подпадающее под любой из следующих подпунктов, наказывается штрафом (벌금) до 200 000 вон, арестом (구류) или мелким штрафом (과료). 12-2. Лицо, в отношении которого есть достаточные основания считать, что оно находится в состоянии опьянения, которое в нарушение пункта 5 статьи 44 после управления велосипедом и т. п. совершило действия, препятствующие измерению алкоголя.",
@@ -43032,7 +43032,7 @@
       "uz": [
         "Transport vositasi harakati orqali qo'pol ehtiyotsizlik bilan tan jarohati yetkazish jinoyatini sodir etgan haydovchi avtomobil kompleks sug'urtasiga ega bo'lsa, hech qanday holatda jinoiy ish qo'zg'atish mumkin emas.",
         "Transport vositasi harakati orqali kasbiy ehtiyotsizlik bilan tan jarohati yetkazish jinoyatini sodir etgan haydovchiga nisbatan jabrlanuvchining aniq xohishiga qarshi ravishda har doim jinoiy ish qo'zg'atish mumkin.",
-        "Transport vositasi haydovchisi yo'l-transport hodisasi tufayli jinoiy javobgarlikka tortiladigan bo'lsa, 5 yilgacha qamoq (majburiy mehnatsiz) yoki 20 million vongacha jarima jazosiga tortiladi.",
+        "Transport vositasi haydovchisi yo'l-transport hodisasi tufayli jinoiy javobgarlikka tortiladigan bo'lsa, 5 yilgacha qamoq (majburiy mehnatsiz) yoki 20 million vongacha jinoiy jarima jazosiga tortiladi.",
         "Belgilangan tezlikdan soatiga 20 kilometrdan ortiq oshirib haydash oqibatida odam jabrlangan hodisa yuz berganda, agar kompleks sug'urta mavjud bo'lsa, jinoiy ish qo'zg'atib bo'lmaydi."
       ],
       "ne": [
@@ -47748,7 +47748,7 @@
         "Yumalashga moyil yuklar uchun tayanch yog'och yoki yuk tagligidan foydalaniladi.",
         "Qurilish texnikasi va shunga o'xshash yuklarni ortganda tros, arqon va boshqalardan foydalaniladi.",
         "Kuzovning old, orqa, chap va o'ng tomonlarida bo'sh joy bo'lsa, to'xtatuvchi tirgaklardan foydalaniladi.",
-        "Yuk tushib ketishining oldini olish qoidasini buzgan taqdirda jarima 50 000 von va jarima balli 10 ballni tashkil qiladi."
+        "Yuk tushib ketishining oldini olish qoidasini buzgan taqdirda qoidabuzarlik uchun jarima 50 000 von va jarima balli 10 ballni tashkil qiladi."
       ],
       "ne": [
         "सजिलै गुड्ने सामानका लागि अड्याउने काठ (चक्स) वा सामान अड्याउने स्ट्यान्ड प्रयोग गरिन्छ।",
@@ -52057,10 +52057,10 @@
         "벌점 15점, 범칙금 7만 원"
       ],
       "uz": [
-        "70 jarima balli, 140 000 von jarima",
-        "60 jarima balli, 130 000 von jarima",
-        "30 jarima balli, 100 000 von jarima",
-        "15 jarima balli, 70 000 von jarima"
+        "70 jarima balli, 140 000 von qoidabuzarlik uchun jarima",
+        "60 jarima balli, 130 000 von qoidabuzarlik uchun jarima",
+        "30 jarima balli, 100 000 von qoidabuzarlik uchun jarima",
+        "15 jarima balli, 70 000 von qoidabuzarlik uchun jarima"
       ],
       "ne": [
         "७० जरिवाना अंक, १ लाख ४० हजार वन जरिवाना",
@@ -77871,7 +77871,7 @@
         "1년 이하의 징역에 처해진다."
       ],
       "uz": [
-        "5 million vongacha jarima solinadi.",
+        "5 million vongacha jinoiy jarima solinadi.",
         "Haydovchi olgan barcha toifadagi haydovchilik guvohnomalari 100 kunga to‘xtatiladi.",
         "Haydovchi olgan barcha toifadagi haydovchilik guvohnomalari bekor qilinadi.",
         "1 yilgacha ozodlikdan mahrum qilish bilan jazolanadi."
@@ -78881,10 +78881,10 @@
         "자동차등을 운전한 사람은 5년 이하의 징역이나 2천만원 이하의 벌금에 처한다."
       ],
       "uz": [
-        "Giyohvand/dori vositalari ta'sirida haydagan deb hisoblash uchun yetarli asosga ega bo'lgan shaxs birinchi marta Yo'l harakati to'g'risidagi qonunga muvofiq politsiya xodimining tekshiruvidan o'tishga rozi bo'lmasa, 6 yilgacha ozodlikdan mahrum qilish yoki 30 million vongacha jarima bilan jazolanadi.",
-        "Avtomobil va hokazolarni haydab jarima yoki undan og'irroq jazoga hukm qilingan va ushbu hukm kuchga kirgan kundan boshlab 10 yil ichida yana giyohvand/dori vositalari ta'sirida haydash tekshiruvidan bosh tortib qoidani buzgan shaxs 1 yildan 6 yilgacha ozodlikdan mahrum qilish yoki 5 million vondan 30 million vongacha jarima bilan jazolanadi.",
-        "Avtomobil va hokazolarni haydab jarima yoki undan og'irroq jazoga hukm qilingan va ushbu hukm kuchga kirgan kundan boshlab 10 yil ichida yana giyohvand/dori vositalari ta'sirida haydashni taqiqlash qoidasini buzgan shaxs 2 yildan 6 yilgacha ozodlikdan mahrum qilish yoki 10 million vondan 30 million vongacha jarima bilan jazolanadi.",
-        "Avtomobil va hokazolarni haydagan shaxs 5 yilgacha ozodlikdan mahrum qilish yoki 20 million vongacha jarima bilan jazolanadi."
+        "Giyohvand/dori vositalari ta'sirida haydagan deb hisoblash uchun yetarli asosga ega bo'lgan shaxs birinchi marta Yo'l harakati to'g'risidagi qonunga muvofiq politsiya xodimining tekshiruvidan o'tishga rozi bo'lmasa, 6 yilgacha ozodlikdan mahrum qilish yoki 30 million vongacha jinoiy jarima bilan jazolanadi.",
+        "Avtomobil va hokazolarni haydab jinoiy jarima yoki undan og'irroq jazoga hukm qilingan va ushbu hukm kuchga kirgan kundan boshlab 10 yil ichida yana giyohvand/dori vositalari ta'sirida haydash tekshiruvidan bosh tortib qoidani buzgan shaxs 1 yildan 6 yilgacha ozodlikdan mahrum qilish yoki 5 million vondan 30 million vongacha jinoiy jarima bilan jazolanadi.",
+        "Avtomobil va hokazolarni haydab jinoiy jarima yoki undan og'irroq jazoga hukm qilingan va ushbu hukm kuchga kirgan kundan boshlab 10 yil ichida yana giyohvand/dori vositalari ta'sirida haydashni taqiqlash qoidasini buzgan shaxs 2 yildan 6 yilgacha ozodlikdan mahrum qilish yoki 10 million vondan 30 million vongacha jinoiy jarima bilan jazolanadi.",
+        "Avtomobil va hokazolarni haydagan shaxs 5 yilgacha ozodlikdan mahrum qilish yoki 20 million vongacha jinoiy jarima bilan jazolanadi."
       ],
       "ne": [
         "लागुऔषध सेवन गरी सवारी चलाएको मान्न सकिने पर्याप्त कारण भएको व्यक्तिले पहिलो पटक सडक यातायात ऐन बमोजिम प्रहरी अधिकारीको परीक्षणमा अस्वीकार गरेमा ६ वर्षसम्म कैद वा ३० मिलियन वोनसम्म जरिवाना हुन्छ।",
