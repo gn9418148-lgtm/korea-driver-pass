@@ -278,6 +278,7 @@ main { max-width: 580px; margin: 0 auto; padding: 14px 16px 110px; }
       <div id="pay-guide-box" style="background:rgba(0,180,216,0.12); border:1px solid var(--acc); border-radius:10px; padding:10px; font-size:13px; color:#fff; font-weight:600; margin-bottom:12px; text-align:center;">
         💡 결제 수단을 선택한 뒤 약관 동의 후 아래 버튼을 누르세요
       </div>
+      <div id="bank-box" style="display:none; background:rgba(255,200,0,0.10); border:1px solid var(--gold); border-radius:10px; padding:14px; font-size:14px; color:#fff; line-height:1.6; margin-bottom:12px;"></div>
       <div id="payment-method" style="margin-bottom:12px;"></div>
       <div id="agreement" style="margin-bottom:16px;"></div>
 
@@ -2201,6 +2202,29 @@ function checkUnlocked() {
   }
 }
 window.addEventListener('DOMContentLoaded', checkUnlocked);
+// 11/22 토스 새 상점 승인 전 임시 계좌이체 판매(사용자 «열어»). 승인·키 교체 뒤 BANK_MODE=false
+const BANK_MODE = true;
+const BANK_TXT = {
+ ko:"🏦 <b>계좌이체로 구매 (7,500원)</b><br>국민은행 <b>777101-01-263330</b> (예금주 송애희)<br>① 7,500원 입금 → ② 아래 버튼으로 텔레그램에 <b>입금자명</b>을 보내 주세요 → ③ 확인 후 이용권 코드를 보내 드립니다(보통 몇 시간 안 · 밤 입금은 다음 날 아침).",
+ en:"🏦 <b>Buy by bank transfer (₩7,500)</b><br>KB Kookmin Bank <b>777101-01-263330</b> (account holder: 송애희 SONG AEHEE)<br>① Send ₩7,500 → ② tap the button below and send us the <b>sender name</b> on Telegram → ③ after we confirm, we send your pass code (usually within a few hours; night transfers are checked next morning).",
+ ru:"🏦 <b>Покупка банковским переводом (7 500 вон)</b><br>KB Kookmin Bank <b>777101-01-263330</b> (получатель: 송애희 SONG AEHEE)<br>① Переведите 7 500 вон → ② нажмите кнопку ниже и отправьте в Telegram <b>имя отправителя</b> → ③ после проверки пришлём код доступа (обычно в течение нескольких часов; ночные переводы — утром).",
+ uz:"🏦 <b>Bank o'tkazmasi orqali sotib olish (7 500 von)</b><br>KB Kookmin Bank <b>777101-01-263330</b> (qabul qiluvchi: 송애희 SONG AEHEE)<br>① 7 500 von o'tkazing → ② pastdagi tugma orqali Telegramga <b>jo'natuvchi ismini</b> yuboring → ③ tekshirgandan so'ng kirish kodini yuboramiz (odatda bir necha soat ichida; tungi o'tkazmalar ertalab).",
+ vi:"🏦 <b>Mua bằng chuyển khoản (7.500 won)</b><br>Ngân hàng KB Kookmin <b>777101-01-263330</b> (chủ tài khoản: 송애희 SONG AEHEE)<br>① Chuyển 7.500 won → ② bấm nút bên dưới và gửi <b>tên người chuyển</b> qua Telegram → ③ sau khi xác nhận, chúng tôi gửi mã sử dụng (thường trong vài giờ; chuyển ban đêm sẽ kiểm tra sáng hôm sau).",
+ id:"🏦 <b>Beli dengan transfer bank (7.500 won)</b><br>KB Kookmin Bank <b>777101-01-263330</b> (atas nama: 송애희 SONG AEHEE)<br>① Transfer 7.500 won → ② tekan tombol di bawah dan kirim <b>nama pengirim</b> lewat Telegram → ③ setelah dicek, kami kirim kode akses (biasanya dalam beberapa jam; transfer malam dicek besok pagi).",
+ ne:"🏦 <b>बैंक ट्रान्सफरबाट किन्नुहोस् (७,५०० वन)</b><br>KB Kookmin Bank <b>777101-01-263330</b> (खाताधनी: 송애희 SONG AEHEE)<br>① ७,५०० वन पठाउनुहोस् → ② तलको बटन थिचेर Telegram मा <b>पठाउनेको नाम</b> पठाउनुहोस् → ③ जाँच पछि पास कोड पठाउँछौं (प्रायः केही घण्टाभित्र; रातिको ट्रान्सफर भोलि बिहान)।",
+ zh:"🏦 <b>银行转账购买（7,500韩元）</b><br>KB国民银行 <b>777101-01-263330</b>（收款人：송애희 SONG AEHEE）<br>① 转账7,500韩元 → ② 点击下方按钮，在Telegram发送<b>转账人姓名</b> → ③ 确认后发送使用码（通常几小时内；夜间转账次日早上确认）。"};
+const BANK_BTN = {ko:"📨 텔레그램으로 입금자명 보내기",en:"📨 Send sender name on Telegram",ru:"📨 Отправить имя в Telegram",uz:"📨 Telegramga ism yuborish",vi:"📨 Gửi tên qua Telegram",id:"📨 Kirim nama via Telegram",ne:"📨 Telegram मा नाम पठाउनुहोस्",zh:"📨 在Telegram发送姓名"};
+function applyBankMode(){
+  if(!BANK_MODE) return;
+  const L=(typeof curLang!=='undefined'&&BANK_TXT[curLang])?curLang:'en';
+  const b=document.getElementById('bank-box'); if(!b) return;
+  b.innerHTML=BANK_TXT[L]+'<br><a href="https://t.me/koreapass_help_bot?start=bank" target="_blank" rel="noopener" class="btn-buy" style="display:block;text-align:center;text-decoration:none;margin-top:10px;">'+BANK_BTN[L]+'</a>';
+  b.style.display='block';
+  ['pin-setup-box','pay-guide-box','payment-method','agreement','btn-price'].forEach(id=>{const e=document.getElementById(id); if(e) e.style.display='none';});
+}
+window.addEventListener('DOMContentLoaded',()=>setTimeout(applyBankMode,50));
+if(BANK_MODE){const _cuOrig=checkUnlocked; checkUnlocked=function(){_cuOrig.apply(this,arguments); applyBankMode();};}
+
 
 function recoverPageInteractivity() {
   document.documentElement.style.overflow = '';
