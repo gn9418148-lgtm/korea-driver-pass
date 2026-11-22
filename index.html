@@ -301,6 +301,10 @@ main { max-width: 580px; margin: 0 auto; padding: 14px 16px 110px; }
     솜사탕 · 대표 송애희 · 사업자 402-37-23073(간이·통신판매 신고면제) · 전남광주통합특별시 광산구 용아로 390, 2층 · 010-2448-9726 · bluesky-1224@naver.com<br>
     상품: 다국어 운전면허 학습 웹 180일 이용권 7,500원(1회 결제) · 배송 없음(결제 즉시 개통) · 환불: 미사용 7일 내 전액, 열람 개시 후 제한(전자상거래법 제17조②) · 신청: 위 이메일·전화(3영업일 내 처리)
   </div>
+  <div class="biz-micro" id="biz-en" style="display:none;">
+    Somsatang (솜사탕) · Owner: SONG AEHEE · Business Reg. No. 402-37-23073 · 2F, 390 Yongah-ro, Gwangsan-gu, Gwangju, Korea · +82-10-2448-9726 · bluesky-1224@naver.com<br>
+    Product: 180-day multilingual driver's license study web pass, ₩7,500 (one-time payment) · No physical delivery (activated instantly after payment) · Refund: full refund within 7 days if unused; limited after content is opened (Korean E-Commerce Act Art. 17(2)) · Request by email/phone above (processed within 3 business days)
+  </div>
 </main>
 
 <script>
@@ -2199,6 +2203,9 @@ function checkUnlocked() {
   }
 }
 window.addEventListener('DOMContentLoaded', checkUnlocked);
+function applyBizLang(){const k=document.getElementById('biz-ko'),e=document.getElementById('biz-en');if(!k||!e)return;const isKo=(typeof curLang==='undefined'||curLang==='ko');k.style.display=isKo?'':'none';e.style.display=isKo?'none':'';}
+window.addEventListener('DOMContentLoaded',()=>setTimeout(applyBizLang,60));
+{const _cu2=checkUnlocked; checkUnlocked=function(){_cu2.apply(this,arguments); applyBizLang();};}
 // 11/22 토스 새 상점 승인 전 임시 계좌이체 판매(사용자 «열어»). 승인·키 교체 뒤 BANK_MODE=false
 const BANK_MODE = true;
 const BANK_TXT = {
