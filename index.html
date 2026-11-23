@@ -2110,8 +2110,8 @@ function toggleSavedRecCode() {
   if (btn) btn.innerText = isRecExpanded ? lbl.hide : lbl.show;
 }
 
-// 11/23 토스 심사 보완: 솜사탕(ggn941vbln) 테스트 결제위젯 키 · 승인 뒤 라이브 키로
-const clientKey = 'test_gck_c19ztgNjwCGHIXpLfYJqM1lAdDNZehB7nB';
+// 11/23 계약 완료: 솜사탕(ggn941vbln) 라이브 결제위젯 키
+const clientKey = 'live_gck_c19ztgMZdrb6SNrfrMcmP3xQ7OdUOc2szP';
 const customerKey = localStorage.getItem('koreapass_cust_key') || ('CUST_' + Math.random().toString(36).substring(2, 11));
 localStorage.setItem('koreapass_cust_key', customerKey);
 let paymentWidget;
