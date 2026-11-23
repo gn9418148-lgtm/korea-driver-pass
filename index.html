@@ -975,6 +975,7 @@ function activatePassLocally(codeUsed) {
 
 function detectInitialLang() {
   const urlParams = new URLSearchParams(window.location.search);
+  try { const sp = urlParams.get('src'); if (sp && !localStorage.getItem('koreapass_src')) localStorage.setItem('koreapass_src', sp); } catch (e) {}
   const langParam = urlParams.get('lang');
   if (langParam && UI_TEXT[langParam]) return langParam;
   const saved = localStorage.getItem('koreapass_lang');
@@ -2268,7 +2269,10 @@ function requestPay() {
   localStorage.setItem('koreapass_pending_buy_lang', buyPack);
   localStorage.setItem('koreapass_pending_pin', pin4);
 
-  const orderId = 'KP_' + Date.now() + '_' + Math.random().toString(36).substring(2, 6).toUpperCase();
+  // 11/23 유입 출처: 링크의 ?src= (처음 들어온 곳) 를 주문번호 끝에 붙여 판매장부에서 채널별로 셈
+  let kpSrc = '';
+  try { kpSrc = (localStorage.getItem('koreapass_src') || '').replace(/[^a-z0-9]/gi, '').slice(0, 10); } catch (e) {}
+  const orderId = 'KP_' + Date.now() + '_' + Math.random().toString(36).substring(2, 6).toUpperCase() + (kpSrc ? '_' + kpSrc : '');
   const orderName = 'KoreaPass 180-Day Pass (' + buyPack.toUpperCase() + ' + KO)';
 
   if (paymentWidget) {
