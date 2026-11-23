@@ -21,6 +21,7 @@
   <p id="f-desc">No charge was made. Please return to the study page and try again.</p>
   <div class="err" id="f-err"></div>
   <a href="./" id="btn-retry" class="btn">Try Again →</a>
+  <div id="bank-alt" style="display:none;margin-top:18px;"><p id="bank-msg" style="margin-bottom:10px;"></p><a href="https://t.me/koreapass_help_bot?start=bank" target="_blank" rel="noopener" id="btn-bank" class="btn" style="background:#f3d36b;color:#111;"></a></div>
 </div>
 <script>
   const p = new URLSearchParams(window.location.search);
@@ -45,6 +46,23 @@
   document.getElementById('f-desc').innerText = t.desc;
   document.getElementById('btn-retry').innerText = t.btn;
   document.getElementById('btn-retry').href = './?lang=' + encodeURIComponent(lang);
+  // 11/23 카드사 심사 중 결제 막힘 → 계좌이체로 바로 안내
+  const BANK_ALT = {
+    ko: ["카드 결제는 준비 중입니다. 지금은 계좌이체(7,500원)로 바로 구매할 수 있어요.", "🏦 계좌이체로 구매하기"],
+    en: ["Card payment is being activated. You can buy now by bank transfer (₩7,500).", "🏦 Buy by bank transfer"],
+    uz: ["Karta orqali to'lov tayyorlanmoqda. Hozir bank o'tkazmasi (7 500 von) orqali sotib olishingiz mumkin.", "🏦 Bank o'tkazmasi orqali sotib olish"],
+    ru: ["Оплата картой скоро заработает. Сейчас можно купить банковским переводом (7 500 вон).", "🏦 Купить банковским переводом"],
+    vi: ["Thanh toán thẻ đang được kích hoạt. Hiện bạn có thể mua bằng chuyển khoản (7.500 won).", "🏦 Mua bằng chuyển khoản"],
+    id: ["Pembayaran kartu sedang diaktifkan. Sekarang bisa beli lewat transfer bank (7.500 won).", "🏦 Beli lewat transfer bank"],
+    ne: ["कार्ड भुक्तानी तयार हुँदैछ। अहिले बैंक ट्रान्सफर (७,५०० वन) बाट किन्न सकिन्छ।", "🏦 बैंक ट्रान्सफरबाट किन्नुहोस्"],
+    zh: ["银行卡支付即将开通。现在可以通过银行转账（7,500韩元）购买。", "🏦 银行转账购买"]
+  };
+  if (code === 'NOT_AVAILABLE_PAYMENT_BY_MERCHANT' || code === 'NOT_SUPPORTED_METHOD' || code === 'INVALID_CARD_COMPANY') {
+    const b = BANK_ALT[lang] || BANK_ALT.en;
+    document.getElementById('bank-msg').innerText = b[0];
+    document.getElementById('btn-bank').innerText = b[1];
+    document.getElementById('bank-alt').style.display = 'block';
+  }
   if (code || msg) {
     document.getElementById('f-err').innerText = [code, msg].filter(Boolean).join(' · ');
   }
