@@ -2110,7 +2110,8 @@ function toggleSavedRecCode() {
   if (btn) btn.innerText = isRecExpanded ? lbl.hide : lbl.show;
 }
 
-const clientKey = 'live_gck_c19zd7g4SpoJGGTtYyP1ZwvhShxUU7IXTc';
+// 11/23 토스 심사 보완: 솜사탕(ggn941vbln) 테스트 결제위젯 키 · 승인 뒤 라이브 키로
+const clientKey = 'test_gck_c19ztgNjwCGHIXpLfYJqM1lAdDNZehB7nB';
 const customerKey = localStorage.getItem('koreapass_cust_key') || ('CUST_' + Math.random().toString(36).substring(2, 11));
 localStorage.setItem('koreapass_cust_key', customerKey);
 let paymentWidget;
@@ -2224,7 +2225,7 @@ function applyBankMode(){
   const b=document.getElementById('bank-box'); if(!b) return;
   b.innerHTML=BANK_TXT[L]+'<br><a href="https://t.me/koreapass_help_bot?start=bank" target="_blank" rel="noopener" class="btn-buy" style="display:block;text-align:center;text-decoration:none;margin-top:10px;">'+BANK_BTN[L]+'</a>';
   b.style.display='block';
-  ['pin-setup-box','pay-guide-box','payment-method','agreement','btn-price'].forEach(id=>{const e=document.getElementById(id); if(e) e.style.display='none';});
+  // 11/23 심사 보완: 카드 결제창도 함께 보임(계좌이체는 덧붙인 안내)
 }
 window.addEventListener('DOMContentLoaded',()=>setTimeout(applyBankMode,50));
 if(BANK_MODE){const _cuOrig=checkUnlocked; checkUnlocked=function(){_cuOrig.apply(this,arguments); applyBankMode();};}
