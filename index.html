@@ -973,6 +973,8 @@ function activatePassLocally(codeUsed) {
   if (curMode === 'practical') renderPractical();
 }
 
+function kpHit(ev){try{const k='kp_hit_'+ev;if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1');let src='';try{src=localStorage.getItem('koreapass_src')||'';}catch(e){}fetch('https://koreapass-payment-confirm.volcano-nukki-txvxjeuy.workers.dev/hit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({ev:ev,lang:(typeof curLang!=='undefined'?curLang:''),src:src}),keepalive:true}).catch(()=>{});}catch(e){}}
+setTimeout(()=>kpHit('visit'),1500);
 function detectInitialLang() {
   const urlParams = new URLSearchParams(window.location.search);
   try { const sp = urlParams.get('src'); if (sp && !localStorage.getItem('koreapass_src')) localStorage.setItem('koreapass_src', sp); } catch (e) {}
@@ -1234,7 +1236,7 @@ function jumpToQuestion() {
   if (!unlocked && qNum > FREE_LIMIT) {
     alert(t.partLockMsg);
     const lockEl = document.querySelector('.cta-lock');
-    if (lockEl) lockEl.scrollIntoView({ behavior: 'smooth' });
+    if (lockEl) { kpHit('lock'); lockEl.scrollIntoView({ behavior: 'smooth' }); }
     return;
   }
   stopSpeech();
@@ -1255,7 +1257,7 @@ function selectPart(p) {
   if (p > 1 && !unlocked) {
     alert(t.partLockMsg);
     const lockEl = document.querySelector('.cta-lock');
-    if (lockEl) lockEl.scrollIntoView({ behavior: 'smooth' });
+    if (lockEl) { kpHit('lock'); lockEl.scrollIntoView({ behavior: 'smooth' }); }
     return;
   }
   curPart = p;
@@ -1314,7 +1316,7 @@ function playPracticalVoice(id, isLocked) {
   if (isLocked) {
     alert(ex.pracLockMsg);
     const lockEl = document.querySelector('.cta-lock');
-    if (lockEl) lockEl.scrollIntoView({ behavior: 'smooth' });
+    if (lockEl) { kpHit('lock'); lockEl.scrollIntoView({ behavior: 'smooth' }); }
     return;
   }
   stopSpeech();
@@ -1358,7 +1360,7 @@ async function togglePracticalRecord(id, isLocked) {
   if (isLocked) {
     alert(ex.pracLockMsg);
     const lockEl = document.querySelector('.cta-lock');
-    if (lockEl) lockEl.scrollIntoView({ behavior: 'smooth' });
+    if (lockEl) { kpHit('lock'); lockEl.scrollIntoView({ behavior: 'smooth' }); }
     return;
   }
   stopSpeech();
@@ -1504,7 +1506,7 @@ function switchMode(mode) {
   if ((mode === 'exam' || mode === 'wrong') && !unlocked) {
     alert(t.modeLockMsg);
     const lockEl = document.querySelector('.cta-lock');
-    if (lockEl) lockEl.scrollIntoView({ behavior: 'smooth' });
+    if (lockEl) { kpHit('lock'); lockEl.scrollIntoView({ behavior: 'smooth' }); }
     return;
   }
 
@@ -1823,7 +1825,7 @@ function nextQ() {
   if (curMode === 'study' && !unlocked && curIdx >= (FREE_LIMIT - 1)) {
     alert(t.endAlert);
     const lockEl = document.querySelector('.cta-lock');
-    if (lockEl) lockEl.scrollIntoView({ behavior: 'smooth' });
+    if (lockEl) { kpHit('lock'); lockEl.scrollIntoView({ behavior: 'smooth' }); }
     return;
   }
 
@@ -1848,7 +1850,7 @@ function nextQ() {
       } else {
         alert(t.endAlert);
         const lockEl = document.querySelector('.cta-lock');
-        if (lockEl) lockEl.scrollIntoView({ behavior: 'smooth' });
+        if (lockEl) { kpHit('lock'); lockEl.scrollIntoView({ behavior: 'smooth' }); }
       }
     } else {
       alert(t.examEndMsg);
@@ -2253,6 +2255,7 @@ function recoverPageInteractivity() {
 window.addEventListener('keydown', e => { if (e.key === 'Escape') setTimeout(recoverPageInteractivity, 150); });
 
 function requestPay() {
+  kpHit('paytry');
   const ex = EXTRA_UI[curLang] || EXTRA_UI.ko;
   const pinInp = document.getElementById('pin-set-input');
   const pin4 = (pinInp ? pinInp.value : '').replace(/\D/g, '');
@@ -2281,6 +2284,7 @@ function requestPay() {
     }
     const baseUrl = window.location.origin + window.location.pathname.replace(/[^/]*$/, '');
     const qs = 'lang=' + encodeURIComponent(curLang) + '&buyLang=' + encodeURIComponent(buyPack) + '&pin=' + encodeURIComponent(pin4);
+    kpHit('payreq');
     paymentWidget.requestPayment({
       orderId: orderId,
       orderName: orderName,
