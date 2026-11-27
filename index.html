@@ -198,6 +198,8 @@ main { max-width: 580px; margin: 0 auto; padding: 14px 16px 110px; }
     <div class="bar"><div class="bar-fill" id="bar-fill"></div></div>
   </div>
 
+  <div id="latest-bank-note" style="text-align:center; font-size:12.5px; font-weight:700; color:var(--gold); margin-bottom:10px;"></div>
+
   <div id="lang-guide-banner" style="display:none; position:relative; background:linear-gradient(135deg, rgba(0,180,216,0.15), rgba(19,34,56,0.9)); border:1.5px solid var(--acc); border-radius:14px; padding:13px 38px 13px 15px; margin-bottom:15px; font-size:13px; line-height:1.48; color:#fff; box-shadow:0 4px 16px rgba(0,0,0,0.25);">
     <button onclick="closeGuideBanner()" style="position:absolute; right:10px; top:10px; background:transparent; border:0; color:var(--sub); font-size:17px; font-weight:700; cursor:pointer; line-height:1; padding:4px;">✕</button>
     <div style="font-weight:800; color:var(--gold); margin-bottom:3px; font-size:13.5px;" id="guide-title"></div>
@@ -1622,6 +1624,18 @@ function render() {
   const t = UI_TEXT[curLang] || UI_TEXT.ko;
 
   const ex = EXTRA_UI[curLang] || EXTRA_UI.ko;
+  const LATEST_NOTE = {
+    ko: '✅ 2026.11.30 시행 최신 문제은행 반영',
+    en: '✅ Updated to the latest question bank (effective 2026.11.30)',
+    ru: '✅ Обновлено: актуальный банк вопросов (действует с 30.11.2026)',
+    uz: "✅ Eng so'nggi savollar banki (2026.11.30 dan kuchda) asosida",
+    vi: '✅ Đã cập nhật ngân hàng đề mới nhất (áp dụng từ 30/11/2026)',
+    id: '✅ Bank soal terbaru (berlaku 30.11.2026) sudah diterapkan',
+    ne: '✅ पछिल्लो प्रश्न बैंक (२०२६.११.३० देखि लागू) अनुसार अद्यावधिक',
+    zh: '✅ 已更新至最新题库（2026.11.30 起施行）'
+  };
+  const lbn = document.getElementById('latest-bank-note');
+  if (lbn) lbn.innerText = LATEST_NOTE[curLang] || LATEST_NOTE.en;
   const guideBanner = document.getElementById('lang-guide-banner');
   if (curMode === 'practical' || curLang === 'ko' || sessionStorage.getItem('guide_banner_closed') === 'true') {
     guideBanner.style.display = 'none';
