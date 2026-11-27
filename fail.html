@@ -28,6 +28,7 @@
   const lang = p.get('lang') || localStorage.getItem('koreapass_lang') || 'en';
   const code = p.get('code') || '';
   const msg = p.get('message') || '';
+  try{ if(!sessionStorage.getItem('kp_payfail')){ sessionStorage.setItem('kp_payfail','1'); fetch('https://koreapass-payment-confirm.volcano-nukki-txvxjeuy.workers.dev/hit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({ev:'payfail',lang:lang,code:code||'USER_CANCEL'}),keepalive:true}).catch(()=>{}); } }catch(e){}   // 11/27 실패 코드 셈
 
   const TEXT = {
     ko: { title: "결제가 취소되었거나 실패했습니다", desc: "결제 금액은 청구되지 않았습니다. 아래 버튼을 눌러 다시 시도해 주세요.", btn: "문제로 돌아가기 →" },
