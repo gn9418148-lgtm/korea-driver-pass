@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gn9418148-lgtm.github.io/korea-driver-pass/sitemap.xml
