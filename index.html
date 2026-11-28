@@ -2226,6 +2226,16 @@ window.addEventListener('DOMContentLoaded',()=>setTimeout(applyBizLang,60));
 {const _cu2=checkUnlocked; checkUnlocked=function(){_cu2.apply(this,arguments); applyBizLang();};}
 // 11/22 토스 새 상점 승인 전 임시 계좌이체 판매(사용자 «열어»). 승인·키 교체 뒤 BANK_MODE=false
 const BANK_MODE = true;
+const ACTIVE_CARDS_TXT = {
+ ko:"<div style='margin-top:6px;padding-top:6px;border-top:1px dashed rgba(0,180,216,0.35);font-size:12px;line-height:1.45;color:#ffd166;'>💳 <b>현재 바로 결제되는 카드: 신한 · 삼성 · 롯데 · 농협(NH) · 우리</b><br>🏦 그 외 카드(국민·하나·BC·현대·해외카드)는 아래 <b>계좌이체</b> 또는 <b>카카오/토스페이 머니(계좌)</b>로 결제해 주세요!</div>",
+ en:"<div style='margin-top:6px;padding-top:6px;border-top:1px dashed rgba(0,180,216,0.35);font-size:12px;line-height:1.45;color:#ffd166;'>💳 <b>Cards working right now: Shinhan · Samsung · Lotte · NH · Woori</b><br>🏦 For other cards (KB · Hana · BC · Hyundai · Overseas cards), please use <b>Bank Transfer</b> below or <b>Kakao/Toss Pay Money (bank balance)</b>!</div>",
+ vi:"<div style='margin-top:6px;padding-top:6px;border-top:1px dashed rgba(0,180,216,0.35);font-size:12px;line-height:1.45;color:#ffd166;'>💳 <b>Thẻ thanh toán được ngay: Shinhan · Samsung · Lotte · NH · Woori</b><br>🏦 Các thẻ khác (KB · Hana · BC · Hyundai · thẻ quốc tế) vui lòng dùng <b>Chuyển khoản (Bank Transfer)</b> bên dưới hoặc <b>tiền dư Kakao/Toss Pay</b>!</div>",
+ uz:"<div style='margin-top:6px;padding-top:6px;border-top:1px dashed rgba(0,180,216,0.35);font-size:12px;line-height:1.45;color:#ffd166;'>💳 <b>Hozir darhol ishlaydigan kartalar: Shinhan · Samsung · Lotte · NH · Woori</b><br>🏦 Boshqa kartalar (KB · Hana · BC · Hyundai · xorijiy) uchun pastdagi <b>Bank o'tkazmasi</b> yoki <b>Kakao/Toss Pay balansidan</b> foydalaning!</div>",
+ ru:"<div style='margin-top:6px;padding-top:6px;border-top:1px dashed rgba(0,180,216,0.35);font-size:12px;line-height:1.45;color:#ffd166;'>💳 <b>Карты, работающие сейчас: Shinhan · Samsung · Lotte · NH · Woori</b><br>🏦 Для других карт (KB · Hana · BC · Hyundai · зарубежные) используйте <b>Банковский перевод</b> ниже или <b>баланс Kakao/Toss Pay</b>!</div>",
+ id:"<div style='margin-top:6px;padding-top:6px;border-top:1px dashed rgba(0,180,216,0.35);font-size:12px;line-height:1.45;color:#ffd166;'>💳 <b>Kartu yang langsung aktif: Shinhan · Samsung · Lotte · NH · Woori</b><br>🏦 Untuk kartu lain (KB · Hana · BC · Hyundai · kartu luar negeri), gunakan <b>Transfer Bank</b> di bawah atau <b>saldo Kakao/Toss Pay</b>!</div>",
+ ne:"<div style='margin-top:6px;padding-top:6px;border-top:1px dashed rgba(0,180,216,0.35);font-size:12px;line-height:1.45;color:#ffd166;'>💳 <b>अहिले तुरुन्तै चल्ने कार्डहरू: Shinhan · Samsung · Lotte · NH · Woori</b><br>🏦 अन्य कार्ड (KB · Hana · BC · Hyundai · विदेशी कार्ड) भए तलको <b>बैंक ट्रान्सफर</b> वा <b>Kakao/Toss Pay ब्यालेन्स</b> प्रयोग गर्नुहोस्!</div>",
+ zh:"<div style='margin-top:6px;padding-top:6px;border-top:1px dashed rgba(0,180,216,0.35);font-size:12px;line-height:1.45;color:#ffd166;'>💳 <b>目前可立即支付的银行卡：新韩 · 三星 · 乐天 · 农协(NH) · 友利</b><br>🏦 其他卡（国民KB · 韩亚 · BC · 现代 · 海外卡）请使用下方<b>银行转账</b>或<b>Kakao/Toss Pay余额</b>支付！</div>"
+};
 const BANK_TXT = {
  ko:"🏦 <b>계좌이체로 구매 (7,500원)</b><br>국민은행 <b>777101-01-263330</b> (예금주 송애희)<br>① 7,500원 입금 → ② 아래 버튼으로 텔레그램에 <b>입금자명</b>을 보내 주세요 → ③ 확인 후 이용권 코드를 보내 드립니다(보통 몇 시간 안 · 밤 입금은 다음 날 아침).",
  en:"🏦 <b>Buy by bank transfer (₩7,500)</b><br>KB Kookmin Bank <b>777101-01-263330</b> (account holder: 송애희 SONG AEHEE)<br>① Send ₩7,500 → ② tap the button below and send us the <b>sender name</b> on Telegram → ③ after we confirm, we send your pass code (usually within a few hours; night transfers are checked next morning).",
@@ -2239,6 +2249,10 @@ const BANK_BTN = {ko:"📨 텔레그램으로 입금자명 보내기",en:"📨 S
 function applyBankMode(){
   if(!BANK_MODE) return;
   const L=(typeof curLang!=='undefined'&&BANK_TXT[curLang])?curLang:'en';
+  const pg=document.getElementById('pay-guide-box');
+  if(pg&&ACTIVE_CARDS_TXT[L]&&!pg.innerHTML.includes('Shinhan')&&!pg.innerHTML.includes('신한')&&!pg.innerHTML.includes('新韩')){
+    pg.innerHTML+=ACTIVE_CARDS_TXT[L];
+  }
   const b=document.getElementById('bank-box'); if(!b) return;
   b.innerHTML=BANK_TXT[L]+'<br><a href="https://t.me/koreapass_help_bot?start=bank" target="_blank" rel="noopener" class="btn-buy" style="display:block;text-align:center;text-decoration:none;margin-top:10px;">'+BANK_BTN[L]+'</a>';
   b.style.display='block';
